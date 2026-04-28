@@ -1,0 +1,111 @@
+# server-global
+
+- 文件数量：3
+
+## [F96ea1c22] server/global/global.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 69
+- imports: fmt, github.com/flipped-aurora/gin-vue-admin/server/config, github.com/flipped-aurora/gin-vue-admin/server/utils/timer, github.com/gin-gonic/gin, github.com/mark3labs/mcp-go/server, github.com/qiniu/qmgo, github.com/redis/go-redis/v9, github.com/songzhibin97/gkit/cache/local_cache, github.com/spf13/viper, go.uber.org/zap, golang.org/x/sync/singleflight, gorm.io/gorm, sync
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F96ea1c22-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F96ea1c22-S0002] 行 3-24 | go-import | 逻辑段 go-import：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: mcp-skills, go-import, database, ai-tooling, config
+- [F96ea1c22-S0003] 行 25-44 | go-const-var | 逻辑段 go-const-var：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: NewTimerTask
+- risks: -
+- tags: mcp-skills, go-const-var, database, config
+- [F96ea1c22-S0004] 行 45-51 | go-func | 函数 GetGlobalDBByDBName：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: dbname string
+- outputs: *gorm.DB
+- side_effects: -
+- calls: GetGlobalDBByDBName, RLock, RUnlock
+- risks: -
+- tags: system-config, go-func, database
+- [F96ea1c22-S0005] 行 52-61 | go-func | 函数 MustGetGlobalDBByDBName：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: dbname string
+- outputs: *gorm.DB
+- side_effects: 触发 panic
+- calls: MustGetGlobalDBByDBName, RLock, RUnlock
+- risks: 存在 panic 路径，异常恢复依赖上层中间件
+- tags: system-config, go-func, database
+- [F96ea1c22-S0006] 行 62-69 | go-func | 函数 GetRedis：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: name string
+- outputs: redis.UniversalClient
+- side_effects: 触发 panic
+- calls: GetRedis, Sprintf
+- risks: 存在 panic 路径，异常恢复依赖上层中间件
+- tags: system-config, go-func
+
+## [Ffef5cfce] server/global/model.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 15
+- imports: gorm.io/gorm, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Ffef5cfce-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Ffef5cfce-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, database
+- [Ffef5cfce-S0003] 行 9-15 | go-type | 类型 GVA_MODEL：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type, database
+
+## [Fea8b2d3d] server/global/version.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 13
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fea8b2d3d-S0001] 行 1-4 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fea8b2d3d-S0002] 行 5-13 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var
+

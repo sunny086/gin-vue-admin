@@ -1,0 +1,837 @@
+## [F93ba4d47] web/src/api/autoCode.js
+- 语言: js
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 583
+- imports: @/pinia/modules/user, @/utils/request
+- entrypoints: -
+- depends_on: @/pinia/modules/user, @/utils/request
+- owned_by: frontend
+- 逻辑段:
+- [F93ba4d47-S0001] 行 1-1 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, js-import
+- [F93ba4d47-S0002] 行 2-3 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, js-import
+- [F93ba4d47-S0003] 行 4-5 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0004] 行 6-6 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0005] 行 7-7 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0006] 行 8-9 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0007] 行 10-12 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: ...values
+- outputs: -
+- side_effects: -
+- calls: find, trim
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0008] 行 13-13 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: current, incoming
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0009] 行 14-21 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: String, startsWith
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0010] 行 22-34 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: payload
+- outputs: -
+- side_effects: -
+- calls: firstText
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0011] 行 35-35 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: response
+- outputs: -
+- side_effects: -
+- calls: async
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0012] 行 36-42 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: String, get, toLowerCase, includes, json, text
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0013] 行 43-43 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: response
+- outputs: -
+- side_effects: -
+- calls: async
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0014] 行 44-44 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: parseFetchBody
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0015] 行 45-52 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: firstText, trim, Error
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0016] 行 53-53 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: state
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0017] 行 54-74 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: firstText
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0018] 行 75-75 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: extraHeaders = {}
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0019] 行 76-85 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: useUserStore
+- risks: -
+- tags: codegen-ai, js-const, security
+- [F93ba4d47-S0020] 行 86-93 | js-export | 函数/导出 preview：输出渲染结果，用于支撑「代码生成与AI工作流」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0021] 行 94-101 | js-export | 函数/导出 createTemp：执行创建或新增流程，用于支撑「代码生成与AI工作流」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0022] 行 102-109 | js-export | 函数/导出 getDB：执行查询与读取流程，用于支撑「代码生成与AI工作流」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0023] 行 110-117 | js-export | 函数/导出 getTable：执行查询与读取流程，用于支撑「代码生成与AI工作流」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0024] 行 118-125 | js-export | 函数/导出 getColumn：执行查询与读取流程，用于支撑「代码生成与AI工作流」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0025] 行 126-133 | js-export | 函数/导出 getSysHistory：执行查询与读取流程，用于支撑「代码生成与AI工作流」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0026] 行 134-141 | js-export | 函数/导出 rollback：承载该模块的核心逻辑，用于支撑「代码生成与AI工作流」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0027] 行 142-149 | js-export | 函数/导出 getMeta：执行查询与读取流程，用于支撑「代码生成与AI工作流」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0028] 行 150-157 | js-export | 函数/导出 delSysHistory：承载该模块的核心逻辑，用于支撑「代码生成与AI工作流」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0029] 行 158-165 | js-export | 函数/导出 createPackageApi：执行创建或新增流程，用于支撑「代码生成与AI工作流」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0030] 行 166-174 | js-export | 函数/导出 saveAIWorkflowSession：执行更新与配置写入流程，用于支撑「代码生成与AI工作流」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0031] 行 175-183 | js-export | 函数/导出 getAIWorkflowSessionList：执行查询与读取流程，用于支撑「代码生成与AI工作流」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0032] 行 184-192 | js-export | 函数/导出 getAIWorkflowSessionDetail：执行查询与读取流程，用于支撑「代码生成与AI工作流」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0033] 行 193-201 | js-export | 函数/导出 deleteAIWorkflowSession：执行删除与清理流程，用于支撑「代码生成与AI工作流」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0034] 行 202-209 | js-export | 函数/导出 dumpAIWorkflowMarkdown：承载该模块的核心逻辑，用于支撑「代码生成与AI工作流」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0035] 行 210-216 | js-export | 函数/导出 getPackageApi：执行查询与读取流程，用于支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0036] 行 217-224 | js-export | 函数/导出 deletePackageApi：执行删除与清理流程，用于支撑「代码生成与AI工作流」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0037] 行 225-231 | js-export | 函数/导出 getTemplatesApi：执行查询与读取流程，用于支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0038] 行 232-239 | js-export | 函数/导出 installPlug：承载该模块的核心逻辑，用于支撑「代码生成与AI工作流」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0039] 行 240-247 | js-export | 函数/导出 pubPlug：承载该模块的核心逻辑，用于支撑「代码生成与AI工作流」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0040] 行 248-263 | js-export | 函数/导出 llmAuto：承载该模块的核心逻辑，用于支撑「代码生成与AI工作流」域。
+- inputs: data, options = {}
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0041] 行 264-264 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: url, data, options = {}
+- outputs: -
+- side_effects: -
+- calls: async
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0042] 行 265-265 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: AbortController
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0043] 行 266-266 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0044] 行 267-267 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0045] 行 268-276 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: setTimeout, abort
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0046] 行 277-283 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0047] 行 284-284 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: event
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0048] 行 285-285 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: firstText
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0049] 行 286-321 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: pickStreamText, firstText, mergeStreamText, Error, stringify
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0050] 行 322-324 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: debug
+- risks: -
+- tags: codegen-ai, js-const, config
+- [F93ba4d47-S0051] 行 325-338 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: 发起网络调用
+- calls: fetch, createLLMFetchHeaders, stringify, buildFetchError
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0052] 行 339-341 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: String, get, toLowerCase, includes, warn
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0053] 行 342-349 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: parseFetchBody, Error, debug
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0054] 行 350-350 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getReader
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0055] 行 351-351 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: TextDecoder
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0056] 行 352-352 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0057] 行 353-355 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: while
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0058] 行 356-360 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: read, decode
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0059] 行 361-365 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: split, pop
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0060] 行 366-368 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: trim, startsWith
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0061] 行 369-371 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: slice, trim
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0062] 行 372-393 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: parse, handleSSEEvent, catch, trim
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0063] 行 394-395 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: trim, startsWith
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0064] 行 396-398 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: slice, trim
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0065] 行 399-418 | js-const | 逻辑段 js-const：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: parse, handleSSEEvent, buildLLMStreamResult, catch, Error, clearTimeout
+- risks: -
+- tags: codegen-ai, js-const
+- [F93ba4d47-S0066] 行 419-421 | js-export | 函数/导出 llmAutoStream：承载该模块的核心逻辑，用于支撑「代码生成与AI工作流」域。
+- inputs: data, options = {}
+- outputs: -
+- side_effects: -
+- calls: async, streamLLMRequest
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0067] 行 422-424 | js-export | 函数/导出 llmAutoSSEStream：承载该模块的核心逻辑，用于支撑「代码生成与AI工作流」域。
+- inputs: data, options = {}
+- outputs: -
+- side_effects: -
+- calls: async, streamLLMRequest
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0068] 行 425-437 | js-export | 函数/导出 analyzeRequirementByAI：承载该模块的核心逻辑，用于支撑「代码生成与AI工作流」域。
+- inputs: data, options = {}
+- outputs: -
+- side_effects: -
+- calls: llmAuto
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0069] 行 438-447 | js-export | 函数/导出 analyzeRequirementByAIStream：承载该模块的核心逻辑，用于支撑「代码生成与AI工作流」域。
+- inputs: data, options = {}
+- outputs: -
+- side_effects: -
+- calls: llmAutoStream
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0070] 行 448-457 | js-export | 函数/导出 analyzeRequirementByAISSEStream：承载该模块的核心逻辑，用于支撑「代码生成与AI工作流」域。
+- inputs: data, options = {}
+- outputs: -
+- side_effects: -
+- calls: llmAutoSSEStream
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0071] 行 458-470 | js-export | 函数/导出 generatePromptFlowByAI：承载该模块的核心逻辑，用于支撑「代码生成与AI工作流」域。
+- inputs: data, options = {}
+- outputs: -
+- side_effects: -
+- calls: llmAuto
+- risks: -
+- tags: codegen-ai, js-export, ai-tooling
+- [F93ba4d47-S0072] 行 471-480 | js-export | 函数/导出 generatePromptFlowByAIStream：承载该模块的核心逻辑，用于支撑「代码生成与AI工作流」域。
+- inputs: data, options = {}
+- outputs: -
+- side_effects: -
+- calls: llmAutoStream
+- risks: -
+- tags: codegen-ai, js-export, ai-tooling
+- [F93ba4d47-S0073] 行 481-490 | js-export | 函数/导出 generatePromptFlowByAISSEStream：承载该模块的核心逻辑，用于支撑「代码生成与AI工作流」域。
+- inputs: data, options = {}
+- outputs: -
+- side_effects: -
+- calls: llmAutoSSEStream
+- risks: -
+- tags: codegen-ai, js-export, ai-tooling
+- [F93ba4d47-S0074] 行 491-498 | js-export | 函数/导出 addFunc：执行创建或新增流程，用于支撑「代码生成与AI工作流」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0075] 行 499-506 | js-export | 函数/导出 initMenu：完成初始化或注册流程，用于支撑「代码生成与AI工作流」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0076] 行 507-514 | js-export | 函数/导出 initAPI：完成初始化或注册流程，用于支撑「代码生成与AI工作流」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0077] 行 515-522 | js-export | 函数/导出 initDictionary：完成初始化或注册流程，用于支撑「代码生成与AI工作流」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0078] 行 523-530 | js-export | 函数/导出 mcp：承载该模块的核心逻辑，用于支撑「MCP与Skills生态」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: mcp-skills, js-export, ai-tooling
+- [F93ba4d47-S0079] 行 531-537 | js-export | 函数/导出 mcpStatus：承载该模块的核心逻辑，用于支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: mcp-skills, js-export, ai-tooling
+- [F93ba4d47-S0080] 行 538-544 | js-export | 函数/导出 mcpStart：控制服务运行状态，用于支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: mcp-skills, js-export, ai-tooling
+- [F93ba4d47-S0081] 行 545-551 | js-export | 函数/导出 mcpStop：控制服务运行状态，用于支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: mcp-skills, js-export, ai-tooling
+- [F93ba4d47-S0082] 行 552-559 | js-export | 函数/导出 mcpList：执行查询与读取流程，用于支撑「MCP与Skills生态」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: mcp-skills, js-export, ai-tooling
+- [F93ba4d47-S0083] 行 560-567 | js-export | 函数/导出 mcpTest：承载该模块的核心逻辑，用于支撑「MCP与Skills生态」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: mcp-skills, js-export, ai-tooling
+- [F93ba4d47-S0084] 行 568-575 | js-export | 函数/导出 getPluginList：执行查询与读取流程，用于支撑「代码生成与AI工作流」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: codegen-ai, js-export
+- [F93ba4d47-S0085] 行 576-583 | js-export | 函数/导出 removePlugin：执行删除与清理流程，用于支撑「代码生成与AI工作流」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: codegen-ai, js-export
+
+## [F9f319298] web/src/api/breakpoint.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 44
+- imports: @/utils/request
+- entrypoints: -
+- depends_on: @/utils/request
+- owned_by: frontend
+- 逻辑段:
+- [F9f319298-S0001] 行 1-9 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import, security
+- [F9f319298-S0002] 行 10-17 | js-export | 函数/导出 findFile：执行查询与读取流程，用于支撑「前端框架内核」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F9f319298-S0003] 行 18-27 | js-export | 函数/导出 breakpointContinue：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F9f319298-S0004] 行 28-35 | js-export | 函数/导出 breakpointContinueFinish：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F9f319298-S0005] 行 36-44 | js-export | 函数/导出 removeChunk：执行删除与清理流程，用于支撑「前端框架内核」域。
+- inputs: data, params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+
+## [Fe53e326b] web/src/api/casbin.js
+- 语言: js
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 33
+- imports: @/utils/request
+- entrypoints: -
+- depends_on: @/utils/request
+- owned_by: frontend
+- 逻辑段:
+- [Fe53e326b-S0001] 行 1-9 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, js-import, security
+- [Fe53e326b-S0002] 行 10-25 | js-export | 函数/导出 UpdateCasbin：执行更新与配置写入流程，用于支撑「鉴权与访问控制」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: auth-access, js-export, security
+- [Fe53e326b-S0003] 行 26-33 | js-export | 函数/导出 getPolicyPathByAuthorityId：执行查询与读取流程，用于支撑「鉴权与访问控制」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: auth-access, js-export, security
+
+## [F54a54019] web/src/api/customer.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 81
+- imports: @/utils/request
+- entrypoints: -
+- depends_on: @/utils/request
+- owned_by: frontend
+- 逻辑段:
+- [F54a54019-S0001] 行 1-9 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F54a54019-S0002] 行 10-25 | js-export | 函数/导出 createExaCustomer：执行创建或新增流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F54a54019-S0003] 行 26-41 | js-export | 函数/导出 updateExaCustomer：执行更新与配置写入流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F54a54019-S0004] 行 42-57 | js-export | 函数/导出 deleteExaCustomer：执行删除与清理流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F54a54019-S0005] 行 58-73 | js-export | 函数/导出 getExaCustomer：执行查询与读取流程，用于支撑「前端框架内核」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F54a54019-S0006] 行 74-81 | js-export | 函数/导出 getExaCustomerList：执行查询与读取流程，用于支撑「前端框架内核」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+
+## [F6fd96d69] web/src/api/email.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 15
+- imports: @/utils/request
+- entrypoints: -
+- depends_on: @/utils/request
+- owned_by: frontend
+- 逻辑段:
+- [F6fd96d69-S0001] 行 1-7 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F6fd96d69-S0002] 行 8-15 | js-export | 函数/导出 emailTest：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+
+## [Fa44d8439] web/src/api/exportTemplate.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 146
+- imports: @/utils/request
+- entrypoints: -
+- depends_on: @/utils/request
+- owned_by: frontend
+- 逻辑段:
+- [Fa44d8439-S0001] 行 1-10 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [Fa44d8439-S0002] 行 11-26 | js-export | 函数/导出 createSysExportTemplate：执行创建或新增流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [Fa44d8439-S0003] 行 27-42 | js-export | 函数/导出 deleteSysExportTemplate：执行删除与清理流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [Fa44d8439-S0004] 行 43-58 | js-export | 函数/导出 deleteSysExportTemplateByIds：执行删除与清理流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [Fa44d8439-S0005] 行 59-74 | js-export | 函数/导出 updateSysExportTemplate：执行更新与配置写入流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [Fa44d8439-S0006] 行 75-90 | js-export | 函数/导出 findSysExportTemplate：执行查询与读取流程，用于支撑「前端框架内核」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [Fa44d8439-S0007] 行 91-106 | js-export | 函数/导出 getSysExportTemplateList：执行查询与读取流程，用于支撑「前端框架内核」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export, security
+- [Fa44d8439-S0008] 行 107-121 | js-export | 函数/导出 exportExcel：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [Fa44d8439-S0009] 行 122-138 | js-export | 函数/导出 exportTemplate：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [Fa44d8439-S0010] 行 139-146 | js-export | 函数/导出 previewSQL：输出渲染结果，用于支撑「前端框架内核」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+

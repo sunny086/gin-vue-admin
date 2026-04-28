@@ -1,0 +1,772 @@
+## [Fb7bbb044] server/api/v1/system/sys_api.go
+- 语言: go
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 382
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/request, github.com/flipped-aurora/gin-vue-admin/server/model/common/response, github.com/flipped-aurora/gin-vue-admin/server/model/system, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/gin-gonic/gin, go.uber.org/zap
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fb7bbb044-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-package
+- [Fb7bbb044-S0002] 行 3-15 | go-import | 逻辑段 go-import：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: menu-rbac, go-import
+- [Fb7bbb044-S0003] 行 16-26 | go-type | 类型 SystemApiApi：定义该文件的数据结构或接口边界，支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-type
+- [Fb7bbb044-S0004] 行 27-55 | go-func | 函数 CreateApi：执行创建或新增流程，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: CreateApi, ShouldBindJSON, FailWithMessage, Error, Verify, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [Fb7bbb044-S0005] 行 56-77 | go-func | 函数 SyncApi：承载该模块的核心逻辑，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: SyncApi, Error, FailWithMessage, OkWithData
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [Fb7bbb044-S0006] 行 78-98 | go-func | 函数 GetApiGroups：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetApiGroups, Error, FailWithMessage, OkWithData
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [Fb7bbb044-S0007] 行 99-122 | go-func | 函数 IgnoreApi：承载该模块的核心逻辑，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: IgnoreApi, ShouldBindJSON, FailWithMessage, Error, Ok
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [Fb7bbb044-S0008] 行 123-147 | go-func | 函数 EnterSyncApi：承载该模块的核心逻辑，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: EnterSyncApi, ShouldBindJSON, FailWithMessage, Error, Ok
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [Fb7bbb044-S0009] 行 148-177 | go-func | 函数 DeleteApi：执行删除与清理流程，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: DeleteApi, ShouldBindJSON, FailWithMessage, Error, Verify, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [Fb7bbb044-S0010] 行 178-212 | go-func | 函数 GetApiList：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetApiList, ShouldBindJSON, FailWithMessage, Error, Verify, GetAPIInfoList, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [Fb7bbb044-S0011] 行 213-242 | go-func | 函数 GetApiById：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetApiById, ShouldBindJSON, FailWithMessage, Error, Verify, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [Fb7bbb044-S0012] 行 243-271 | go-func | 函数 UpdateApi：执行更新与配置写入流程，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: UpdateApi, ShouldBindJSON, FailWithMessage, Error, Verify, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [Fb7bbb044-S0013] 行 272-291 | go-func | 函数 GetAllApis：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetAllApis, GetUserAuthorityId, Error, FailWithMessage, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, security
+- [Fb7bbb044-S0014] 行 292-314 | go-func | 函数 DeleteApisByIds：执行删除与清理流程，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: DeleteApisByIds, ShouldBindJSON, FailWithMessage, Error, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, security
+- [Fb7bbb044-S0015] 行 315-334 | go-func | 函数 FreshCasbin：承载该模块的核心逻辑，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: FreshCasbin, Error, FailWithMessage, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, security
+- [Fb7bbb044-S0016] 行 335-362 | go-func | 函数 GetApiRoles：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetApiRoles, Query, FailWithMessage, GetAuthoritiesByApi, Error, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, security
+- [Fb7bbb044-S0017] 行 363-382 | go-func | 函数 SetApiRoles：执行更新与配置写入流程，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: SetApiRoles, ShouldBindJSON, FailWithMessage, Error, SetApiAuthorities, FreshCasbin, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, security
+
+## [F6b160fde] server/api/v1/system/sys_authority_btn.go
+- 语言: go
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 81
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/response, github.com/flipped-aurora/gin-vue-admin/server/model/system/request, github.com/gin-gonic/gin, go.uber.org/zap
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F6b160fde-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-package
+- [F6b160fde-S0002] 行 3-10 | go-import | 逻辑段 go-import：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: auth-access, go-import
+- [F6b160fde-S0003] 行 11-21 | go-type | 类型 AuthorityBtnApi：定义该文件的数据结构或接口边界，支撑「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-type, security
+- [F6b160fde-S0004] 行 22-46 | go-func | 函数 GetAuthorityBtn：执行查询与读取流程，位于「鉴权与访问控制」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetAuthorityBtn, ShouldBindJSON, FailWithMessage, Error, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, security
+- [F6b160fde-S0005] 行 47-70 | go-func | 函数 SetAuthorityBtn：执行更新与配置写入流程，位于「鉴权与访问控制」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: SetAuthorityBtn, ShouldBindJSON, FailWithMessage, Error, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, security
+- [F6b160fde-S0006] 行 71-81 | go-func | 函数 CanRemoveAuthorityBtn：执行删除与清理流程，位于「鉴权与访问控制」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: CanRemoveAuthorityBtn, Query, Error, FailWithMessage, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, security
+
+## [Fed8c5ff3] server/api/v1/system/sys_authority.go
+- 语言: go
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 258
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/response, github.com/flipped-aurora/gin-vue-admin/server/model/system, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/gin-gonic/gin, go.uber.org/zap
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fed8c5ff3-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-package
+- [Fed8c5ff3-S0002] 行 3-14 | go-import | 逻辑段 go-import：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: auth-access, go-import
+- [Fed8c5ff3-S0003] 行 15-25 | go-type | 类型 AuthorityApi：定义该文件的数据结构或接口边界，支撑「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-type, security
+- [Fed8c5ff3-S0004] 行 26-66 | go-func | 函数 CreateAuthority：执行创建或新增流程，位于「鉴权与访问控制」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: CreateAuthority, ShouldBindJSON, FailWithMessage, Error, Verify, Pointer, GetUserAuthorityId, FreshCasbin, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, security
+- [Fed8c5ff3-S0005] 行 67-102 | go-func | 函数 CopyAuthority：承载该模块的核心逻辑，位于「鉴权与访问控制」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: CopyAuthority, ShouldBindJSON, FailWithMessage, Error, Verify, GetUserAuthorityId, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, security
+- [Fed8c5ff3-S0006] 行 103-132 | go-func | 函数 DeleteAuthority：执行删除与清理流程，位于「鉴权与访问控制」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: DeleteAuthority, ShouldBindJSON, FailWithMessage, Error, Verify, FreshCasbin, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, security
+- [Fed8c5ff3-S0007] 行 133-162 | go-func | 函数 UpdateAuthority：执行更新与配置写入流程，位于「鉴权与访问控制」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: UpdateAuthority, ShouldBindJSON, FailWithMessage, Error, Verify, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, security
+- [Fed8c5ff3-S0008] 行 163-182 | go-func | 函数 GetAuthorityList：执行查询与读取流程，位于「鉴权与访问控制」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetAuthorityList, GetUserAuthorityId, GetAuthorityInfoList, Error, FailWithMessage, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, security
+- [Fed8c5ff3-S0009] 行 183-213 | go-func | 函数 SetDataAuthority：执行更新与配置写入流程，位于「鉴权与访问控制」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: SetDataAuthority, ShouldBindJSON, FailWithMessage, Error, Verify, GetUserAuthorityId, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, security
+- [Fed8c5ff3-S0010] 行 214-240 | go-func | 函数 GetUsersByAuthority：执行查询与读取流程，位于「鉴权与访问控制」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetUsersByAuthority, ShouldBindQuery, FailWithMessage, Error, GetUserIdsByAuthorityId, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, security
+- [Fed8c5ff3-S0011] 行 241-258 | go-func | 函数 SetRoleUsers：执行更新与配置写入流程，位于「鉴权与访问控制」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: SetRoleUsers, ShouldBindJSON, FailWithMessage, Error, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, security
+
+## [F29fd1101] server/api/v1/system/sys_auto_code_sse.go
+- 语言: go
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 211
+- imports: bufio, errors, fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common, github.com/flipped-aurora/gin-vue-admin/server/model/common/response, github.com/gin-contrib/sse, github.com/gin-gonic/gin, github.com/goccy/go-json, go.uber.org/zap, io, net/http, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F29fd1101-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-package
+- [F29fd1101-S0002] 行 3-19 | go-import | 逻辑段 go-import：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: codegen-ai, go-import
+- [F29fd1101-S0003] 行 20-43 | go-func | 函数 LLMAutoSSE：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: LLMAutoSSE, ShouldBindJSON, Error, FailWithMessage, Info, Any, streamLLMAsSSE, Written, writeLLMStreamError
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [F29fd1101-S0004] 行 44-149 | go-func | 函数 streamLLMAsSSE：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context, llm common.JSONMap
+- outputs: error
+- side_effects: -
+- calls: streamLLMAsSSE, LLMAutoStream, Context, Errorf, Close, ReadAll, Get, previewResponseBody, Info, Int, String, Contains
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [F29fd1101-S0005] 行 150-157 | go-func | 函数 prepareSSEHeaders：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: prepareSSEHeaders, Header, Set
+- risks: -
+- tags: codegen-ai, go-func
+- [F29fd1101-S0006] 行 158-201 | go-func | 函数 emitSSEBlock：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context, lines []string
+- outputs: error
+- side_effects: -
+- calls: emitSSEBlock, HasPrefix, TrimSpace, TrimPrefix, Join, renderSSE, Unmarshal, byte
+- risks: -
+- tags: codegen-ai, go-func
+- [F29fd1101-S0007] 行 202-211 | go-func | 函数 renderSSE：输出渲染结果，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context, event sse.Event
+- outputs: error
+- side_effects: -
+- calls: renderSSE, Render, Errorf, Flush
+- risks: -
+- tags: codegen-ai, go-func
+
+## [Fb2d10ef3] server/api/v1/system/sys_auto_code.go
+- 语言: go
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 220
+- imports: errors, fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common, github.com/flipped-aurora/gin-vue-admin/server/model/common/response, github.com/gin-gonic/gin, github.com/goccy/go-json, go.uber.org/zap, io, net/http, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fb2d10ef3-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-package
+- [Fb2d10ef3-S0002] 行 3-17 | go-import | 逻辑段 go-import：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: codegen-ai, go-import
+- [Fb2d10ef3-S0003] 行 18-19 | go-type | 类型 AutoCodeApi：定义该文件的数据结构或接口边界，支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-type
+- [Fb2d10ef3-S0004] 行 20-40 | go-func | 函数 GetDB：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetDB, Query, Database, Error, FailWithMessage, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [Fb2d10ef3-S0005] 行 41-63 | go-func | 函数 GetTables：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetTables, Query, Database, Error, FailWithMessage, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [Fb2d10ef3-S0006] 行 64-86 | go-func | 函数 GetColumn：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetColumn, Query, Database, Error, FailWithMessage, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [Fb2d10ef3-S0007] 行 87-114 | go-func | 函数 LLMAuto：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: LLMAuto, ShouldBindJSON, FailWithMessage, Error, shouldStreamLLM, proxyLLMStream, Written, writeLLMStreamError, Context, OkWithData
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [Fb2d10ef3-S0008] 行 115-125 | go-func | 函数 shouldStreamLLM：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context, llm common.JSONMap
+- outputs: bool
+- side_effects: -
+- calls: shouldStreamLLM, ToLower, TrimSpace, Sprintf, Contains, GetHeader
+- risks: -
+- tags: codegen-ai, go-func
+- [Fb2d10ef3-S0009] 行 126-175 | go-func | 函数 proxyLLMStream：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context, llm common.JSONMap
+- outputs: error
+- side_effects: -
+- calls: proxyLLMStream, LLMAutoStream, Context, Close, ReadAll, Errorf, Get, previewResponseBody, New, copyLLMStreamHeaders, Header, Set
+- risks: -
+- tags: codegen-ai, go-func
+- [Fb2d10ef3-S0010] 行 176-189 | go-func | 函数 copyLLMStreamHeaders：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: dst, src http.Header
+- outputs: -
+- side_effects: -
+- calls: copyLLMStreamHeaders, Get, Set
+- risks: -
+- tags: codegen-ai, go-func
+- [Fb2d10ef3-S0011] 行 190-205 | go-func | 函数 writeLLMStreamError：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context, err error
+- outputs: -
+- side_effects: -
+- calls: writeLLMStreamError, Marshal, Error, byte, WriteString, Write, Flush
+- risks: -
+- tags: codegen-ai, go-func
+- [Fb2d10ef3-S0012] 行 206-220 | go-func | 函数 previewResponseBody：输出渲染结果，位于「代码生成与AI工作流」域。
+- inputs: body []byte
+- outputs: string
+- side_effects: -
+- calls: previewResponseBody, TrimSpace, string, ReplaceAll, Join, Fields, rune
+- risks: -
+- tags: codegen-ai, go-func
+
+## [Fff1ab0e6] server/api/v1/system/sys_captcha.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 71
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/response, github.com/gin-gonic/gin, github.com/mojocn/base64Captcha, go.uber.org/zap, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fff1ab0e6-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fff1ab0e6-S0002] 行 3-15 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import, NewDefaultRedisStore
+- risks: -
+- tags: system-config, go-import
+- [Fff1ab0e6-S0003] 行 16-17 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var
+- [Fff1ab0e6-S0004] 行 18-27 | go-type | 类型 BaseApi：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [Fff1ab0e6-S0005] 行 28-61 | go-func | 函数 Captcha：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: Captcha, ClientIP, Get, Set, Duration, interfaceToInt, NewDriverDigit, NewCaptcha, UseWithCtx, Generate, Error, FailWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [Fff1ab0e6-S0006] 行 62-71 | go-func | 函数 interfaceToInt：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: v interface{}
+- outputs: (i int)
+- side_effects: -
+- calls: interfaceToInt
+- risks: -
+- tags: system-config, go-func
+
+## [F98ed0356] server/api/v1/system/sys_casbin.go
+- 语言: go
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 70
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/response, github.com/flipped-aurora/gin-vue-admin/server/model/system/request, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/gin-gonic/gin, go.uber.org/zap
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F98ed0356-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-package
+- [F98ed0356-S0002] 行 3-12 | go-import | 逻辑段 go-import：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: auth-access, go-import
+- [F98ed0356-S0003] 行 13-23 | go-type | 类型 CasbinApi：定义该文件的数据结构或接口边界，支撑「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-type, security
+- [F98ed0356-S0004] 行 24-54 | go-func | 函数 UpdateCasbin：执行更新与配置写入流程，位于「鉴权与访问控制」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: UpdateCasbin, ShouldBindJSON, FailWithMessage, Error, Verify, GetUserAuthorityId, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, security
+- [F98ed0356-S0005] 行 55-70 | go-func | 函数 GetPolicyPathByAuthorityId：执行查询与读取流程，位于「鉴权与访问控制」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetPolicyPathByAuthorityId, ShouldBindJSON, FailWithMessage, Error, Verify, OkWithDetailed
+- risks: -
+- tags: auth-access, go-func, security
+
+## [F72d2e73c] server/api/v1/system/sys_dictionary_detail.go
+- 语言: go
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 268
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/response, github.com/flipped-aurora/gin-vue-admin/server/model/system, github.com/flipped-aurora/gin-vue-admin/server/model/system/request, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/gin-gonic/gin, go.uber.org/zap, strconv
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F72d2e73c-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-package
+- [F72d2e73c-S0002] 行 3-14 | go-import | 逻辑段 go-import：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: menu-rbac, go-import
+- [F72d2e73c-S0003] 行 15-25 | go-type | 类型 DictionaryDetailApi：定义该文件的数据结构或接口边界，支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-type
+- [F72d2e73c-S0004] 行 26-50 | go-func | 函数 CreateSysDictionaryDetail：执行创建或新增流程，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: CreateSysDictionaryDetail, ShouldBindJSON, FailWithMessage, Error, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F72d2e73c-S0005] 行 51-75 | go-func | 函数 DeleteSysDictionaryDetail：执行删除与清理流程，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: DeleteSysDictionaryDetail, ShouldBindJSON, FailWithMessage, Error, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F72d2e73c-S0006] 行 76-100 | go-func | 函数 UpdateSysDictionaryDetail：执行更新与配置写入流程，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: UpdateSysDictionaryDetail, ShouldBindJSON, FailWithMessage, Error, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F72d2e73c-S0007] 行 101-130 | go-func | 函数 FindSysDictionaryDetail：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: FindSysDictionaryDetail, ShouldBindQuery, FailWithMessage, Error, Verify, GetSysDictionaryDetail, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F72d2e73c-S0008] 行 131-160 | go-func | 函数 GetSysDictionaryDetailList：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetSysDictionaryDetailList, ShouldBindQuery, FailWithMessage, Error, GetSysDictionaryDetailInfoList, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F72d2e73c-S0009] 行 161-193 | go-func | 函数 GetDictionaryTreeList：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetDictionaryTreeList, Query, FailWithMessage, ParseUint, uint, Error, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F72d2e73c-S0010] 行 194-218 | go-func | 函数 GetDictionaryTreeListByType：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetDictionaryTreeListByType, Query, FailWithMessage, Error, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F72d2e73c-S0011] 行 219-244 | go-func | 函数 GetDictionaryDetailsByParent：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetDictionaryDetailsByParent, ShouldBindQuery, FailWithMessage, Error, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F72d2e73c-S0012] 行 245-268 | go-func | 函数 GetDictionaryPath：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetDictionaryPath, Query, FailWithMessage, ParseUint, uint, Error, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+
+## [F0436b420] server/api/v1/system/sys_dictionary.go
+- 语言: go
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 192
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/response, github.com/flipped-aurora/gin-vue-admin/server/model/system, github.com/flipped-aurora/gin-vue-admin/server/model/system/request, github.com/gin-gonic/gin, go.uber.org/zap
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F0436b420-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-package
+- [F0436b420-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: menu-rbac, go-import
+- [F0436b420-S0003] 行 12-22 | go-type | 类型 DictionaryApi：定义该文件的数据结构或接口边界，支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-type
+- [F0436b420-S0004] 行 23-47 | go-func | 函数 CreateSysDictionary：执行创建或新增流程，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: CreateSysDictionary, ShouldBindJSON, FailWithMessage, Error, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F0436b420-S0005] 行 48-72 | go-func | 函数 DeleteSysDictionary：执行删除与清理流程，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: DeleteSysDictionary, ShouldBindJSON, FailWithMessage, Error, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F0436b420-S0006] 行 73-97 | go-func | 函数 UpdateSysDictionary：执行更新与配置写入流程，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: UpdateSysDictionary, ShouldBindJSON, FailWithMessage, Error, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F0436b420-S0007] 行 98-122 | go-func | 函数 FindSysDictionary：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: FindSysDictionary, ShouldBindQuery, FailWithMessage, Error, GetSysDictionary, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F0436b420-S0008] 行 123-147 | go-func | 函数 GetSysDictionaryList：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetSysDictionaryList, ShouldBindQuery, FailWithMessage, Error, GetSysDictionaryInfoList, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F0436b420-S0009] 行 148-176 | go-func | 函数 ExportSysDictionary：承载该模块的核心逻辑，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: ExportSysDictionary, ShouldBindQuery, FailWithMessage, Error, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F0436b420-S0010] 行 177-192 | go-func | 函数 ImportSysDictionary：承载该模块的核心逻辑，位于「菜单与权限编排」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: ImportSysDictionary, ShouldBindJSON, FailWithMessage, Error, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+
+## [Fb167ab32] server/api/v1/system/sys_error.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 200
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/response, github.com/flipped-aurora/gin-vue-admin/server/model/system, github.com/gin-gonic/gin, go.uber.org/zap
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fb167ab32-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fb167ab32-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Fb167ab32-S0003] 行 12-22 | go-type | 类型 SysErrorApi：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [Fb167ab32-S0004] 行 23-50 | go-func | 函数 CreateSysError：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: CreateSysError, Context, ShouldBindJSON, FailWithMessage, Error, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [Fb167ab32-S0005] 行 51-72 | go-func | 函数 DeleteSysError：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: DeleteSysError, Context, Query, Error, FailWithMessage, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [Fb167ab32-S0006] 行 73-95 | go-func | 函数 DeleteSysErrorByIds：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: DeleteSysErrorByIds, Context, QueryArray, Error, FailWithMessage, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [Fb167ab32-S0007] 行 96-123 | go-func | 函数 UpdateSysError：执行更新与配置写入流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: UpdateSysError, Context, ShouldBindJSON, FailWithMessage, Error, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [Fb167ab32-S0008] 行 124-146 | go-func | 函数 FindSysError：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: FindSysError, Context, Query, GetSysError, Error, FailWithMessage, OkWithData
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [Fb167ab32-S0009] 行 147-179 | go-func | 函数 GetSysErrorList：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetSysErrorList, Context, ShouldBindQuery, FailWithMessage, Error, GetSysErrorInfoList, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [Fb167ab32-S0010] 行 180-200 | go-func | 函数 GetSysErrorSolution：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetSysErrorSolution, Context, Query, FailWithMessage, Error, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+

@@ -1,0 +1,223 @@
+# web-hooks
+
+- 文件数量：3
+
+## [F17b95a06] web/src/hooks/charts.js
+- 语言: js
+- 领域: other (通用模块)
+- 行数: 19
+- imports: @/pinia, vue
+- entrypoints: -
+- depends_on: @/pinia
+- owned_by: frontend
+- 逻辑段:
+- [F17b95a06-S0001] 行 1-3 | preamble | 逻辑段 preamble：承载「通用模块」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, preamble
+- [F17b95a06-S0002] 行 4-4 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, js-import
+- [F17b95a06-S0003] 行 5-6 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, js-import
+- [F17b95a06-S0004] 行 7-7 | js-export | 函数/导出 export default：承载该模块的核心逻辑，用于支撑「通用模块」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: useChartOption
+- risks: -
+- tags: other, js-export
+- [F17b95a06-S0005] 行 8-8 | js-const | 逻辑段 js-const：承载「通用模块」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: useAppStore
+- risks: -
+- tags: other, js-const
+- [F17b95a06-S0006] 行 9-11 | js-const | 逻辑段 js-const：承载「通用模块」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: computed
+- risks: -
+- tags: other, js-const
+- [F17b95a06-S0007] 行 12-19 | js-const | 逻辑段 js-const：承载「通用模块」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: computed, sourceOption
+- risks: -
+- tags: other, js-const
+
+## [F01f3f803] web/src/hooks/responsive.js
+- 语言: js
+- 领域: other (通用模块)
+- 行数: 36
+- imports: @/pinia, @/utils/event, @vueuse/core, vue
+- entrypoints: -
+- depends_on: @/pinia, @/utils/event
+- owned_by: frontend
+- 逻辑段:
+- [F01f3f803-S0001] 行 1-3 | preamble | 逻辑段 preamble：承载「通用模块」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, preamble
+- [F01f3f803-S0002] 行 4-4 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, js-import
+- [F01f3f803-S0003] 行 5-5 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, js-import
+- [F01f3f803-S0004] 行 6-6 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, js-import
+- [F01f3f803-S0005] 行 7-8 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, js-import
+- [F01f3f803-S0006] 行 9-10 | js-const | 逻辑段 js-const：承载「通用模块」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, js-const
+- [F01f3f803-S0007] 行 11-11 | js-func | 函数/导出 queryDevice：执行查询与读取流程，用于支撑「通用模块」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: queryDevice
+- risks: -
+- tags: other, js-func
+- [F01f3f803-S0008] 行 12-15 | js-const | 逻辑段 js-const：承载「通用模块」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getBoundingClientRect
+- risks: -
+- tags: other, js-const
+- [F01f3f803-S0009] 行 16-16 | js-export | 函数/导出 export default：承载该模块的核心逻辑，用于支撑「通用模块」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: useResponsive
+- risks: -
+- tags: other, js-export
+- [F01f3f803-S0010] 行 17-17 | js-const | 逻辑段 js-const：承载「通用模块」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: useAppStore
+- risks: -
+- tags: other, js-const
+- [F01f3f803-S0011] 行 18-19 | js-func | 函数/导出 resizeHandler：处理请求或事件分发，用于支撑「通用模块」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: resizeHandler
+- risks: -
+- tags: other, js-func
+- [F01f3f803-S0012] 行 20-24 | js-const | 逻辑段 js-const：承载「通用模块」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: queryDevice, toggleDevice
+- risks: -
+- tags: other, js-const
+- [F01f3f803-S0013] 行 25-36 | js-const | 逻辑段 js-const：承载「通用模块」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: useDebounceFn, onMounted, debounceFn, onBeforeMount, addEventListen, onBeforeUnmount, removeEventListen
+- risks: -
+- tags: other, js-const
+
+## [F47bf67c7] web/src/hooks/use-windows-resize.js
+- 语言: js
+- 领域: other (通用模块)
+- 行数: 24
+- imports: @vueuse/core, vue
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [F47bf67c7-S0001] 行 1-1 | preamble | 逻辑段 preamble：承载「通用模块」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, preamble
+- [F47bf67c7-S0002] 行 2-2 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, js-import
+- [F47bf67c7-S0003] 行 3-4 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, js-import
+- [F47bf67c7-S0004] 行 5-5 | js-const | 逻辑段 js-const：承载「通用模块」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: shallowRef
+- risks: -
+- tags: other, js-const
+- [F47bf67c7-S0005] 行 6-7 | js-const | 逻辑段 js-const：承载「通用模块」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: shallowRef
+- risks: -
+- tags: other, js-const
+- [F47bf67c7-S0006] 行 8-8 | js-export | 函数/导出 useWindowResize：承载该模块的核心逻辑，用于支撑「通用模块」域。
+- inputs: cb
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, js-export
+- [F47bf67c7-S0007] 行 9-24 | js-const | 逻辑段 js-const：承载「通用模块」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: cb, tryOnMounted, useEventListener
+- risks: -
+- tags: other, js-const
+

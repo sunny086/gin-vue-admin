@@ -1,0 +1,837 @@
+# server-plugin
+
+- 文件数量：32
+
+## [Ff4000a04] server/plugin/announcement/api/enter.go
+- 语言: go
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 11
+- imports: github.com/flipped-aurora/gin-vue-admin/server/plugin/announcement/service
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Ff4000a04-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-package
+- [Ff4000a04-S0002] 行 3-4 | go-import | 逻辑段 go-import：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-import, plugin
+- [Ff4000a04-S0003] 行 5-9 | go-const-var | 逻辑段 go-const-var：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-const-var
+- [Ff4000a04-S0004] 行 10-11 | go-type | 类型 api：定义该文件的数据结构或接口边界，支撑「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-type
+
+## [Fb44621d2] server/plugin/announcement/api/info.go
+- 语言: go
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 184
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/response, github.com/flipped-aurora/gin-vue-admin/server/plugin/announcement/model, github.com/flipped-aurora/gin-vue-admin/server/plugin/announcement/model/request, github.com/gin-gonic/gin, go.uber.org/zap
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fb44621d2-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-package
+- [Fb44621d2-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: plugin-ecosystem, go-import, plugin
+- [Fb44621d2-S0003] 行 12-13 | go-const-var | 逻辑段 go-const-var：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-const-var
+- [Fb44621d2-S0004] 行 14-24 | go-type | 类型 info：定义该文件的数据结构或接口边界，支撑「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-type
+- [Fb44621d2-S0005] 行 25-49 | go-func | 函数 CreateInfo：执行创建或新增流程，位于「插件生态」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: CreateInfo, ShouldBindJSON, FailWithMessage, Error, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: plugin-ecosystem, go-func
+- [Fb44621d2-S0006] 行 50-68 | go-func | 函数 DeleteInfo：执行删除与清理流程，位于「插件生态」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: DeleteInfo, Query, Error, FailWithMessage, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: plugin-ecosystem, go-func
+- [Fb44621d2-S0007] 行 69-87 | go-func | 函数 DeleteInfoByIds：执行删除与清理流程，位于「插件生态」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: DeleteInfoByIds, QueryArray, Error, FailWithMessage, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: plugin-ecosystem, go-func
+- [Fb44621d2-S0008] 行 88-112 | go-func | 函数 UpdateInfo：执行更新与配置写入流程，位于「插件生态」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: UpdateInfo, ShouldBindJSON, FailWithMessage, Error, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: plugin-ecosystem, go-func
+- [Fb44621d2-S0009] 行 113-132 | go-func | 函数 FindInfo：执行查询与读取流程，位于「插件生态」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: FindInfo, Query, GetInfo, Error, FailWithMessage, OkWithData
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: plugin-ecosystem, go-func
+- [Fb44621d2-S0010] 行 133-160 | go-func | 函数 GetInfoList：执行查询与读取流程，位于「插件生态」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetInfoList, ShouldBindQuery, FailWithMessage, Error, GetInfoInfoList, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: plugin-ecosystem, go-func
+- [Fb44621d2-S0011] 行 161-179 | go-func | 函数 GetInfoDataSource：执行查询与读取流程，位于「插件生态」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetInfoDataSource, Error, FailWithMessage, OkWithData
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: plugin-ecosystem, go-func
+- [Fb44621d2-S0012] 行 180-184 | go-func | 函数 GetInfoPublic：执行查询与读取流程，位于「插件生态」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetInfoPublic, OkWithDetailed
+- risks: -
+- tags: plugin-ecosystem, go-func
+
+## [F67394f6c] server/plugin/announcement/config/config.go
+- 语言: go
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 5
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F67394f6c-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-package, config
+- [F67394f6c-S0002] 行 3-5 | go-type | 类型 Config：定义该文件的数据结构或接口边界，支撑「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-type
+
+## [F61106b1a] server/plugin/announcement/gen/gen.go
+- 语言: go
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 18
+- imports: github.com/flipped-aurora/gin-vue-admin/server/plugin/announcement/model, gorm.io/gen, path/filepath
+- entrypoints: main-function
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F61106b1a-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-package
+- [F61106b1a-S0002] 行 3-10 | go-import | 逻辑段 go-import：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: plugin-ecosystem, go-import, database, plugin
+- [F61106b1a-S0003] 行 11-18 | go-func | 函数 main：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: main, NewGenerator, Join, ApplyBasic, Execute
+- risks: -
+- tags: plugin-ecosystem, go-func
+
+## [Fbc8d9da6] server/plugin/announcement/initialize/api.go
+- 语言: go
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 50
+- imports: context, github.com/flipped-aurora/gin-vue-admin/server/plugin/plugin-tool/utils
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fbc8d9da6-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-package
+- [Fbc8d9da6-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: plugin-ecosystem, go-import, plugin
+- [Fbc8d9da6-S0003] 行 9-50 | go-func | 函数 Api：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: ctx context.Context
+- outputs: -
+- side_effects: -
+- calls: Api, RegisterApis
+- risks: -
+- tags: plugin-ecosystem, go-func
+
+## [F81e07d16] server/plugin/announcement/initialize/dictionary.go
+- 语言: go
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 13
+- imports: context, github.com/flipped-aurora/gin-vue-admin/server/plugin/plugin-tool/utils
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F81e07d16-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-package
+- [F81e07d16-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: plugin-ecosystem, go-import, plugin
+- [F81e07d16-S0003] 行 9-13 | go-func | 函数 Dictionary：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: ctx context.Context
+- outputs: -
+- side_effects: -
+- calls: Dictionary, RegisterDictionaries
+- risks: -
+- tags: plugin-ecosystem, go-func
+
+## [F9dd03a63] server/plugin/announcement/initialize/gorm.go
+- 语言: go
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 21
+- imports: context, fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/plugin/announcement/model, github.com/pkg/errors, go.uber.org/zap
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F9dd03a63-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-package
+- [F9dd03a63-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: plugin-ecosystem, go-import, plugin
+- [F9dd03a63-S0003] 行 12-21 | go-func | 函数 Gorm：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: ctx context.Context
+- outputs: -
+- side_effects: 写入数据库
+- calls: Gorm, WithContext, AutoMigrate, Wrap, L, Error, Sprintf
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: plugin-ecosystem, go-func, database
+
+## [Fbf33fb77] server/plugin/announcement/initialize/menu.go
+- 语言: go
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 23
+- imports: context, github.com/flipped-aurora/gin-vue-admin/server/plugin/plugin-tool/utils
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fbf33fb77-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-package
+- [Fbf33fb77-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: plugin-ecosystem, go-import, plugin
+- [Fbf33fb77-S0003] 行 9-23 | go-func | 函数 Menu：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: ctx context.Context
+- outputs: -
+- side_effects: -
+- calls: Menu, RegisterMenus
+- risks: -
+- tags: plugin-ecosystem, go-func, plugin
+
+## [Fa2163d2d] server/plugin/announcement/initialize/router.go
+- 语言: go
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 16
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/middleware, github.com/flipped-aurora/gin-vue-admin/server/plugin/announcement/router, github.com/gin-gonic/gin
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fa2163d2d-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-package
+- [Fa2163d2d-S0002] 行 3-9 | go-import | 逻辑段 go-import：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: plugin-ecosystem, go-import, plugin
+- [Fa2163d2d-S0003] 行 10-16 | go-func | 函数 Router：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: engine *gin.Engine
+- outputs: -
+- side_effects: -
+- calls: Router, Group, Use, JWTAuth, CasbinHandler, Init
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: plugin-ecosystem, go-func
+
+## [Fb08d328e] server/plugin/announcement/initialize/viper.go
+- 语言: go
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 18
+- imports: fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/plugin/announcement/plugin, github.com/pkg/errors, go.uber.org/zap
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fb08d328e-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-package
+- [Fb08d328e-S0002] 行 3-10 | go-import | 逻辑段 go-import：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: plugin-ecosystem, go-import, plugin
+- [Fb08d328e-S0003] 行 11-18 | go-func | 函数 Viper：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: Viper, UnmarshalKey, Wrap, L, Error, Sprintf
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: plugin-ecosystem, go-func, plugin
+
+## [F2a77d8df] server/plugin/announcement/model/info.go
+- 语言: go
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 21
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, gorm.io/datatypes
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F2a77d8df-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-package
+- [F2a77d8df-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: plugin-ecosystem, go-import, database
+- [F2a77d8df-S0003] 行 9-17 | go-type | 类型 Info：定义该文件的数据结构或接口边界，支撑「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: plugin-ecosystem, go-type, database
+- [F2a77d8df-S0004] 行 18-21 | go-func | 函数 TableName：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: TableName
+- risks: -
+- tags: plugin-ecosystem, go-func
+
+## [Fab8d0d65] server/plugin/announcement/model/request/info.go
+- 语言: go
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 13
+- imports: github.com/flipped-aurora/gin-vue-admin/server/model/common/request, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fab8d0d65-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-package
+- [Fab8d0d65-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: plugin-ecosystem, go-import
+- [Fab8d0d65-S0003] 行 8-13 | go-type | 类型 InfoSearch：定义该文件的数据结构或接口边界，支撑「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-type
+
+## [F80e05030] server/plugin/announcement/plugin.go
+- 语言: go
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 33
+- imports: context, github.com/flipped-aurora/gin-vue-admin/server/plugin/announcement/initialize, github.com/gin-gonic/gin
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F80e05030-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-package
+- [F80e05030-S0002] 行 3-9 | go-import | 逻辑段 go-import：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: plugin-ecosystem, go-import, plugin
+- [F80e05030-S0003] 行 10-11 | go-const-var | 逻辑段 go-const-var：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-const-var, plugin
+- [F80e05030-S0004] 行 12-13 | go-const-var | 逻辑段 go-const-var：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-const-var, plugin
+- [F80e05030-S0005] 行 14-15 | go-type | 类型 plugin：定义该文件的数据结构或接口边界，支撑「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-type, plugin
+- [F80e05030-S0006] 行 16-19 | go-func | 函数 init：完成初始化或注册流程，位于「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: init, Register
+- risks: -
+- tags: plugin-ecosystem, go-func
+- [F80e05030-S0007] 行 20-33 | go-func | 函数 Register：完成初始化或注册流程，位于「插件生态」域。
+- inputs: group *gin.Engine
+- outputs: -
+- side_effects: -
+- calls: Register, Background, Viper, Api, Menu, Dictionary, Gorm, Router
+- risks: -
+- tags: plugin-ecosystem, go-func, plugin, config
+
+## [F8b79e51a] server/plugin/announcement/plugin/plugin.go
+- 语言: go
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 6
+- imports: github.com/flipped-aurora/gin-vue-admin/server/plugin/announcement/config
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F8b79e51a-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-package, plugin
+- [F8b79e51a-S0002] 行 3-4 | go-import | 逻辑段 go-import：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-import, plugin, config
+- [F8b79e51a-S0003] 行 5-6 | go-const-var | 逻辑段 go-const-var：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-const-var, config
+
+## [Faa77ffc9] server/plugin/announcement/router/enter.go
+- 语言: go
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 11
+- imports: github.com/flipped-aurora/gin-vue-admin/server/plugin/announcement/api
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Faa77ffc9-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-package
+- [Faa77ffc9-S0002] 行 3-4 | go-import | 逻辑段 go-import：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-import, plugin
+- [Faa77ffc9-S0003] 行 5-9 | go-const-var | 逻辑段 go-const-var：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-const-var
+- [Faa77ffc9-S0004] 行 10-11 | go-type | 类型 router：定义该文件的数据结构或接口边界，支撑「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-type
+
+## [F5ca7c4b9] server/plugin/announcement/router/info.go
+- 语言: go
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 32
+- imports: github.com/flipped-aurora/gin-vue-admin/server/middleware, github.com/gin-gonic/gin
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F5ca7c4b9-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-package
+- [F5ca7c4b9-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: plugin-ecosystem, go-import
+- [F5ca7c4b9-S0003] 行 8-9 | go-const-var | 逻辑段 go-const-var：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-const-var
+- [F5ca7c4b9-S0004] 行 10-12 | go-type | 类型 info：定义该文件的数据结构或接口边界，支撑「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-type
+- [F5ca7c4b9-S0005] 行 13-32 | go-func | 函数 Init：完成初始化或注册流程，位于「插件生态」域。
+- inputs: public *gin.RouterGroup, private *gin.RouterGroup
+- outputs: -
+- side_effects: -
+- calls: Init, Group, Use, OperationRecord, POST, DELETE, PUT, GET
+- risks: -
+- tags: plugin-ecosystem, go-func
+
+## [F25102949] server/plugin/announcement/service/enter.go
+- 语言: go
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 6
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F25102949-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-package
+- [F25102949-S0002] 行 3-4 | go-const-var | 逻辑段 go-const-var：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-const-var
+- [F25102949-S0003] 行 5-6 | go-type | 类型 service：定义该文件的数据结构或接口边界，支撑「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-type
+
+## [Fcbcee539] server/plugin/announcement/service/info.go
+- 语言: go
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 79
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/plugin/announcement/model, github.com/flipped-aurora/gin-vue-admin/server/plugin/announcement/model/request
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fcbcee539-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-package
+- [Fcbcee539-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: plugin-ecosystem, go-import, plugin
+- [Fcbcee539-S0003] 行 9-10 | go-const-var | 逻辑段 go-const-var：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-const-var
+- [Fcbcee539-S0004] 行 11-14 | go-type | 类型 info：定义该文件的数据结构或接口边界，支撑「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-type
+- [Fcbcee539-S0005] 行 15-21 | go-func | 函数 CreateInfo：执行创建或新增流程，位于「插件生态」域。
+- inputs: info *model.Info
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: CreateInfo, Create
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: plugin-ecosystem, go-func
+- [Fcbcee539-S0006] 行 22-28 | go-func | 函数 DeleteInfo：执行删除与清理流程，位于「插件生态」域。
+- inputs: ID string
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: DeleteInfo, Delete
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: plugin-ecosystem, go-func
+- [Fcbcee539-S0007] 行 29-35 | go-func | 函数 DeleteInfoByIds：执行删除与清理流程，位于「插件生态」域。
+- inputs: IDs []string
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: DeleteInfoByIds, Delete
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: plugin-ecosystem, go-func
+- [Fcbcee539-S0008] 行 36-42 | go-func | 函数 UpdateInfo：执行更新与配置写入流程，位于「插件生态」域。
+- inputs: info model.Info
+- outputs: (err error)
+- side_effects: -
+- calls: UpdateInfo, Model, Where, Updates
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: plugin-ecosystem, go-func, database
+- [Fcbcee539-S0009] 行 43-49 | go-func | 函数 GetInfo：执行查询与读取流程，位于「插件生态」域。
+- inputs: ID string
+- outputs: (info model.Info, err error)
+- side_effects: -
+- calls: GetInfo, Where, First
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: plugin-ecosystem, go-func
+- [Fcbcee539-S0010] 行 50-70 | go-func | 函数 GetInfoInfoList：执行查询与读取流程，位于「插件生态」域。
+- inputs: info request.InfoSearch
+- outputs: (list []model.Info, total int64, err error)
+- side_effects: -
+- calls: GetInfoInfoList, Model, Where, Count, Limit, Offset, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: plugin-ecosystem, go-func, database
+- [Fcbcee539-S0011] 行 71-79 | go-func | 函数 GetInfoDataSource：执行查询与读取流程，位于「插件生态」域。
+- inputs: -
+- outputs: (res map[string][]map[string]any, err error)
+- side_effects: -
+- calls: GetInfoDataSource, Table, Select, Scan
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: plugin-ecosystem, go-func
+
+## [Fcc8e2a93] server/plugin/email/api/enter.go
+- 语言: go
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 8
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fcc8e2a93-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-package
+- [Fcc8e2a93-S0002] 行 3-6 | go-type | 类型 ApiGroup：定义该文件的数据结构或接口边界，支撑「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-type
+- [Fcc8e2a93-S0003] 行 7-8 | go-const-var | 逻辑段 go-const-var：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-const-var
+
+## [F77823c7f] server/plugin/email/api/sys_email.go
+- 语言: go
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 54
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/response, github.com/flipped-aurora/gin-vue-admin/server/plugin/email/service, github.com/gin-gonic/gin, go.uber.org/zap
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F77823c7f-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-package
+- [F77823c7f-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: plugin-ecosystem, go-import, plugin
+- [F77823c7f-S0003] 行 12-20 | go-type | 类型 EmailApi：定义该文件的数据结构或接口边界，支撑「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-type
+- [F77823c7f-S0004] 行 21-38 | go-func | 函数 EmailTest：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: EmailTest, Error, FailWithMessage, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: plugin-ecosystem, go-func
+- [F77823c7f-S0005] 行 39-54 | go-func | 函数 SendEmail：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: SendEmail, ShouldBindJSON, FailWithMessage, Error, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: plugin-ecosystem, go-func
+
+## [F3a4fc0af] server/plugin/email/config/email.go
+- 语言: go
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 13
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F3a4fc0af-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-package, config
+- [F3a4fc0af-S0002] 行 3-13 | go-type | 类型 Email：定义该文件的数据结构或接口边界，支撑「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-type
+

@@ -1,0 +1,794 @@
+# server-utils
+
+- 文件数量：66
+
+## [F75a9bbc1] server/utils/ast/ast_auto_enter.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 48
+- imports: bytes, fmt, go/ast, go/parser, go/printer, go/token, os
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F75a9bbc1-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F75a9bbc1-S0002] 行 3-12 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, security
+- [F75a9bbc1-S0003] 行 13-48 | go-func | 函数 ImportForAutoEnter：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: path string, funcName string, code string
+- outputs: -
+- side_effects: 写入文件系统
+- calls: ImportForAutoEnter, ReadFile, Println, NewFileSet, ParseFile, Inspect, NewBuffer, Fprint, WriteFile, Bytes
+- risks: -
+- tags: system-config, go-func, security
+
+## [F091d2247] server/utils/ast/ast_enter.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 182
+- imports: bytes, go/ast, go/format, go/parser, go/token, golang.org/x/text/cases, golang.org/x/text/language, log, os, strconv, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F091d2247-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F091d2247-S0002] 行 3-16 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, security
+- [F091d2247-S0003] 行 17-23 | go-type | 类型 Visitor：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F091d2247-S0004] 行 24-47 | go-func | 函数 Visit：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: node ast.Node
+- outputs: ast.Visitor
+- side_effects: -
+- calls: Visit, addImport, addStruct, addFuncBodyVar
+- risks: -
+- tags: system-config, go-func, security
+- [F091d2247-S0005] 行 48-81 | go-func | 函数 addStruct：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: genDecl *ast.GenDecl
+- outputs: ast.Visitor
+- side_effects: -
+- calls: addStruct, Index
+- risks: -
+- tags: system-config, go-func
+- [F091d2247-S0006] 行 82-102 | go-func | 函数 addImport：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: genDecl *ast.GenDecl
+- outputs: ast.Visitor
+- side_effects: -
+- calls: addImport, Quote
+- risks: -
+- tags: system-config, go-func, security
+- [F091d2247-S0007] 行 103-153 | go-func | 函数 addFuncBodyVar：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: funDecl *ast.FuncDecl
+- outputs: ast.Visitor
+- side_effects: -
+- calls: addFuncBodyVar, Title, String, copy
+- risks: -
+- tags: system-config, go-func, security
+- [F091d2247-S0008] 行 154-182 | go-func | 函数 ImportReference：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: filepath, importCode, structName, packageName, groupName string
+- outputs: error
+- side_effects: 写入文件系统
+- calls: ImportReference, NewFileSet, ParseFile, TrimSpace, Print, Walk, NewBuffer, Node, Fatal, WriteFile, Bytes
+- risks: -
+- tags: system-config, go-func, security
+
+## [Fcf0f859a] server/utils/ast/ast_gorm.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 167
+- imports: bytes, fmt, go/ast, go/parser, go/printer, go/token, os
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fcf0f859a-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fcf0f859a-S0002] 行 3-13 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, database, security
+- [Fcf0f859a-S0003] 行 14-39 | go-func | 函数 AddRegisterTablesAst：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: path, funcName, pk, varName, dbName, model string
+- outputs: -
+- side_effects: 写入数据库, 写入文件系统
+- calls: AddRegisterTablesAst, Sprintf, ReadFile, Println, NewFileSet, ParseFile, AddImport, FindFunction, Print, addDBVar, addAutoMigrate, NewBuffer
+- risks: -
+- tags: system-config, go-func, database, security
+- [Fcf0f859a-S0004] 行 40-84 | go-func | 函数 addDBVar：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: astBody *ast.BlockStmt, varName, dbName string
+- outputs: -
+- side_effects: -
+- calls: addDBVar, Sprintf
+- risks: -
+- tags: system-config, go-func, database, security
+- [Fcf0f859a-S0005] 行 85-150 | go-func | 函数 addAutoMigrate：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: astBody *ast.BlockStmt, dbname string, pk string, model string
+- outputs: -
+- side_effects: 写入数据库
+- calls: addAutoMigrate, Inspect, NeedAppendModel
+- risks: -
+- tags: system-config, go-func, database
+- [Fcf0f859a-S0006] 行 151-167 | go-func | 函数 NeedAppendModel：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: callNode ast.Node, pk string, model string
+- outputs: bool
+- side_effects: -
+- calls: NeedAppendModel, Inspect
+- risks: -
+- tags: system-config, go-func, database
+
+## [Fc310bcb0] server/utils/ast/ast_init_test.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 12
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, path/filepath
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fc310bcb0-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fc310bcb0-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Fc310bcb0-S0003] 行 8-12 | go-func | 函数 init：完成初始化或注册流程，位于「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: init, Abs
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+
+## [Fb73dfe97] server/utils/ast/ast_rollback.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 174
+- imports: bytes, fmt, github.com/flipped-aurora/gin-vue-admin/server/global, go/ast, go/parser, go/printer, go/token, os, path/filepath
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fb73dfe97-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fb73dfe97-S0002] 行 3-14 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, security
+- [Fb73dfe97-S0003] 行 15-19 | go-func | 函数 RollBackAst：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: pk, model string
+- outputs: -
+- side_effects: -
+- calls: RollBackAst, RollGormBack, RollRouterBack
+- risks: -
+- tags: system-config, go-func
+- [Fb73dfe97-S0004] 行 20-96 | go-func | 函数 RollGormBack：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: pk, model string
+- outputs: -
+- side_effects: 写入文件系统
+- calls: RollGormBack, Join, ReadFile, Println, NewFileSet, ParseFile, Inspect, NewBuffer, Fprint, Remove, WriteFile, Bytes
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database, security
+- [Fb73dfe97-S0005] 行 97-174 | go-func | 函数 RollRouterBack：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: pk, model string
+- outputs: -
+- side_effects: 写入文件系统
+- calls: RollRouterBack, Join, ReadFile, Println, NewFileSet, ParseFile, Inspect, NewBuffer, Fprint, Remove, WriteFile, Bytes
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, security
+
+## [Ff94a6dc4] server/utils/ast/ast_router.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 136
+- imports: bytes, fmt, go/ast, go/parser, go/printer, go/token, os, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Ff94a6dc4-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Ff94a6dc4-S0002] 行 3-13 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, security
+- [Ff94a6dc4-S0003] 行 14-17 | go-func | 函数 AppendNodeToList：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: stmts []ast.Stmt, stmt ast.Stmt, index int
+- outputs: []ast.Stmt
+- side_effects: -
+- calls: AppendNodeToList
+- risks: -
+- tags: system-config, go-func
+- [Ff94a6dc4-S0004] 行 18-94 | go-func | 函数 AddRouterCode：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: path, funcName, pk, model string
+- outputs: -
+- side_effects: 写入文件系统
+- calls: AddRouterCode, ReadFile, Println, NewFileSet, ParseFile, FindFunction, ToUpper, Sprintf, Print, needAppendRouter, AppendNodeToList, needAppendInit
+- risks: -
+- tags: system-config, go-func, security
+- [Ff94a6dc4-S0005] 行 95-118 | go-func | 函数 needAppendRouter：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: funcNode ast.Node, pk string
+- outputs: (bool, *ast.BlockStmt)
+- side_effects: -
+- calls: needAppendRouter, Inspect, Sprintf
+- risks: -
+- tags: system-config, go-func
+- [Ff94a6dc4-S0006] 行 119-136 | go-func | 函数 needAppendInit：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: funcNode ast.Node, routerName string, modelName string
+- outputs: bool
+- side_effects: -
+- calls: needAppendInit, Inspect
+- risks: -
+- tags: system-config, go-func
+
+## [F910d44cf] server/utils/ast/ast_test.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 33
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, go/ast, go/parser, go/printer, go/token, os, path/filepath, testing
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F910d44cf-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F910d44cf-S0002] 行 3-13 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, security
+- [F910d44cf-S0003] 行 14-33 | go-func | 函数 TestAst：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: t *testing.T
+- outputs: -
+- side_effects: 触发 panic
+- calls: TestAst, Join, NewFileSet, ParseFile, Error, Print, Fprint
+- risks: 存在 panic 路径，异常恢复依赖上层中间件 / 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, security, plugin
+
+## [F1fa90097] server/utils/ast/ast_type.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 54
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F1fa90097-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F1fa90097-S0002] 行 3-4 | go-type | 类型 Type：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F1fa90097-S0003] 行 5-8 | go-func | 函数 String：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: String, string
+- risks: -
+- tags: system-config, go-func
+- [F1fa90097-S0004] 行 9-33 | go-func | 函数 Group：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: Group
+- risks: -
+- tags: plugin-ecosystem, go-func
+- [F1fa90097-S0005] 行 34-54 | go-const-var | 逻辑段 go-const-var：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-const-var, database, plugin
+
+## [F97409f28] server/utils/ast/ast.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 410
+- imports: fmt, github.com/flipped-aurora/gin-vue-admin/server/model/system, go/ast, go/parser, go/token, log
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F97409f28-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F97409f28-S0002] 行 3-12 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, security
+- [F97409f28-S0003] 行 13-37 | go-func | 函数 AddImport：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: astNode ast.Node, imp string
+- outputs: -
+- side_effects: -
+- calls: AddImport, Sprintf, Inspect
+- risks: -
+- tags: system-config, go-func, security
+- [F97409f28-S0004] 行 38-52 | go-func | 函数 FindFunction：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: astNode ast.Node, FunctionName string
+- outputs: *ast.FuncDecl
+- side_effects: -
+- calls: FindFunction, Inspect, String
+- risks: -
+- tags: system-config, go-func
+- [F97409f28-S0005] 行 53-75 | go-func | 函数 FindArray：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: astNode ast.Node, identName, selectorExprName string
+- outputs: *ast.CompositeLit
+- side_effects: -
+- calls: FindArray, Inspect
+- risks: -
+- tags: system-config, go-func
+- [F97409f28-S0006] 行 76-206 | go-func | 函数 CreateMenuStructAst：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: menus []system.SysBaseMenu
+- outputs: *[]ast.Expr
+- side_effects: -
+- calls: CreateMenuStructAst, Sprintf
+- risks: -
+- tags: system-config, go-func, security
+- [F97409f28-S0007] 行 207-236 | go-func | 函数 CreateApiStructAst：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: apis []system.SysApi
+- outputs: *[]ast.Expr
+- side_effects: -
+- calls: CreateApiStructAst, Sprintf
+- risks: -
+- tags: system-config, go-func, security
+- [F97409f28-S0008] 行 237-249 | go-func | 函数 CheckImport：执行校验与约束判断，位于「系统配置与运行时」域。
+- inputs: file *ast.File, importPath string
+- outputs: bool
+- side_effects: -
+- calls: CheckImport
+- risks: -
+- tags: system-config, go-func
+- [F97409f28-S0009] 行 250-276 | go-func | 函数 clearPosition：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: astNode ast.Node
+- outputs: -
+- side_effects: -
+- calls: clearPosition, Inspect
+- risks: -
+- tags: system-config, go-func, security
+- [F97409f28-S0010] 行 277-285 | go-func | 函数 CreateStmt：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: statement string
+- outputs: *ast.ExprStmt
+- side_effects: -
+- calls: CreateStmt, ParseExpr, Fatal, clearPosition
+- risks: -
+- tags: system-config, go-func
+- [F97409f28-S0011] 行 286-290 | go-func | 函数 IsBlockStmt：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: node ast.Node
+- outputs: bool
+- side_effects: -
+- calls: IsBlockStmt
+- risks: -
+- tags: system-config, go-func
+- [F97409f28-S0012] 行 291-307 | go-func | 函数 VariableExistsInBlock：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: block *ast.BlockStmt, varName string
+- outputs: bool
+- side_effects: -
+- calls: VariableExistsInBlock, Inspect
+- risks: -
+- tags: system-config, go-func
+- [F97409f28-S0013] 行 308-410 | go-func | 函数 CreateDictionaryStructAst：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: dictionaries []system.SysDictionary
+- outputs: *[]ast.Expr
+- side_effects: -
+- calls: CreateDictionaryStructAst, Sprintf
+- risks: -
+- tags: system-config, go-func, security
+
+## [F6de7a090] server/utils/ast/extract_func.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 62
+- imports: fmt, go/ast, go/parser, go/token, os
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F6de7a090-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F6de7a090-S0002] 行 3-12 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, security
+- [F6de7a090-S0003] 行 13-62 | go-func | 函数 ExtractFuncSourceByPosition：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: filePath string, line int
+- outputs: (name string, source string, startLine int, endLine int, err error)
+- side_effects: -
+- calls: ExtractFuncSourceByPosition, ReadFile, Errorf, NewFileSet, ParseFile, Inspect, Position, Pos, End, string
+- risks: -
+- tags: system-config, go-func, security
+
+## [Fea84811b] server/utils/ast/import.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 95
+- imports: go/ast, go/token, io, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fea84811b-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fea84811b-S0002] 行 3-9 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, security
+- [Fea84811b-S0003] 行 10-14 | go-type | 类型 Import：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [Fea84811b-S0004] 行 15-18 | go-func | 函数 NewImport：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: importPath string
+- outputs: *Import
+- side_effects: -
+- calls: NewImport
+- risks: -
+- tags: system-config, go-func
+- [Fea84811b-S0005] 行 19-22 | go-func | 函数 Parse：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: filename string, writer io.Writer
+- outputs: (file *ast.File, err error)
+- side_effects: -
+- calls: Parse
+- risks: -
+- tags: system-config, go-func
+- [Fea84811b-S0006] 行 23-47 | go-func | 函数 Rollback：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Rollback, HasSuffix, import
+- risks: -
+- tags: system-config, go-func, security
+- [Fea84811b-S0007] 行 48-91 | go-func | 函数 Injection：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Injection, HasSuffix
+- risks: -
+- tags: system-config, go-func, security
+- [Fea84811b-S0008] 行 92-95 | go-func | 函数 Format：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: filename string, writer io.Writer, file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Format
+- risks: -
+- tags: system-config, go-func
+
+## [F37aea85c] server/utils/ast/interfaces_base.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 82
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/pkg/errors, go/ast, go/format, go/parser, go/token, io, os, path, path/filepath, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F37aea85c-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F37aea85c-S0002] 行 3-16 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, security
+- [F37aea85c-S0003] 行 17-20 | go-type | 类型 Base：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type, security
+- [F37aea85c-S0004] 行 21-33 | go-func | 函数 Parse：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: filename string, writer io.Writer
+- outputs: (file *ast.File, err error)
+- side_effects: -
+- calls: Parse, NewFileSet, ParseFile, Wrapf
+- risks: -
+- tags: system-config, go-func, security
+- [F37aea85c-S0005] 行 34-37 | go-func | 函数 Rollback：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Rollback
+- risks: -
+- tags: system-config, go-func
+- [F37aea85c-S0006] 行 38-41 | go-func | 函数 Injection：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Injection
+- risks: -
+- tags: system-config, go-func
+- [F37aea85c-S0007] 行 42-62 | go-func | 函数 Format：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: filename string, writer io.Writer, file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Format, NewFileSet, OpenFile, Close, Wrapf, Node
+- risks: -
+- tags: system-config, go-func, security
+- [F37aea85c-S0008] 行 63-74 | go-func | 函数 RelativePath：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: filePath string
+- outputs: string
+- side_effects: -
+- calls: RelativePath, Join, Index, TrimPrefix, Split, string
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [F37aea85c-S0009] 行 75-82 | go-func | 函数 AbsolutePath：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: filePath string
+- outputs: string
+- side_effects: -
+- calls: AbsolutePath, Join, Split
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+
+## [F35a609c4] server/utils/ast/interfaces.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 18
+- imports: go/ast, io
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F35a609c4-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F35a609c4-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F35a609c4-S0003] 行 8-18 | go-type | 类型 Ast：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: Parse, Rollback, Injection, Format
+- risks: -
+- tags: system-config, go-type
+
+## [F8e3dc3e2] server/utils/ast/package_enter_test.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 155
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, path/filepath, testing
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F8e3dc3e2-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F8e3dc3e2-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F8e3dc3e2-S0003] 行 9-82 | go-func | 函数 TestPackageEnter_Rollback：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: t *testing.T
+- outputs: -
+- side_effects: -
+- calls: TestPackageEnter_Rollback, Join, Run, Parse, Errorf, Rollback, Format
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [F8e3dc3e2-S0004] 行 83-155 | go-func | 函数 TestPackageEnter_Injection：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: t *testing.T
+- outputs: -
+- side_effects: -
+- calls: TestPackageEnter_Injection, Join, Run, Parse, Errorf, Injection, Format
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+
+## [F2c5fd50b] server/utils/ast/package_enter.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 86
+- imports: go/ast, go/token, io
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F2c5fd50b-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F2c5fd50b-S0002] 行 3-9 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, security
+- [F2c5fd50b-S0003] 行 10-20 | go-type | 类型 PackageEnter：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F2c5fd50b-S0004] 行 21-33 | go-func | 函数 Parse：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: filename string, writer io.Writer
+- outputs: (file *ast.File, err error)
+- side_effects: -
+- calls: Parse, RelativePath, AbsolutePath
+- risks: -
+- tags: system-config, go-func
+- [F2c5fd50b-S0005] 行 34-38 | go-func | 函数 Rollback：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Rollback
+- risks: -
+- tags: system-config, go-func
+- [F2c5fd50b-S0006] 行 39-79 | go-func | 函数 Injection：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Injection, NewImport, Inspect, Group
+- risks: -
+- tags: system-config, go-func, security
+- [F2c5fd50b-S0007] 行 80-86 | go-func | 函数 Format：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: filename string, writer io.Writer, file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Format
+- risks: -
+- tags: system-config, go-func
+
+## [Fd900ca90] server/utils/ast/package_initialize_gorm_test.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 172
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, path/filepath, testing
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fd900ca90-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fd900ca90-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Fd900ca90-S0003] 行 9-90 | go-func | 函数 TestPackageInitializeGorm_Injection：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: t *testing.T
+- outputs: -
+- side_effects: -
+- calls: TestPackageInitializeGorm_Injection, Join, Run, Parse, Errorf, Injection, Format
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database
+- [Fd900ca90-S0004] 行 91-172 | go-func | 函数 TestPackageInitializeGorm_Rollback：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: t *testing.T
+- outputs: -
+- side_effects: -
+- calls: TestPackageInitializeGorm_Rollback, Join, Run, Parse, Errorf, Rollback, Format
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database
+

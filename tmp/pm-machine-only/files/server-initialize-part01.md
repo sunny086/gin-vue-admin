@@ -1,0 +1,824 @@
+# server-initialize
+
+- 文件数量：25
+
+## [F4f678607] server/initialize/db_list.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 37
+- imports: github.com/flipped-aurora/gin-vue-admin/server/config, github.com/flipped-aurora/gin-vue-admin/server/global, gorm.io/gorm
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F4f678607-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F4f678607-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, database, config
+- [F4f678607-S0003] 行 9-10 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var
+- [F4f678607-S0004] 行 11-37 | go-func | 函数 DBList：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: 修改全局状态
+- calls: DBList, GormMysqlByConfig, GormMssqlByConfig, GormPgSqlByConfig, GormOracleByConfig
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database, config
+
+## [Fd55c1ff4] server/initialize/ensure_tables.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 119
+- imports: context, github.com/flipped-aurora/gin-vue-admin/server/model/example, github.com/flipped-aurora/gin-vue-admin/server/plugin/announcement/model, github.com/flipped-aurora/gin-vue-admin/server/service/system, gorm.io/gorm
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fd55c1ff4-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fd55c1ff4-S0002] 行 3-12 | go-import | 逻辑段 go-import：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: plugin-ecosystem, go-import, database, security, plugin
+- [Fd55c1ff4-S0003] 行 13-14 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var
+- [Fd55c1ff4-S0004] 行 15-17 | go-type | 类型 ensureTables：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [Fd55c1ff4-S0005] 行 18-21 | go-func | 函数 init：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: init, RegisterInit
+- risks: -
+- tags: system-config, go-func
+- [Fd55c1ff4-S0006] 行 22-24 | go-func | 函数 InitializerName：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: InitializerName
+- risks: -
+- tags: system-config, go-func
+- [Fd55c1ff4-S0007] 行 25-28 | go-func | 函数 InitializeData：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: ctx context.Context
+- outputs: (next context.Context, err error)
+- side_effects: -
+- calls: InitializeData
+- risks: -
+- tags: system-config, go-func
+- [Fd55c1ff4-S0008] 行 29-32 | go-func | 函数 DataInserted：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: ctx context.Context
+- outputs: bool
+- side_effects: -
+- calls: DataInserted
+- risks: -
+- tags: system-config, go-func
+- [Fd55c1ff4-S0009] 行 33-78 | go-func | 函数 MigrateTable：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: ctx context.Context
+- outputs: (context.Context, error)
+- side_effects: 写入数据库
+- calls: MigrateTable, Value, AutoMigrate
+- risks: -
+- tags: codegen-ai, go-func, database, security
+- [Fd55c1ff4-S0010] 行 79-119 | go-func | 函数 TableCreated：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: ctx context.Context
+- outputs: bool
+- side_effects: -
+- calls: TableCreated, Value, Migrator, HasTable
+- risks: -
+- tags: codegen-ai, go-func, database
+
+## [F8609d5a9] server/initialize/gorm_biz.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 15
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F8609d5a9-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F8609d5a9-S0002] 行 3-6 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F8609d5a9-S0003] 行 7-15 | go-func | 函数 bizModel：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: error
+- side_effects: 写入数据库
+- calls: bizModel, AutoMigrate
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+
+## [F690c16f2] server/initialize/gorm_mssql.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 65
+- imports: github.com/flipped-aurora/gin-vue-admin/server/config, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/initialize/internal, gorm.io/driver/sqlserver, gorm.io/gorm
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F690c16f2-S0001] 行 1-11 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package, database
+- [F690c16f2-S0002] 行 12-21 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, database, config
+- [F690c16f2-S0003] 行 22-44 | go-func | 函数 GormMssql：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: *gorm.DB
+- side_effects: -
+- calls: GormMssql, Dsn, Open, New, Config, InstanceSet, DB, SetMaxIdleConns, SetMaxOpenConns
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+- [F690c16f2-S0004] 行 45-65 | go-func | 函数 GormMssqlByConfig：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: m config.Mssql
+- outputs: *gorm.DB
+- side_effects: 触发 panic
+- calls: GormMssqlByConfig, Dsn, Open, New, Config, InstanceSet, DB, SetMaxIdleConns, SetMaxOpenConns
+- risks: 存在 panic 路径，异常恢复依赖上层中间件
+- tags: system-config, go-func, database, config
+
+## [Fd23fad6c] server/initialize/gorm_mysql.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 49
+- imports: github.com/flipped-aurora/gin-vue-admin/server/config, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/initialize/internal, gorm.io/driver/mysql, gorm.io/gorm
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fd23fad6c-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fd23fad6c-S0002] 行 3-15 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, database, config
+- [Fd23fad6c-S0003] 行 16-21 | go-func | 函数 GormMysql：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: *gorm.DB
+- side_effects: -
+- calls: GormMysql, initMysqlDatabase
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+- [Fd23fad6c-S0004] 行 22-26 | go-func | 函数 GormMysqlByConfig：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: m config.Mysql
+- outputs: *gorm.DB
+- side_effects: -
+- calls: GormMysqlByConfig, initMysqlDatabase
+- risks: -
+- tags: system-config, go-func, database, config
+- [Fd23fad6c-S0005] 行 27-49 | go-func | 函数 initMysqlDatabase：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: m config.Mysql
+- outputs: *gorm.DB
+- side_effects: 触发 panic
+- calls: initMysqlDatabase, Dsn, Open, New, Config, InstanceSet, DB, SetMaxIdleConns, SetMaxOpenConns
+- risks: 存在 panic 路径，异常恢复依赖上层中间件
+- tags: system-config, go-func, database, config
+
+## [F4e8db084] server/initialize/gorm_oracle.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 38
+- imports: github.com/flipped-aurora/gin-vue-admin/server/config, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/initialize/internal, gorm.io/gorm
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F4e8db084-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F4e8db084-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, database, config
+- [F4e8db084-S0003] 行 12-17 | go-func | 函数 GormOracle：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: *gorm.DB
+- side_effects: -
+- calls: GormOracle, initOracleDatabase
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+- [F4e8db084-S0004] 行 18-22 | go-func | 函数 GormOracleByConfig：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: m config.Oracle
+- outputs: *gorm.DB
+- side_effects: -
+- calls: GormOracleByConfig, initOracleDatabase
+- risks: -
+- tags: system-config, go-func, database, config
+- [F4e8db084-S0005] 行 23-38 | go-func | 函数 initOracleDatabase：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: m config.Oracle
+- outputs: *gorm.DB
+- side_effects: 触发 panic
+- calls: initOracleDatabase, Open, Dsn, Config, DB, SetMaxIdleConns, SetMaxOpenConns
+- risks: 存在 panic 路径，异常恢复依赖上层中间件
+- tags: system-config, go-func, database, config
+
+## [Fef59548b] server/initialize/gorm_pgsql.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 44
+- imports: github.com/flipped-aurora/gin-vue-admin/server/config, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/initialize/internal, gorm.io/driver/postgres, gorm.io/gorm
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fef59548b-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fef59548b-S0002] 行 3-13 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, database, config
+- [Fef59548b-S0003] 行 14-19 | go-func | 函数 GormPgSql：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: *gorm.DB
+- side_effects: -
+- calls: GormPgSql, initPgSqlDatabase
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+- [Fef59548b-S0004] 行 20-24 | go-func | 函数 GormPgSqlByConfig：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: p config.Pgsql
+- outputs: *gorm.DB
+- side_effects: -
+- calls: GormPgSqlByConfig, initPgSqlDatabase
+- risks: -
+- tags: system-config, go-func, database, config
+- [Fef59548b-S0005] 行 25-44 | go-func | 函数 initPgSqlDatabase：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: p config.Pgsql
+- outputs: *gorm.DB
+- side_effects: 触发 panic
+- calls: initPgSqlDatabase, Dsn, Open, New, Config, DB, SetMaxIdleConns, SetMaxOpenConns
+- risks: 存在 panic 路径，异常恢复依赖上层中间件
+- tags: system-config, go-func, database, config
+
+## [F4280844e] server/initialize/gorm_sqlite.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 39
+- imports: github.com/flipped-aurora/gin-vue-admin/server/config, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/initialize/internal, github.com/glebarez/sqlite, gorm.io/gorm
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F4280844e-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F4280844e-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, database, config
+- [F4280844e-S0003] 行 12-17 | go-func | 函数 GormSqlite：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: *gorm.DB
+- side_effects: -
+- calls: GormSqlite, initSqliteDatabase
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+- [F4280844e-S0004] 行 18-22 | go-func | 函数 GormSqliteByConfig：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: s config.Sqlite
+- outputs: *gorm.DB
+- side_effects: -
+- calls: GormSqliteByConfig, initSqliteDatabase
+- risks: -
+- tags: system-config, go-func, database, config
+- [F4280844e-S0005] 行 23-39 | go-func | 函数 initSqliteDatabase：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: s config.Sqlite
+- outputs: *gorm.DB
+- side_effects: 触发 panic
+- calls: initSqliteDatabase, Open, Dsn, Config, DB, SetMaxIdleConns, SetMaxOpenConns
+- risks: 存在 panic 路径，异常恢复依赖上层中间件
+- tags: system-config, go-func, database, config
+
+## [F123a25ef] server/initialize/gorm.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 88
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/example, github.com/flipped-aurora/gin-vue-admin/server/model/system, go.uber.org/zap, gorm.io/gorm, os
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F123a25ef-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F123a25ef-S0002] 行 3-13 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, database
+- [F123a25ef-S0003] 行 14-36 | go-func | 函数 Gorm：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: *gorm.DB
+- side_effects: 修改全局状态
+- calls: Gorm, GormMysql, GormPgSql, GormOracle, GormMssql, GormSqlite
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+- [F123a25ef-S0004] 行 37-88 | go-func | 函数 RegisterTables：完成初始化或注册流程，位于「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: 触发进程退出, 写入数据库
+- calls: RegisterTables, Info, AutoMigrate, Error, Exit, bizModel
+- risks: 存在进程级退出路径，影响服务可用性 / 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database
+
+## [F87cd90a4] server/initialize/init.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 16
+- imports: github.com/flipped-aurora/gin-vue-admin/server/utils
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F87cd90a4-S0001] 行 1-2 | preamble | 逻辑段 preamble：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, preamble
+- [F87cd90a4-S0002] 行 3-4 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F87cd90a4-S0003] 行 5-9 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F87cd90a4-S0004] 行 10-16 | go-func | 函数 SetupHandlers：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: SetupHandlers, RegisterReloadHandler, Reload
+- risks: -
+- tags: system-config, go-func
+
+## [F2d82134e] server/initialize/internal/gorm_logger_writer.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 42
+- imports: fmt, github.com/flipped-aurora/gin-vue-admin/server/config, github.com/flipped-aurora/gin-vue-admin/server/global, gorm.io/gorm/logger
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F2d82134e-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F2d82134e-S0002] 行 3-9 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, database, config
+- [F2d82134e-S0003] 行 10-14 | go-type | 类型 Writer：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type, config
+- [F2d82134e-S0004] 行 15-19 | go-func | 函数 NewWriter：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: config config.GeneralDB
+- outputs: *Writer
+- side_effects: -
+- calls: NewWriter
+- risks: -
+- tags: system-config, go-func, config
+- [F2d82134e-S0005] 行 20-42 | go-func | 函数 Printf：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: message string, data ...any
+- outputs: -
+- side_effects: -
+- calls: Printf, LogLevel, Debug, Sprintf, Error, Warn, Info
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, config
+
+## [F70da3f19] server/initialize/internal/gorm.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 32
+- imports: github.com/flipped-aurora/gin-vue-admin/server/config, gorm.io/gorm, gorm.io/gorm/logger, gorm.io/gorm/schema, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F70da3f19-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F70da3f19-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, database, config
+- [F70da3f19-S0003] 行 12-13 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var, database
+- [F70da3f19-S0004] 行 14-17 | go-type | 类型 _gorm：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type, database
+- [F70da3f19-S0005] 行 18-32 | go-func | 函数 Config：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: general config.GeneralDB
+- outputs: *gorm.Config
+- side_effects: -
+- calls: Config, New, NewWriter, LogLevel
+- risks: -
+- tags: system-config, go-func, database, config
+
+## [Fd4a16ac4] server/initialize/internal/mongo.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 30
+- imports: context, fmt, github.com/qiniu/qmgo/options, go.mongodb.org/mongo-driver/event, go.uber.org/zap
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fd4a16ac4-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fd4a16ac4-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Fd4a16ac4-S0003] 行 12-13 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var
+- [Fd4a16ac4-S0004] 行 14-15 | go-type | 类型 mongo：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [Fd4a16ac4-S0005] 行 16-30 | go-func | 函数 GetClientOptions：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: []options.ClientOptions
+- side_effects: -
+- calls: GetClientOptions, L, Info, Sprintf, String, Error
+- risks: -
+- tags: system-config, go-func
+
+## [F7ca67c1a] server/initialize/mongo.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 156
+- imports: context, fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/initialize/internal, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/pkg/errors, github.com/qiniu/qmgo, github.com/qiniu/qmgo/options, go.mongodb.org/mongo-driver/bson, sort, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F7ca67c1a-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F7ca67c1a-S0002] 行 3-17 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F7ca67c1a-S0003] 行 18-19 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var
+- [F7ca67c1a-S0004] 行 20-29 | go-type | 类型 Type：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F7ca67c1a-S0005] 行 30-41 | go-func | 函数 Indexes：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: ctx context.Context
+- outputs: error
+- side_effects: -
+- calls: Indexes, CreateIndexes
+- risks: -
+- tags: system-config, go-func
+- [F7ca67c1a-S0006] 行 42-76 | go-func | 函数 Initialization：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: error
+- side_effects: 修改全局状态
+- calls: Initialization, GetClientOptions, Background, Uri, Open, Wrap, Indexes
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, config
+- [F7ca67c1a-S0007] 行 77-156 | go-func | 函数 CreateIndexes：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: ctx context.Context, name string, indexes [][]string
+- outputs: error
+- side_effects: -
+- calls: CreateIndexes, Collection, CloneCollection, Wrapf, Indexes, List, All, Strings, Join, Errorf, Sprintf, Name
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+
+## [Fb6441eec] server/initialize/other.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 33
+- imports: bufio, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/songzhibin97/gkit/cache/local_cache, os, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fb6441eec-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fb6441eec-S0002] 行 3-12 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Fb6441eec-S0003] 行 13-33 | go-func | 函数 OtherInit：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: 触发 panic, 修改全局状态
+- calls: OtherInit, ParseDuration, NewCache, SetDefaultExpire, Open, NewScanner, Scan, TrimPrefix, Text
+- risks: 存在 panic 路径，异常恢复依赖上层中间件 / 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+
+## [F69885e3f] server/initialize/plugin_biz_v1.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 37
+- imports: fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/plugin/email, github.com/flipped-aurora/gin-vue-admin/server/utils/plugin, github.com/gin-gonic/gin
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F69885e3f-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F69885e3f-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: plugin-ecosystem, go-import, plugin
+- [F69885e3f-S0003] 行 12-20 | go-func | 函数 PluginInit：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: group *gin.RouterGroup, Plugin ...plugin.Plugin
+- outputs: -
+- side_effects: -
+- calls: PluginInit, Println, RouterPath, Group, Register
+- risks: -
+- tags: plugin-ecosystem, go-func, plugin
+- [F69885e3f-S0004] 行 21-37 | go-func | 函数 bizPluginV1：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: group ...*gin.RouterGroup
+- outputs: -
+- side_effects: -
+- calls: bizPluginV1, PluginInit, CreateEmailPlug, holder
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: plugin-ecosystem, go-func
+
+## [F6264a7bc] server/initialize/plugin_biz_v2.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 17
+- imports: github.com/flipped-aurora/gin-vue-admin/server/utils/plugin/v2, github.com/gin-gonic/gin
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F6264a7bc-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F6264a7bc-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: plugin-ecosystem, go-import, plugin
+- [F6264a7bc-S0003] 行 9-13 | go-func | 函数 PluginInitV2：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: group *gin.Engine, plugins ...plugin.Plugin
+- outputs: -
+- side_effects: -
+- calls: PluginInitV2, Register
+- risks: -
+- tags: plugin-ecosystem, go-func, plugin
+- [F6264a7bc-S0004] 行 14-17 | go-func | 函数 bizPluginV2：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: engine *gin.Engine
+- outputs: -
+- side_effects: -
+- calls: bizPluginV2, PluginInitV2, Registered
+- risks: -
+- tags: plugin-ecosystem, go-func, plugin
+
+## [F490723d3] server/initialize/plugin.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 16
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/gin-gonic/gin
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F490723d3-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F490723d3-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F490723d3-S0003] 行 8-16 | go-func | 函数 InstallPlugin：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: PrivateGroup *gin.RouterGroup, PublicRouter *gin.RouterGroup, engine *gin.Engine
+- outputs: -
+- side_effects: 修改全局状态
+- calls: InstallPlugin, Info, bizPluginV1, bizPluginV2
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: plugin-ecosystem, go-func
+
+## [F849a0fcf] server/initialize/redis.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 60
+- imports: context, github.com/flipped-aurora/gin-vue-admin/server/config, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/redis/go-redis/v9, go.uber.org/zap
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F849a0fcf-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F849a0fcf-S0002] 行 3-12 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, config
+- [F849a0fcf-S0003] 行 13-38 | go-func | 函数 initRedisClient：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: redisCfg config.Redis
+- outputs: (redis.UniversalClient, error)
+- side_effects: -
+- calls: initRedisClient, NewClusterClient, NewClient, Ping, Background, Result, Error, String, Info
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, config
+- [F849a0fcf-S0004] 行 39-46 | go-func | 函数 Redis：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: 触发 panic, 修改全局状态
+- calls: Redis, initRedisClient
+- risks: 存在 panic 路径，异常恢复依赖上层中间件 / 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F849a0fcf-S0005] 行 47-60 | go-func | 函数 RedisList：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: 触发 panic, 修改全局状态
+- calls: RedisList, initRedisClient
+- risks: 存在 panic 路径，异常恢复依赖上层中间件 / 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+

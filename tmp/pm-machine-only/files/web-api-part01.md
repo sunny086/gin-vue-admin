@@ -1,0 +1,275 @@
+# web-api
+
+- 文件数量：27
+
+## [F82e32e61] web/src/api/api.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 207
+- imports: @/utils/request
+- entrypoints: -
+- depends_on: @/utils/request
+- owned_by: frontend
+- 逻辑段:
+- [F82e32e61-S0001] 行 1-14 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F82e32e61-S0002] 行 15-30 | js-export | 函数/导出 getApiList：执行查询与读取流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F82e32e61-S0003] 行 31-46 | js-export | 函数/导出 createApi：执行创建或新增流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F82e32e61-S0004] 行 47-62 | js-export | 函数/导出 getApiById：执行查询与读取流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F82e32e61-S0005] 行 63-78 | js-export | 函数/导出 updateApi：执行更新与配置写入流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F82e32e61-S0006] 行 79-93 | js-export | 函数/导出 setAuthApi：执行更新与配置写入流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F82e32e61-S0007] 行 94-109 | js-export | 函数/导出 getAllApis：执行查询与读取流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F82e32e61-S0008] 行 110-125 | js-export | 函数/导出 deleteApi：执行删除与清理流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F82e32e61-S0009] 行 126-140 | js-export | 函数/导出 deleteApisByIds：执行删除与清理流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export, security
+- [F82e32e61-S0010] 行 141-147 | js-export | 函数/导出 freshCasbin：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F82e32e61-S0011] 行 148-154 | js-export | 函数/导出 syncApi：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F82e32e61-S0012] 行 155-161 | js-export | 函数/导出 getApiGroups：执行查询与读取流程，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F82e32e61-S0013] 行 162-169 | js-export | 函数/导出 ignoreApi：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F82e32e61-S0014] 行 170-183 | js-export | 函数/导出 enterSyncApi：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F82e32e61-S0015] 行 184-199 | js-export | 函数/导出 getApiRoles：执行查询与读取流程，用于支撑「前端框架内核」域。
+- inputs: path, method
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export, security
+- [F82e32e61-S0016] 行 200-207 | js-export | 函数/导出 setApiRoles：执行更新与配置写入流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+
+## [F5f17b842] web/src/api/attachmentCategory.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 27
+- imports: @/utils/request
+- entrypoints: -
+- depends_on: @/utils/request
+- owned_by: frontend
+- 逻辑段:
+- [F5f17b842-S0001] 行 1-2 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F5f17b842-S0002] 行 3-10 | js-export | 函数/导出 getCategoryList：执行查询与读取流程，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F5f17b842-S0003] 行 11-19 | js-export | 函数/导出 addCategory：执行创建或新增流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F5f17b842-S0004] 行 20-27 | js-export | 函数/导出 deleteCategory：执行删除与清理流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+
+## [F7c68605e] web/src/api/authority.js
+- 语言: js
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 114
+- imports: @/utils/request
+- entrypoints: -
+- depends_on: @/utils/request
+- owned_by: frontend
+- 逻辑段:
+- [F7c68605e-S0001] 行 1-2 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, js-import, security
+- [F7c68605e-S0002] 行 3-17 | js-export | 函数/导出 getAuthorityList：执行查询与读取流程，用于支撑「鉴权与访问控制」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: auth-access, js-export, security
+- [F7c68605e-S0003] 行 18-32 | js-export | 函数/导出 deleteAuthority：执行删除与清理流程，用于支撑「鉴权与访问控制」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: auth-access, js-export, security
+- [F7c68605e-S0004] 行 33-48 | js-export | 函数/导出 createAuthority：执行创建或新增流程，用于支撑「鉴权与访问控制」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: auth-access, js-export, security
+- [F7c68605e-S0005] 行 49-63 | js-export | 函数/导出 copyAuthority：承载该模块的核心逻辑，用于支撑「鉴权与访问控制」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: auth-access, js-export, security
+- [F7c68605e-S0006] 行 64-78 | js-export | 函数/导出 setDataAuthority：执行更新与配置写入流程，用于支撑「鉴权与访问控制」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: auth-access, js-export, security
+- [F7c68605e-S0007] 行 79-91 | js-export | 函数/导出 updateAuthority：执行更新与配置写入流程，用于支撑「鉴权与访问控制」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: auth-access, js-export, security
+- [F7c68605e-S0008] 行 92-106 | js-export | 函数/导出 getUsersByAuthorityId：执行查询与读取流程，用于支撑「鉴权与访问控制」域。
+- inputs: authorityId
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: auth-access, js-export, security
+- [F7c68605e-S0009] 行 107-114 | js-export | 函数/导出 setRoleUsers：执行更新与配置写入流程，用于支撑「鉴权与访问控制」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: auth-access, js-export, security
+
+## [Ffd4fae78] web/src/api/authorityBtn.js
+- 语言: js
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 26
+- imports: @/utils/request
+- entrypoints: -
+- depends_on: @/utils/request
+- owned_by: frontend
+- 逻辑段:
+- [Ffd4fae78-S0001] 行 1-2 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, js-import
+- [Ffd4fae78-S0002] 行 3-10 | js-export | 函数/导出 getAuthorityBtnApi：执行查询与读取流程，用于支撑「鉴权与访问控制」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: auth-access, js-export, security
+- [Ffd4fae78-S0003] 行 11-18 | js-export | 函数/导出 setAuthorityBtnApi：执行更新与配置写入流程，用于支撑「鉴权与访问控制」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: auth-access, js-export, security
+- [Ffd4fae78-S0004] 行 19-26 | js-export | 函数/导出 canRemoveAuthorityBtnApi：执行删除与清理流程，用于支撑「鉴权与访问控制」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: auth-access, js-export, security
+

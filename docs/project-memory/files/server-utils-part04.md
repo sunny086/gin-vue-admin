@@ -1,0 +1,837 @@
+## [F3160280a] server/utils/server.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 127
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/shirou/gopsutil/v3/cpu, github.com/shirou/gopsutil/v3/disk, github.com/shirou/gopsutil/v3/mem, runtime, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F3160280a-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F3160280a-S0002] 行 3-12 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F3160280a-S0003] 行 13-19 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var
+- [F3160280a-S0004] 行 20-26 | go-type | 类型 Server：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F3160280a-S0005] 行 27-34 | go-type | 类型 Os：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [F3160280a-S0006] 行 35-39 | go-type | 类型 Cpu：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F3160280a-S0007] 行 40-45 | go-type | 类型 Ram：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F3160280a-S0008] 行 46-59 | go-type | 类型 Disk：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F3160280a-S0009] 行 60-73 | go-func | 函数 InitOS：完成初始化或注册流程，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: (o Os)
+- side_effects: -
+- calls: InitOS, NumCPU, Version, NumGoroutine
+- risks: -
+- tags: mcp-skills, go-func
+- [F3160280a-S0010] 行 74-92 | go-func | 函数 InitCPU：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: (c Cpu, err error)
+- side_effects: -
+- calls: InitCPU, Counts, Percent, Duration
+- risks: -
+- tags: system-config, go-func
+- [F3160280a-S0011] 行 93-108 | go-func | 函数 InitRAM：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: (r Ram, err error)
+- side_effects: -
+- calls: InitRAM, VirtualMemory, int
+- risks: -
+- tags: system-config, go-func
+- [F3160280a-S0012] 行 109-127 | go-func | 函数 InitDisk：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: (d []Disk, err error)
+- side_effects: -
+- calls: InitDisk, Usage, int
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+
+## [Fd3d98298] server/utils/stacktrace/stacktrace.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 79
+- imports: regexp, strconv, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fd3d98298-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fd3d98298-S0002] 行 3-9 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Fd3d98298-S0003] 行 10-15 | go-type | 类型 Frame：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [Fd3d98298-S0004] 行 16-19 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: MustCompile
+- risks: -
+- tags: system-config, go-const-var
+- [Fd3d98298-S0005] 行 20-46 | go-func | 函数 FindFinalCaller：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: stack string
+- outputs: (Frame, bool)
+- side_effects: -
+- calls: FindFinalCaller, Split, TrimSpace, FindStringSubmatch, Atoi, shouldSkip
+- risks: -
+- tags: system-config, go-func
+- [Fd3d98298-S0006] 行 47-79 | go-func | 函数 shouldSkip：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: file string
+- outputs: bool
+- side_effects: -
+- calls: shouldSkip, Contains
+- risks: -
+- tags: system-config, go-func, database
+
+## [F8eb135b0] server/utils/system_events.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 35
+- imports: sync
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F8eb135b0-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F8eb135b0-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F8eb135b0-S0003] 行 8-13 | go-type | 类型 SystemEvents：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F8eb135b0-S0004] 行 14-16 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var
+- [F8eb135b0-S0005] 行 17-23 | go-func | 函数 RegisterReloadHandler：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: handler func(
+- outputs: error)
+- side_effects: -
+- calls: RegisterReloadHandler, Lock, Unlock
+- risks: -
+- tags: system-config, go-func
+- [F8eb135b0-S0006] 行 24-35 | go-func | 函数 TriggerReload：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: error
+- side_effects: -
+- calls: TriggerReload, RLock, RUnlock, handler
+- risks: -
+- tags: system-config, go-func
+
+## [F2ad88cbd] server/utils/timer/timed_task_test.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 73
+- imports: fmt, github.com/stretchr/testify/assert, testing, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F2ad88cbd-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F2ad88cbd-S0002] 行 3-10 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F2ad88cbd-S0003] 行 11-12 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var
+- [F2ad88cbd-S0004] 行 13-14 | go-type | 类型 mockJob：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F2ad88cbd-S0005] 行 15-18 | go-func | 函数 Run：控制服务运行状态，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: Run, mockFunc
+- risks: -
+- tags: system-config, go-func
+- [F2ad88cbd-S0006] 行 19-23 | go-func | 函数 mockFunc：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: mockFunc, Sleep, Println
+- risks: -
+- tags: system-config, go-func
+- [F2ad88cbd-S0007] 行 24-73 | go-func | 函数 TestNewTimerTask：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: t *testing.T
+- outputs: -
+- side_effects: -
+- calls: TestNewTimerTask, NewTimerTask, AddTaskByFunc, Nil, Error, AddTaskByJob, FindCron, Clear, FindCronList, Println
+- risks: -
+- tags: system-config, go-func
+
+## [Fbbe66ba2] server/utils/timer/timed_task.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 230
+- imports: github.com/robfig/cron/v3, sync
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fbbe66ba2-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fbbe66ba2-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Fbbe66ba2-S0003] 行 8-36 | go-type | 类型 Timer：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: FindCronList, AddTaskByFuncWithSecond, AddTaskByJobWithSeconds, Run, AddTaskByFunc, AddTaskByJob, FindCron, StartCron, StopCron, FindTask, RemoveTask, RemoveTaskByName
+- risks: -
+- tags: system-config, go-type
+- [Fbbe66ba2-S0004] 行 37-42 | go-type | 类型 task：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [Fbbe66ba2-S0005] 行 43-48 | go-type | 类型 taskManager：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [Fbbe66ba2-S0006] 行 49-54 | go-type | 类型 timer：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [Fbbe66ba2-S0007] 行 55-75 | go-func | 函数 AddTaskByFunc：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: cronName string, spec string, fun func(
+- outputs: , taskName string, option ...cron.Option) (cron.EntryID, error)
+- side_effects: -
+- calls: AddTaskByFunc, Lock, Unlock, New, AddFunc, Start
+- risks: -
+- tags: system-config, go-func
+- [Fbbe66ba2-S0008] 行 76-97 | go-func | 函数 AddTaskByFuncWithSecond：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: cronName string, spec string, fun func(
+- outputs: , taskName string, option ...cron.Option) (cron.EntryID, error)
+- side_effects: -
+- calls: AddTaskByFuncWithSecond, Lock, Unlock, WithSeconds, New, AddFunc, Start
+- risks: -
+- tags: system-config, go-func
+- [Fbbe66ba2-S0009] 行 98-118 | go-func | 函数 AddTaskByJob：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: cronName string, spec string, job interface{ Run(
+- outputs: }, taskName string, option ...cron.Option) (cron.EntryID, error)
+- side_effects: -
+- calls: AddTaskByJob, Run, Lock, Unlock, New, AddJob, Start
+- risks: -
+- tags: system-config, go-func
+- [Fbbe66ba2-S0010] 行 119-140 | go-func | 函数 AddTaskByJobWithSeconds：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: cronName string, spec string, job interface{ Run(
+- outputs: }, taskName string, option ...cron.Option) (cron.EntryID, error)
+- side_effects: -
+- calls: AddTaskByJobWithSeconds, Run, Lock, Unlock, WithSeconds, New, AddJob, Start
+- risks: -
+- tags: system-config, go-func
+- [Fbbe66ba2-S0011] 行 141-148 | go-func | 函数 FindCron：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: cronName string
+- outputs: (*taskManager, bool)
+- side_effects: -
+- calls: FindCron, Lock, Unlock
+- risks: -
+- tags: system-config, go-func
+- [Fbbe66ba2-S0012] 行 149-164 | go-func | 函数 FindTask：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: cronName string, taskName string
+- outputs: (*task, bool)
+- side_effects: -
+- calls: FindTask, Lock, Unlock
+- risks: -
+- tags: system-config, go-func
+- [Fbbe66ba2-S0013] 行 165-171 | go-func | 函数 FindCronList：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: map[string]*taskManager
+- side_effects: -
+- calls: FindCronList, Lock, Unlock
+- risks: -
+- tags: system-config, go-func
+- [Fbbe66ba2-S0014] 行 172-180 | go-func | 函数 StartCron：控制服务运行状态，位于「系统配置与运行时」域。
+- inputs: cronName string
+- outputs: -
+- side_effects: -
+- calls: StartCron, Lock, Unlock, Start
+- risks: -
+- tags: system-config, go-func
+- [Fbbe66ba2-S0015] 行 181-189 | go-func | 函数 StopCron：控制服务运行状态，位于「系统配置与运行时」域。
+- inputs: cronName string
+- outputs: -
+- side_effects: -
+- calls: StopCron, Lock, Unlock, Stop
+- risks: -
+- tags: system-config, go-func
+- [Fbbe66ba2-S0016] 行 190-199 | go-func | 函数 RemoveTask：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: cronName string, id int
+- outputs: -
+- side_effects: -
+- calls: RemoveTask, Lock, Unlock, Remove, EntryID
+- risks: -
+- tags: system-config, go-func
+- [Fbbe66ba2-S0017] 行 200-208 | go-func | 函数 RemoveTaskByName：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: cronName string, taskName string
+- outputs: -
+- side_effects: -
+- calls: RemoveTaskByName, FindTask, RemoveTask, int
+- risks: -
+- tags: system-config, go-func
+- [Fbbe66ba2-S0018] 行 209-218 | go-func | 函数 Clear：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: cronName string
+- outputs: -
+- side_effects: -
+- calls: Clear, Lock, Unlock, Stop
+- risks: -
+- tags: system-config, go-func
+- [Fbbe66ba2-S0019] 行 219-226 | go-func | 函数 Close：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: Close, Lock, Unlock, Stop
+- risks: -
+- tags: system-config, go-func
+- [Fbbe66ba2-S0020] 行 227-230 | go-func | 函数 NewTimerTask：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: Timer
+- side_effects: -
+- calls: NewTimerTask
+- risks: -
+- tags: system-config, go-func
+
+## [F6cb2906f] server/utils/upload/aliyun_oss.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 76
+- imports: errors, github.com/aliyun/aliyun-oss-go-sdk/oss, github.com/flipped-aurora/gin-vue-admin/server/global, go.uber.org/zap, mime/multipart, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F6cb2906f-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F6cb2906f-S0002] 行 3-12 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F6cb2906f-S0003] 行 13-14 | go-type | 类型 AliyunOSS：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F6cb2906f-S0004] 行 15-42 | go-func | 函数 UploadFile：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: file *multipart.FileHeader
+- outputs: (string, string, error)
+- side_effects: -
+- calls: UploadFile, NewBucket, Error, Any, New, Open, Close, Join, Now, Format, PutObject, Put
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F6cb2906f-S0005] 行 43-60 | go-func | 函数 DeleteFile：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: key string
+- outputs: error
+- side_effects: 写入数据库
+- calls: DeleteFile, NewBucket, Error, Any, New, DeleteObject, Delete
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F6cb2906f-S0006] 行 61-76 | go-func | 函数 NewBucket：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: (*oss.Bucket, error)
+- side_effects: -
+- calls: NewBucket, New, Bucket
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+
+## [F99e5485f] server/utils/upload/aws_s3.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 115
+- imports: context, errors, fmt, github.com/aws/aws-sdk-go-v2/aws, github.com/aws/aws-sdk-go-v2/config, github.com/aws/aws-sdk-go-v2/credentials, github.com/aws/aws-sdk-go-v2/feature/s3/manager, github.com/aws/aws-sdk-go-v2/service/s3, github.com/flipped-aurora/gin-vue-admin/server/global, go.uber.org/zap, mime/multipart, strings, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F99e5485f-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F99e5485f-S0002] 行 3-19 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, config
+- [F99e5485f-S0003] 行 20-28 | go-type | 类型 AwsS3：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F99e5485f-S0004] 行 29-62 | go-func | 函数 UploadFile：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: file *multipart.FileHeader
+- outputs: (string, string, error)
+- side_effects: -
+- calls: UploadFile, newS3Client, NewUploader, Sprintf, Now, Unix, Open, Error, Any, New, Close, Upload
+- risks: 存在待办逻辑，行为边界未完全收敛 / 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F99e5485f-S0005] 行 63-87 | go-func | 函数 DeleteFile：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: key string
+- outputs: error
+- side_effects: -
+- calls: DeleteFile, newS3Client, DeleteObject, TODO, String, Error, Any, New, NewObjectNotExistsWaiter, Wait
+- risks: 存在待办逻辑，行为边界未完全收敛 / 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F99e5485f-S0006] 行 88-115 | go-func | 函数 newS3Client：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: *s3.Client
+- side_effects: -
+- calls: newS3Client, LoadDefaultConfig, TODO, WithRegion, WithCredentialsProvider, NewStaticCredentialsProvider, NewFromConfig, HasPrefix, String
+- risks: 存在待办逻辑，行为边界未完全收敛 / 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, config
+
+## [Fb0246511] server/utils/upload/cloudflare_r2.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 86
+- imports: context, errors, fmt, github.com/aws/aws-sdk-go-v2/aws, github.com/aws/aws-sdk-go-v2/config, github.com/aws/aws-sdk-go-v2/credentials, github.com/aws/aws-sdk-go-v2/feature/s3/manager, github.com/aws/aws-sdk-go-v2/service/s3, github.com/flipped-aurora/gin-vue-admin/server/global, go.uber.org/zap, mime/multipart, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fb0246511-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fb0246511-S0002] 行 3-18 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, config
+- [Fb0246511-S0003] 行 19-20 | go-type | 类型 CloudflareR2：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [Fb0246511-S0004] 行 21-46 | go-func | 函数 UploadFile：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: file *multipart.FileHeader
+- outputs: (fileUrl string, fileName string, err error)
+- side_effects: -
+- calls: UploadFile, newR2Client, NewUploader, Sprintf, Now, Unix, Open, Error, Any, New, Close, Upload
+- risks: 存在待办逻辑，行为边界未完全收敛 / 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [Fb0246511-S0005] 行 47-69 | go-func | 函数 DeleteFile：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: key string
+- outputs: error
+- side_effects: -
+- calls: DeleteFile, newR2Client, DeleteObject, TODO, String, Error, Any, New, NewObjectNotExistsWaiter, Wait
+- risks: 存在待办逻辑，行为边界未完全收敛 / 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [Fb0246511-S0006] 行 70-86 | go-func | 函数 newR2Client：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: *s3.Client
+- side_effects: -
+- calls: newR2Client, Sprintf, LoadDefaultConfig, TODO, WithRegion, WithCredentialsProvider, NewStaticCredentialsProvider, NewFromConfig, String
+- risks: 存在待办逻辑，行为边界未完全收敛 / 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, config
+
+## [F15f13e3c] server/utils/upload/local.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 110
+- imports: errors, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/utils, go.uber.org/zap, io, mime/multipart, os, path/filepath, strings, sync, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F15f13e3c-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F15f13e3c-S0002] 行 3-17 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F15f13e3c-S0003] 行 18-19 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var
+- [F15f13e3c-S0004] 行 20-30 | go-type | 类型 Local：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F15f13e3c-S0005] 行 31-80 | go-func | 函数 UploadFile：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: file *multipart.FileHeader
+- outputs: (string, string, error)
+- side_effects: 写入数据库
+- calls: UploadFile, Ext, TrimSuffix, MD5V, byte, Now, Format, MkdirAll, Error, Any, New, Open
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F15f13e3c-S0006] 行 81-110 | go-func | 函数 DeleteFile：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: key string
+- outputs: error
+- side_effects: -
+- calls: DeleteFile, New, Contains, ContainsAny, Join, Stat, IsNotExist, Lock, Unlock, Remove, Error
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+
+## [F999de491] server/utils/upload/minio_oss.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 107
+- imports: bytes, context, errors, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/minio/minio-go/v7, github.com/minio/minio-go/v7/pkg/credentials, go.uber.org/zap, io, mime, mime/multipart, path/filepath, strings, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F999de491-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F999de491-S0002] 行 3-20 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F999de491-S0003] 行 21-22 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var
+- [F999de491-S0004] 行 23-27 | go-type | 类型 Minio：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F999de491-S0005] 行 28-54 | go-func | 函数 GetMinio：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: endpoint, accessKeyID, secretAccessKey, bucketName string, useSSL bool
+- outputs: (*Minio, error)
+- side_effects: -
+- calls: GetMinio, New, NewStaticV4, MakeBucket, Background, bucket, BucketExists, Printf
+- risks: -
+- tags: system-config, go-func
+- [F999de491-S0006] 行 55-98 | go-func | 函数 UploadFile：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: file *multipart.FileHeader
+- outputs: (filePathres, key string, uploadErr error)
+- side_effects: -
+- calls: UploadFile, Open, Error, Any, New, Copy, Close, Ext, MD5V, byte, TrimSuffix, Now
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F999de491-S0007] 行 99-107 | go-func | 函数 DeleteFile：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: key string
+- outputs: error
+- side_effects: -
+- calls: DeleteFile, WithTimeout, Background, cancel, RemoveObject
+- risks: -
+- tags: system-config, go-func
+
+## [F354a02f3] server/utils/upload/obs.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 70
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/huaweicloud/huaweicloud-sdk-go-obs/obs, github.com/pkg/errors, mime/multipart
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F354a02f3-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F354a02f3-S0002] 行 3-10 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F354a02f3-S0003] 行 11-12 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var
+- [F354a02f3-S0004] 行 13-14 | go-type | 类型 Obs：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F354a02f3-S0005] 行 15-18 | go-func | 函数 NewHuaWeiObsClient：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: (client *obs.ObsClient, err error)
+- side_effects: -
+- calls: NewHuaWeiObsClient, New
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F354a02f3-S0006] 行 19-53 | go-func | 函数 UploadFile：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: file *multipart.FileHeader
+- outputs: (string, string, error)
+- side_effects: -
+- calls: UploadFile, Open, Close, Get, NewHuaWeiObsClient, Wrap, PutObject
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F354a02f3-S0007] 行 54-70 | go-func | 函数 DeleteFile：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: key string
+- outputs: error
+- side_effects: -
+- calls: DeleteFile, NewHuaWeiObsClient, Wrap, DeleteObject, Wrapf
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+
+## [F43116f87] server/utils/upload/qiniu.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 97
+- imports: context, errors, fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/qiniu/go-sdk/v7/auth/qbox, github.com/qiniu/go-sdk/v7/storage, go.uber.org/zap, mime/multipart, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F43116f87-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F43116f87-S0002] 行 3-15 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F43116f87-S0003] 行 16-26 | go-type | 类型 Qiniu：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F43116f87-S0004] 行 27-60 | go-func | 函数 UploadFile：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: file *multipart.FileHeader
+- outputs: (string, string, error)
+- side_effects: -
+- calls: UploadFile, NewMac, UploadToken, qiniuConfig, NewFormUploader, Open, Error, Any, New, Close, Sprintf, Now
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F43116f87-S0005] 行 61-77 | go-func | 函数 DeleteFile：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: key string
+- outputs: error
+- side_effects: 写入数据库
+- calls: DeleteFile, NewMac, qiniuConfig, NewBucketManager, Delete, Error, Any, New
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F43116f87-S0006] 行 78-97 | go-func | 函数 qiniuConfig：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: *storage.Config
+- side_effects: -
+- calls: qiniuConfig
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+
+## [F08581eba] server/utils/upload/tencent_cos.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 62
+- imports: context, errors, fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/tencentyun/cos-go-sdk-v5, go.uber.org/zap, mime/multipart, net/http, net/url, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F08581eba-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F08581eba-S0002] 行 3-17 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F08581eba-S0003] 行 18-20 | go-type | 类型 TencentCOS：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F08581eba-S0004] 行 21-38 | go-func | 函数 UploadFile：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: file *multipart.FileHeader
+- outputs: (string, string, error)
+- side_effects: 触发 panic
+- calls: UploadFile, NewClient, Open, Error, Any, New, Close, Sprintf, Now, Unix, Put, Background
+- risks: 存在 panic 路径，异常恢复依赖上层中间件 / 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F08581eba-S0005] 行 39-50 | go-func | 函数 DeleteFile：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: key string
+- outputs: error
+- side_effects: 写入数据库
+- calls: DeleteFile, NewClient, Delete, Background, Error, Any, New
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F08581eba-S0006] 行 51-62 | go-func | 函数 NewClient：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: *cos.Client
+- side_effects: -
+- calls: NewClient, Parse
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+

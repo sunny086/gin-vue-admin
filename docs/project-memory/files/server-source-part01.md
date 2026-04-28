@@ -1,0 +1,804 @@
+# server-source
+
+- 文件数量：11
+
+## [F6a0fba31] server/source/example/file_upload_download.go
+- 语言: go
+- 领域: data-model (数据模型与初始化数据)
+- 行数: 66
+- imports: context, github.com/flipped-aurora/gin-vue-admin/server/model/example, github.com/flipped-aurora/gin-vue-admin/server/service/system, github.com/pkg/errors, gorm.io/gorm
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F6a0fba31-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「数据模型与初始化数据」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-package
+- [F6a0fba31-S0002] 行 3-10 | go-import | 逻辑段 go-import：承载「数据模型与初始化数据」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: data-model, go-import, database
+- [F6a0fba31-S0003] 行 11-12 | go-const-var | 逻辑段 go-const-var：承载「数据模型与初始化数据」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-const-var
+- [F6a0fba31-S0004] 行 13-15 | go-type | 类型 initExaFileMysql：定义该文件的数据结构或接口边界，支撑「数据模型与初始化数据」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-type, database
+- [F6a0fba31-S0005] 行 16-19 | go-func | 函数 init：完成初始化或注册流程，位于「数据模型与初始化数据」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: init, RegisterInit
+- risks: -
+- tags: data-model, go-func, database
+- [F6a0fba31-S0006] 行 20-27 | go-func | 函数 MigrateTable：承载该模块的核心逻辑，位于「数据模型与初始化数据」域。
+- inputs: ctx context.Context
+- outputs: (context.Context, error)
+- side_effects: 写入数据库
+- calls: MigrateTable, Value, AutoMigrate
+- risks: -
+- tags: data-model, go-func, database
+- [F6a0fba31-S0007] 行 28-35 | go-func | 函数 TableCreated：承载该模块的核心逻辑，位于「数据模型与初始化数据」域。
+- inputs: ctx context.Context
+- outputs: bool
+- side_effects: -
+- calls: TableCreated, Value, Migrator, HasTable
+- risks: -
+- tags: data-model, go-func, database
+- [F6a0fba31-S0008] 行 36-39 | go-func | 函数 InitializerName：完成初始化或注册流程，位于「数据模型与初始化数据」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: InitializerName, TableName
+- risks: -
+- tags: data-model, go-func, database
+- [F6a0fba31-S0009] 行 40-54 | go-func | 函数 InitializeData：完成初始化或注册流程，位于「数据模型与初始化数据」域。
+- inputs: ctx context.Context
+- outputs: (context.Context, error)
+- side_effects: 写入数据库
+- calls: InitializeData, Value, Create, Wrap, TableName
+- risks: -
+- tags: data-model, go-func, database
+- [F6a0fba31-S0010] 行 55-66 | go-func | 函数 DataInserted：执行创建或新增流程，位于「数据模型与初始化数据」域。
+- inputs: ctx context.Context
+- outputs: bool
+- side_effects: -
+- calls: DataInserted, Value, Is, First
+- risks: -
+- tags: data-model, go-func, database
+
+## [F7fdf151c] server/source/system/api_ignore.go
+- 语言: go
+- 领域: data-model (数据模型与初始化数据)
+- 行数: 79
+- imports: context, github.com/flipped-aurora/gin-vue-admin/server/service/system, github.com/pkg/errors, gorm.io/gorm
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F7fdf151c-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「数据模型与初始化数据」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-package
+- [F7fdf151c-S0002] 行 3-10 | go-import | 逻辑段 go-import：承载「数据模型与初始化数据」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: data-model, go-import, database
+- [F7fdf151c-S0003] 行 11-12 | go-type | 类型 initApiIgnore：定义该文件的数据结构或接口边界，支撑「数据模型与初始化数据」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-type
+- [F7fdf151c-S0004] 行 13-15 | go-const-var | 逻辑段 go-const-var：承载「数据模型与初始化数据」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-const-var
+- [F7fdf151c-S0005] 行 16-19 | go-func | 函数 init：完成初始化或注册流程，位于「数据模型与初始化数据」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: init, RegisterInit
+- risks: -
+- tags: data-model, go-func
+- [F7fdf151c-S0006] 行 20-23 | go-func | 函数 InitializerName：完成初始化或注册流程，位于「数据模型与初始化数据」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: InitializerName, TableName
+- risks: -
+- tags: data-model, go-func
+- [F7fdf151c-S0007] 行 24-31 | go-func | 函数 MigrateTable：承载该模块的核心逻辑，位于「数据模型与初始化数据」域。
+- inputs: ctx context.Context
+- outputs: (context.Context, error)
+- side_effects: 写入数据库
+- calls: MigrateTable, Value, AutoMigrate
+- risks: -
+- tags: data-model, go-func, database
+- [F7fdf151c-S0008] 行 32-39 | go-func | 函数 TableCreated：承载该模块的核心逻辑，位于「数据模型与初始化数据」域。
+- inputs: ctx context.Context
+- outputs: bool
+- side_effects: -
+- calls: TableCreated, Value, Migrator, HasTable
+- risks: -
+- tags: data-model, go-func, database
+- [F7fdf151c-S0009] 行 40-67 | go-func | 函数 InitializeData：完成初始化或注册流程，位于「代码生成与AI工作流」域。
+- inputs: ctx context.Context
+- outputs: (context.Context, error)
+- side_effects: 写入数据库
+- calls: InitializeData, Value, Create, Wrap, TableName, WithValue, InitializerName
+- risks: -
+- tags: codegen-ai, go-func, database
+- [F7fdf151c-S0010] 行 68-79 | go-func | 函数 DataInserted：执行创建或新增流程，位于「数据模型与初始化数据」域。
+- inputs: ctx context.Context
+- outputs: bool
+- side_effects: -
+- calls: DataInserted, Value, Is, Where, First
+- risks: -
+- tags: data-model, go-func, database
+
+## [F6b5a68bb] server/source/system/api.go
+- 语言: go
+- 领域: data-model (数据模型与初始化数据)
+- 行数: 277
+- imports: context, github.com/flipped-aurora/gin-vue-admin/server/service/system, github.com/pkg/errors, gorm.io/gorm
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F6b5a68bb-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「数据模型与初始化数据」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-package
+- [F6b5a68bb-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「数据模型与初始化数据」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: data-model, go-import, database
+- [F6b5a68bb-S0003] 行 12-13 | go-type | 类型 initApi：定义该文件的数据结构或接口边界，支撑「数据模型与初始化数据」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-type
+- [F6b5a68bb-S0004] 行 14-16 | go-const-var | 逻辑段 go-const-var：承载「数据模型与初始化数据」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-const-var
+- [F6b5a68bb-S0005] 行 17-20 | go-func | 函数 init：完成初始化或注册流程，位于「数据模型与初始化数据」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: init, RegisterInit
+- risks: -
+- tags: data-model, go-func
+- [F6b5a68bb-S0006] 行 21-24 | go-func | 函数 InitializerName：完成初始化或注册流程，位于「数据模型与初始化数据」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: InitializerName, TableName
+- risks: -
+- tags: data-model, go-func
+- [F6b5a68bb-S0007] 行 25-32 | go-func | 函数 MigrateTable：承载该模块的核心逻辑，位于「数据模型与初始化数据」域。
+- inputs: ctx context.Context
+- outputs: (context.Context, error)
+- side_effects: 写入数据库
+- calls: MigrateTable, Value, AutoMigrate
+- risks: -
+- tags: data-model, go-func, database
+- [F6b5a68bb-S0008] 行 33-40 | go-func | 函数 TableCreated：承载该模块的核心逻辑，位于「数据模型与初始化数据」域。
+- inputs: ctx context.Context
+- outputs: bool
+- side_effects: -
+- calls: TableCreated, Value, Migrator, HasTable
+- risks: -
+- tags: data-model, go-func, database
+- [F6b5a68bb-S0009] 行 41-265 | go-func | 函数 InitializeData：完成初始化或注册流程，位于「MCP与Skills生态」域。
+- inputs: ctx context.Context
+- outputs: (context.Context, error)
+- side_effects: 写入数据库
+- calls: InitializeData, Value, Create, Wrap, TableName, WithValue, InitializerName
+- risks: 逻辑段较长，建议拆分以降低维护成本
+- tags: mcp-skills, go-func, database, security, ai-tooling
+- [F6b5a68bb-S0010] 行 266-277 | go-func | 函数 DataInserted：执行创建或新增流程，位于「数据模型与初始化数据」域。
+- inputs: ctx context.Context
+- outputs: bool
+- side_effects: -
+- calls: DataInserted, Value, Is, Where, First
+- risks: -
+- tags: data-model, go-func, database, security
+
+## [F589984d9] server/source/system/authorities_menus.go
+- 语言: go
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 122
+- imports: context, github.com/flipped-aurora/gin-vue-admin/server/service/system, github.com/pkg/errors, gorm.io/gorm
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F589984d9-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-package
+- [F589984d9-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: auth-access, go-import, database
+- [F589984d9-S0003] 行 12-13 | go-const-var | 逻辑段 go-const-var：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-const-var
+- [F589984d9-S0004] 行 14-16 | go-type | 类型 initMenuAuthority：定义该文件的数据结构或接口边界，支撑「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-type
+- [F589984d9-S0005] 行 17-20 | go-func | 函数 init：完成初始化或注册流程，位于「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: init, RegisterInit
+- risks: -
+- tags: auth-access, go-func
+- [F589984d9-S0006] 行 21-24 | go-func | 函数 MigrateTable：承载该模块的核心逻辑，位于「鉴权与访问控制」域。
+- inputs: ctx context.Context
+- outputs: (context.Context, error)
+- side_effects: -
+- calls: MigrateTable
+- risks: -
+- tags: auth-access, go-func
+- [F589984d9-S0007] 行 25-28 | go-func | 函数 TableCreated：承载该模块的核心逻辑，位于「鉴权与访问控制」域。
+- inputs: ctx context.Context
+- outputs: bool
+- side_effects: -
+- calls: TableCreated
+- risks: -
+- tags: auth-access, go-func
+- [F589984d9-S0008] 行 29-32 | go-func | 函数 InitializerName：完成初始化或注册流程，位于「鉴权与访问控制」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: InitializerName
+- risks: -
+- tags: auth-access, go-func
+- [F589984d9-S0009] 行 33-106 | go-func | 函数 InitializeData：完成初始化或注册流程，位于「鉴权与访问控制」域。
+- inputs: ctx context.Context
+- outputs: (next context.Context, err error)
+- side_effects: -
+- calls: InitializeData, Value, InitializerName, Wrap, New, Model, Association, Replace
+- risks: -
+- tags: auth-access, go-func, database
+- [F589984d9-S0010] 行 107-122 | go-func | 函数 DataInserted：执行创建或新增流程，位于「鉴权与访问控制」域。
+- inputs: ctx context.Context
+- outputs: bool
+- side_effects: -
+- calls: DataInserted, Value, Model, Where, Preload, Find
+- risks: -
+- tags: auth-access, go-func, database, security
+
+## [F26ce8a98] server/source/system/authority.go
+- 语言: go
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 89
+- imports: context, github.com/flipped-aurora/gin-vue-admin/server/service/system, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/pkg/errors, gorm.io/gorm
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F26ce8a98-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-package
+- [F26ce8a98-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: auth-access, go-import, database
+- [F26ce8a98-S0003] 行 12-13 | go-const-var | 逻辑段 go-const-var：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-const-var
+- [F26ce8a98-S0004] 行 14-16 | go-type | 类型 initAuthority：定义该文件的数据结构或接口边界，支撑「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-type
+- [F26ce8a98-S0005] 行 17-20 | go-func | 函数 init：完成初始化或注册流程，位于「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: init, RegisterInit
+- risks: -
+- tags: auth-access, go-func
+- [F26ce8a98-S0006] 行 21-28 | go-func | 函数 MigrateTable：承载该模块的核心逻辑，位于「鉴权与访问控制」域。
+- inputs: ctx context.Context
+- outputs: (context.Context, error)
+- side_effects: 写入数据库
+- calls: MigrateTable, Value, AutoMigrate
+- risks: -
+- tags: auth-access, go-func, database
+- [F26ce8a98-S0007] 行 29-36 | go-func | 函数 TableCreated：承载该模块的核心逻辑，位于「鉴权与访问控制」域。
+- inputs: ctx context.Context
+- outputs: bool
+- side_effects: -
+- calls: TableCreated, Value, Migrator, HasTable
+- risks: -
+- tags: auth-access, go-func, database
+- [F26ce8a98-S0008] 行 37-40 | go-func | 函数 InitializerName：完成初始化或注册流程，位于「鉴权与访问控制」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: InitializerName, TableName
+- risks: -
+- tags: auth-access, go-func
+- [F26ce8a98-S0009] 行 41-77 | go-func | 函数 InitializeData：完成初始化或注册流程，位于「鉴权与访问控制」域。
+- inputs: ctx context.Context
+- outputs: (context.Context, error)
+- side_effects: 写入数据库
+- calls: InitializeData, Value, Create, Wrapf, TableName, Model, Association, Replace, WithValue, InitializerName
+- risks: -
+- tags: auth-access, go-func, database, security
+- [F26ce8a98-S0010] 行 78-89 | go-func | 函数 DataInserted：执行创建或新增流程，位于「鉴权与访问控制」域。
+- inputs: ctx context.Context
+- outputs: bool
+- side_effects: -
+- calls: DataInserted, Value, Is, Where, First
+- risks: -
+- tags: auth-access, go-func, database, security
+
+## [F68ceea23] server/source/system/casbin.go
+- 语言: go
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 373
+- imports: context, github.com/flipped-aurora/gin-vue-admin/server/service/system, github.com/pkg/errors, gorm.io/gorm
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F68ceea23-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-package
+- [F68ceea23-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: auth-access, go-import, database, security
+- [F68ceea23-S0003] 行 12-13 | go-const-var | 逻辑段 go-const-var：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-const-var
+- [F68ceea23-S0004] 行 14-16 | go-type | 类型 initCasbin：定义该文件的数据结构或接口边界，支撑「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-type
+- [F68ceea23-S0005] 行 17-20 | go-func | 函数 init：完成初始化或注册流程，位于「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: init, RegisterInit
+- risks: -
+- tags: auth-access, go-func
+- [F68ceea23-S0006] 行 21-28 | go-func | 函数 MigrateTable：承载该模块的核心逻辑，位于「鉴权与访问控制」域。
+- inputs: ctx context.Context
+- outputs: (context.Context, error)
+- side_effects: 写入数据库
+- calls: MigrateTable, Value, AutoMigrate
+- risks: -
+- tags: auth-access, go-func, database
+- [F68ceea23-S0007] 行 29-36 | go-func | 函数 TableCreated：承载该模块的核心逻辑，位于「鉴权与访问控制」域。
+- inputs: ctx context.Context
+- outputs: bool
+- side_effects: -
+- calls: TableCreated, Value, Migrator, HasTable
+- risks: -
+- tags: auth-access, go-func, database
+- [F68ceea23-S0008] 行 37-41 | go-func | 函数 InitializerName：完成初始化或注册流程，位于「鉴权与访问控制」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: InitializerName, TableName
+- risks: -
+- tags: auth-access, go-func
+- [F68ceea23-S0009] 行 42-361 | go-func | 函数 InitializeData：完成初始化或注册流程，位于「MCP与Skills生态」域。
+- inputs: ctx context.Context
+- outputs: (context.Context, error)
+- side_effects: 写入数据库
+- calls: InitializeData, Value, Create, Wrap, InitializerName, WithValue
+- risks: 逻辑段较长，建议拆分以降低维护成本
+- tags: mcp-skills, go-func, database, security, ai-tooling
+- [F68ceea23-S0010] 行 362-373 | go-func | 函数 DataInserted：执行创建或新增流程，位于「鉴权与访问控制」域。
+- inputs: ctx context.Context
+- outputs: bool
+- side_effects: -
+- calls: DataInserted, Value, Is, Where, First
+- risks: -
+- tags: auth-access, go-func, database
+
+## [Fb3e23657] server/source/system/dictionary_detail.go
+- 语言: go
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 122
+- imports: context, fmt, github.com/flipped-aurora/gin-vue-admin/server/service/system, github.com/pkg/errors, gorm.io/gorm
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fb3e23657-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-package
+- [Fb3e23657-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: menu-rbac, go-import, database
+- [Fb3e23657-S0003] 行 12-13 | go-const-var | 逻辑段 go-const-var：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-const-var
+- [Fb3e23657-S0004] 行 14-16 | go-type | 类型 initDictDetail：定义该文件的数据结构或接口边界，支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-type
+- [Fb3e23657-S0005] 行 17-20 | go-func | 函数 init：完成初始化或注册流程，位于「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: init, RegisterInit
+- risks: -
+- tags: menu-rbac, go-func
+- [Fb3e23657-S0006] 行 21-28 | go-func | 函数 MigrateTable：承载该模块的核心逻辑，位于「菜单与权限编排」域。
+- inputs: ctx context.Context
+- outputs: (context.Context, error)
+- side_effects: 写入数据库
+- calls: MigrateTable, Value, AutoMigrate
+- risks: -
+- tags: menu-rbac, go-func, database
+- [Fb3e23657-S0007] 行 29-36 | go-func | 函数 TableCreated：承载该模块的核心逻辑，位于「菜单与权限编排」域。
+- inputs: ctx context.Context
+- outputs: bool
+- side_effects: -
+- calls: TableCreated, Value, Migrator, HasTable
+- risks: -
+- tags: menu-rbac, go-func, database
+- [Fb3e23657-S0008] 行 37-40 | go-func | 函数 InitializerName：完成初始化或注册流程，位于「菜单与权限编排」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: InitializerName, TableName
+- risks: -
+- tags: menu-rbac, go-func
+- [Fb3e23657-S0009] 行 41-109 | go-func | 函数 InitializeData：完成初始化或注册流程，位于「菜单与权限编排」域。
+- inputs: ctx context.Context
+- outputs: (context.Context, error)
+- side_effects: -
+- calls: InitializeData, Value, InitializerName, Wrap, Sprintf, TableName, Model, Association, Replace
+- risks: -
+- tags: menu-rbac, go-func, database
+- [Fb3e23657-S0010] 行 110-122 | go-func | 函数 DataInserted：执行创建或新增流程，位于「菜单与权限编排」域。
+- inputs: ctx context.Context
+- outputs: bool
+- side_effects: -
+- calls: DataInserted, Value, Preload, First
+- risks: -
+- tags: menu-rbac, go-func, database
+
+## [F1f04354d] server/source/system/dictionary.go
+- 语言: go
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 72
+- imports: context, github.com/flipped-aurora/gin-vue-admin/server/service/system, github.com/pkg/errors, gorm.io/gorm
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F1f04354d-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-package
+- [F1f04354d-S0002] 行 3-10 | go-import | 逻辑段 go-import：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: menu-rbac, go-import, database
+- [F1f04354d-S0003] 行 11-12 | go-const-var | 逻辑段 go-const-var：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-const-var
+- [F1f04354d-S0004] 行 13-15 | go-type | 类型 initDict：定义该文件的数据结构或接口边界，支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-type
+- [F1f04354d-S0005] 行 16-19 | go-func | 函数 init：完成初始化或注册流程，位于「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: init, RegisterInit
+- risks: -
+- tags: menu-rbac, go-func
+- [F1f04354d-S0006] 行 20-27 | go-func | 函数 MigrateTable：承载该模块的核心逻辑，位于「菜单与权限编排」域。
+- inputs: ctx context.Context
+- outputs: (context.Context, error)
+- side_effects: 写入数据库
+- calls: MigrateTable, Value, AutoMigrate
+- risks: -
+- tags: menu-rbac, go-func, database
+- [F1f04354d-S0007] 行 28-35 | go-func | 函数 TableCreated：承载该模块的核心逻辑，位于「菜单与权限编排」域。
+- inputs: ctx context.Context
+- outputs: bool
+- side_effects: -
+- calls: TableCreated, Value, Migrator, HasTable
+- risks: -
+- tags: menu-rbac, go-func, database
+- [F1f04354d-S0008] 行 36-39 | go-func | 函数 InitializerName：完成初始化或注册流程，位于「菜单与权限编排」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: InitializerName, TableName
+- risks: -
+- tags: menu-rbac, go-func
+- [F1f04354d-S0009] 行 40-61 | go-func | 函数 InitializeData：完成初始化或注册流程，位于「菜单与权限编排」域。
+- inputs: ctx context.Context
+- outputs: (next context.Context, err error)
+- side_effects: 写入数据库
+- calls: InitializeData, Value, Create, Wrap, TableName, WithValue, InitializerName
+- risks: -
+- tags: menu-rbac, go-func, database
+- [F1f04354d-S0010] 行 62-72 | go-func | 函数 DataInserted：执行创建或新增流程，位于「菜单与权限编排」域。
+- inputs: ctx context.Context
+- outputs: bool
+- side_effects: -
+- calls: DataInserted, Value, Is, Where, First
+- risks: -
+- tags: menu-rbac, go-func, database
+
+## [Fc73571bb] server/source/system/excel_template.go
+- 语言: go
+- 领域: data-model (数据模型与初始化数据)
+- 行数: 76
+- imports: context, github.com/flipped-aurora/gin-vue-admin/server/service/system, github.com/pkg/errors, gorm.io/gorm
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fc73571bb-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「数据模型与初始化数据」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-package
+- [Fc73571bb-S0002] 行 3-10 | go-import | 逻辑段 go-import：承载「数据模型与初始化数据」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: data-model, go-import, database
+- [Fc73571bb-S0003] 行 11-12 | go-type | 类型 initExcelTemplate：定义该文件的数据结构或接口边界，支撑「数据模型与初始化数据」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-type
+- [Fc73571bb-S0004] 行 13-15 | go-const-var | 逻辑段 go-const-var：承载「数据模型与初始化数据」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-const-var
+- [Fc73571bb-S0005] 行 16-19 | go-func | 函数 init：完成初始化或注册流程，位于「数据模型与初始化数据」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: init, RegisterInit
+- risks: -
+- tags: data-model, go-func
+- [Fc73571bb-S0006] 行 20-23 | go-func | 函数 InitializerName：完成初始化或注册流程，位于「数据模型与初始化数据」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: InitializerName
+- risks: -
+- tags: data-model, go-func
+- [Fc73571bb-S0007] 行 24-31 | go-func | 函数 MigrateTable：承载该模块的核心逻辑，位于「数据模型与初始化数据」域。
+- inputs: ctx context.Context
+- outputs: (context.Context, error)
+- side_effects: 写入数据库
+- calls: MigrateTable, Value, AutoMigrate
+- risks: -
+- tags: data-model, go-func, database
+- [Fc73571bb-S0008] 行 32-39 | go-func | 函数 TableCreated：承载该模块的核心逻辑，位于「数据模型与初始化数据」域。
+- inputs: ctx context.Context
+- outputs: bool
+- side_effects: -
+- calls: TableCreated, Value, Migrator, HasTable
+- risks: -
+- tags: data-model, go-func, database
+- [Fc73571bb-S0009] 行 40-65 | go-func | 函数 InitializeData：完成初始化或注册流程，位于「数据模型与初始化数据」域。
+- inputs: ctx context.Context
+- outputs: (context.Context, error)
+- side_effects: 写入数据库
+- calls: InitializeData, Value, Create, Wrap, WithValue, InitializerName
+- risks: -
+- tags: data-model, go-func, database
+- [Fc73571bb-S0010] 行 66-76 | go-func | 函数 DataInserted：执行创建或新增流程，位于「数据模型与初始化数据」域。
+- inputs: ctx context.Context
+- outputs: bool
+- side_effects: -
+- calls: DataInserted, Value, Is, First
+- risks: -
+- tags: data-model, go-func, database
+
+## [F4a5aa4a4] server/source/system/menu.go
+- 语言: go
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 140
+- imports: context, github.com/flipped-aurora/gin-vue-admin/server/service/system, github.com/pkg/errors, gorm.io/gorm
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F4a5aa4a4-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-package
+- [F4a5aa4a4-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: menu-rbac, go-import, database
+- [F4a5aa4a4-S0003] 行 12-13 | go-const-var | 逻辑段 go-const-var：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-const-var
+- [F4a5aa4a4-S0004] 行 14-16 | go-type | 类型 initMenu：定义该文件的数据结构或接口边界，支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-type
+- [F4a5aa4a4-S0005] 行 17-20 | go-func | 函数 init：完成初始化或注册流程，位于「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: init, RegisterInit
+- risks: -
+- tags: menu-rbac, go-func
+- [F4a5aa4a4-S0006] 行 21-24 | go-func | 函数 InitializerName：完成初始化或注册流程，位于「菜单与权限编排」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: InitializerName, TableName
+- risks: -
+- tags: menu-rbac, go-func
+- [F4a5aa4a4-S0007] 行 25-36 | go-func | 函数 MigrateTable：承载该模块的核心逻辑，位于「菜单与权限编排」域。
+- inputs: ctx context.Context
+- outputs: (context.Context, error)
+- side_effects: 写入数据库
+- calls: MigrateTable, Value, AutoMigrate
+- risks: -
+- tags: menu-rbac, go-func, database
+- [F4a5aa4a4-S0008] 行 37-47 | go-func | 函数 TableCreated：承载该模块的核心逻辑，位于「菜单与权限编排」域。
+- inputs: ctx context.Context
+- outputs: bool
+- side_effects: -
+- calls: TableCreated, Value, Migrator, HasTable
+- risks: -
+- tags: menu-rbac, go-func, database
+- [F4a5aa4a4-S0009] 行 48-129 | go-func | 函数 InitializeData：完成初始化或注册流程，位于「MCP与Skills生态」域。
+- inputs: ctx context.Context
+- outputs: (next context.Context, err error)
+- side_effects: 写入数据库
+- calls: InitializeData, Value, Create, Wrap, TableName, WithValue, InitializerName
+- risks: -
+- tags: mcp-skills, go-func, database, security, ai-tooling, plugin
+- [F4a5aa4a4-S0010] 行 130-140 | go-func | 函数 DataInserted：执行创建或新增流程，位于「菜单与权限编排」域。
+- inputs: ctx context.Context
+- outputs: bool
+- side_effects: -
+- calls: DataInserted, Value, Is, Where, First
+- risks: -
+- tags: menu-rbac, go-func, database
+

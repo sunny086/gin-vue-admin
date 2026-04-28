@@ -1,0 +1,761 @@
+## [F62a7b5fb] web/src/view/systemTools/autoCode/index.vue
+- 语言: vue
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 1682
+- imports: @/components/warningBar/warningBar.vue, @/pinia, @/utils/dictionary, @/view/systemTools/autoCode/component/fieldDialog.vue, @/view/systemTools/autoCode/component/previewCodeDialog.vue, element-plus, sortablejs, vue, vue-router
+- entrypoints: -
+- depends_on: @/components/warningBar/warningBar.vue, @/pinia, @/utils/dictionary, @/view/systemTools/autoCode/component/fieldDialog.vue, @/view/systemTools/autoCode/component/previewCodeDialog.vue
+- owned_by: frontend
+- 逻辑段:
+- [F62a7b5fb-S0001] 行 1-54 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: eyeFunc
+- risks: -
+- tags: codegen-ai, vue-template, plugin, config
+- [F62a7b5fb-S0002] 行 55-90 | vue-template | 模板区块：定义页面结构与交互骨架，承载「插件生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: llmAutoFunc
+- risks: -
+- tags: plugin-ecosystem, vue-template, plugin, config
+- [F62a7b5fb-S0003] 行 91-209 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: llmAutoFunc
+- risks: -
+- tags: codegen-ai, vue-template
+- [F62a7b5fb-S0004] 行 210-246 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template
+- [F62a7b5fb-S0005] 行 247-296 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: toLowerCaseFunc
+- risks: -
+- tags: codegen-ai, vue-template
+- [F62a7b5fb-S0006] 行 297-337 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: MustGetGlobalDBByDBName
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, vue-template
+- [F62a7b5fb-S0007] 行 338-342 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template
+- [F62a7b5fb-S0008] 行 343-505 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: editAndAddField
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, vue-template
+- [F62a7b5fb-S0009] 行 506-525 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template
+- [F62a7b5fb-S0010] 行 526-536 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template
+- [F62a7b5fb-S0011] 行 537-546 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template
+- [F62a7b5fb-S0012] 行 547-556 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template
+- [F62a7b5fb-S0013] 行 557-561 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template
+- [F62a7b5fb-S0014] 行 562-566 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template
+- [F62a7b5fb-S0015] 行 567-576 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template
+- [F62a7b5fb-S0016] 行 577-581 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template
+- [F62a7b5fb-S0017] 行 582-586 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template
+- [F62a7b5fb-S0018] 行 587-597 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template
+- [F62a7b5fb-S0019] 行 598-607 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template
+- [F62a7b5fb-S0020] 行 608-617 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template
+- [F62a7b5fb-S0021] 行 618-640 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template
+- [F62a7b5fb-S0022] 行 641-663 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template
+- [F62a7b5fb-S0023] 行 664-673 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template
+- [F62a7b5fb-S0024] 行 674-683 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template
+- [F62a7b5fb-S0025] 行 684-693 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template
+- [F62a7b5fb-S0026] 行 694-712 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: canSelect
+- risks: -
+- tags: codegen-ai, vue-template
+- [F62a7b5fb-S0027] 行 713-767 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: editAndAddField, deleteField, exportJson, clearCatch, catchData, enterForm
+- risks: -
+- tags: codegen-ai, vue-template, security
+- [F62a7b5fb-S0028] 行 768-788 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template
+- [F62a7b5fb-S0029] 行 789-807 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template
+- [F62a7b5fb-S0030] 行 808-838 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: useUserStore
+- risks: -
+- tags: codegen-ai, vue-script, security
+- [F62a7b5fb-S0031] 行 839-843 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: addEventListener
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F62a7b5fb-S0032] 行 844-848 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: removeEventListener
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F62a7b5fb-S0033] 行 849-854 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: event
+- outputs: -
+- side_effects: -
+- calls: llmAutoFunc
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F62a7b5fb-S0034] 行 855-873 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: event
+- outputs: -
+- side_effects: -
+- calls: indexOf, getAsFile, FileReader, async, llmAuto, llmAutoFunc, readAsDataURL
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F62a7b5fb-S0035] 行 874-883 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: while, random, toString, substring, ref
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F62a7b5fb-S0036] 行 884-909 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, createElement, FileReader, llmAuto, llmAutoFunc, readAsDataURL, click
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F62a7b5fb-S0037] 行 910-958 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: flag
+- outputs: -
+- side_effects: -
+- calls: async, error, confirm, llmAuto, parse, forEach, toUpperCase, ref
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F62a7b5fb-S0038] 行 959-1170 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: querySelector, create, async, nextTick, splice, onMounted, rowDrop, defineOptions, ref, useRoute, useRouter
+- risks: -
+- tags: codegen-ai, vue-script-func, database
+- [F62a7b5fb-S0039] 行 1171-1193 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: e
+- outputs: -
+- side_effects: -
+- calls: confirm, then, filter, some, catch
+- risks: -
+- tags: codegen-ai, vue-script-func, database
+- [F62a7b5fb-S0040] 行 1194-1197 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: form, key
+- outputs: -
+- side_effects: -
+- calls: toLowerCase, ref
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F62a7b5fb-S0041] 行 1198-1200 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: selectText
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F62a7b5fb-S0042] 行 1201-1203 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: copy
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F62a7b5fb-S0043] 行 1204-1227 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: item
+- outputs: -
+- side_effects: -
+- calls: parse, stringify, getOnlyNumber, ref
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F62a7b5fb-S0044] 行 1228-1240 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: validate, toUpperCase, push
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F62a7b5fb-S0045] 行 1241-1246 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F62a7b5fb-S0046] 行 1247-1256 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: index
+- outputs: -
+- side_effects: -
+- calls: confirm, then, async, splice, ref
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F62a7b5fb-S0047] 行 1257-1396 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: isPreview
+- outputs: -
+- side_effects: -
+- calls: async, ElMessage, every, some, validate, trim, toUpperCase, replace, toSQLLine, toLowerCase, forEach, split
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F62a7b5fb-S0048] 行 1397-1405 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getDB
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F62a7b5fb-S0049] 行 1406-1416 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getTable
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F62a7b5fb-S0050] 行 1417-1481 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getColumn, find, toRaw, toHump, toUpperCase, toLowerCase, forEach, needAppend, push, getOnlyNumber, split
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F62a7b5fb-S0051] 行 1482-1498 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: item
+- outputs: -
+- side_effects: -
+- calls: some
+- risks: -
+- tags: codegen-ai, vue-script-func, database
+- [F62a7b5fb-S0052] 行 1499-1508 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, forEach, getDict
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F62a7b5fb-S0053] 行 1509-1523 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: id
+- outputs: -
+- side_effects: -
+- calls: async, getMeta, Number, parse, forEach, ref
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F62a7b5fb-S0054] 行 1524-1530 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getPackageApi
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F62a7b5fb-S0055] 行 1531-1534 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: push
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F62a7b5fb-S0056] 行 1535-1559 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getDbFunc, setFdMap, getPkgs, getAutoCodeJson, init, watch
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F62a7b5fb-S0057] 行 1560-1564 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: setItem, stringify, success
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F62a7b5fb-S0058] 行 1565-1571 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getItem, parse
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F62a7b5fb-S0059] 行 1572-1597 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, nextTick, removeItem, getCatch
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F62a7b5fb-S0060] 行 1598-1610 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: stringify, Blob, createObjectURL, createElement, appendChild, click, removeChild, revokeObjectURL
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F62a7b5fb-S0061] 行 1611-1649 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: file
+- outputs: -
+- side_effects: -
+- calls: FileReader, parse, success, catch, error, readAsText, watch, confirm, then
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F62a7b5fb-S0062] 行 1650-1667 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: fieldType,item
+- outputs: -
+- side_effects: -
+- calls: includes
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F62a7b5fb-S0063] 行 1668-1682 | vue-style | 样式区块：定义页面视觉表现与布局约束。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-style
+
+## [F008d7593] web/src/view/systemTools/autoCode/mcp.vue
+- 语言: vue
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 152
+- imports: @/api/autoCode, element-plus, vue
+- entrypoints: -
+- depends_on: @/api/autoCode
+- owned_by: frontend
+- 逻辑段:
+- [F008d7593-S0001] 行 1-17 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template
+- [F008d7593-S0002] 行 18-22 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template
+- [F008d7593-S0003] 行 23-33 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template
+- [F008d7593-S0004] 行 34-38 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template
+- [F008d7593-S0005] 行 39-43 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template
+- [F008d7593-S0006] 行 44-55 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: removeParam
+- risks: -
+- tags: codegen-ai, vue-template
+- [F008d7593-S0007] 行 56-63 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template
+- [F008d7593-S0008] 行 64-80 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: removeResponse
+- risks: -
+- tags: codegen-ai, vue-template
+- [F008d7593-S0009] 行 81-104 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineOptions, ref, reactive
+- risks: -
+- tags: mcp-skills, vue-script, ai-tooling
+- [F008d7593-S0010] 行 105-113 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: addParam, push
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F008d7593-S0011] 行 114-117 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: index
+- outputs: -
+- side_effects: -
+- calls: removeParam, splice
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F008d7593-S0012] 行 118-123 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: addResponse, push
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F008d7593-S0013] 行 124-127 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: index
+- outputs: -
+- side_effects: -
+- calls: removeResponse, splice
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F008d7593-S0014] 行 128-152 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: submit, validate, async, error, mcp, success
+- risks: -
+- tags: mcp-skills, vue-script-func, ai-tooling
+
+## [F4144bd5b] web/src/view/systemTools/autoCode/mcpTest.vue
+- 语言: vue
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 616
+- imports: @/pinia/modules/user, element-plus, vue
+- entrypoints: -
+- depends_on: @/pinia/modules/user
+- owned_by: frontend
+- 逻辑段:
+- [F4144bd5b-S0001] 行 1-94 | vue-template | 模板区块：定义页面结构与交互骨架，承载「MCP与Skills生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: formatTime
+- risks: -
+- tags: mcp-skills, vue-template, ai-tooling
+- [F4144bd5b-S0002] 行 95-275 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: openTestDialog, keys, includes, calc, stringify
+- risks: -
+- tags: codegen-ai, vue-template
+- [F4144bd5b-S0003] 行 276-287 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template
+- [F4144bd5b-S0004] 行 288-310 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineOptions, useUserStore
+- risks: -
+- tags: mcp-skills, vue-script, ai-tooling
+- [F4144bd5b-S0005] 行 311-346 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: ref, reactive, emptyStatus
+- risks: -
+- tags: mcp-skills, vue-script-func, security, ai-tooling
+- [F4144bd5b-S0006] 行 347-416 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: config
+- outputs: -
+- side_effects: -
+- calls: parse, stringify, keys, fromEntries, ref, buildMcpServerConfig, computed, Boolean
+- risks: -
+- tags: mcp-skills, vue-script-func, security, ai-tooling, config
+- [F4144bd5b-S0007] 行 417-428 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: payload = {}
+- outputs: -
+- side_effects: -
+- calls: emptyStatus, buildMcpServerConfig
+- risks: -
+- tags: mcp-skills, vue-script-func, ai-tooling
+- [F4144bd5b-S0008] 行 429-448 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: { silent = false } = {}
+- outputs: -
+- side_effects: -
+- calls: async, mcpList, applyMcpOverview, refreshMcpOverview, error
+- risks: -
+- tags: mcp-skills, vue-script-func, ai-tooling
+- [F4144bd5b-S0009] 行 449-474 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: { silent = false, loadTools = true } = {}
+- outputs: -
+- side_effects: -
+- calls: async, mcpStatus, error, applyMcpOverview, fetchMcpTools, onMounted, refreshMcpOverview
+- risks: -
+- tags: mcp-skills, vue-script-func, ai-tooling
+- [F4144bd5b-S0010] 行 475-492 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, mcpStart, applyMcpOverview, error, success, refreshMcpOverview
+- risks: -
+- tags: mcp-skills, vue-script-func, ai-tooling
+- [F4144bd5b-S0011] 行 493-511 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, mcpStop, applyMcpOverview, error, success, refreshMcpOverview
+- risks: -
+- tags: mcp-skills, vue-script-func, ai-tooling
+- [F4144bd5b-S0012] 行 512-520 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, writeText, success, catch, error
+- risks: -
+- tags: mcp-skills, vue-script-func, ai-tooling
+- [F4144bd5b-S0013] 行 521-547 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: tool
+- outputs: -
+- side_effects: -
+- calls: keys, forEach, clearValidate
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F4144bd5b-S0014] 行 548-552 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: done
+- outputs: -
+- side_effects: -
+- calls: done
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F4144bd5b-S0015] 行 553-571 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: tool, payload
+- outputs: -
+- side_effects: -
+- calls: keys, forEach, parse
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F4144bd5b-S0016] 行 572-610 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, warning, validate, normalizeToolPayload, mcpTest, error, success, catch
+- risks: -
+- tags: mcp-skills, vue-script-func, ai-tooling
+- [F4144bd5b-S0017] 行 611-616 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: value
+- outputs: -
+- side_effects: -
+- calls: Date, isNaN, getTime, String, toLocaleString
+- risks: -
+- tags: codegen-ai, vue-script-func
+
+## [Feff88b25] web/src/view/systemTools/autoCode/picture.vue
+- 语言: vue
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 427
+- imports: @/api/autoCode, @/components/warningBar/warningBar.vue, @element-plus/icons-vue, element-plus, vue, vue3-sfc-loader
+- entrypoints: -
+- depends_on: @/api/autoCode, @/components/warningBar/warningBar.vue
+- owned_by: frontend
+- 逻辑段:
+- [Feff88b25-S0001] 行 1-185 | vue-template | 模板区块：定义页面结构与交互骨架，承载「插件生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: includes, llmAutoFunc, copySnippet
+- risks: -
+- tags: plugin-ecosystem, vue-template, plugin
+- [Feff88b25-S0002] 行 186-199 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineOptions
+- risks: -
+- tags: codegen-ai, vue-script
+- [Feff88b25-S0003] 行 200-203 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: addEventListener
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [Feff88b25-S0004] 行 204-207 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: removeEventListener
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [Feff88b25-S0005] 行 208-214 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: event
+- outputs: -
+- side_effects: -
+- calls: llmAutoFunc
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [Feff88b25-S0006] 行 215-261 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: vueString
+- outputs: -
+- side_effects: -
+- calls: writeText, then, ElMessage, catch, ref
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [Feff88b25-S0007] 行 262-379 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: vueCode
+- outputs: -
+- side_effects: -
+- calls: async, defineAsyncComponent, getFile, split, pop, resolve, warn, reject, Error, addStyle, handleModule, log
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [Feff88b25-S0008] 行 380-385 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: value
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [Feff88b25-S0009] 行 386-427 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, filter, push, join, llmAuto, loadVueComponent, ref
+- risks: -
+- tags: codegen-ai, vue-script-func
+

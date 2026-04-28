@@ -1,0 +1,579 @@
+## [F6f4a7177] web/src/view/superAdmin/operation/sysOperationRecord.vue
+- 语言: vue
+- 领域: frontend-ui (前端业务界面)
+- 行数: 278
+- imports: @/utils/format, element-plus, vue
+- entrypoints: -
+- depends_on: @/utils/format
+- owned_by: frontend
+- 逻辑段:
+- [F6f4a7177-S0001] 行 1-47 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template
+- [F6f4a7177-S0002] 行 48-52 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: formatDate
+- risks: -
+- tags: frontend-ui, vue-template
+- [F6f4a7177-S0003] 行 53-72 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template
+- [F6f4a7177-S0004] 行 73-92 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: fmtBody
+- risks: -
+- tags: frontend-ui, vue-template
+- [F6f4a7177-S0005] 行 93-111 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: fmtBody
+- risks: -
+- tags: frontend-ui, vue-template
+- [F6f4a7177-S0006] 行 112-137 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: deleteSysOperationRecordFunc
+- risks: -
+- tags: frontend-ui, vue-template
+- [F6f4a7177-S0007] 行 138-156 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineOptions, ref
+- risks: -
+- tags: frontend-ui, vue-script
+- [F6f4a7177-S0008] 行 157-160 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F6f4a7177-S0009] 行 161-169 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getTableData
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F6f4a7177-S0010] 行 170-174 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: val
+- outputs: -
+- side_effects: -
+- calls: getTableData
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F6f4a7177-S0011] 行 175-180 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: val
+- outputs: -
+- side_effects: -
+- calls: getTableData
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F6f4a7177-S0012] 行 181-197 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getSysOperationRecordList, getTableData, ref
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F6f4a7177-S0013] 行 198-200 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: val
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F6f4a7177-S0014] 行 201-224 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, confirm, then, forEach, push, deleteSysOperationRecordByIds, ElMessage, getTableData
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F6f4a7177-S0015] 行 225-243 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: async, confirm, then, deleteSysOperationRecord, ElMessage, getTableData
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F6f4a7177-S0016] 行 244-252 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: value
+- outputs: -
+- side_effects: -
+- calls: parse, catch
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F6f4a7177-S0017] 行 253-278 | vue-style | 样式区块：定义页面视觉表现与布局约束。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-style
+
+## [Faa2822ac] web/src/view/superAdmin/params/sysParams.vue
+- 语言: vue
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 605
+- imports: @/components/warningBar/warningBar.vue, @/utils/format, element-plus, vue
+- entrypoints: -
+- depends_on: @/components/warningBar/warningBar.vue, @/utils/format
+- owned_by: frontend
+- 逻辑段:
+- [Faa2822ac-S0001] 行 1-55 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getTime
+- risks: -
+- tags: menu-rbac, vue-template
+- [Faa2822ac-S0002] 行 56-107 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-template
+- [Faa2822ac-S0003] 行 108-132 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: formatDate
+- risks: -
+- tags: menu-rbac, vue-template
+- [Faa2822ac-S0004] 行 133-178 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getDetails, updateSysParamsFunc, deleteRow
+- risks: -
+- tags: menu-rbac, vue-template
+- [Faa2822ac-S0005] 行 179-286 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getParams, GetSysParam
+- risks: -
+- tags: menu-rbac, vue-template
+- [Faa2822ac-S0006] 行 287-400 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineOptions, ref, reactive, callback, Error, getTime
+- risks: -
+- tags: menu-rbac, vue-script
+- [Faa2822ac-S0007] 行 401-406 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getTableData
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Faa2822ac-S0008] 行 407-415 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: validate, async, getTableData
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Faa2822ac-S0009] 行 416-421 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: val
+- outputs: -
+- side_effects: -
+- calls: getTableData
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Faa2822ac-S0010] 行 422-427 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: val
+- outputs: -
+- side_effects: -
+- calls: getTableData
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Faa2822ac-S0011] 行 428-446 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getSysParamsList, getTableData
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Faa2822ac-S0012] 行 447-454 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, setOptions, ref
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Faa2822ac-S0013] 行 455-459 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: val
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Faa2822ac-S0014] 行 460-470 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: confirm, then, deleteSysParamsFunc
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Faa2822ac-S0015] 行 471-506 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, confirm, then, ElMessage, push, deleteSysParamsByIds, getTableData, ref
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Faa2822ac-S0016] 行 507-516 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: async, findSysParams
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Faa2822ac-S0017] 行 517-534 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: async, deleteSysParams, ElMessage, getTableData, ref
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Faa2822ac-S0018] 行 535-540 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Faa2822ac-S0019] 行 541-550 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Faa2822ac-S0020] 行 551-582 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, validate, createSysParams, updateSysParams, ElMessage, closeDialog, getTableData, ref
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Faa2822ac-S0021] 行 583-587 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Faa2822ac-S0022] 行 588-597 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: async, findSysParams, openDetailShow
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Faa2822ac-S0023] 行 598-603 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Faa2822ac-S0024] 行 604-605 | vue-style | 样式区块：定义页面视觉表现与布局约束。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-style
+
+## [F18740525] web/src/view/superAdmin/user/user.vue
+- 语言: vue
+- 领域: frontend-ui (前端业务界面)
+- 行数: 623
+- imports: @/api/authority, @/api/user.js, @/components/customPic/index.vue, @/components/selectImage/selectImage.vue, @/components/warningBar/warningBar.vue, @/pinia, @/utils/stringFun, element-plus, vue
+- entrypoints: -
+- depends_on: @/api/authority, @/api/user.js, @/components/customPic/index.vue, @/components/selectImage/selectImage.vue, @/components/warningBar/warningBar.vue, @/pinia, @/utils/stringFun
+- owned_by: frontend
+- 逻辑段:
+- [F18740525-S0001] 行 1-63 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template
+- [F18740525-S0002] 行 64-92 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: changeAuthority
+- risks: -
+- tags: frontend-ui, vue-template, security
+- [F18740525-S0003] 行 93-108 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: switchEnable
+- risks: -
+- tags: frontend-ui, vue-template
+- [F18740525-S0004] 行 109-169 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: deleteUserFunc, openEdit, resetPasswordFunc
+- risks: -
+- tags: frontend-ui, vue-template
+- [F18740525-S0005] 行 170-182 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template
+- [F18740525-S0006] 行 183-252 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template, security
+- [F18740525-S0007] 行 253-284 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineOptions, useAppStore, ref
+- risks: -
+- tags: frontend-ui, vue-script, security
+- [F18740525-S0008] 行 285-289 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getTableData
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F18740525-S0009] 行 290-301 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getTableData
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F18740525-S0010] 行 302-329 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: AuthorityData, optionsData
+- outputs: -
+- side_effects: -
+- calls: forEach, setAuthorityOptions, push, ref
+- risks: -
+- tags: frontend-ui, vue-script-func, security
+- [F18740525-S0011] 行 330-337 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: { prop, order }
+- outputs: -
+- side_effects: -
+- calls: toSQLLine, getTableData
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F18740525-S0012] 行 338-342 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: val
+- outputs: -
+- side_effects: -
+- calls: getTableData
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F18740525-S0013] 行 343-348 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: val
+- outputs: -
+- side_effects: -
+- calls: getTableData
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F18740525-S0014] 行 349-372 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getUserList, watch, setAuthorityIds, ref
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F18740525-S0015] 行 373-377 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: authData
+- outputs: -
+- side_effects: -
+- calls: setAuthorityOptions
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F18740525-S0016] 行 378-396 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getTableData, getAuthorityList, setOptions, initPage, ref
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F18740525-S0017] 行 397-418 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: charAt, floor, random, writeText, then, ElMessage, catch
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F18740525-S0018] 行 419-427 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F18740525-S0019] 行 428-456 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, ElMessage, resetPassword
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F18740525-S0020] 行 457-460 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F18740525-S0021] 行 461-471 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: forEach
+- risks: -
+- tags: frontend-ui, vue-script-func, security
+- [F18740525-S0022] 行 472-525 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: async, confirm, then, deleteUser, success, getTableData, ref
+- risks: -
+- tags: frontend-ui, vue-script-func, security
+- [F18740525-S0023] 行 526-553 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, validate, register, ElMessage, getTableData, closeAddUserDialog, setUserInfo, ref
+- risks: -
+- tags: frontend-ui, vue-script-func, security
+- [F18740525-S0024] 行 554-562 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: resetFields, ref
+- risks: -
+- tags: frontend-ui, vue-script-func, security
+- [F18740525-S0025] 行 563-568 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F18740525-S0026] 行 569-592 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: row, flag, removeAuth
+- outputs: -
+- side_effects: -
+- calls: async, nextTick, setUserAuthorities, ElMessage
+- risks: -
+- tags: frontend-ui, vue-script-func, security
+- [F18740525-S0027] 行 593-598 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: parse, stringify
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F18740525-S0028] 行 599-617 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: async, parse, stringify, nextTick, setUserInfo, ElMessage, getTableData
+- risks: -
+- tags: frontend-ui, vue-script-func, security
+- [F18740525-S0029] 行 618-623 | vue-style | 样式区块：定义页面视觉表现与布局约束。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-style
+
+## [Fdef5775c] web/src/view/system/state.vue
+- 语言: vue
+- 领域: frontend-ui (前端业务界面)
+- 行数: 193
+- imports: @/api/system, vue
+- entrypoints: -
+- depends_on: @/api/system
+- owned_by: frontend
+- 逻辑段:
+- [Fdef5775c-S0001] 行 1-38 | vue-template | 模板区块：定义页面结构与交互骨架，承载「MCP与Skills生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, vue-template
+- [Fdef5775c-S0002] 行 39-89 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: total, used
+- risks: -
+- tags: frontend-ui, vue-template
+- [Fdef5775c-S0003] 行 90-116 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: toFixed
+- risks: -
+- tags: frontend-ui, vue-template
+- [Fdef5775c-S0004] 行 117-155 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: total, used, toFixed
+- risks: -
+- tags: frontend-ui, vue-template
+- [Fdef5775c-S0005] 行 156-171 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineOptions, ref
+- risks: -
+- tags: frontend-ui, vue-script
+- [Fdef5775c-S0006] 行 172-187 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getSystemState, reload, setInterval, onUnmounted, clearInterval
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Fdef5775c-S0007] 行 188-193 | vue-style | 样式区块：定义页面视觉表现与布局约束。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-style
+

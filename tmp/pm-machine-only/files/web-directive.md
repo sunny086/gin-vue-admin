@@ -1,0 +1,115 @@
+# web-directive
+
+- 文件数量：2
+
+## [F692ff3ca] web/src/directive/auth.js
+- 语言: js
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 26
+- imports: @/pinia/modules/user
+- entrypoints: -
+- depends_on: @/pinia/modules/user
+- owned_by: frontend
+- 逻辑段:
+- [F692ff3ca-S0001] 行 1-1 | preamble | 逻辑段 preamble：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, preamble
+- [F692ff3ca-S0002] 行 2-2 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, js-import
+- [F692ff3ca-S0003] 行 3-3 | js-export | 函数/导出 export default：承载该模块的核心逻辑，用于支撑「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, js-export
+- [F692ff3ca-S0004] 行 4-4 | js-func | 函数/导出 install：承载该模块的核心逻辑，用于支撑「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, js-func
+- [F692ff3ca-S0005] 行 5-8 | js-const | 逻辑段 js-const：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: useUserStore, directive, function
+- risks: -
+- tags: auth-access, js-const
+- [F692ff3ca-S0006] 行 9-13 | js-const | 逻辑段 js-const：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: removeChild
+- risks: -
+- tags: auth-access, js-const
+- [F692ff3ca-S0007] 行 14-14 | js-const | 逻辑段 js-const：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: toString, split
+- risks: -
+- tags: auth-access, js-const
+- [F692ff3ca-S0008] 行 15-26 | js-const | 逻辑段 js-const：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: some, Number, removeChild
+- risks: -
+- tags: auth-access, js-const, security
+
+## [F0c91ec39] web/src/directive/clickOutSide.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 44
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [F0c91ec39-S0001] 行 1-1 | js-export | 函数/导出 export default：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-export
+- [F0c91ec39-S0002] 行 2-4 | js-func | 函数/导出 install：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: directive, mounted
+- risks: -
+- tags: frontend-core, js-func
+- [F0c91ec39-S0003] 行 5-8 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: e
+- outputs: -
+- side_effects: -
+- calls: contains
+- risks: -
+- tags: frontend-core, js-const
+- [F0c91ec39-S0004] 行 9-33 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: some, contains, handler, value, setTimeout, addEventListener, unmounted
+- risks: -
+- tags: frontend-core, js-const
+- [F0c91ec39-S0005] 行 34-44 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: removeEventListener
+- risks: -
+- tags: frontend-core, js-const
+

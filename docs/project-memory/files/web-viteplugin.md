@@ -1,0 +1,199 @@
+# web-vitePlugin
+
+- 文件数量：2
+
+## [F65c73e50] web/vitePlugin/componentName/index.js
+- 语言: js
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 89
+- imports: chokidar, fs, path
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [F65c73e50-S0001] 行 1-1 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, js-import
+- [F65c73e50-S0002] 行 2-2 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, js-import
+- [F65c73e50-S0003] 行 3-4 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, js-import
+- [F65c73e50-S0004] 行 5-8 | js-const | 逻辑段 js-const：承载「通用模块」域的实现细节。
+- inputs: str
+- outputs: -
+- side_effects: -
+- calls: replace
+- risks: -
+- tags: other, js-const
+- [F65c73e50-S0005] 行 9-13 | js-const | 逻辑段 js-const：承载「通用模块」域的实现细节。
+- inputs: text
+- outputs: -
+- side_effects: -
+- calls: replace, toUpperCase
+- risks: -
+- tags: other, js-const
+- [F65c73e50-S0006] 行 14-14 | js-const | 逻辑段 js-const：承载「通用模块」域的实现细节。
+- inputs: dir, fileList = []
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, js-const
+- [F65c73e50-S0007] 行 15-16 | js-const | 逻辑段 js-const：承载「通用模块」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: readdirSync, forEach
+- risks: -
+- tags: other, js-const
+- [F65c73e50-S0008] 行 17-27 | js-const | 逻辑段 js-const：承载「通用模块」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: join, statSync, isDirectory, getAllVueFiles, endsWith, push
+- risks: -
+- tags: other, js-const
+- [F65c73e50-S0009] 行 28-28 | js-const | 逻辑段 js-const：承载「通用模块」域的实现细节。
+- inputs: fileContent
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, js-const
+- [F65c73e50-S0010] 行 29-29 | js-const | 逻辑段 js-const：承载「通用模块」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, js-const
+- [F65c73e50-S0011] 行 30-34 | js-const | 逻辑段 js-const：承载「通用模块」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: match
+- risks: -
+- tags: other, js-const
+- [F65c73e50-S0012] 行 35-36 | js-const | 逻辑段 js-const：承载「插件生态」域的实现细节。
+- inputs: outputFilePath
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, js-const
+- [F65c73e50-S0013] 行 37-37 | js-const | 逻辑段 js-const：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, js-const
+- [F65c73e50-S0014] 行 38-38 | js-const | 逻辑段 js-const：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, js-const
+- [F65c73e50-S0015] 行 39-42 | js-const | 逻辑段 js-const：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getAllVueFiles, join
+- risks: -
+- tags: plugin-ecosystem, js-const, plugin
+- [F65c73e50-S0016] 行 43-43 | js-const | 逻辑段 js-const：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: reduce
+- risks: -
+- tags: plugin-ecosystem, js-const
+- [F65c73e50-S0017] 行 44-44 | js-const | 逻辑段 js-const：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: readFileSync
+- risks: -
+- tags: plugin-ecosystem, js-const
+- [F65c73e50-S0018] 行 45-45 | js-const | 逻辑段 js-const：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: extractComponentName
+- risks: -
+- tags: plugin-ecosystem, js-const
+- [F65c73e50-S0019] 行 46-50 | js-const | 逻辑段 js-const：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: relative, replace, toPascalCase, basename
+- risks: -
+- tags: plugin-ecosystem, js-const
+- [F65c73e50-S0020] 行 51-54 | js-const | 逻辑段 js-const：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: 写入文件系统
+- calls: stringify, writeFileSync
+- risks: -
+- tags: plugin-ecosystem, js-const
+- [F65c73e50-S0021] 行 55-55 | js-const | 逻辑段 js-const：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, js-const
+- [F65c73e50-S0022] 行 56-59 | js-const | 逻辑段 js-const：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: join
+- risks: -
+- tags: plugin-ecosystem, js-const, plugin
+- [F65c73e50-S0023] 行 60-87 | js-const | 逻辑段 js-const：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: watch, on, generatePathNameMap, configResolved, buildStart, buildEnd, watchDirectoryChanges
+- risks: -
+- tags: plugin-ecosystem, js-const, plugin, config
+- [F65c73e50-S0024] 行 88-89 | js-export | 函数/导出 export default：承载该模块的核心逻辑，用于支撑「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, js-export
+
+## [Fd16c4990] web/vitePlugin/secret/index.js
+- 语言: js
+- 领域: other (通用模块)
+- 行数: 8
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [Fd16c4990-S0001] 行 1-8 | js-export | 函数/导出 AddSecret：执行创建或新增流程，用于支撑「通用模块」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: AddSecret
+- risks: -
+- tags: other, js-export
+

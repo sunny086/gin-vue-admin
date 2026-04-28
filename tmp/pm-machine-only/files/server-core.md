@@ -1,0 +1,326 @@
+# server-core
+
+- 文件数量：7
+
+## [Fabe14f73] server/core/internal/constant.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 10
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fabe14f73-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fabe14f73-S0002] 行 3-10 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var, config
+
+## [F5e7493ca] server/core/internal/cutter.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 126
+- imports: fmt, os, path/filepath, sync, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F5e7493ca-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F5e7493ca-S0002] 行 3-12 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import, Join
+- risks: -
+- tags: system-config, go-import
+- [F5e7493ca-S0003] 行 13-22 | go-type | 类型 Cutter：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F5e7493ca-S0004] 行 23-25 | go-type | 类型 CutterOption：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F5e7493ca-S0005] 行 26-32 | go-func | 函数 CutterWithLayout：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: layout string
+- outputs: CutterOption
+- side_effects: -
+- calls: CutterWithLayout
+- risks: -
+- tags: system-config, go-func
+- [F5e7493ca-S0006] 行 33-40 | go-func | 函数 CutterWithFormats：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: format ...string
+- outputs: CutterOption
+- side_effects: -
+- calls: CutterWithFormats
+- risks: -
+- tags: system-config, go-func
+- [F5e7493ca-S0007] 行 41-57 | go-func | 函数 NewCutter：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: director string, level string, retentionDay int, options ...CutterOption
+- outputs: *Cutter
+- side_effects: -
+- calls: NewCutter
+- risks: -
+- tags: system-config, go-func
+- [F5e7493ca-S0008] 行 58-96 | go-func | 函数 Write：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: bytes []byte
+- outputs: (n int, err error)
+- side_effects: -
+- calls: Write, Lock, Close, Unlock, Now, Format, Join, Dir, MkdirAll, removeNDaysFolders, Println, OpenFile
+- risks: -
+- tags: system-config, go-func
+- [F5e7493ca-S0009] 行 97-107 | go-func | 函数 Sync：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: error
+- side_effects: -
+- calls: Sync, Lock, Unlock
+- risks: -
+- tags: system-config, go-func
+- [F5e7493ca-S0010] 行 108-126 | go-func | 函数 removeNDaysFolders：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: dir string, days int
+- outputs: error
+- side_effects: -
+- calls: removeNDaysFolders, Now, AddDate, Walk, IsDir, ModTime, Before, RemoveAll
+- risks: -
+- tags: system-config, go-func
+
+## [Fdbc6fc1e] server/core/internal/zap_core.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 134
+- imports: context, fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system, github.com/flipped-aurora/gin-vue-admin/server/service, github.com/flipped-aurora/gin-vue-admin/server/utils/stacktrace, go.uber.org/zap, go.uber.org/zap/zapcore, os, strings, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fdbc6fc1e-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fdbc6fc1e-S0002] 行 3-17 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Fdbc6fc1e-S0003] 行 18-22 | go-type | 类型 ZapCore：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [Fdbc6fc1e-S0004] 行 23-32 | go-func | 函数 NewZapCore：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: level zapcore.Level
+- outputs: *ZapCore
+- side_effects: -
+- calls: NewZapCore, WriteSyncer, LevelEnablerFunc, NewCore, Encoder
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [Fdbc6fc1e-S0005] 行 33-47 | go-func | 函数 WriteSyncer：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: formats ...string
+- outputs: zapcore.WriteSyncer
+- side_effects: -
+- calls: WriteSyncer, NewCutter, String, CutterWithLayout, CutterWithFormats, NewMultiWriteSyncer, AddSync
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [Fdbc6fc1e-S0006] 行 48-51 | go-func | 函数 Enabled：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: level zapcore.Level
+- outputs: bool
+- side_effects: -
+- calls: Enabled
+- risks: -
+- tags: system-config, go-func
+- [Fdbc6fc1e-S0007] 行 52-55 | go-func | 函数 With：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: fields []zapcore.Field
+- outputs: zapcore.Core
+- side_effects: -
+- calls: With
+- risks: -
+- tags: system-config, go-func
+- [Fdbc6fc1e-S0008] 行 56-62 | go-func | 函数 Check：执行校验与约束判断，位于「系统配置与运行时」域。
+- inputs: entry zapcore.Entry, check *zapcore.CheckedEntry
+- outputs: *zapcore.CheckedEntry
+- side_effects: -
+- calls: Check, Enabled, AddCore
+- risks: -
+- tags: system-config, go-func
+- [Fdbc6fc1e-S0009] 行 63-130 | go-func | 函数 Write：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: entry zapcore.Entry, fields []zapcore.Field
+- outputs: error
+- side_effects: -
+- calls: Write, WriteSyncer, NewCore, Encoder, Error, Contains, String, Sprintf, FindFinalCaller, ExtractFuncSourceByPosition, d, Background
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+- [Fdbc6fc1e-S0010] 行 131-134 | go-func | 函数 Sync：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: error
+- side_effects: -
+- calls: Sync
+- risks: -
+- tags: system-config, go-func
+
+## [Fd2d3d37c] server/core/server_run.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 61
+- imports: context, fmt, github.com/gin-gonic/gin, go.uber.org/zap, net/http, os, os/signal, syscall, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fd2d3d37c-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fd2d3d37c-S0002] 行 3-15 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Fd2d3d37c-S0003] 行 16-21 | go-type | 类型 server：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: ListenAndServe, Shutdown
+- risks: -
+- tags: system-config, go-type
+- [Fd2d3d37c-S0004] 行 22-61 | go-func | 函数 initServer：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: address string, router *gin.Engine, readTimeout, writeTimeout time.Duration
+- outputs: -
+- side_effects: 触发进程退出, 启动并发协程
+- calls: initServer, ListenAndServe, Printf, L, Error, Exit, kill, Notify, Info, WithTimeout, Background, cancel
+- risks: 存在进程级退出路径，影响服务可用性
+- tags: system-config, go-func
+
+## [F5f77ba7e] server/core/server.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 49
+- imports: fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/initialize, github.com/flipped-aurora/gin-vue-admin/server/service/system, go.uber.org/zap, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F5f77ba7e-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F5f77ba7e-S0002] 行 3-13 | go-import | 逻辑段 go-import：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: mcp-skills, go-import, ai-tooling
+- [F5f77ba7e-S0003] 行 14-49 | go-func | 函数 RunServer：控制服务运行状态，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: RunServer, Redis, RedisList, Initialization, L, Error, Sprintf, LoadAll, Routers, ResolveMCPServiceURL, Printf, initServer
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: mcp-skills, go-func, ai-tooling, plugin, config
+
+## [F85091d8d] server/core/viper.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 77
+- imports: flag, fmt, github.com/flipped-aurora/gin-vue-admin/server/core/internal, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/fsnotify/fsnotify, github.com/gin-gonic/gin, github.com/spf13/viper, os, path/filepath
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F85091d8d-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F85091d8d-S0002] 行 3-16 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, config
+- [F85091d8d-S0003] 行 17-44 | go-func | 函数 Viper：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: -
+- outputs: *viper.Viper
+- side_effects: 触发 panic
+- calls: Viper, getConfigPath, New, SetConfigFile, SetConfigType, ReadInConfig, Errorf, WatchConfig, OnConfigChange, Println, Unmarshal, Abs
+- risks: 存在 panic 路径，异常恢复依赖上层中间件 / 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, config
+- [F85091d8d-S0004] 行 45-77 | go-func | 函数 getConfigPath：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: (config string)
+- side_effects: -
+- calls: getConfigPath, StringVar, Parse, Printf, Getenv, Mode, Stat, IsNotExist
+- risks: -
+- tags: system-config, go-func, config
+
+## [F3e05cbf0] server/core/zap.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 37
+- imports: fmt, github.com/flipped-aurora/gin-vue-admin/server/core/internal, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/utils, go.uber.org/zap, go.uber.org/zap/zapcore, os
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F3e05cbf0-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F3e05cbf0-S0002] 行 3-14 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F3e05cbf0-S0003] 行 15-37 | go-func | 函数 Zap：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: (logger *zap.Logger)
+- side_effects: -
+- calls: Zap, PathExists, Printf, Mkdir, Levels, NewZapCore, New, NewTee, AddStacktrace, AddCaller, WithOptions
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+

@@ -1,0 +1,824 @@
+## [F92526df4] web/src/view/systemTools/aiWrokflow/index.vue
+- 语言: vue
+- 领域: frontend-ui (前端业务界面)
+- 行数: 2424
+- imports: @/pinia/modules/user, element-plus, vue, vue-router
+- entrypoints: -
+- depends_on: @/pinia/modules/user
+- owned_by: frontend
+- 逻辑段:
+- [F92526df4-S0001] 行 1-233 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: switchTab, loadSessionList, startNewConversation, isSessionActive, openSession, formatTime, removeSession
+- risks: 逻辑段较长，建议拆分以降低维护成本
+- tags: codegen-ai, vue-template, ai-tooling
+- [F92526df4-S0002] 行 234-309 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: startNewConversation
+- risks: -
+- tags: codegen-ai, vue-template, plugin
+- [F92526df4-S0003] 行 310-415 | vue-template | 模板区块：定义页面结构与交互骨架，承载「MCP与Skills生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: startNewConversation, copyText
+- risks: -
+- tags: mcp-skills, vue-template, ai-tooling
+- [F92526df4-S0004] 行 416-545 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: rollbackToMessage, formatTime, selectMessageNode
+- risks: -
+- tags: codegen-ai, vue-template, ai-tooling
+- [F92526df4-S0005] 行 546-556 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template
+- [F92526df4-S0006] 行 557-620 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: openDrawer
+- risks: -
+- tags: frontend-ui, vue-template
+- [F92526df4-S0007] 行 621-872 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: 逻辑段较长，建议拆分以降低维护成本
+- tags: frontend-ui, vue-template
+- [F92526df4-S0008] 行 873-981 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template, ai-tooling
+- [F92526df4-S0009] 行 982-1020 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineOptions, useRouter, useUserStore
+- risks: -
+- tags: mcp-skills, vue-script, ai-tooling
+- [F92526df4-S0010] 行 1021-1029 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0011] 行 1030-1034 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F92526df4-S0012] 行 1035-1044 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0013] 行 1045-1050 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F92526df4-S0014] 行 1051-1062 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: tab
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0015] 行 1063-1069 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: value
+- outputs: -
+- side_effects: -
+- calls: parse, catch
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0016] 行 1070-1076 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: value, fallback = {}
+- outputs: -
+- side_effects: -
+- calls: parse, stringify, catch
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0017] 行 1077-1078 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: ...values
+- outputs: -
+- side_effects: -
+- calls: find, trim
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0018] 行 1079-1083 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: text
+- outputs: -
+- side_effects: -
+- calls: String, split, trim, find
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0019] 行 1084-1090 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: payload
+- outputs: -
+- side_effects: -
+- calls: stringify, catch, String
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0020] 行 1091-1094 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: value
+- outputs: -
+- side_effects: -
+- calls: String, replace, trim
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0021] 行 1095-1095 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: value
+- outputs: -
+- side_effects: -
+- calls: isArray
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0022] 行 1096-1133 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: key, fallback
+- outputs: -
+- side_effects: -
+- calls: parse, getItem, catch, ref, reactive, loadStorage, newSession, newAnalysisForm, newWorkflowForm, emptyAnalysis, emptyWorkflow, computed
+- risks: -
+- tags: codegen-ai, vue-script-func, ai-tooling
+- [F92526df4-S0023] 行 1134-1182 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: title, content
+- outputs: -
+- side_effects: -
+- calls: computed, isArray, Boolean, trim, find, String
+- risks: -
+- tags: codegen-ai, vue-script-func, ai-tooling
+- [F92526df4-S0024] 行 1183-1185 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: item
+- outputs: -
+- side_effects: -
+- calls: Number
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0025] 行 1186-1243 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: value
+- outputs: -
+- side_effects: -
+- calls: Date, isNaN, getTime, String, toLocaleString, watch, setItem, stringify, clone, firstText, async, nextTick
+- risks: -
+- tags: codegen-ai, vue-script-func, ai-tooling
+- [F92526df4-S0026] 行 1244-1261 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: text
+- outputs: -
+- side_effects: -
+- calls: parseJSON, trim, match, indexOf, filter, lastIndexOf, slice, min, max
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0027] 行 1262-1284 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: value
+- outputs: -
+- side_effects: -
+- calls: isArray, trim, firstText, stringify, filter, split
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0028] 行 1285-1324 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: value
+- outputs: -
+- side_effects: -
+- calls: toArray, firstText, Boolean
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0029] 行 1325-1357 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: value
+- outputs: -
+- side_effects: -
+- calls: toArray, firstText, normalizeFields
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0030] 行 1358-1388 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: value
+- outputs: -
+- side_effects: -
+- calls: toArray, firstText, normalizeStrings, Boolean
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0031] 行 1389-1439 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: value, fallback
+- outputs: -
+- side_effects: -
+- calls: toArray, String, split, n, trim, filter, firstText, Boolean
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0032] 行 1440-1476 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: payload, rawText = ''
+- outputs: -
+- side_effects: -
+- calls: firstText, firstParagraph, normalizeStrings, normalizeClientPages, normalizeModules, formatPayload
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0033] 行 1477-1495 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: payload, rawText = ''
+- outputs: -
+- side_effects: -
+- calls: firstText, firstParagraph, normalizeSteps, formatPayload
+- risks: -
+- tags: codegen-ai, vue-script-func, ai-tooling
+- [F92526df4-S0034] 行 1496-1561 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: content
+- outputs: -
+- side_effects: -
+- calls: normalizeText, match, think, replace, extractJson, formatPayload, slice, Boolean, computed, parseDisplay
+- risks: -
+- tags: codegen-ai, vue-script-func, ai-tooling
+- [F92526df4-S0035] 行 1562-1570 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: value
+- outputs: -
+- side_effects: -
+- calls: Boolean, some, call
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0036] 行 1571-1607 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: value, depth = 0
+- outputs: -
+- side_effects: -
+- calls: extractJson, isArray, hasStructuredResultShape, unwrapStructuredResult
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0037] 行 1608-1613 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: value
+- outputs: -
+- side_effects: -
+- calls: formatPayload
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0038] 行 1614-1624 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: response
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0039] 行 1625-1643 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: response
+- outputs: -
+- side_effects: -
+- calls: unwrap, unwrapStructuredResult, firstText, fallbackAnswerText, extractJson
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0040] 行 1644-1652 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: tab, message
+- outputs: -
+- side_effects: -
+- calls: keys, extractJson, normalizeAnalysis, firstText, normalizeWorkflow
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F92526df4-S0041] 行 1653-1665 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: tab, message
+- outputs: -
+- side_effects: -
+- calls: emptyAnalysis, emptyWorkflow, messageSnapshot, clone, firstText
+- risks: -
+- tags: codegen-ai, vue-script-func, ai-tooling
+- [F92526df4-S0042] 行 1666-1702 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: tab
+- outputs: -
+- side_effects: -
+- calls: assign, newAnalysisForm, clone, newWorkflowForm, find, reverse, applyMessage, keys, normalizeAnalysis, firstText, emptyAnalysis, normalizeWorkflow
+- risks: -
+- tags: codegen-ai, vue-script-func, ai-tooling
+- [F92526df4-S0043] 行 1703-1715 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: tab
+- outputs: -
+- side_effects: -
+- calls: find, firstText, slice
+- risks: -
+- tags: codegen-ai, vue-script-func, ai-tooling
+- [F92526df4-S0044] 行 1716-1718 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: value
+- outputs: -
+- side_effects: -
+- calls: normalizeText, replace, trim
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0045] 行 1719-1735 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: field
+- outputs: -
+- side_effects: -
+- calls: push, join, normalizeInlineText
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0046] 行 1736-1849 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: trim, push, normalizeInlineText, join, formatModuleFieldForTransfer, filter
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0047] 行 1850-1872 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: tab
+- outputs: -
+- side_effects: -
+- calls: sessionTitle, firstText, clone
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0048] 行 1873-1907 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, warning, persistSession, catch, unwrap, dumpAIWorkflowMarkdown, sessionPayload, firstText, alert
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F92526df4-S0049] 行 1908-1923 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: tab = activeTab.value
+- outputs: -
+- side_effects: -
+- calls: newSession, assign, newAnalysisForm, emptyAnalysis, newWorkflowForm, emptyWorkflow, success
+- risks: -
+- tags: codegen-ai, vue-script-func, ai-tooling
+- [F92526df4-S0050] 行 1924-1951 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: tab, raw
+- outputs: -
+- side_effects: -
+- calls: newSession, Number, firstText, clone, toArray, now, random, toString, slice, applySession
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0051] 行 1952-1968 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: tab = activeTab.value
+- outputs: -
+- side_effects: -
+- calls: async, unwrap, getAIWorkflowSessionList, toArray
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F92526df4-S0052] 行 1969-1976 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: item
+- outputs: -
+- side_effects: -
+- calls: async, unwrap, getAIWorkflowSessionDetail, Number, hydrateSession
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F92526df4-S0053] 行 1977-1986 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: tab, refreshList = true
+- outputs: -
+- side_effects: -
+- calls: async, unwrap, saveAIWorkflowSession, sessionPayload, hydrateSession, loadSessionList
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F92526df4-S0054] 行 1987-2002 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: item
+- outputs: -
+- side_effects: -
+- calls: async, confirm, deleteAIWorkflowSession, Number, isSessionActive, startNewConversation, loadSessionList, success
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F92526df4-S0055] 行 2003-2012 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: messageId
+- outputs: -
+- side_effects: -
+- calls: async, find, applyMessage, persistSession
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0056] 行 2013-2039 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: messageId
+- outputs: -
+- side_effects: -
+- calls: async, findIndex, confirm, slice, applyMessage, persistSession, success
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0057] 行 2040-2050 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: trim, parse, catch, error
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0058] 行 2051-2101 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: { tab, query, inputs, onProgress }
+- outputs: -
+- side_effects: -
+- calls: async, parseExtraPayload, catch, String, trim, error, resolveChat, await, analyzeRequirementByAISSEStream, generatePromptFlowByAISSEStream
+- risks: -
+- tags: codegen-ai, vue-script-func, ai-tooling
+- [F92526df4-S0059] 行 2102-2115 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: tab, role, content, extras = {}
+- outputs: -
+- side_effects: -
+- calls: now, random, toString, slice, clone, firstText, Date, toISOString, push
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0060] 行 2116-2122 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: tab, messageIds = []
+- outputs: -
+- side_effects: -
+- calls: Set, filter, has
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0061] 行 2123-2129 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, nextTick
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0062] 行 2130-2151 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: tab, message, payload = {}
+- outputs: -
+- side_effects: -
+- calls: nextTick, scrollConversationToBottom
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0063] 行 2152-2208 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, trim, warning, addMessage, scrollConversationToBottom, sendChat, updateStreamMessage, removeMessages, normalizeAnalysis, sessionTitle, persistSession, success
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0064] 行 2209-2215 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, warning, switchTab, buildAnalysisTransferText, success
+- risks: -
+- tags: codegen-ai, vue-script-func, ai-tooling
+- [F92526df4-S0065] 行 2216-2269 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, trim, warning, addMessage, scrollConversationToBottom, sendChat, updateStreamMessage, removeMessages, normalizeWorkflow, sessionTitle, persistSession, success
+- risks: -
+- tags: codegen-ai, vue-script-func, ai-tooling
+- [F92526df4-S0066] 行 2270-2337 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, trim, warning, addMessage, scrollConversationToBottom, sendChat, updateStreamMessage, removeMessages, normalizeAnalysis, normalizeWorkflow, sessionTitle, persistSession
+- risks: -
+- tags: codegen-ai, vue-script-func, ai-tooling
+- [F92526df4-S0067] 行 2338-2355 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: text, successMessage = '复制成功'
+- outputs: -
+- side_effects: -
+- calls: async, warning, writeText, catch, createElement, appendChild, focus, execCommand, removeChild, success
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0068] 行 2356-2360 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, copyText, stringify, clone
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0069] 行 2361-2372 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, copyText, join
+- risks: -
+- tags: codegen-ai, vue-script-func, ai-tooling
+- [F92526df4-S0070] 行 2373-2377 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, copyText
+- risks: -
+- tags: codegen-ai, vue-script-func, ai-tooling
+- [F92526df4-S0071] 行 2378-2383 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: tab
+- outputs: -
+- side_effects: -
+- calls: async, applySession, loadSessionList
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F92526df4-S0072] 行 2384-2400 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: switchTab
+- risks: -
+- tags: codegen-ai, vue-script-func, ai-tooling
+- [F92526df4-S0073] 行 2401-2418 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: push, onMounted, async, all, loadSessionList, Number, unwrap, getAIWorkflowSessionDetail, hydrateSession, applySession
+- risks: -
+- tags: codegen-ai, vue-script-func, ai-tooling
+- [F92526df4-S0074] 行 2419-2424 | vue-style | 样式区块：定义页面视觉表现与布局约束。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: deep
+- risks: -
+- tags: codegen-ai, vue-style, ai-tooling
+
+## [F80a33b64] web/src/view/systemTools/apiToken/index.vue
+- 语言: vue
+- 领域: frontend-ui (前端业务界面)
+- 行数: 300
+- imports: @/api/user, @/utils/format, element-plus, vue
+- entrypoints: -
+- depends_on: @/api/user, @/utils/format
+- owned_by: frontend
+- 逻辑段:
+- [F80a33b64-S0001] 行 1-37 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template, security
+- [F80a33b64-S0002] 行 38-44 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template
+- [F80a33b64-S0003] 行 45-48 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: formatDate
+- risks: -
+- tags: frontend-ui, vue-template
+- [F80a33b64-S0004] 行 49-117 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: openCurl, invalidateToken
+- risks: -
+- tags: frontend-ui, vue-template, security
+- [F80a33b64-S0005] 行 118-130 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template, security
+- [F80a33b64-S0006] 行 131-152 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: copyText
+- risks: -
+- tags: frontend-ui, vue-template, security
+- [F80a33b64-S0007] 行 153-186 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: ref
+- risks: -
+- tags: frontend-ui, vue-script, security
+- [F80a33b64-S0008] 行 187-196 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getApiTokenList
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F80a33b64-S0009] 行 197-208 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getUserList
+- risks: -
+- tags: frontend-ui, vue-script-func, security
+- [F80a33b64-S0010] 行 209-222 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: val
+- outputs: -
+- side_effects: -
+- calls: find
+- risks: -
+- tags: frontend-ui, vue-script-func, security
+- [F80a33b64-S0011] 行 223-236 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, warning, createApiToken, getTableData
+- risks: -
+- tags: frontend-ui, vue-script-func, security
+- [F80a33b64-S0012] 行 237-245 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: async, deleteApiToken, success, getTableData
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F80a33b64-S0013] 行 246-262 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-script-func, security
+- [F80a33b64-S0014] 行 263-273 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: text
+- outputs: -
+- side_effects: -
+- calls: createElement, appendChild, execCommand, removeChild, success
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F80a33b64-S0015] 行 274-279 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getTableData
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F80a33b64-S0016] 行 280-284 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getTableData
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F80a33b64-S0017] 行 285-289 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: val
+- outputs: -
+- side_effects: -
+- calls: getTableData
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F80a33b64-S0018] 行 290-297 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: val
+- outputs: -
+- side_effects: -
+- calls: getTableData
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F80a33b64-S0019] 行 298-300 | vue-style | 样式区块：定义页面视觉表现与布局约束。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-style
+
+## [F03437bb3] web/src/view/systemTools/autoCode/component/fieldDialog.vue
+- 语言: vue
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 503
+- imports: @/api/autoCode, @/api/sysDictionary, @/components/warningBar/warningBar.vue, @/utils/stringFun, element-plus, vue
+- entrypoints: -
+- depends_on: @/api/autoCode, @/api/sysDictionary, @/components/warningBar/warningBar.vue, @/utils/stringFun
+- owned_by: frontend
+- 逻辑段:
+- [F03437bb3-S0001] 行 1-254 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: canSelect
+- risks: 逻辑段较长，建议拆分以降低维护成本
+- tags: codegen-ai, vue-template
+- [F03437bb3-S0002] 行 255-292 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-template
+- [F03437bb3-S0003] 行 293-338 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineOptions, defineProps, function, ref
+- risks: -
+- tags: codegen-ai, vue-script
+- [F03437bb3-S0004] 行 339-345 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getDB
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F03437bb3-S0005] 行 346-371 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: rule, value, callback
+- outputs: -
+- side_effects: -
+- calls: test, callback, Error, ref
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F03437bb3-S0006] 行 372-382 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getSysDictionaryList, init
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F03437bb3-S0007] 行 383-387 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: toLowerCase, toSQLLine
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F03437bb3-S0008] 行 388-406 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: item
+- outputs: -
+- side_effects: -
+- calls: includes
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F03437bb3-S0009] 行 407-411 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F03437bb3-S0010] 行 412-431 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: val
+- outputs: -
+- side_effects: -
+- calls: confirm, then, catch
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F03437bb3-S0011] 行 432-436 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F03437bb3-S0012] 行 437-440 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F03437bb3-S0013] 行 441-448 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getDBTableList, clearDataSourceTable, clearAccress, ref
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F03437bb3-S0014] 行 449-463 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getTable, clearAccress, ref
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [F03437bb3-S0015] 行 464-503 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: val, isInit
+- outputs: -
+- side_effects: -
+- calls: async, getColumn, ref, defineExpose, onMounted, getDbFunc, selectDB
+- risks: -
+- tags: codegen-ai, vue-script-func
+
+## [Fd2271d8e] web/src/view/systemTools/autoCode/component/previewCodeDialog.vue
+- 语言: vue
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 120
+- imports: @/pinia, element-plus, highlight.js, marked, marked-highlight, vue
+- entrypoints: -
+- depends_on: @/pinia
+- owned_by: frontend
+- 逻辑段:
+- [Fd2271d8e-S0001] 行 1-17 | vue-template | 模板区块：定义页面结构与交互骨架，承载「代码生成与AI工作流」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: calc
+- risks: -
+- tags: codegen-ai, vue-template
+- [Fd2271d8e-S0002] 行 18-95 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: useAppStore, ref, onMounted, import, defineProps, watchEffect, some, includes, Marked, markedHighlight, highlight, getLanguage
+- risks: -
+- tags: codegen-ai, vue-script, database, config
+- [Fd2271d8e-S0003] 行 96-111 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getElementById, createTextRange, moveToElementText, getSelection, createRange, selectNodeContents, removeAllRanges, addRange, alert
+- risks: -
+- tags: codegen-ai, vue-script-func
+- [Fd2271d8e-S0004] 行 112-120 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: selectText, execCommand, success, defineExpose
+- risks: -
+- tags: codegen-ai, vue-script-func
+

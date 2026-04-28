@@ -1,0 +1,768 @@
+# web-utils
+
+- 文件数量：17
+
+## [F511b740d] web/src/utils/asyncRouter.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 30
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [F511b740d-S0001] 行 1-1 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: glob
+- risks: -
+- tags: frontend-core, js-const
+- [F511b740d-S0002] 行 2-3 | js-const | 逻辑段 js-const：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: glob
+- risks: -
+- tags: plugin-ecosystem, js-const, plugin
+- [F511b740d-S0003] 行 4-19 | js-export | 函数/导出 asyncRouterHandle：处理请求或事件分发，用于支撑「插件生态」域。
+- inputs: asyncRouter
+- outputs: -
+- side_effects: -
+- calls: forEach, split, dynamicImport, asyncRouterHandle
+- risks: -
+- tags: plugin-ecosystem, js-export, plugin
+- [F511b740d-S0004] 行 20-20 | js-func | 函数/导出 dynamicImport：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: dynamicViewsModules, component
+- outputs: -
+- side_effects: -
+- calls: dynamicImport
+- risks: -
+- tags: frontend-core, js-func
+- [F511b740d-S0005] 行 21-21 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: keys
+- risks: -
+- tags: frontend-core, js-const
+- [F511b740d-S0006] 行 22-22 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: filter
+- risks: -
+- tags: frontend-core, js-const
+- [F511b740d-S0007] 行 23-25 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: replace
+- risks: -
+- tags: frontend-core, js-const
+- [F511b740d-S0008] 行 26-30 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const
+
+## [F6cfe6134] web/src/utils/btnAuth.js
+- 语言: js
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 7
+- imports: vue, vue-router
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [F6cfe6134-S0001] 行 1-1 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, js-import
+- [F6cfe6134-S0002] 行 2-2 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, js-import
+- [F6cfe6134-S0003] 行 3-3 | js-export | 函数/导出 useBtnAuth：承载该模块的核心逻辑，用于支撑「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, js-export
+- [F6cfe6134-S0004] 行 4-7 | js-const | 逻辑段 js-const：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: useRoute, reactive
+- risks: -
+- tags: auth-access, js-const
+
+## [F68f8e2dc] web/src/utils/bus.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 5
+- imports: mitt
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [F68f8e2dc-S0001] 行 1-1 | preamble | 逻辑段 preamble：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, preamble
+- [F68f8e2dc-S0002] 行 2-3 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F68f8e2dc-S0003] 行 4-5 | js-export | 函数/导出 emitter：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: mitt
+- risks: -
+- tags: frontend-core, js-export
+
+## [F0bb1bb77] web/src/utils/closeThisPage.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 6
+- imports: @/utils/bus.js
+- entrypoints: -
+- depends_on: @/utils/bus.js
+- owned_by: frontend
+- 逻辑段:
+- [F0bb1bb77-S0001] 行 1-2 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F0bb1bb77-S0002] 行 3-6 | js-export | 函数/导出 closeThisPage：执行更新与配置写入流程，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: emit
+- risks: -
+- tags: frontend-core, js-export
+
+## [F6b822120] web/src/utils/date.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 45
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [F6b822120-S0001] 行 1-7 | preamble | 逻辑段 preamble：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: Date, Format, function
+- risks: -
+- tags: frontend-core, preamble
+- [F6b822120-S0002] 行 8-16 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getMonth, getDate, getHours, getMinutes, getSeconds, floor, getMilliseconds
+- risks: -
+- tags: frontend-core, js-const
+- [F6b822120-S0003] 行 17-18 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: test
+- risks: -
+- tags: frontend-core, js-const
+- [F6b822120-S0004] 行 19-25 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: exec, replace, getFullYear, substring
+- risks: -
+- tags: frontend-core, js-const
+- [F6b822120-S0005] 行 26-27 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: RegExp, test
+- risks: -
+- tags: frontend-core, js-const
+- [F6b822120-S0006] 行 28-37 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: exec, replace, substring
+- risks: -
+- tags: frontend-core, js-const
+- [F6b822120-S0007] 行 38-38 | js-export | 函数/导出 formatTimeToStr：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: formatTimeToStr
+- risks: -
+- tags: frontend-core, js-export
+- [F6b822120-S0008] 行 39-45 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: Date, Format, toLocaleString
+- risks: -
+- tags: frontend-core, js-const
+
+## [Fc04a0fa4] web/src/utils/dictionary.js
+- 语言: js
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 94
+- imports: @/pinia/modules/dictionary
+- entrypoints: -
+- depends_on: @/pinia/modules/dictionary
+- owned_by: frontend
+- 逻辑段:
+- [Fc04a0fa4-S0001] 行 1-9 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, js-import
+- [Fc04a0fa4-S0002] 行 10-37 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: type, depth, value
+- outputs: -
+- side_effects: -
+- calls: getDict
+- risks: -
+- tags: menu-rbac, js-const
+- [Fc04a0fa4-S0003] 行 38-56 | js-export | 函数/导出 getDict：执行查询与读取流程，用于支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, warn
+- risks: -
+- tags: menu-rbac, js-export
+- [Fc04a0fa4-S0004] 行 57-62 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: useDictionaryStore, getDictionary
+- risks: -
+- tags: menu-rbac, js-const
+- [Fc04a0fa4-S0005] 行 63-65 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: generateCacheKey
+- risks: -
+- tags: menu-rbac, js-const
+- [Fc04a0fa4-S0006] 行 66-76 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: isArray, catch, error
+- risks: -
+- tags: menu-rbac, js-const
+- [Fc04a0fa4-S0007] 行 77-85 | js-export | 函数/导出 showDictLabel：承载该模块的核心逻辑，用于支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, js-export
+- [Fc04a0fa4-S0008] 行 86-94 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: forEach, has
+- risks: -
+- tags: menu-rbac, js-const
+
+## [Fe61900d0] web/src/utils/doc.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 4
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [Fe61900d0-S0001] 行 1-4 | js-export | 函数/导出 toDoc：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: url
+- outputs: -
+- side_effects: -
+- calls: open
+- risks: -
+- tags: frontend-core, js-export
+
+## [F6b1f8ddf] web/src/utils/downloadImg.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 21
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [F6b1f8ddf-S0001] 行 1-2 | js-export | 函数/导出 downloadImage：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: imgsrc, name
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-export
+- [F6b1f8ddf-S0002] 行 3-5 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: Image, setAttribute, function
+- risks: -
+- tags: frontend-core, js-const
+- [F6b1f8ddf-S0003] 行 6-8 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: createElement
+- risks: -
+- tags: frontend-core, js-const
+- [F6b1f8ddf-S0004] 行 9-10 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getContext, drawImage
+- risks: -
+- tags: frontend-core, js-const
+- [F6b1f8ddf-S0005] 行 11-12 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: toDataURL
+- risks: -
+- tags: frontend-core, js-const
+- [F6b1f8ddf-S0006] 行 13-13 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: createElement
+- risks: -
+- tags: frontend-core, js-const
+- [F6b1f8ddf-S0007] 行 14-21 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: MouseEvent, dispatchEvent
+- risks: -
+- tags: frontend-core, js-const
+
+## [Fde9a0c6f] web/src/utils/env.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 4
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [Fde9a0c6f-S0001] 行 1-2 | js-export | 函数/导出 isDev：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-export, config
+- [Fde9a0c6f-S0002] 行 3-4 | js-export | 函数/导出 isProd：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-export, config
+
+## [Fddf7bbd2] web/src/utils/event.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 18
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [Fddf7bbd2-S0001] 行 1-9 | js-export | 函数/导出 addEventListen：执行查询与读取流程，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: addEventListen, addEventListener
+- risks: -
+- tags: frontend-core, js-export
+- [Fddf7bbd2-S0002] 行 10-18 | js-export | 函数/导出 removeEventListen：执行查询与读取流程，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: removeEventListen, removeEventListener
+- risks: -
+- tags: frontend-core, js-export
+
+## [F4164ce38] web/src/utils/fmtRouterTitle.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 14
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [F4164ce38-S0001] 行 1-1 | js-export | 函数/导出 fmtTitle：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: title, now
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-export
+- [F4164ce38-S0002] 行 2-2 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const
+- [F4164ce38-S0003] 行 3-3 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const
+- [F4164ce38-S0004] 行 4-6 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: match, forEach
+- risks: -
+- tags: frontend-core, js-const
+- [F4164ce38-S0005] 行 7-7 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: match
+- risks: -
+- tags: frontend-core, js-const
+- [F4164ce38-S0006] 行 8-14 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: replace
+- risks: -
+- tags: frontend-core, js-const
+
+## [Fc5ab1d05] web/src/utils/format.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 176
+- imports: ./image, @/utils/date, @/utils/dictionary, vue
+- entrypoints: -
+- depends_on: ./image, @/utils/date, @/utils/dictionary
+- owned_by: frontend
+- 逻辑段:
+- [Fc5ab1d05-S0001] 行 1-1 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [Fc5ab1d05-S0002] 行 2-2 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [Fc5ab1d05-S0003] 行 3-3 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [Fc5ab1d05-S0004] 行 4-5 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [Fc5ab1d05-S0005] 行 6-12 | js-export | 函数/导出 formatBoolean：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: bool
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-export
+- [Fc5ab1d05-S0006] 行 13-14 | js-export | 函数/导出 formatDate：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: time
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-export
+- [Fc5ab1d05-S0007] 行 15-21 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: Date, formatTimeToStr
+- risks: -
+- tags: frontend-core, js-const
+- [Fc5ab1d05-S0008] 行 22-23 | js-export | 函数/导出 filterDict：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: value, options
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-export
+- [Fc5ab1d05-S0009] 行 24-32 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: opts, targetValue
+- outputs: -
+- side_effects: -
+- calls: isArray
+- risks: -
+- tags: frontend-core, js-const
+- [Fc5ab1d05-S0010] 行 33-40 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: findInOptions
+- risks: -
+- tags: frontend-core, js-const
+- [Fc5ab1d05-S0011] 行 41-44 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: findInOptions
+- risks: -
+- tags: frontend-core, js-const
+- [Fc5ab1d05-S0012] 行 45-46 | js-export | 函数/导出 filterDataSource：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: dataSource, value
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-export
+- [Fc5ab1d05-S0013] 行 47-57 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: data, targetValue
+- outputs: -
+- side_effects: -
+- calls: isArray
+- risks: -
+- tags: frontend-core, js-const
+- [Fc5ab1d05-S0014] 行 58-67 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: findInDataSource, isArray
+- risks: -
+- tags: frontend-core, js-const
+- [Fc5ab1d05-S0015] 行 68-72 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: findInDataSource
+- risks: -
+- tags: frontend-core, js-const
+- [Fc5ab1d05-S0016] 行 73-76 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: findInDataSource
+- risks: -
+- tags: frontend-core, js-const
+- [Fc5ab1d05-S0017] 行 77-77 | js-export | 函数/导出 getDictFunc：执行查询与读取流程，用于支撑「前端框架内核」域。
+- inputs: type
+- outputs: -
+- side_effects: -
+- calls: async
+- risks: -
+- tags: frontend-core, js-export
+- [Fc5ab1d05-S0018] 行 78-81 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getDict
+- risks: -
+- tags: frontend-core, js-const
+- [Fc5ab1d05-S0019] 行 82-82 | js-export | 函数/导出 ReturnArrImg：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: arr
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-export
+- [Fc5ab1d05-S0020] 行 83-94 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: push, getUrl
+- risks: -
+- tags: frontend-core, js-const
+- [Fc5ab1d05-S0021] 行 95-96 | js-export | 函数/导出 returnArrImg：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-export
+- [Fc5ab1d05-S0022] 行 97-99 | js-export | 函数/导出 onDownloadFile：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: url
+- outputs: -
+- side_effects: -
+- calls: open, getUrl
+- risks: -
+- tags: frontend-core, js-export
+- [Fc5ab1d05-S0023] 行 100-100 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: u
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const
+- [Fc5ab1d05-S0024] 行 101-105 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: replace, match, parseInt
+- risks: -
+- tags: frontend-core, js-const
+- [Fc5ab1d05-S0025] 行 106-106 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: u, e, t
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const
+- [Fc5ab1d05-S0026] 行 107-110 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: toString, join
+- risks: -
+- tags: frontend-core, js-const
+- [Fc5ab1d05-S0027] 行 111-111 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: u, e
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const
+- [Fc5ab1d05-S0028] 行 112-112 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: colorToHex
+- risks: -
+- tags: frontend-core, js-const
+- [Fc5ab1d05-S0029] 行 113-117 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: floor, hexToColor
+- risks: -
+- tags: frontend-core, js-const
+- [Fc5ab1d05-S0030] 行 118-118 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: u, e
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const
+- [Fc5ab1d05-S0031] 行 119-119 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: colorToHex
+- risks: -
+- tags: frontend-core, js-const
+- [Fc5ab1d05-S0032] 行 120-124 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: floor, hexToColor
+- risks: -
+- tags: frontend-core, js-const
+- [Fc5ab1d05-S0033] 行 125-125 | js-func | 函数/导出 addOpacityToColor：执行创建或新增流程，用于支撑「前端框架内核」域。
+- inputs: u, opacity
+- outputs: -
+- side_effects: -
+- calls: addOpacityToColor
+- risks: -
+- tags: frontend-core, js-func
+- [Fc5ab1d05-S0034] 行 126-129 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: colorToHex, rgba
+- risks: -
+- tags: frontend-core, js-const
+- [Fc5ab1d05-S0035] 行 130-130 | js-export | 函数/导出 setBodyPrimaryColor：执行更新与配置写入流程，用于支撑「前端框架内核」域。
+- inputs: primaryColor, darkMode
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-export
+- [Fc5ab1d05-S0036] 行 131-158 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: setProperty, addOpacityToColor, fmtColorFunc
+- risks: -
+- tags: frontend-core, js-const
+- [Fc5ab1d05-S0037] 行 159-160 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: ref
+- risks: -
+- tags: frontend-core, js-const, config
+- [Fc5ab1d05-S0038] 行 161-164 | js-export | 函数/导出 getBaseUrl：执行查询与读取流程，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-export
+- [Fc5ab1d05-S0039] 行 165-165 | js-export | 函数/导出 CreateUUID：执行创建或新增流程，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-export
+- [Fc5ab1d05-S0040] 行 166-170 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: Date, getTime, now, replace
+- risks: -
+- tags: frontend-core, js-const
+- [Fc5ab1d05-S0041] 行 171-176 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: random, floor, toString
+- risks: -
+- tags: frontend-core, js-const
+

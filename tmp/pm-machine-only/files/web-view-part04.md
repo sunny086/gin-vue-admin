@@ -1,0 +1,830 @@
+## [F42fba4f4] web/src/view/routerHolder.vue
+- 语言: vue
+- 领域: frontend-ui (前端业务界面)
+- 行数: 23
+- imports: @/pinia/modules/router
+- entrypoints: -
+- depends_on: @/pinia/modules/router
+- owned_by: frontend
+- 逻辑段:
+- [F42fba4f4-S0001] 行 1-1 | preamble | 逻辑段 preamble：承载「前端业务界面」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, preamble
+- [F42fba4f4-S0002] 行 2-15 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template
+- [F42fba4f4-S0003] 行 16-23 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineOptions, useRouterStore
+- risks: -
+- tags: frontend-ui, vue-script
+
+## [Ff510409d] web/src/view/superAdmin/api/api.vue
+- 语言: vue
+- 领域: frontend-ui (前端业务界面)
+- 行数: 919
+- imports: @/api/authority, @/api/autoCode, @/components/exportExcel/exportExcel.vue, @/components/exportExcel/exportTemplate.vue, @/components/exportExcel/importExcel.vue, @/components/warningBar/warningBar.vue, @/pinia, @/utils/stringFun, element-plus, vue
+- entrypoints: -
+- depends_on: @/api/authority, @/api/autoCode, @/components/exportExcel/exportExcel.vue, @/components/exportExcel/exportTemplate.vue, @/components/exportExcel/importExcel.vue, @/components/warningBar/warningBar.vue, @/pinia, @/utils/stringFun
+- owned_by: frontend
+- 逻辑段:
+- [Ff510409d-S0001] 行 1-105 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: openDialog, methodFilter
+- risks: -
+- tags: frontend-ui, vue-template
+- [Ff510409d-S0002] 行 106-155 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: editApiFunc, openAssignRoleDrawer, deleteApiFunc
+- risks: -
+- tags: frontend-ui, vue-template
+- [Ff510409d-S0003] 行 156-202 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template
+- [Ff510409d-S0004] 行 203-225 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template
+- [Ff510409d-S0005] 行 226-235 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template
+- [Ff510409d-S0006] 行 236-242 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: methodFilter
+- risks: -
+- tags: frontend-ui, vue-template
+- [Ff510409d-S0007] 行 243-289 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: addApiFunc, ignoreApiFunc
+- risks: -
+- tags: frontend-ui, vue-template
+- [Ff510409d-S0008] 行 290-328 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: methodFilter
+- risks: -
+- tags: frontend-ui, vue-template
+- [Ff510409d-S0009] 行 329-335 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: methodFilter
+- risks: -
+- tags: frontend-ui, vue-template
+- [Ff510409d-S0010] 行 336-355 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: ignoreApiFunc
+- risks: -
+- tags: frontend-ui, vue-template
+- [Ff510409d-S0011] 行 356-413 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template
+- [Ff510409d-S0012] 行 414-437 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template, security
+- [Ff510409d-S0013] 行 438-470 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineOptions, useAppStore
+- risks: -
+- tags: codegen-ai, vue-script, security
+- [Ff510409d-S0014] 行 471-521 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: value
+- outputs: -
+- side_effects: -
+- calls: filter, ref
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Ff510409d-S0015] 行 522-533 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getApiGroups
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Ff510409d-S0016] 行 534-554 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: row, flag
+- outputs: -
+- side_effects: -
+- calls: async, ignoreApi, ElMessage, filter, push
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Ff510409d-S0017] 行 555-584 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: async, ElMessage, createApi, filter, getTableData, getGroup
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Ff510409d-S0018] 行 585-590 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: ref
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Ff510409d-S0019] 行 591-616 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, some, ElMessage, enterSyncApi, getTableData
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Ff510409d-S0020] 行 617-622 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getTableData
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Ff510409d-S0021] 行 623-628 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getTableData
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Ff510409d-S0022] 行 629-633 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: val
+- outputs: -
+- side_effects: -
+- calls: getTableData
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Ff510409d-S0023] 行 634-639 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: val
+- outputs: -
+- side_effects: -
+- calls: getTableData
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Ff510409d-S0024] 行 640-651 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: { prop, order }
+- outputs: -
+- side_effects: -
+- calls: toSQLLine, getTableData
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Ff510409d-S0025] 行 652-668 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getApiList, getTableData, getGroup
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Ff510409d-S0026] 行 669-672 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: val
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Ff510409d-S0027] 行 673-692 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, confirm, then, deleteApisByIds, ElMessage, getTableData
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Ff510409d-S0028] 行 693-716 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, confirm, then, freshCasbin, ElMessage, ref
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Ff510409d-S0029] 行 717-730 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, syncApi, forEach, split, ref
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Ff510409d-S0030] 行 731-742 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: resetFields, ref
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Ff510409d-S0031] 行 743-756 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: key
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Ff510409d-S0032] 行 757-761 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: initForm
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Ff510409d-S0033] 行 762-767 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: async, getApiById, openDialog
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Ff510409d-S0034] 行 768-815 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, validate, createApi, ElMessage, getTableData, getGroup, closeDialog, updateApi
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Ff510409d-S0035] 行 816-836 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: async, confirm, then, deleteApi, ElMessage, getTableData, getGroup, ref
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Ff510409d-S0036] 行 837-874 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, filter, llmAuto, String, parse, forEach, find, catch, ElMessage, ref
+- risks: -
+- tags: frontend-ui, vue-script-func, security
+- [Ff510409d-S0037] 行 875-893 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: async, all, getAuthorityList, getApiRoles, nextTick, setCheckedKeys
+- risks: -
+- tags: frontend-ui, vue-script-func, security
+- [Ff510409d-S0038] 行 894-913 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getCheckedKeys, setApiRoles, ElMessage
+- risks: -
+- tags: frontend-ui, vue-script-func, security
+- [Ff510409d-S0039] 行 914-919 | vue-style | 样式区块：定义页面视觉表现与布局约束。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-style
+
+## [F0357450d] web/src/view/superAdmin/authority/authority.vue
+- 语言: vue
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 596
+- imports: @/api/user, @/components/warningBar/warningBar.vue, @/pinia, @/utils/stringFun, @/view/superAdmin/authority/components/apis.vue, @/view/superAdmin/authority/components/datas.vue, @/view/superAdmin/authority/components/menus.vue, element-plus, vue
+- entrypoints: -
+- depends_on: @/api/user, @/components/warningBar/warningBar.vue, @/pinia, @/utils/stringFun, @/view/superAdmin/authority/components/apis.vue, @/view/superAdmin/authority/components/datas.vue, @/view/superAdmin/authority/components/menus.vue
+- owned_by: frontend
+- 逻辑段:
+- [F0357450d-S0001] 行 1-72 | vue-template | 模板区块：定义页面结构与交互骨架，承载「鉴权与访问控制」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: addAuthority, openDrawer, openAssignDrawer, copyAuthorityFunc, editAuthority, deleteAuth
+- risks: -
+- tags: auth-access, vue-template, security
+- [F0357450d-S0002] 行 73-151 | vue-template | 模板区块：定义页面结构与交互骨架，承载「鉴权与访问控制」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, vue-template, security
+- [F0357450d-S0003] 行 152-205 | vue-template | 模板区块：定义页面结构与交互骨架，承载「鉴权与访问控制」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, vue-template, security
+- [F0357450d-S0004] 行 206-231 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineOptions
+- risks: -
+- tags: auth-access, vue-script, security
+- [F0357450d-S0005] 行 232-273 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: rule, value, callback
+- outputs: -
+- side_effects: -
+- calls: test, callback, Error, ref, useAppStore
+- risks: -
+- tags: auth-access, vue-script-func, security
+- [F0357450d-S0006] 行 274-282 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getAuthorityList, getTableData
+- risks: -
+- tags: auth-access, vue-script-func
+- [F0357450d-S0007] 行 283-288 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: key, value
+- outputs: -
+- side_effects: -
+- calls: ref
+- risks: -
+- tags: auth-access, vue-script-func
+- [F0357450d-S0008] 行 289-298 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: activeName, oldActiveName
+- outputs: -
+- side_effects: -
+- calls: enterAndNext
+- risks: -
+- tags: auth-access, vue-script-func
+- [F0357450d-S0009] 行 299-308 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: setOptions
+- risks: -
+- tags: auth-access, vue-script-func, security
+- [F0357450d-S0010] 行 309-313 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, vue-script-func
+- [F0357450d-S0011] 行 314-339 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: confirm, then, async, deleteAuthority, ElMessage, getTableData, catch, ref
+- risks: -
+- tags: auth-access, vue-script-func, security
+- [F0357450d-S0012] 行 340-350 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: resetFields
+- risks: -
+- tags: auth-access, vue-script-func, security
+- [F0357450d-S0013] 行 351-357 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: initForm
+- risks: -
+- tags: auth-access, vue-script-func, security
+- [F0357450d-S0014] 行 358-419 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: validate, async, Number, createAuthority, ElMessage, getTableData, closeAuthorityForm, updateAuthority, copyAuthority, initForm
+- risks: -
+- tags: auth-access, vue-script-func, security
+- [F0357450d-S0015] 行 420-428 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: setAuthorityOptions
+- risks: -
+- tags: auth-access, vue-script-func, security
+- [F0357450d-S0016] 行 429-455 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: AuthorityData, optionsData, disabled
+- outputs: -
+- side_effects: -
+- calls: forEach, setAuthorityOptions, push
+- risks: -
+- tags: auth-access, vue-script-func, security
+- [F0357450d-S0017] 行 456-464 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: parentId
+- outputs: -
+- side_effects: -
+- calls: initForm, setOptions
+- risks: -
+- tags: auth-access, vue-script-func, security
+- [F0357450d-S0018] 行 465-488 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: setOptions, clearValidate, ref, Set
+- risks: -
+- tags: auth-access, vue-script-func, security
+- [F0357450d-S0019] 行 489-500 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: async, Set, getUsersByAuthorityId, getUserData
+- risks: -
+- tags: auth-access, vue-script-func, security
+- [F0357450d-S0020] 行 501-514 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getUserList, nextTick, forEach, toggleRowSelection, has
+- risks: -
+- tags: auth-access, vue-script-func
+- [F0357450d-S0021] 行 515-522 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: selection, row
+- outputs: -
+- side_effects: -
+- calls: some, add
+- risks: -
+- tags: auth-access, vue-script-func
+- [F0357450d-S0022] 行 523-533 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: selection
+- outputs: -
+- side_effects: -
+- calls: Set, forEach, has, add
+- risks: -
+- tags: auth-access, vue-script-func
+- [F0357450d-S0023] 行 534-541 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: { prop, order }
+- outputs: -
+- side_effects: -
+- calls: toSQLLine, getUserData
+- risks: -
+- tags: auth-access, vue-script-func
+- [F0357450d-S0024] 行 542-546 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getUserData
+- risks: -
+- tags: auth-access, vue-script-func
+- [F0357450d-S0025] 行 547-551 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getUserData
+- risks: -
+- tags: auth-access, vue-script-func
+- [F0357450d-S0026] 行 552-556 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: page
+- outputs: -
+- side_effects: -
+- calls: getUserData
+- risks: -
+- tags: auth-access, vue-script-func
+- [F0357450d-S0027] 行 557-562 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: size
+- outputs: -
+- side_effects: -
+- calls: getUserData
+- risks: -
+- tags: auth-access, vue-script-func
+- [F0357450d-S0028] 行 563-580 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, setRoleUsers, ElMessage
+- risks: -
+- tags: auth-access, vue-script-func, security
+- [F0357450d-S0029] 行 581-596 | vue-style | 样式区块：定义页面视觉表现与布局约束。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: calc
+- risks: -
+- tags: auth-access, vue-style, security
+
+## [Ff0e1cc60] web/src/view/superAdmin/authority/components/apis.vue
+- 语言: vue
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 175
+- imports: @/api/api, @/api/casbin, element-plus, vue
+- entrypoints: -
+- depends_on: @/api/api, @/api/casbin
+- owned_by: frontend
+- 逻辑段:
+- [Ff0e1cc60-S0001] 行 1-48 | vue-template | 模板区块：定义页面结构与交互骨架，承载「鉴权与访问控制」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, vue-template
+- [Ff0e1cc60-S0002] 行 49-76 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineOptions, defineProps, function, ref
+- risks: -
+- tags: auth-access, vue-script, security
+- [Ff0e1cc60-S0003] 行 77-95 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getAllApis, buildApiTree, getPolicyPathByAuthorityId, forEach, push, init, ref
+- risks: -
+- tags: auth-access, vue-script-func, security
+- [Ff0e1cc60-S0004] 行 96-99 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, vue-script-func
+- [Ff0e1cc60-S0005] 行 100-104 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: authApiEnter
+- risks: -
+- tags: auth-access, vue-script-func
+- [Ff0e1cc60-S0006] 行 105-129 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: apis
+- outputs: -
+- side_effects: -
+- calls: forEach, call, push, assign, ref
+- risks: -
+- tags: auth-access, vue-script-func
+- [Ff0e1cc60-S0007] 行 130-154 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getCheckedNodes, forEach, push, UpdateCasbin, ElMessage, defineExpose
+- risks: -
+- tags: auth-access, vue-script-func, security
+- [Ff0e1cc60-S0008] 行 155-175 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: value, data
+- outputs: -
+- side_effects: -
+- calls: includes, watch, filter
+- risks: -
+- tags: auth-access, vue-script-func
+
+## [F53714742] web/src/view/superAdmin/authority/components/datas.vue
+- 语言: vue
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 146
+- imports: @/api/authority, @/components/warningBar/warningBar.vue, element-plus, vue
+- entrypoints: -
+- depends_on: @/api/authority, @/components/warningBar/warningBar.vue
+- owned_by: frontend
+- 逻辑段:
+- [F53714742-S0001] 行 1-31 | vue-template | 模板区块：定义页面结构与交互骨架，承载「插件生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, vue-template, security, plugin
+- [F53714742-S0002] 行 32-59 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineOptions, defineProps, function, ref
+- risks: -
+- tags: auth-access, vue-script, security
+- [F53714742-S0003] 行 60-73 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: authoritysData
+- outputs: -
+- side_effects: -
+- calls: forEach, push, roundAuthority, ref
+- risks: -
+- tags: auth-access, vue-script-func, security
+- [F53714742-S0004] 行 74-92 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: roundAuthority, forEach, filter, push, init
+- risks: -
+- tags: auth-access, vue-script-func, security
+- [F53714742-S0005] 行 93-97 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: authDataEnter, defineEmits
+- risks: -
+- tags: auth-access, vue-script-func
+- [F53714742-S0006] 行 98-102 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: emit
+- risks: -
+- tags: auth-access, vue-script-func, security
+- [F53714742-S0007] 行 103-109 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: filter, emit
+- risks: -
+- tags: auth-access, vue-script-func, security
+- [F53714742-S0008] 行 110-118 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getChildrenId, filter, indexOf, emit
+- risks: -
+- tags: auth-access, vue-script-func, security
+- [F53714742-S0009] 行 119-126 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: row, arrBox
+- outputs: -
+- side_effects: -
+- calls: push, forEach, getChildrenId
+- risks: -
+- tags: auth-access, vue-script-func, security
+- [F53714742-S0010] 行 127-134 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, setDataAuthority, ElMessage
+- risks: -
+- tags: auth-access, vue-script-func
+- [F53714742-S0011] 行 135-146 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: filter, emit, defineExpose
+- risks: -
+- tags: auth-access, vue-script-func
+
+## [Ffd1ee157] web/src/view/superAdmin/authority/components/menus.vue
+- 语言: vue
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 310
+- imports: @/api/authority, @/api/authorityBtn, element-plus, vue
+- entrypoints: -
+- depends_on: @/api/authority, @/api/authorityBtn
+- owned_by: frontend
+- 逻辑段:
+- [Ffd1ee157-S0001] 行 1-64 | vue-template | 模板区块：定义页面结构与交互骨架，承载「鉴权与访问控制」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: OpenBtn
+- risks: -
+- tags: auth-access, vue-template
+- [Ffd1ee157-S0002] 行 65-74 | vue-template | 模板区块：定义页面结构与交互骨架，承载「鉴权与访问控制」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, vue-template
+- [Ffd1ee157-S0003] 行 75-119 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineOptions, defineProps, function, defineEmits, ref, includes, Number
+- risks: -
+- tags: auth-access, vue-script, security
+- [Ffd1ee157-S0004] 行 120-124 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: name
+- outputs: -
+- side_effects: -
+- calls: startsWith
+- risks: -
+- tags: auth-access, vue-script-func
+- [Ffd1ee157-S0005] 行 125-135 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: menus, name
+- outputs: -
+- side_effects: -
+- calls: findMenuByName
+- risks: -
+- tags: auth-access, vue-script-func
+- [Ffd1ee157-S0006] 行 136-160 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getCheckedNodes, filter, isExternalRoute, some, findMenuByName, push
+- risks: -
+- tags: auth-access, vue-script-func
+- [Ffd1ee157-S0007] 行 161-164 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: buildOptionsFromCheckedLeafMenus
+- risks: -
+- tags: auth-access, vue-script-func
+- [Ffd1ee157-S0008] 行 165-172 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: routeName
+- outputs: -
+- side_effects: -
+- calls: getCheckedNodes, some
+- risks: -
+- tags: auth-access, vue-script-func
+- [Ffd1ee157-S0009] 行 173-198 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getBaseMenuTree, getMenuAuthority, forEach, some, push, Number, nextTick, setCheckedKeys, refreshDefaultRouterOptions, init
+- risks: -
+- tags: auth-access, vue-script-func, security
+- [Ffd1ee157-S0010] 行 199-211 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: async, updateAuthority, relation, emit
+- risks: -
+- tags: auth-access, vue-script-func, security
+- [Ffd1ee157-S0011] 行 212-220 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: val
+- outputs: -
+- side_effects: -
+- calls: isDefaultRouterAllowed, warning, setDefault
+- risks: -
+- tags: auth-access, vue-script-func
+- [Ffd1ee157-S0012] 行 221-225 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: refreshDefaultRouterOptions
+- risks: -
+- tags: auth-access, vue-script-func
+- [Ffd1ee157-S0013] 行 226-229 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: relation
+- risks: -
+- tags: auth-access, vue-script-func
+- [Ffd1ee157-S0014] 行 230-253 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getCheckedNodes, addMenuAuthority, ElMessage, refreshDefaultRouterOptions, defineExpose, ref
+- risks: -
+- tags: auth-access, vue-script-func, security
+- [Ffd1ee157-S0015] 行 254-274 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: async, getAuthorityBtnApi, openDialog, nextTick, forEach, some, toggleRowSelection
+- risks: -
+- tags: auth-access, vue-script-func, security
+- [Ffd1ee157-S0016] 行 275-278 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: val
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, vue-script-func
+- [Ffd1ee157-S0017] 行 279-283 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, vue-script-func
+- [Ffd1ee157-S0018] 行 284-286 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, vue-script-func
+- [Ffd1ee157-S0019] 行 287-299 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, setAuthorityBtnApi, ElMessage
+- risks: -
+- tags: auth-access, vue-script-func, security
+- [Ffd1ee157-S0020] 行 300-310 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: value, data
+- outputs: -
+- side_effects: -
+- calls: log, indexOf, watch, filter
+- risks: -
+- tags: auth-access, vue-script-func
+

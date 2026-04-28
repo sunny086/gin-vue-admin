@@ -1,0 +1,838 @@
+## [F0162b149] server/service/system/auto_code_package.go
+- 语言: go
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 744
+- imports: context, fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system/request, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/flipped-aurora/gin-vue-admin/server/utils/ast, github.com/flipped-aurora/gin-vue-admin/server/utils/autocode, github.com/pkg/errors, go/token, gorm.io/gorm, os, path/filepath, strings, text/template
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F0162b149-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-package
+- [F0162b149-S0002] 行 3-22 | go-import | 逻辑段 go-import：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: codegen-ai, go-import, database, security
+- [F0162b149-S0003] 行 23-24 | go-const-var | 逻辑段 go-const-var：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-const-var
+- [F0162b149-S0004] 行 25-29 | go-type | 类型 autoCodePackage：定义该文件的数据结构或接口边界，支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-type
+- [F0162b149-S0005] 行 30-109 | go-func | 函数 Create：执行创建或新增流程，位于「代码生成与AI工作流」域。
+- inputs: ctx context.Context, info *request.SysAutoCodePackageCreate
+- outputs: error
+- side_effects: 写入数据库
+- calls: Create, New, IsKeyword, Errorf, Is, Where, First, WithContext, Transaction, Wrap, AutoCode, templates
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database, security
+- [F0162b149-S0006] 行 110-120 | go-func | 函数 Delete：执行删除与清理流程，位于「代码生成与AI工作流」域。
+- inputs: ctx context.Context, info common.GetById
+- outputs: error
+- side_effects: 写入数据库
+- calls: Delete, WithContext, Uint, Wrap
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [F0162b149-S0007] 行 121-134 | go-func | 函数 DeleteByNames：执行删除与清理流程，位于「代码生成与AI工作流」域。
+- inputs: ctx context.Context, names []string
+- outputs: error
+- side_effects: 写入数据库
+- calls: DeleteByNames, WithContext, Where, Delete, Wrap
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [F0162b149-S0008] 行 135-277 | go-func | 函数 All：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: ctx context.Context
+- outputs: (entities []model.SysAutoCodePackage, err error)
+- side_effects: 写入数据库
+- calls: All, Join, ReadDir, Wrap, IsDir, Name, Sprintf, WithContext, Find, Create, Delete
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: mcp-skills, go-func, ai-tooling, plugin, config
+- [F0162b149-S0009] 行 278-303 | go-func | 函数 Templates：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: ctx context.Context
+- outputs: ([]string, error)
+- side_effects: -
+- calls: Templates, ReadDir, Wrap, IsDir, Name
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling
+- [F0162b149-S0010] 行 304-744 | go-func | 函数 templates：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: ctx context.Context, entity model.SysAutoCodePackage, info request.AutoCode, isPackage bool
+- outputs: (code map[string]string, asts map[string]ast.Ast, creates map[string]string, err error)
+- side_effects: -
+- calls: templates, Join, ReadDir, Wrapf, Name, IsDir, Ext, Errorf, TrimSuffix, Sprintf, String, Index
+- risks: 依赖全局状态，模块可测试性与解耦性下降 / 逻辑段较长，建议拆分以降低维护成本
+- tags: codegen-ai, go-func, database, plugin, config
+
+## [Fdc064b16] server/service/system/auto_code_plugin.go
+- 语言: go
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 513
+- imports: bytes, context, fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system, github.com/flipped-aurora/gin-vue-admin/server/model/system/request, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/mholt/archives, github.com/pkg/errors, go.uber.org/zap, go/parser, go/printer, go/token, io, mime/multipart, os, path/filepath, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fdc064b16-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-package
+- [Fdc064b16-S0002] 行 3-28 | go-import | 逻辑段 go-import：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: plugin-ecosystem, go-import, security, plugin
+- [Fdc064b16-S0003] 行 29-30 | go-const-var | 逻辑段 go-const-var：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-const-var
+- [Fdc064b16-S0004] 行 31-33 | go-type | 类型 autoCodePlugin：定义该文件的数据结构或接口边界，支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-type
+- [Fdc064b16-S0005] 行 34-130 | go-func | 函数 Install：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: file *multipart.FileHeader
+- outputs: (web, server int, err error)
+- side_effects: 写入数据库
+- calls: Install, RemoveAll, Stat, IsNotExist, Mkdir, Open, Close, Create, Copy, Unzip, filterFile, ToSlash
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, plugin
+- [Fdc064b16-S0006] 行 131-148 | go-func | 函数 installation：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: path string, formPath string, toPath string
+- outputs: error
+- side_effects: -
+- calls: installation, Split, ToSlash, New, Join, Stat, L, Error, String, Copy
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, plugin
+- [Fdc064b16-S0007] 行 149-206 | go-func | 函数 ensurePluginRegisterImport：完成初始化或注册流程，位于「代码生成与AI工作流」域。
+- inputs: packageName string
+- outputs: error
+- side_effects: 写入文件系统
+- calls: ensurePluginRegisterImport, TrimSpace, New, Join, ReadFile, NewFileSet, ParseFile, Sprintf, CheckImport, NewIdent, NewBuffer, Fprint
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, security, plugin
+- [Fdc064b16-S0008] 行 207-217 | go-func | 函数 filterFile：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: paths []string
+- outputs: []string
+- side_effects: -
+- calls: filterFile, skipMacSpecialDocument
+- risks: -
+- tags: codegen-ai, go-func
+- [Fdc064b16-S0009] 行 218-224 | go-func | 函数 skipMacSpecialDocument：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: _ os.FileInfo, src, _ string
+- outputs: (bool, error)
+- side_effects: -
+- calls: skipMacSpecialDocument, Contains
+- risks: -
+- tags: codegen-ai, go-func
+- [Fdc064b16-S0010] 行 225-276 | go-func | 函数 PubPlug：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: plugName string
+- outputs: (zipPath string, err error)
+- side_effects: 写入数据库
+- calls: PubPlug, New, Clean, Join, Stat, FilesFromDisk, Background, Create, Close, Archive
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, plugin
+- [Fdc064b16-S0011] 行 277-319 | go-func | 函数 InitMenu：完成初始化或注册流程，位于「代码生成与AI工作流」域。
+- inputs: menuInfo request.InitMenu
+- outputs: (err error)
+- side_effects: 写入文件系统
+- calls: InitMenu, Join, ReadFile, Println, NewFileSet, ParseFile, FindArray, Preload, Find, in, CreateMenuStructAst, NewBuffer
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, security, plugin
+- [Fdc064b16-S0012] 行 320-344 | go-func | 函数 InitAPI：完成初始化或注册流程，位于「代码生成与AI工作流」域。
+- inputs: apiInfo request.InitApi
+- outputs: (err error)
+- side_effects: 写入文件系统
+- calls: InitAPI, Join, ReadFile, Println, NewFileSet, ParseFile, FindArray, Find, in, CreateApiStructAst, NewBuffer, Fprint
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, security, plugin
+- [Fdc064b16-S0013] 行 345-369 | go-func | 函数 InitDictionary：完成初始化或注册流程，位于「代码生成与AI工作流」域。
+- inputs: dictInfo request.InitDictionary
+- outputs: (err error)
+- side_effects: 写入文件系统
+- calls: InitDictionary, Join, ReadFile, Println, NewFileSet, ParseFile, FindArray, Preload, Find, in, CreateDictionaryStructAst, NewBuffer
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, security, plugin
+- [Fdc064b16-S0014] 行 370-442 | go-func | 函数 Remove：执行删除与清理流程，位于「代码生成与AI工作流」域。
+- inputs: pluginName string, pluginType string
+- outputs: (err error)
+- side_effects: -
+- calls: Remove, Join, RemoveAll, Wrap, removePluginRegisterImport, GetPluginData, Where, First, GetMenuIds, DeleteBaseMenu, L, Error
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, plugin
+- [Fdc064b16-S0015] 行 443-452 | go-func | 函数 GetMenuIds：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: menu system.SysBaseMenu, ids *[]int
+- outputs: -
+- side_effects: -
+- calls: GetMenuIds, int, Where, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [Fdc064b16-S0016] 行 453-513 | go-func | 函数 removePluginRegisterImport：完成初始化或注册流程，位于「代码生成与AI工作流」域。
+- inputs: packageName string
+- outputs: error
+- side_effects: 写入文件系统
+- calls: removePluginRegisterImport, TrimSpace, New, Join, ReadFile, NewFileSet, ParseFile, Sprintf, NewBuffer, Fprint, WriteFile, Bytes
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, security, plugin
+
+## [Fd16eec44] server/service/system/auto_code_template_test.go
+- 语言: go
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 85
+- imports: context, encoding/json, github.com/flipped-aurora/gin-vue-admin/server/model/system/request, reflect, testing
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fd16eec44-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-package
+- [Fd16eec44-S0002] 行 3-10 | go-import | 逻辑段 go-import：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: codegen-ai, go-import
+- [Fd16eec44-S0003] 行 11-32 | go-func | 函数 Test_autoCodeTemplate_Create：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: t *testing.T
+- outputs: -
+- side_effects: 写入数据库
+- calls: Test_autoCodeTemplate_Create, Run, Create, Errorf
+- risks: 存在待办逻辑，行为边界未完全收敛
+- tags: codegen-ai, go-func
+- [Fd16eec44-S0004] 行 33-85 | go-func | 函数 Test_autoCodeTemplate_Preview：输出渲染结果，位于「代码生成与AI工作流」域。
+- inputs: t *testing.T
+- outputs: -
+- side_effects: -
+- calls: Test_autoCodeTemplate_Preview, Background, Run, Unmarshal, byte, Error, Pretreatment, Preview, Errorf, DeepEqual
+- risks: -
+- tags: codegen-ai, go-func, security, plugin
+
+## [F8d3ecf21] server/service/system/auto_code_template.go
+- 语言: go
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 454
+- imports: context, encoding/json, fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system/request, github.com/flipped-aurora/gin-vue-admin/server/utils/autocode, github.com/pkg/errors, go/ast, go/format, go/parser, go/token, gorm.io/gorm, os, path/filepath, strings, text/template
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F8d3ecf21-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-package
+- [F8d3ecf21-S0002] 行 3-24 | go-import | 逻辑段 go-import：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: codegen-ai, go-import, database, security
+- [F8d3ecf21-S0003] 行 25-26 | go-const-var | 逻辑段 go-const-var：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-const-var
+- [F8d3ecf21-S0004] 行 27-28 | go-type | 类型 autoCodeTemplate：定义该文件的数据结构或接口边界，支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-type
+- [F8d3ecf21-S0005] 行 29-57 | go-func | 函数 checkPackage：执行校验与约束判断，位于「代码生成与AI工作流」域。
+- inputs: Pkg string, template string
+- outputs: (err error)
+- side_effects: -
+- calls: checkPackage, Join, Stat, Errorf
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, plugin
+- [F8d3ecf21-S0006] 行 58-188 | go-func | 函数 Create：执行创建或新增流程，位于「代码生成与AI工作流」域。
+- inputs: ctx context.Context, info request.AutoCode
+- outputs: error
+- side_effects: 写入数据库, 写入文件系统
+- calls: Create, History, WithContext, Where, First, Wrap, checkPackage, Repeat, New, generate, MkdirAll, Dir
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database
+- [F8d3ecf21-S0007] 行 189-219 | go-func | 函数 Preview：输出渲染结果，位于「代码生成与AI工作流」域。
+- inputs: ctx context.Context, info request.AutoCode
+- outputs: (map[string]string, error)
+- side_effects: -
+- calls: Preview, WithContext, Where, First, Wrap, Repeat, New, generate, Rel, Ext, WriteString, String
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [F8d3ecf21-S0008] 行 220-273 | go-func | 函数 generate：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: ctx context.Context, info request.AutoCode, entity model.SysAutoCodePackage
+- outputs: (map[string]strings.Builder, map[string]string, map[string]utilsAst.Ast, error)
+- side_effects: -
+- calls: generate, templates, New, Base, Funcs, GetTemplateFuncMap, ParseFiles, Wrapf, Execute, Split, Parse, Injection
+- risks: -
+- tags: codegen-ai, go-func, database
+- [F8d3ecf21-S0009] 行 274-297 | go-func | 函数 AddFunc：执行创建或新增流程，位于「代码生成与AI工作流」域。
+- inputs: info request.AutoFunc
+- outputs: error
+- side_effects: -
+- calls: AddFunc, First, addTemplateToFile, addTemplateToAst
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [F8d3ecf21-S0010] 行 298-323 | go-func | 函数 GetApiAndServer：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: info request.AutoFunc
+- outputs: (map[string]string, error)
+- side_effects: -
+- calls: GetApiAndServer, First, getTemplateStr
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [F8d3ecf21-S0011] 行 324-338 | go-func | 函数 getTemplateStr：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: t string, info request.AutoFunc
+- outputs: (string, error)
+- side_effects: -
+- calls: getTemplateStr, Join, New, Base, Funcs, GetTemplateFuncMap, ParseFiles, Wrapf, Execute, Println, Error, String
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [F8d3ecf21-S0012] 行 339-402 | go-func | 函数 addTemplateToAst：执行创建或新增流程，位于「代码生成与AI工作流」域。
+- inputs: t string, info request.AutoFunc
+- outputs: error
+- side_effects: 写入数据库
+- calls: addTemplateToAst, Join, Sprintf, s, ReadFile, NewFileSet, ParseFile, FindFunction, CreateStmt, Create, Close, Node
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, security, plugin
+- [F8d3ecf21-S0013] 行 403-454 | go-func | 函数 addTemplateToFile：执行创建或新增流程，位于「代码生成与AI工作流」域。
+- inputs: t string, info request.AutoFunc
+- outputs: error
+- side_effects: -
+- calls: addTemplateToFile, getTemplateStr, Join, OpenFile, Close, Fprintln, Printf, Error
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, plugin
+
+## [F6e7537c1] server/service/system/enter.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 31
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F6e7537c1-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F6e7537c1-S0002] 行 3-31 | go-type | 类型 ServiceGroup：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+
+## [Fcaa88f57] server/service/system/jwt_black_list.go
+- 语言: go
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 53
+- imports: context, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system, go.uber.org/zap
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fcaa88f57-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-package
+- [Fcaa88f57-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: auth-access, go-import
+- [Fcaa88f57-S0003] 行 12-13 | go-type | 类型 JwtService：定义该文件的数据结构或接口边界，支撑「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-type
+- [Fcaa88f57-S0004] 行 14-21 | go-const-var | 逻辑段 go-const-var：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-const-var, security
+- [Fcaa88f57-S0005] 行 22-36 | go-func | 函数 JsonInBlacklist：执行查询与读取流程，位于「鉴权与访问控制」域。
+- inputs: jwtList system.JwtBlacklist
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: JsonInBlacklist, Create, SetDefault
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, security
+- [Fcaa88f57-S0006] 行 37-41 | go-func | 函数 GetRedisJWT：执行查询与读取流程，位于「鉴权与访问控制」域。
+- inputs: userName string
+- outputs: (redisJWT string, err error)
+- side_effects: -
+- calls: GetRedisJWT, Get, Background, Result
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, security
+- [Fcaa88f57-S0007] 行 42-53 | go-func | 函数 LoadAll：承载该模块的核心逻辑，位于「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: LoadAll, Model, Select, Find, Error, SetDefault
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, database, security
+
+## [Ffe30960f] server/service/system/sys_api_token.go
+- 语言: go
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 107
+- imports: errors, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/golang-jwt/jwt/v5, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Ffe30960f-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-package
+- [Ffe30960f-S0002] 行 3-12 | go-import | 逻辑段 go-import：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: auth-access, go-import, security
+- [Ffe30960f-S0003] 行 13-14 | go-type | 类型 ApiTokenService：定义该文件的数据结构或接口边界，支撑「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-type
+- [Ffe30960f-S0004] 行 15-69 | go-func | 函数 CreateApiToken：执行创建或新增流程，位于「鉴权与访问控制」域。
+- inputs: apiToken system.SysApiToken, days int
+- outputs: (string, error)
+- side_effects: 写入数据库
+- calls: CreateApiToken, Where, First, New, byte, Duration, ParseDuration, int64, NewNumericDate, Now, Add, CreateToken
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, security
+- [Ffe30960f-S0005] 行 70-91 | go-func | 函数 GetApiTokenList：执行查询与读取流程，位于「鉴权与访问控制」域。
+- inputs: info sysReq.SysApiTokenSearch
+- outputs: (list []system.SysApiToken, total int64, err error)
+- side_effects: -
+- calls: GetApiTokenList, Model, Preload, Where, Count, Limit, Offset, Order, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, database
+- [Ffe30960f-S0006] 行 92-107 | go-func | 函数 DeleteApiToken：执行删除与清理流程，位于「鉴权与访问控制」域。
+- inputs: id uint
+- outputs: error
+- side_effects: 写入数据库
+- calls: DeleteApiToken, First, JsonInBlacklist, Model, Update
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, database, security
+
+## [F62d68fa1] server/service/system/sys_api.go
+- 语言: go
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 327
+- imports: errors, fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/request, github.com/flipped-aurora/gin-vue-admin/server/model/system, gorm.io/gorm, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F62d68fa1-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-package
+- [F62d68fa1-S0002] 行 3-20 | go-import | 逻辑段 go-import：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: menu-rbac, go-import, database
+- [F62d68fa1-S0003] 行 21-22 | go-type | 类型 ApiService：定义该文件的数据结构或接口边界，支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-type
+- [F62d68fa1-S0004] 行 23-24 | go-const-var | 逻辑段 go-const-var：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-const-var
+- [F62d68fa1-S0005] 行 25-31 | go-func | 函数 CreateApi：执行创建或新增流程，位于「菜单与权限编排」域。
+- inputs: api system.SysApi
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: CreateApi, Is, Where, First, New, Create
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, database
+- [F62d68fa1-S0006] 行 32-54 | go-func | 函数 GetApiGroups：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: -
+- outputs: (groups []string, groupApiMap map[string]string, err error)
+- side_effects: -
+- calls: GetApiGroups, Find, Split
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F62d68fa1-S0007] 行 55-128 | go-func | 函数 SyncApi：承载该模块的核心逻辑，位于「菜单与权限编排」域。
+- inputs: -
+- outputs: (newApis, deleteApis, ignoreApis []system.SysApi, err error)
+- side_effects: -
+- calls: SyncApi, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F62d68fa1-S0008] 行 129-135 | go-func | 函数 IgnoreApi：承载该模块的核心逻辑，位于「菜单与权限编排」域。
+- inputs: ignoreApi system.SysIgnoreApi
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: IgnoreApi, Create, Unscoped, Delete
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F62d68fa1-S0009] 行 136-161 | go-func | 函数 EnterSyncApi：承载该模块的核心逻辑，位于「菜单与权限编排」域。
+- inputs: syncApis systemRes.SysSyncApis
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: EnterSyncApi, Transaction, Create, ClearCasbin, Delete
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, database
+- [F62d68fa1-S0010] 行 162-181 | go-func | 函数 DeleteApi：执行删除与清理流程，位于「菜单与权限编排」域。
+- inputs: api system.SysApi
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: DeleteApi, First, Is, Delete, ClearCasbin
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, database
+- [F62d68fa1-S0011] 行 182-236 | go-func | 函数 GetAPIInfoList：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: api system.SysApi, info request.PageInfo, order string, desc bool
+- outputs: (list interface{}, total int64, err error)
+- side_effects: -
+- calls: GetAPIInfoList, Model, Where, Count, Limit, Offset, Errorf, Order, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, database
+- [F62d68fa1-S0012] 行 237-264 | go-func | 函数 GetAllApis：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: authorityID uint
+- outputs: (apis []system.SysApi, err error)
+- side_effects: -
+- calls: GetAllApis, GetParentAuthorityID, Order, Find, GetPolicyPathByAuthorityId
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, security
+- [F62d68fa1-S0013] 行 265-275 | go-func | 函数 GetApiById：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: id int
+- outputs: (api system.SysApi, err error)
+- side_effects: -
+- calls: GetApiById, First
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F62d68fa1-S0014] 行 276-309 | go-func | 函数 UpdateApi：执行更新与配置写入流程，位于「菜单与权限编排」域。
+- inputs: api system.SysApi
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: UpdateApi, First, Is, New, UpdateCasbinApi, Save
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, database
+- [F62d68fa1-S0015] 行 310-327 | go-func | 函数 DeleteApisByIds：执行删除与清理流程，位于「菜单与权限编排」域。
+- inputs: ids request.IdsReq
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: DeleteApisByIds, Transaction, Find, Delete, ClearCasbin
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, database
+
+## [Fe6235b1b] server/service/system/sys_authority_btn.go
+- 语言: go
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 61
+- imports: errors, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system, github.com/flipped-aurora/gin-vue-admin/server/model/system/request, github.com/flipped-aurora/gin-vue-admin/server/model/system/response, gorm.io/gorm
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fe6235b1b-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-package
+- [Fe6235b1b-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: auth-access, go-import, database
+- [Fe6235b1b-S0003] 行 12-13 | go-type | 类型 AuthorityBtnService：定义该文件的数据结构或接口边界，支撑「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-type
+- [Fe6235b1b-S0004] 行 14-15 | go-const-var | 逻辑段 go-const-var：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-const-var
+- [Fe6235b1b-S0005] 行 16-29 | go-func | 函数 GetAuthorityBtn：执行查询与读取流程，位于「鉴权与访问控制」域。
+- inputs: req request.SysAuthorityBtnReq
+- outputs: (res response.SysAuthorityBtnRes, err error)
+- side_effects: -
+- calls: GetAuthorityBtn, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, security
+- [Fe6235b1b-S0006] 行 30-53 | go-func | 函数 SetAuthorityBtn：执行更新与配置写入流程，位于「鉴权与访问控制」域。
+- inputs: req request.SysAuthorityBtnReq
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: SetAuthorityBtn, Transaction, Delete, Create
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, database, security
+- [Fe6235b1b-S0007] 行 54-61 | go-func | 函数 CanRemoveAuthorityBtn：执行删除与清理流程，位于「鉴权与访问控制」域。
+- inputs: ID string
+- outputs: (err error)
+- side_effects: -
+- calls: CanRemoveAuthorityBtn, First, Is, New
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, database
+
+## [F78a1deb6] server/service/system/sys_authority.go
+- 语言: go
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 413
+- imports: errors, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/request, github.com/flipped-aurora/gin-vue-admin/server/model/system, github.com/flipped-aurora/gin-vue-admin/server/model/system/response, gorm.io/gorm, strconv
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F78a1deb6-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-package
+- [F78a1deb6-S0002] 行 3-15 | go-import | 逻辑段 go-import：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: auth-access, go-import, database
+- [F78a1deb6-S0003] 行 16-23 | go-const-var | 逻辑段 go-const-var：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: New
+- risks: -
+- tags: auth-access, go-const-var, security
+- [F78a1deb6-S0004] 行 24-25 | go-type | 类型 AuthorityService：定义该文件的数据结构或接口边界，支撑「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-type
+- [F78a1deb6-S0005] 行 26-27 | go-const-var | 逻辑段 go-const-var：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-const-var
+- [F78a1deb6-S0006] 行 28-61 | go-func | 函数 CreateAuthority：执行创建或新增流程，位于「鉴权与访问控制」域。
+- inputs: auth system.SysAuthority
+- outputs: (authority system.SysAuthority, err error)
+- side_effects: 写入数据库
+- calls: CreateAuthority, Where, First, Is, Transaction, Create, DefaultMenu, Model, Association, Replace, DefaultCasbin, Itoa
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, database, security
+- [F78a1deb6-S0007] 行 62-113 | go-func | 函数 CopyAuthority：承载该模块的核心逻辑，位于「鉴权与访问控制」域。
+- inputs: adminAuthorityID uint, copyInfo response.SysAuthorityCopyResponse
+- outputs: (authority system.SysAuthority, err error)
+- side_effects: 写入数据库
+- calls: CopyAuthority, Is, Where, First, GetMenuAuthority, uint, Create, Find, GetPolicyPathByAuthorityId, UpdateCasbin, DeleteAuthority
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, database, security
+- [F78a1deb6-S0008] 行 114-130 | go-func | 函数 UpdateAuthority：执行更新与配置写入流程，位于「鉴权与访问控制」域。
+- inputs: auth system.SysAuthority
+- outputs: (authority system.SysAuthority, err error)
+- side_effects: -
+- calls: UpdateAuthority, Where, First, Debug, Error, New, Model, Updates
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, database, security
+- [F78a1deb6-S0009] 行 131-185 | go-func | 函数 DeleteAuthority：执行删除与清理流程，位于「鉴权与访问控制」域。
+- inputs: auth *system.SysAuthority
+- outputs: error
+- side_effects: 写入数据库
+- calls: DeleteAuthority, Is, Debug, Preload, First, New, Where, Transaction, Unscoped, Delete, Model, Association
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, database, security
+- [F78a1deb6-S0010] 行 186-218 | go-func | 函数 GetAuthorityInfoList：执行查询与读取流程，位于「鉴权与访问控制」域。
+- inputs: authorityID uint
+- outputs: (list []system.SysAuthority, err error)
+- side_effects: -
+- calls: GetAuthorityInfoList, Where, First, Model, Preload, Find, Debug, findChildrenAuthority
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, database, security
+- [F78a1deb6-S0011] 行 219-238 | go-func | 函数 GetStructAuthorityList：执行查询与读取流程，位于「鉴权与访问控制」域。
+- inputs: authorityID uint
+- outputs: (list []uint, err error)
+- side_effects: -
+- calls: GetStructAuthorityList, First, Preload, Where, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, security
+- [F78a1deb6-S0012] 行 239-265 | go-func | 函数 CheckAuthorityIDAuth：执行校验与约束判断，位于「鉴权与访问控制」域。
+- inputs: authorityID, targetID uint
+- outputs: (err error)
+- side_effects: -
+- calls: CheckAuthorityIDAuth, GetStructAuthorityList, New
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, security
+- [F78a1deb6-S0013] 行 266-276 | go-func | 函数 GetAuthorityInfo：执行查询与读取流程，位于「鉴权与访问控制」域。
+- inputs: auth system.SysAuthority
+- outputs: (sa system.SysAuthority, err error)
+- side_effects: -
+- calls: GetAuthorityInfo, Preload, Where, First
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, security
+- [F78a1deb6-S0014] 行 277-302 | go-func | 函数 SetDataAuthority：执行更新与配置写入流程，位于「鉴权与访问控制」域。
+- inputs: adminAuthorityID uint, auth system.SysAuthority
+- outputs: error
+- side_effects: -
+- calls: SetDataAuthority, CheckAuthorityIDAuth, Preload, First, Model, Association, Replace
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, database, security
+- [F78a1deb6-S0015] 行 303-315 | go-func | 函数 SetMenuAuthority：执行更新与配置写入流程，位于「鉴权与访问控制」域。
+- inputs: auth *system.SysAuthority
+- outputs: error
+- side_effects: -
+- calls: SetMenuAuthority, Preload, First, Model, Association, Replace
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, database, security
+- [F78a1deb6-S0016] 行 316-325 | go-func | 函数 findChildrenAuthority：执行查询与读取流程，位于「鉴权与访问控制」域。
+- inputs: authority *system.SysAuthority
+- outputs: (err error)
+- side_effects: -
+- calls: findChildrenAuthority, Preload, Where, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, security
+- [F78a1deb6-S0017] 行 326-335 | go-func | 函数 GetParentAuthorityID：执行查询与读取流程，位于「鉴权与访问控制」域。
+- inputs: authorityID uint
+- outputs: (parentID uint, err error)
+- side_effects: -
+- calls: GetParentAuthorityID, Where, First
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, security
+- [F78a1deb6-S0018] 行 336-349 | go-func | 函数 GetUserIdsByAuthorityId：执行查询与读取流程，位于「鉴权与访问控制」域。
+- inputs: authorityId uint
+- outputs: (userIds []uint, err error)
+- side_effects: -
+- calls: GetUserIdsByAuthorityId, Where, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, security
+- [F78a1deb6-S0019] 行 350-413 | go-func | 函数 SetRoleUsers：执行更新与配置写入流程，位于「鉴权与访问控制」域。
+- inputs: authorityId uint, userIds []uint
+- outputs: error
+- side_effects: 写入数据库
+- calls: SetRoleUsers, Transaction, Where, Find, Delete, First, Model, Update, Create
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, database, security
+
+## [F2f6fe656] server/service/system/sys_auto_code_interface.go
+- 语言: go
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 56
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system/response
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F2f6fe656-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-package
+- [F2f6fe656-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: codegen-ai, go-import
+- [F2f6fe656-S0003] 行 8-9 | go-type | 类型 AutoCodeService：定义该文件的数据结构或接口边界，支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-type
+- [F2f6fe656-S0004] 行 10-15 | go-type | 类型 Database：定义该文件的数据结构或接口边界，支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: GetDB, GetTables, GetColumn
+- risks: -
+- tags: codegen-ai, go-type
+- [F2f6fe656-S0005] 行 16-56 | go-func | 函数 Database：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: businessDB string
+- outputs: Database
+- side_effects: -
+- calls: Database
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database
+

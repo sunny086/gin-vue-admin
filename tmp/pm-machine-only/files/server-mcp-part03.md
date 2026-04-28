@@ -1,0 +1,192 @@
+## [Fafb91367] server/mcp/standalone_manager.go
+- 语言: go
+- 领域: mcp-skills (MCP与Skills生态)
+- 行数: 480
+- imports: context, encoding/json, errors, fmt, github.com/flipped-aurora/gin-vue-admin/server/global, net/http, net/url, os, os/exec, path/filepath, runtime, strings, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fafb91367-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-package, ai-tooling
+- [Fafb91367-S0002] 行 3-19 | go-import | 逻辑段 go-import：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: mcp-skills, go-import
+- [Fafb91367-S0003] 行 20-30 | go-const-var | 逻辑段 go-const-var：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-const-var, ai-tooling
+- [Fafb91367-S0004] 行 31-47 | go-type | 类型 ManagedStandaloneStatus：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [Fafb91367-S0005] 行 48-57 | go-type | 类型 managedProcessMeta：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type, config
+- [Fafb91367-S0006] 行 58-65 | go-func | 函数 ResolveMCPListenAddr：执行查询与读取流程，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: ResolveMCPListenAddr, Sprintf
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: mcp-skills, go-func
+- [Fafb91367-S0007] 行 66-76 | go-func | 函数 ResolveMCPPath：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: ResolveMCPPath, TrimSpace, HasPrefix
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: mcp-skills, go-func, ai-tooling
+- [Fafb91367-S0008] 行 77-87 | go-func | 函数 ResolveMCPHealthURL：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: ResolveMCPHealthURL, Parse, ResolveMCPServiceURL, Sprintf, ResolveMCPListenAddr, String
+- risks: -
+- tags: mcp-skills, go-func
+- [Fafb91367-S0009] 行 88-141 | go-func | 函数 GetManagedStandaloneStatus：执行查询与读取流程，位于「MCP与Skills生态」域。
+- inputs: ctx context.Context
+- outputs: ManagedStandaloneStatus
+- side_effects: -
+- calls: GetManagedStandaloneStatus, checkMCPHealth, readManagedProcessMeta, processExists, removeManagedProcessMeta, ResolveMCPServiceURL, ResolveMCPHealthURL, ResolveMCPListenAddr, ResolveMCPPath, ConfiguredAuthHeader, Error
+- risks: -
+- tags: mcp-skills, go-func
+- [Fafb91367-S0010] 行 142-199 | go-func | 函数 StartManagedStandalone：控制服务运行状态，位于「MCP与Skills生态」域。
+- inputs: ctx context.Context
+- outputs: (ManagedStandaloneStatus, error)
+- side_effects: -
+- calls: StartManagedStandalone, GetManagedStandaloneStatus, readManagedProcessMeta, processExists, waitForManagedProcess, resolveManagedStartCommand, Background, ensureMCPRuntimeDir, Join, OpenFile, Close, Command
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling, config
+- [Fafb91367-S0011] 行 200-241 | go-func | 函数 StopManagedStandalone：控制服务运行状态，位于「MCP与Skills生态」域。
+- inputs: ctx context.Context
+- outputs: (ManagedStandaloneStatus, error)
+- side_effects: -
+- calls: StopManagedStandalone, readManagedProcessMeta, GetManagedStandaloneStatus, New, processExists, terminateProcess, Background, Errorf, NewTimer, NewTicker, Stop, Done
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling
+- [Fafb91367-S0012] 行 242-270 | go-func | 函数 checkMCPHealth：执行校验与约束判断，位于「MCP与Skills生态」域。
+- inputs: ctx context.Context
+- outputs: (bool, error)
+- side_effects: -
+- calls: checkMCPHealth, WithTimeout, Background, cancel, Deadline, WithDeadline, NewRequestWithContext, ResolveMCPHealthURL, Do, Close, Errorf
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling
+- [Fafb91367-S0013] 行 271-294 | go-func | 函数 waitForManagedProcess：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: ctx context.Context, meta *managedProcessMeta
+- outputs: (ManagedStandaloneStatus, error)
+- side_effects: -
+- calls: waitForManagedProcess, NewTimer, NewTicker, Stop, Done, GetManagedStandaloneStatus, Background, Err, Errorf, processExists
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling
+- [Fafb91367-S0014] 行 295-320 | go-func | 函数 resolveManagedStartCommand：控制服务运行状态，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: (string, []string, string, string, error)
+- side_effects: -
+- calls: resolveManagedStartCommand, resolveMCPServerRoot, New, resolveMCPConfigPath, TrimSpace, Getenv, fileExists, Errorf, Dir, ensureManagedBinary
+- risks: -
+- tags: mcp-skills, go-func, config
+- [Fafb91367-S0015] 行 321-354 | go-func | 函数 ensureManagedBinary：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: serverRoot string
+- outputs: (string, error)
+- side_effects: -
+- calls: ensureManagedBinary, ensureMCPRuntimeDir, Join, managedBinaryName, LookPath, isDir, WithTimeout, Background, cancel, CommandContext, CombinedOutput, TrimSpace
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling
+- [Fafb91367-S0016] 行 355-385 | go-func | 函数 resolveMCPServerRoot：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: resolveMCPServerRoot, TrimSpace, Join, FromSlash, Getwd, isDir
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: mcp-skills, go-func, ai-tooling
+- [Fafb91367-S0017] 行 386-400 | go-func | 函数 resolveMCPConfigPath：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: serverRoot string
+- outputs: (string, error)
+- side_effects: -
+- calls: resolveMCPConfigPath, Join, fileExists, New
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling, config
+- [Fafb91367-S0018] 行 401-408 | go-func | 函数 ensureMCPRuntimeDir：控制服务运行状态，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: (string, error)
+- side_effects: -
+- calls: ensureMCPRuntimeDir, Join, resolveMCPProjectRoot, MkdirAll
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling
+- [Fafb91367-S0019] 行 409-426 | go-func | 函数 resolveMCPProjectRoot：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: resolveMCPProjectRoot, TrimSpace, resolveMCPServerRoot, fileExists, Join, Dir
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: mcp-skills, go-func
+- [Fafb91367-S0020] 行 427-439 | go-func | 函数 readManagedProcessMeta：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: (*managedProcessMeta, error)
+- side_effects: -
+- calls: readManagedProcessMeta, ReadFile, managedProcessMetaPath, Unmarshal
+- risks: -
+- tags: mcp-skills, go-func
+- [Fafb91367-S0021] 行 440-447 | go-func | 函数 writeManagedProcessMeta：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: meta *managedProcessMeta
+- outputs: error
+- side_effects: 写入文件系统
+- calls: writeManagedProcessMeta, MarshalIndent, WriteFile, managedProcessMetaPath
+- risks: -
+- tags: mcp-skills, go-func
+- [Fafb91367-S0022] 行 448-455 | go-func | 函数 removeManagedProcessMeta：执行删除与清理流程，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: error
+- side_effects: -
+- calls: removeManagedProcessMeta, Remove, managedProcessMetaPath, Is
+- risks: -
+- tags: mcp-skills, go-func
+- [Fafb91367-S0023] 行 456-463 | go-func | 函数 managedProcessMetaPath：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: managedProcessMetaPath, ensureMCPRuntimeDir, Join, resolveMCPProjectRoot
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling
+- [Fafb91367-S0024] 行 464-470 | go-func | 函数 managedBinaryName：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: managedBinaryName
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling
+- [Fafb91367-S0025] 行 471-475 | go-func | 函数 fileExists：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: path string
+- outputs: bool
+- side_effects: -
+- calls: fileExists, Stat, IsDir
+- risks: -
+- tags: mcp-skills, go-func
+- [Fafb91367-S0026] 行 476-480 | go-func | 函数 isDir：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: path string
+- outputs: bool
+- side_effects: -
+- calls: isDir, Stat, IsDir
+- risks: -
+- tags: mcp-skills, go-func
+

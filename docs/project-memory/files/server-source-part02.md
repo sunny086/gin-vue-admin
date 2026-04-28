@@ -1,0 +1,80 @@
+## [Fa990dbc0] server/source/system/user.go
+- 语言: go
+- 领域: data-model (数据模型与初始化数据)
+- 行数: 107
+- imports: context, github.com/flipped-aurora/gin-vue-admin/server/service/system, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/google/uuid, github.com/pkg/errors, gorm.io/gorm
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fa990dbc0-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「数据模型与初始化数据」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-package
+- [Fa990dbc0-S0002] 行 3-12 | go-import | 逻辑段 go-import：承载「数据模型与初始化数据」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: data-model, go-import, database
+- [Fa990dbc0-S0003] 行 13-14 | go-const-var | 逻辑段 go-const-var：承载「数据模型与初始化数据」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-const-var
+- [Fa990dbc0-S0004] 行 15-17 | go-type | 类型 initUser：定义该文件的数据结构或接口边界，支撑「数据模型与初始化数据」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-type
+- [Fa990dbc0-S0005] 行 18-21 | go-func | 函数 init：完成初始化或注册流程，位于「数据模型与初始化数据」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: init, RegisterInit
+- risks: -
+- tags: data-model, go-func
+- [Fa990dbc0-S0006] 行 22-29 | go-func | 函数 MigrateTable：承载该模块的核心逻辑，位于「数据模型与初始化数据」域。
+- inputs: ctx context.Context
+- outputs: (context.Context, error)
+- side_effects: 写入数据库
+- calls: MigrateTable, Value, AutoMigrate
+- risks: -
+- tags: data-model, go-func, database
+- [Fa990dbc0-S0007] 行 30-37 | go-func | 函数 TableCreated：承载该模块的核心逻辑，位于「数据模型与初始化数据」域。
+- inputs: ctx context.Context
+- outputs: bool
+- side_effects: -
+- calls: TableCreated, Value, Migrator, HasTable
+- risks: -
+- tags: data-model, go-func, database
+- [Fa990dbc0-S0008] 行 38-41 | go-func | 函数 InitializerName：完成初始化或注册流程，位于「数据模型与初始化数据」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: InitializerName, TableName
+- risks: -
+- tags: data-model, go-func
+- [Fa990dbc0-S0009] 行 42-94 | go-func | 函数 InitializeData：完成初始化或注册流程，位于「数据模型与初始化数据」域。
+- inputs: ctx context.Context
+- outputs: (next context.Context, err error)
+- side_effects: 写入数据库
+- calls: InitializeData, Value, BcryptHash, New, Create, Wrap, TableName, WithValue, InitializerName, Model, Association, Replace
+- risks: -
+- tags: data-model, go-func, database, security
+- [Fa990dbc0-S0010] 行 95-107 | go-func | 函数 DataInserted：执行创建或新增流程，位于「数据模型与初始化数据」域。
+- inputs: ctx context.Context
+- outputs: bool
+- side_effects: -
+- calls: DataInserted, Value, Is, Where, Preload, First
+- risks: -
+- tags: data-model, go-func, database
+

@@ -1,0 +1,830 @@
+## [Fdcbc4964] web/src/view/superAdmin/dictionary/sysDictionary.vue
+- 语言: vue
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 925
+- imports: ./sysDictionaryDetail.vue, @/api/autoCode, @/components/warningBar/warningBar.vue, @/pinia, @element-plus/icons-vue, element-plus, vue
+- entrypoints: -
+- depends_on: ./sysDictionaryDetail.vue, @/api/autoCode, @/components/warningBar/warningBar.vue, @/pinia
+- owned_by: frontend
+- 逻辑段:
+- [Fdcbc4964-S0001] 行 1-126 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: calc, toDetail, exportDictionary, updateSysDictionaryFunc, deleteSysDictionaryFunc
+- risks: -
+- tags: menu-rbac, vue-template
+- [Fdcbc4964-S0002] 行 127-200 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-template
+- [Fdcbc4964-S0003] 行 201-319 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-template
+- [Fdcbc4964-S0004] 行 320-331 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-template
+- [Fdcbc4964-S0005] 行 332-343 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-template
+- [Fdcbc4964-S0006] 行 344-422 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineOptions, useAppStore, ref
+- risks: -
+- tags: codegen-ai, vue-script
+- [Fdcbc4964-S0007] 行 423-424 | vue-script-setup | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: ref
+- risks: -
+- tags: menu-rbac, vue-script-setup
+- [Fdcbc4964-S0008] 行 425-427 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0009] 行 428-432 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0010] 行 433-436 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: click
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0011] 行 437-454 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: event
+- outputs: -
+- side_effects: -
+- calls: indexOf, getAsFile, FileReader, async, llmAuto, readAsDataURL
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0012] 行 455-504 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, createElement, FileReader, llmAuto, readAsDataURL, click, watch, trim, parse, catch, computed, stringify
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0013] 行 505-517 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getSysDictionaryList, trim, updateAvailableParentDictionaries
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0014] 行 518-535 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: filter, isChildDictionary
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0015] 行 536-544 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: dictId, parentId
+- outputs: -
+- side_effects: -
+- calls: find, isChildDictionary, getTableData
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0016] 行 545-550 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: ref
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0017] 行 551-560 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: async, findSysDictionary, updateAvailableParentDictionaries
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0018] 行 561-570 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0019] 行 571-588 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: async, confirm, then, deleteSysDictionary, ElMessage, getTableData, ref
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0020] 行 589-610 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, validate, createSysDictionary, updateSysDictionary, success, closeDrawer, getTableData
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0021] 行 611-618 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: clearValidate, updateAvailableParentDictionaries
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0022] 行 619-624 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getTableData
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0023] 行 625-629 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: trim
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0024] 行 630-633 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0025] 行 634-640 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: e
+- outputs: -
+- side_effects: -
+- calls: trim, getTableData
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0026] 行 641-663 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: async, exportSysDictionary, stringify, Blob, createObjectURL, createElement, appendChild, click, removeChild, revokeObjectURL, success, catch
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0027] 行 664-672 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0028] 行 673-681 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0029] 行 682-686 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: e
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0030] 行 687-690 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: e
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0031] 行 691-700 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: e
+- outputs: -
+- side_effects: -
+- calls: readJsonFile
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0032] 行 701-705 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: click
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0033] 行 706-717 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: e
+- outputs: -
+- side_effects: -
+- calls: readJsonFile
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0034] 行 718-744 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: file
+- outputs: -
+- side_effects: -
+- calls: endsWith, warning, FileReader, parse, success, catch, error, readAsText
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0035] 行 745-771 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, trim, warning, error, importSysDictionary, success, closeImportDrawer, getTableData, catch
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0036] 行 772-777 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0037] 行 778-783 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0038] 行 784-819 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, trim, warning, llmAuto, success, stringify, closeAiDialog, catch, error
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fdcbc4964-S0039] 行 820-925 | vue-style | 样式区块：定义页面视觉表现与布局约束。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: calc, scale, deep
+- risks: -
+- tags: menu-rbac, vue-style
+
+## [F6d5be915] web/src/view/superAdmin/dictionary/sysDictionaryDetail.vue
+- 语言: vue
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 431
+- imports: @/pinia, @/utils/format, @element-plus/icons-vue, element-plus, vue
+- entrypoints: -
+- depends_on: @/pinia, @/utils/format
+- owned_by: frontend
+- 逻辑段:
+- [F6d5be915-S0001] 行 1-54 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-template
+- [F6d5be915-S0002] 行 55-72 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: formatBoolean
+- risks: -
+- tags: menu-rbac, vue-template
+- [F6d5be915-S0003] 行 73-108 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: addChildNode, updateSysDictionaryDetailFunc, deleteSysDictionaryDetailFunc
+- risks: -
+- tags: menu-rbac, vue-template
+- [F6d5be915-S0004] 行 109-179 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-template
+- [F6d5be915-S0005] 行 180-252 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineOptions, useAppStore, ref, defineProps
+- risks: -
+- tags: menu-rbac, vue-script
+- [F6d5be915-S0006] 行 253-254 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: value
+- outputs: -
+- side_effects: -
+- calls: toString, toLowerCase
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [F6d5be915-S0007] 行 255-259 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: nodes, keyword
+- outputs: -
+- side_effects: -
+- calls: normalizeSearch, trim
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [F6d5be915-S0008] 行 260-276 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: list
+- outputs: -
+- side_effects: -
+- calls: normalizeSearch, isArray, walk, includes, push
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [F6d5be915-S0009] 行 277-281 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: filterTree
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [F6d5be915-S0010] 行 282-309 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getDictionaryTreeList, applySearch, catch, error, getTreeData, ref
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [F6d5be915-S0011] 行 310-320 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: async, clearValidate, findSysDictionaryDetail
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [F6d5be915-S0012] 行 321-336 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: parentNode
+- outputs: -
+- side_effects: -
+- calls: log, clearValidate
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [F6d5be915-S0013] 行 337-340 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: value
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [F6d5be915-S0014] 行 341-352 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [F6d5be915-S0015] 行 353-370 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: async, confirm, then, deleteSysDictionaryDetail, ElMessage, getTreeData, ref
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [F6d5be915-S0016] 行 371-397 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, validate, createSysDictionaryDetail, updateSysDictionaryDetail, ElMessage, closeDrawer, getTreeData
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [F6d5be915-S0017] 行 398-404 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: clearValidate
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [F6d5be915-S0018] 行 405-409 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: applySearch
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [F6d5be915-S0019] 行 410-413 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [F6d5be915-S0020] 行 414-427 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: e
+- outputs: -
+- side_effects: -
+- calls: applySearch, watch, getTreeData
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [F6d5be915-S0021] 行 428-431 | vue-style | 样式区块：定义页面视觉表现与布局约束。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-style
+
+## [F4054b58a] web/src/view/superAdmin/index.vue
+- 语言: vue
+- 领域: frontend-ui (前端业务界面)
+- 行数: 21
+- imports: @/pinia/modules/router
+- entrypoints: -
+- depends_on: @/pinia/modules/router
+- owned_by: frontend
+- 逻辑段:
+- [F4054b58a-S0001] 行 1-12 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template
+- [F4054b58a-S0002] 行 13-21 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: useRouterStore, defineOptions
+- risks: -
+- tags: frontend-ui, vue-script
+
+## [Feafccd86] web/src/view/superAdmin/menu/components/components-cascader.vue
+- 语言: vue
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 132
+- imports: @/pathInfo.json, vue
+- entrypoints: -
+- depends_on: @/pathInfo.json
+- owned_by: frontend
+- 逻辑段:
+- [Feafccd86-S0001] 行 1-24 | vue-template | 模板区块：定义页面结构与交互骨架，承载「插件生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, vue-template, plugin
+- [Feafccd86-S0002] 行 25-42 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineProps, defineEmits, ref
+- risks: -
+- tags: menu-rbac, vue-script
+- [Feafccd86-S0003] 行 43-53 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: join, split, emitChange
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Feafccd86-S0004] 行 54-103 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: convertToCascaderOptions, split, filter, find, push, watch, initCascader, onMounted
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Feafccd86-S0005] 行 104-122 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: value
+- outputs: -
+- side_effects: -
+- calls: split, filter
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Feafccd86-S0006] 行 123-130 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: emits, join
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Feafccd86-S0007] 行 131-132 | vue-style | 样式区块：定义页面视觉表现与布局约束。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-style
+
+## [Ffcacd69f] web/src/view/superAdmin/menu/icon.vue
+- 语言: vue
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 1180
+- imports: @/core/config, vue
+- entrypoints: -
+- depends_on: @/core/config
+- owned_by: frontend
+- 逻辑段:
+- [Ffcacd69f-S0001] 行 1-32 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: concat
+- risks: -
+- tags: menu-rbac, vue-template, config
+- [Ffcacd69f-S0002] 行 33-1166 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineOptions, defineModel, reactive
+- risks: 逻辑段较长，建议拆分以降低维护成本
+- tags: menu-rbac, vue-script, database, config
+- [Ffcacd69f-S0003] 行 1167-1180 | vue-style | 样式区块：定义页面视觉表现与布局约束。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: rgb
+- risks: -
+- tags: menu-rbac, vue-style
+
+## [Fbabb81ad] web/src/view/superAdmin/menu/menu.vue
+- 语言: vue
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 933
+- imports: @/api/authority, @/api/authorityBtn, @/components/warningBar/warningBar.vue, @/pathInfo.json, @/pinia, @/utils/doc, @/utils/stringFun, @/view/superAdmin/menu/components/components-cascader.vue, @/view/superAdmin/menu/icon.vue, @element-plus/icons-vue, element-plus, vue
+- entrypoints: -
+- depends_on: @/api/authority, @/api/authorityBtn, @/components/warningBar/warningBar.vue, @/pathInfo.json, @/pinia, @/utils/doc, @/utils/stringFun, @/view/superAdmin/menu/components/components-cascader.vue, @/view/superAdmin/menu/icon.vue
+- owned_by: frontend
+- 逻辑段:
+- [Fbabb81ad-S0001] 行 1-28 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: addMenu
+- risks: -
+- tags: menu-rbac, vue-template, security
+- [Fbabb81ad-S0002] 行 29-57 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-template
+- [Fbabb81ad-S0003] 行 58-75 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-template
+- [Fbabb81ad-S0004] 行 76-118 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: addMenu, editMenu, openAssignRoleDrawer, deleteMenu
+- risks: -
+- tags: menu-rbac, vue-template
+- [Fbabb81ad-S0005] 行 119-218 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-template
+- [Fbabb81ad-S0006] 行 219-292 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-template
+- [Fbabb81ad-S0007] 行 293-339 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-template
+- [Fbabb81ad-S0008] 行 340-363 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-template
+- [Fbabb81ad-S0009] 行 364-411 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: addParameter
+- risks: -
+- tags: menu-rbac, vue-template
+- [Fbabb81ad-S0010] 行 412-423 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-template
+- [Fbabb81ad-S0011] 行 424-432 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-template
+- [Fbabb81ad-S0012] 行 433-441 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-template
+- [Fbabb81ad-S0013] 行 442-487 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: deleteParameter, addBtn, toDoc
+- risks: -
+- tags: menu-rbac, vue-template
+- [Fbabb81ad-S0014] 行 488-496 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-template
+- [Fbabb81ad-S0015] 行 497-505 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-template
+- [Fbabb81ad-S0016] 行 506-526 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: deleteBtn
+- risks: -
+- tags: menu-rbac, vue-template
+- [Fbabb81ad-S0017] 行 527-550 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-template, security
+- [Fbabb81ad-S0018] 行 551-590 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineOptions, useAppStore, reactive, ref
+- risks: -
+- tags: menu-rbac, vue-script, security
+- [Fbabb81ad-S0019] 行 591-600 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getMenuList, getTableData
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fbabb81ad-S0020] 行 601-611 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: form
+- outputs: -
+- side_effects: -
+- calls: push
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fbabb81ad-S0021] 行 612-618 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: component
+- outputs: -
+- side_effects: -
+- calls: replace, toLowerCase
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fbabb81ad-S0022] 行 619-623 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: parameters, index
+- outputs: -
+- side_effects: -
+- calls: splice
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fbabb81ad-S0023] 行 624-633 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: form
+- outputs: -
+- side_effects: -
+- calls: push
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fbabb81ad-S0024] 行 634-663 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: btns, index
+- outputs: -
+- side_effects: -
+- calls: async, splice, canRemoveAuthorityBtnApi, ref
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fbabb81ad-S0025] 行 664-667 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fbabb81ad-S0026] 行 668-672 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: done
+- outputs: -
+- side_effects: -
+- calls: initForm, done
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fbabb81ad-S0027] 行 673-703 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: ID
+- outputs: -
+- side_effects: -
+- calls: confirm, then, async, deleteBaseMenu, ElMessage, getTableData, catch, ref
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fbabb81ad-S0028] 行 704-725 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: resetFields, ref
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fbabb81ad-S0029] 行 726-730 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: initForm
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fbabb81ad-S0030] 行 731-758 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, validate, updateBaseMenu, addBaseMenu, ElMessage, getTableData, initForm, ref
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fbabb81ad-S0031] 行 759-767 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: setMenuOptions
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fbabb81ad-S0032] 行 768-797 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: menuData, optionsData, disabled
+- outputs: -
+- side_effects: -
+- calls: forEach, setMenuOptions, push, ref
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fbabb81ad-S0033] 行 798-805 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: id
+- outputs: -
+- side_effects: -
+- calls: setOptions
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [Fbabb81ad-S0034] 行 806-823 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: id
+- outputs: -
+- side_effects: -
+- calls: async, getBaseMenuById, setOptions, ref, Set
+- risks: -
+- tags: menu-rbac, vue-script-func, security
+- [Fbabb81ad-S0035] 行 824-827 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: has
+- risks: -
+- tags: menu-rbac, vue-script-func, security
+- [Fbabb81ad-S0036] 行 828-851 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: async, Set, all, getAuthorityList, getMenuRoles, nextTick, setCheckedKeys
+- risks: -
+- tags: menu-rbac, vue-script-func, security
+- [Fbabb81ad-S0037] 行 852-872 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getCheckedKeys, getHalfCheckedKeys, setMenuRoles, ElMessage
+- risks: -
+- tags: menu-rbac, vue-script-func, security
+- [Fbabb81ad-S0038] 行 873-933 | vue-style | 样式区块：定义页面视觉表现与布局约束。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: deep
+- risks: -
+- tags: menu-rbac, vue-style
+

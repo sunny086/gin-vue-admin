@@ -1,0 +1,383 @@
+# web-plugin
+
+- 文件数量：5
+
+## [F8204e281] web/src/plugin/announcement/api/info.js
+- 语言: js
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 111
+- imports: @/utils/request
+- entrypoints: -
+- depends_on: @/utils/request
+- owned_by: frontend
+- 逻辑段:
+- [F8204e281-S0001] 行 1-10 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, js-import
+- [F8204e281-S0002] 行 11-26 | js-export | 函数/导出 createInfo：执行创建或新增流程，用于支撑「插件生态」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: plugin-ecosystem, js-export
+- [F8204e281-S0003] 行 27-42 | js-export | 函数/导出 deleteInfo：执行删除与清理流程，用于支撑「插件生态」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: plugin-ecosystem, js-export
+- [F8204e281-S0004] 行 43-58 | js-export | 函数/导出 deleteInfoByIds：执行删除与清理流程，用于支撑「插件生态」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: plugin-ecosystem, js-export
+- [F8204e281-S0005] 行 59-74 | js-export | 函数/导出 updateInfo：执行更新与配置写入流程，用于支撑「插件生态」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: plugin-ecosystem, js-export
+- [F8204e281-S0006] 行 75-90 | js-export | 函数/导出 findInfo：执行查询与读取流程，用于支撑「插件生态」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: plugin-ecosystem, js-export
+- [F8204e281-S0007] 行 91-104 | js-export | 函数/导出 getInfoList：执行查询与读取流程，用于支撑「插件生态」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: plugin-ecosystem, js-export
+- [F8204e281-S0008] 行 105-111 | js-export | 函数/导出 getInfoDataSource：执行查询与读取流程，用于支撑「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: plugin-ecosystem, js-export
+
+## [F3dc1ab0a] web/src/plugin/announcement/form/info.vue
+- 语言: vue
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 138
+- imports: @/components/richtext/rich-edit.vue, @/components/selectFile/selectFile.vue, element-plus, vue, vue-router
+- entrypoints: -
+- depends_on: @/components/richtext/rich-edit.vue, @/components/selectFile/selectFile.vue
+- owned_by: frontend
+- 逻辑段:
+- [F3dc1ab0a-S0001] 行 1-47 | vue-template | 模板区块：定义页面结构与交互骨架，承载「插件生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, vue-template
+- [F3dc1ab0a-S0002] 行 48-82 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineOptions, useRoute, useRouter, ref, reactive
+- risks: -
+- tags: plugin-ecosystem, vue-script, plugin
+- [F3dc1ab0a-S0003] 行 83-91 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getInfoDataSource, getDataSourceFunc
+- risks: -
+- tags: plugin-ecosystem, vue-script-func
+- [F3dc1ab0a-S0004] 行 92-106 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, findInfo, init
+- risks: -
+- tags: plugin-ecosystem, vue-script-func
+- [F3dc1ab0a-S0005] 行 107-131 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, validate, createInfo, updateInfo, ElMessage
+- risks: -
+- tags: plugin-ecosystem, vue-script-func
+- [F3dc1ab0a-S0006] 行 132-136 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, vue-script-func
+- [F3dc1ab0a-S0007] 行 137-138 | vue-style | 样式区块：定义页面视觉表现与布局约束。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, vue-style
+
+## [Fd5f89983] web/src/plugin/announcement/view/info.vue
+- 语言: vue
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 511
+- imports: @/components/richtext/rich-edit.vue, @/components/selectFile/selectFile.vue, @/utils/format, @/utils/image, element-plus, vue
+- entrypoints: -
+- depends_on: @/components/richtext/rich-edit.vue, @/components/selectFile/selectFile.vue, @/utils/format, @/utils/image
+- owned_by: frontend
+- 逻辑段:
+- [Fd5f89983-S0001] 行 1-47 | vue-template | 模板区块：定义页面结构与交互骨架，承载「插件生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getTime
+- risks: -
+- tags: plugin-ecosystem, vue-template
+- [Fd5f89983-S0002] 行 48-102 | vue-template | 模板区块：定义页面结构与交互骨架，承载「插件生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, vue-template
+- [Fd5f89983-S0003] 行 103-109 | vue-template | 模板区块：定义页面结构与交互骨架，承载「插件生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: formatDate
+- risks: -
+- tags: plugin-ecosystem, vue-template
+- [Fd5f89983-S0004] 行 110-116 | vue-template | 模板区块：定义页面结构与交互骨架，承载「插件生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: filterDataSource
+- risks: -
+- tags: plugin-ecosystem, vue-template
+- [Fd5f89983-S0005] 行 117-134 | vue-template | 模板区块：定义页面结构与交互骨架，承载「插件生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: downloadFile
+- risks: -
+- tags: plugin-ecosystem, vue-template
+- [Fd5f89983-S0006] 行 135-174 | vue-template | 模板区块：定义页面结构与交互骨架，承载「插件生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: updateInfoFunc, deleteRow
+- risks: -
+- tags: plugin-ecosystem, vue-template
+- [Fd5f89983-S0007] 行 175-224 | vue-template | 模板区块：定义页面结构与交互骨架，承载「插件生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, vue-template
+- [Fd5f89983-S0008] 行 225-260 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineOptions, ref
+- risks: -
+- tags: plugin-ecosystem, vue-script, plugin
+- [Fd5f89983-S0009] 行 261-314 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getInfoDataSource, getDataSourceFunc, reactive, callback, Error, getTime, ref
+- risks: -
+- tags: plugin-ecosystem, vue-script-func
+- [Fd5f89983-S0010] 行 315-320 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getTableData
+- risks: -
+- tags: plugin-ecosystem, vue-script-func
+- [Fd5f89983-S0011] 行 321-329 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: validate, async, getTableData
+- risks: -
+- tags: plugin-ecosystem, vue-script-func
+- [Fd5f89983-S0012] 行 330-335 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: val
+- outputs: -
+- side_effects: -
+- calls: getTableData
+- risks: -
+- tags: plugin-ecosystem, vue-script-func
+- [Fd5f89983-S0013] 行 336-341 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: val
+- outputs: -
+- side_effects: -
+- calls: getTableData
+- risks: -
+- tags: plugin-ecosystem, vue-script-func
+- [Fd5f89983-S0014] 行 342-360 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getInfoList, getTableData
+- risks: -
+- tags: plugin-ecosystem, vue-script-func
+- [Fd5f89983-S0015] 行 361-368 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, setOptions, ref
+- risks: -
+- tags: plugin-ecosystem, vue-script-func
+- [Fd5f89983-S0016] 行 369-373 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: val
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, vue-script-func
+- [Fd5f89983-S0017] 行 374-384 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: confirm, then, deleteInfoFunc
+- risks: -
+- tags: plugin-ecosystem, vue-script-func
+- [Fd5f89983-S0018] 行 385-420 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, confirm, then, ElMessage, push, deleteInfoByIds, getTableData, ref
+- risks: -
+- tags: plugin-ecosystem, vue-script-func
+- [Fd5f89983-S0019] 行 421-430 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: async, findInfo
+- risks: -
+- tags: plugin-ecosystem, vue-script-func
+- [Fd5f89983-S0020] 行 431-448 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: async, deleteInfo, ElMessage, getTableData, ref
+- risks: -
+- tags: plugin-ecosystem, vue-script-func
+- [Fd5f89983-S0021] 行 449-454 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, vue-script-func
+- [Fd5f89983-S0022] 行 455-464 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, vue-script-func
+- [Fd5f89983-S0023] 行 465-490 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, validate, createInfo, updateInfo, ElMessage, closeDialog, getTableData
+- risks: -
+- tags: plugin-ecosystem, vue-script-func
+- [Fd5f89983-S0024] 行 491-495 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: url
+- outputs: -
+- side_effects: -
+- calls: open, getUrl
+- risks: -
+- tags: plugin-ecosystem, vue-script-func
+- [Fd5f89983-S0025] 行 496-511 | vue-style | 样式区块：定义页面视觉表现与布局约束。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, vue-style
+
+## [F430c8cb6] web/src/plugin/email/api/email.js
+- 语言: js
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 30
+- imports: @/utils/request
+- entrypoints: -
+- depends_on: @/utils/request
+- owned_by: frontend
+- 逻辑段:
+- [F430c8cb6-S0001] 行 1-7 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, js-import
+- [F430c8cb6-S0002] 行 8-22 | js-export | 函数/导出 emailTest：承载该模块的核心逻辑，用于支撑「插件生态」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: plugin-ecosystem, js-export
+- [F430c8cb6-S0003] 行 23-30 | js-export | 函数/导出 sendEmail：承载该模块的核心逻辑，用于支撑「插件生态」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: plugin-ecosystem, js-export
+
+## [Fb66fada6] web/src/plugin/email/view/index.vue
+- 语言: vue
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 61
+- imports: @/components/warningBar/warningBar.vue, @/plugin/email/api/email.js, element-plus, vue
+- entrypoints: -
+- depends_on: @/components/warningBar/warningBar.vue, @/plugin/email/api/email.js
+- owned_by: frontend
+- 逻辑段:
+- [Fb66fada6-S0001] 行 1-30 | vue-template | 模板区块：定义页面结构与交互骨架，承载「插件生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, vue-template
+- [Fb66fada6-S0002] 行 31-46 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineOptions, ref, reactive
+- risks: -
+- tags: plugin-ecosystem, vue-script, plugin
+- [Fb66fada6-S0003] 行 47-53 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, emailTest, success
+- risks: -
+- tags: plugin-ecosystem, vue-script-func
+- [Fb66fada6-S0004] 行 54-61 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, emailTest, success
+- risks: -
+- tags: plugin-ecosystem, vue-script-func
+

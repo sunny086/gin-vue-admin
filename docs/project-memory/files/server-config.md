@@ -1,0 +1,813 @@
+# server-config
+
+- 文件数量：27
+
+## [F5d9cd121] server/config/auto_code.go
+- 语言: go
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 23
+- imports: path/filepath, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F5d9cd121-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-package, config
+- [F5d9cd121-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: codegen-ai, go-import
+- [F5d9cd121-S0003] 行 8-15 | go-type | 类型 Autocode：定义该文件的数据结构或接口边界，支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-type
+- [F5d9cd121-S0004] 行 16-23 | go-func | 函数 WebRoot：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: WebRoot, Split, Join
+- risks: -
+- tags: codegen-ai, go-func
+
+## [F123780b4] server/config/captcha.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 10
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F123780b4-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package, config
+- [F123780b4-S0002] 行 3-10 | go-type | 类型 Captcha：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: s
+- risks: -
+- tags: system-config, go-type
+
+## [Fd97063a0] server/config/config.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 41
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fd97063a0-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package, config
+- [Fd97063a0-S0002] 行 3-41 | go-type | 类型 Server：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type, database, security, ai-tooling
+
+## [Fdc8b4161] server/config/cors.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 15
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fdc8b4161-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package, config
+- [Fdc8b4161-S0002] 行 3-7 | go-type | 类型 CORS：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [Fdc8b4161-S0003] 行 8-15 | go-type | 类型 CORSWhitelist：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+
+## [F3812f82f] server/config/db_list.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 54
+- imports: gorm.io/gorm/logger, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F3812f82f-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package, config
+- [F3812f82f-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, database
+- [F3812f82f-S0003] 行 9-16 | go-type | 类型 DsnProvider：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: Dsn
+- risks: -
+- tags: system-config, go-type, database, config
+- [F3812f82f-S0004] 行 17-32 | go-type | 类型 GeneralDB：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type, config
+- [F3812f82f-S0005] 行 33-47 | go-func | 函数 LogLevel：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: logger.LogLevel
+- side_effects: -
+- calls: LogLevel, ToLower
+- risks: -
+- tags: system-config, go-func
+- [F3812f82f-S0006] 行 48-54 | go-type | 类型 SpecializedDB：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+
+## [Fd282b0a5] server/config/disk.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 10
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fd282b0a5-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package, config
+- [Fd282b0a5-S0002] 行 3-6 | go-type | 类型 Disk：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [Fd282b0a5-S0003] 行 7-10 | go-type | 类型 DiskList：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+
+## [Fc7a5021a] server/config/email.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 13
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fc7a5021a-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package, config
+- [Fc7a5021a-S0002] 行 3-13 | go-type | 类型 Email：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+
+## [F83a1ac73] server/config/excel.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 6
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F83a1ac73-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package, config
+- [F83a1ac73-S0002] 行 3-6 | go-type | 类型 Excel：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+
+## [Fb84819ea] server/config/gorm_mssql.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 11
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fb84819ea-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package, config
+- [Fb84819ea-S0002] 行 3-7 | go-type | 类型 Mssql：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type, database
+- [Fb84819ea-S0003] 行 8-11 | go-func | 函数 Dsn：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: Dsn
+- risks: -
+- tags: system-config, go-func, database
+
+## [F05c7db94] server/config/gorm_mysql.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 10
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F05c7db94-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package, config
+- [F05c7db94-S0002] 行 3-6 | go-type | 类型 Mysql：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type, database
+- [F05c7db94-S0003] 行 7-10 | go-func | 函数 Dsn：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: Dsn, tcp
+- risks: -
+- tags: system-config, go-func, database
+
+## [F9b566aac] server/config/gorm_oracle.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 19
+- imports: fmt, net, net/url
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F9b566aac-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package, config
+- [F9b566aac-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F9b566aac-S0003] 行 9-12 | go-type | 类型 Oracle：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F9b566aac-S0004] 行 13-19 | go-func | 函数 Dsn：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: Dsn, Sprintf, PathEscape, JoinHostPort
+- risks: -
+- tags: system-config, go-func
+
+## [F5b3b6dd3] server/config/gorm_pgsql.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 18
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F5b3b6dd3-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package, config
+- [F5b3b6dd3-S0002] 行 3-8 | go-type | 类型 Pgsql：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type, database
+- [F5b3b6dd3-S0003] 行 9-14 | go-func | 函数 Dsn：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: Dsn
+- risks: -
+- tags: system-config, go-func, database
+- [F5b3b6dd3-S0004] 行 15-18 | go-func | 函数 LinkDsn：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: dbname string
+- outputs: string
+- side_effects: -
+- calls: LinkDsn
+- risks: -
+- tags: system-config, go-func, database
+
+## [Faf7b8016] server/config/gorm_sqlite.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 14
+- imports: path/filepath
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Faf7b8016-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package, config
+- [Faf7b8016-S0002] 行 3-6 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Faf7b8016-S0003] 行 7-10 | go-type | 类型 Sqlite：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [Faf7b8016-S0004] 行 11-14 | go-func | 函数 Dsn：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: Dsn, Join
+- risks: -
+- tags: system-config, go-func
+
+## [F806f82f9] server/config/jwt.go
+- 语言: go
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 9
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F806f82f9-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-package, config
+- [F806f82f9-S0002] 行 3-9 | go-type | 类型 JWT：定义该文件的数据结构或接口边界，支撑「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-type, security
+
+## [F0079fa9a] server/config/mcp.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 19
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F0079fa9a-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package, config
+- [F0079fa9a-S0002] 行 3-19 | go-type | 类型 MCP：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type, config
+
+## [F8807cd72] server/config/mongo.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 42
+- imports: fmt, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F8807cd72-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package, config
+- [F8807cd72-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F8807cd72-S0003] 行 8-22 | go-type | 类型 Mongo：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F8807cd72-S0004] 行 23-28 | go-type | 类型 MongoHost：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F8807cd72-S0005] 行 29-42 | go-func | 函数 Uri：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: Uri, Sprintf, Join
+- risks: -
+- tags: system-config, go-func
+
+## [F63b2e336] server/config/oss_aliyun.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 11
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F63b2e336-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package, config
+- [F63b2e336-S0002] 行 3-11 | go-type | 类型 AliyunOSS：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+
+## [F4e33ec05] server/config/oss_aws.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 14
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F4e33ec05-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package, config
+- [F4e33ec05-S0002] 行 3-14 | go-type | 类型 AwsS3：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+
+## [F57467917] server/config/oss_cloudflare.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 11
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F57467917-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package, config
+- [F57467917-S0002] 行 3-11 | go-type | 类型 CloudflareR2：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+
+## [Fbcb85d55] server/config/oss_huawei.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 10
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fbcb85d55-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package, config
+- [Fbcb85d55-S0002] 行 3-10 | go-type | 类型 HuaWeiObs：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+
+## [F7b8a448b] server/config/oss_local.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 7
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F7b8a448b-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package, config
+- [F7b8a448b-S0002] 行 3-7 | go-type | 类型 Local：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+
+## [Fb1bb5c16] server/config/oss_minio.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 12
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fb1bb5c16-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package, config
+- [Fb1bb5c16-S0002] 行 3-12 | go-type | 类型 Minio：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+
+## [F01f7ffac] server/config/oss_qiniu.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 12
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F01f7ffac-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package, config
+- [F01f7ffac-S0002] 行 3-12 | go-type | 类型 Qiniu：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+
+## [Fb717f4fd] server/config/oss_tencent.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 11
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fb717f4fd-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package, config
+- [Fb717f4fd-S0002] 行 3-11 | go-type | 类型 TencentCOS：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+
+## [Fe7325377] server/config/redis.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 11
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fe7325377-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package, config
+- [Fe7325377-S0002] 行 3-11 | go-type | 类型 Redis：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+
+## [Fc6cf7c99] server/config/system.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 16
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fc6cf7c99-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package, config
+- [Fc6cf7c99-S0002] 行 3-16 | go-type | 类型 System：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: mysql
+- risks: -
+- tags: system-config, go-type, database
+
+## [F7340de57] server/config/zap.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 72
+- imports: go.uber.org/zap/zapcore, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F7340de57-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package, config
+- [F7340de57-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F7340de57-S0003] 行 8-20 | go-type | 类型 Zap：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F7340de57-S0004] 行 21-32 | go-func | 函数 Levels：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: []zapcore.Level
+- side_effects: -
+- calls: Levels, ParseLevel
+- risks: -
+- tags: system-config, go-func
+- [F7340de57-S0005] 行 33-57 | go-func | 函数 Encoder：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: zapcore.Encoder
+- side_effects: -
+- calls: Encoder, AppendString, Format, LevelEncoder, NewJSONEncoder, NewConsoleEncoder
+- risks: -
+- tags: system-config, go-func, config
+- [F7340de57-S0006] 行 58-72 | go-func | 函数 LevelEncoder：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: zapcore.LevelEncoder
+- side_effects: -
+- calls: LevelEncoder
+- risks: -
+- tags: system-config, go-func
+

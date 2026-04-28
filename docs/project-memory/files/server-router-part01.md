@@ -1,0 +1,840 @@
+# server-router
+
+- 文件数量：28
+
+## [F71876c15] server/router/enter.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 14
+- imports: github.com/flipped-aurora/gin-vue-admin/server/router/example, github.com/flipped-aurora/gin-vue-admin/server/router/system
+- entrypoints: backend-router-entry
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F71876c15-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F71876c15-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F71876c15-S0003] 行 8-9 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var
+- [F71876c15-S0004] 行 10-14 | go-type | 类型 RouterGroup：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+
+## [Fdd55493e] server/router/example/enter.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 20
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fdd55493e-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fdd55493e-S0002] 行 3-6 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Fdd55493e-S0003] 行 7-13 | go-type | 类型 RouterGroup：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [Fdd55493e-S0004] 行 14-20 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var
+
+## [F5455569f] server/router/example/exa_attachment_category.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 17
+- imports: github.com/gin-gonic/gin
+- entrypoints: route-registration
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F5455569f-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F5455569f-S0002] 行 3-6 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F5455569f-S0003] 行 7-8 | go-type | 类型 AttachmentCategoryRouter：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F5455569f-S0004] 行 9-17 | go-func | 函数 InitAttachmentCategoryRouterRouter：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: Router *gin.RouterGroup
+- outputs: -
+- side_effects: -
+- calls: InitAttachmentCategoryRouterRouter, Group, GET, POST
+- risks: -
+- tags: system-config, go-func
+
+## [Fc155fe7f] server/router/example/exa_customer.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 23
+- imports: github.com/flipped-aurora/gin-vue-admin/server/middleware, github.com/gin-gonic/gin
+- entrypoints: route-registration
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fc155fe7f-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fc155fe7f-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Fc155fe7f-S0003] 行 8-9 | go-type | 类型 CustomerRouter：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [Fc155fe7f-S0004] 行 10-23 | go-func | 函数 InitCustomerRouter：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: Router *gin.RouterGroup
+- outputs: -
+- side_effects: 变更路由注册
+- calls: InitCustomerRouter, Group, Use, OperationRecord, POST, PUT, DELETE, GET
+- risks: -
+- tags: system-config, go-func, route
+
+## [F3e6c7fe4] server/router/example/exa_file_upload_and_download.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 23
+- imports: github.com/gin-gonic/gin
+- entrypoints: route-registration
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F3e6c7fe4-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F3e6c7fe4-S0002] 行 3-6 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F3e6c7fe4-S0003] 行 7-8 | go-type | 类型 FileUploadAndDownloadRouter：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F3e6c7fe4-S0004] 行 9-23 | go-func | 函数 InitFileUploadAndDownloadRouter：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: Router *gin.RouterGroup
+- outputs: -
+- side_effects: 变更路由注册
+- calls: InitFileUploadAndDownloadRouter, Group, POST, GET
+- risks: -
+- tags: system-config, go-func, route
+
+## [Facf26ed1] server/router/system/enter.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 54
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Facf26ed1-S0001] 行 1-4 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Facf26ed1-S0002] 行 5-28 | go-type | 类型 RouterGroup：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [Facf26ed1-S0003] 行 29-54 | go-const-var | 逻辑段 go-const-var：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-const-var, security, ai-tooling
+
+## [Fdb19853f] server/router/system/sys_api_token.go
+- 语言: go
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 20
+- imports: github.com/flipped-aurora/gin-vue-admin/server/api/v1, github.com/flipped-aurora/gin-vue-admin/server/middleware, github.com/gin-gonic/gin
+- entrypoints: route-registration
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fdb19853f-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-package
+- [Fdb19853f-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: auth-access, go-import
+- [Fdb19853f-S0003] 行 9-10 | go-type | 类型 ApiTokenRouter：定义该文件的数据结构或接口边界，支撑「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-type
+- [Fdb19853f-S0004] 行 11-20 | go-func | 函数 InitApiTokenRouter：完成初始化或注册流程，位于「鉴权与访问控制」域。
+- inputs: Router *gin.RouterGroup
+- outputs: -
+- side_effects: 变更路由注册
+- calls: InitApiTokenRouter, Group, Use, OperationRecord, POST
+- risks: -
+- tags: auth-access, go-func, route
+
+## [F680ec851] server/router/system/sys_api.go
+- 语言: go
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 36
+- imports: github.com/flipped-aurora/gin-vue-admin/server/middleware, github.com/gin-gonic/gin
+- entrypoints: route-registration
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F680ec851-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-package
+- [F680ec851-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: menu-rbac, go-import
+- [F680ec851-S0003] 行 8-9 | go-type | 类型 ApiRouter：定义该文件的数据结构或接口边界，支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-type
+- [F680ec851-S0004] 行 10-36 | go-func | 函数 InitApiRouter：完成初始化或注册流程，位于「菜单与权限编排」域。
+- inputs: Router *gin.RouterGroup, RouterPub *gin.RouterGroup
+- outputs: -
+- side_effects: 变更路由注册
+- calls: InitApiRouter, Group, Use, OperationRecord, GET, POST, DELETE
+- risks: -
+- tags: menu-rbac, go-func, route, security
+
+## [F1e38424b] server/router/system/sys_authority_btn.go
+- 语言: go
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 20
+- imports: github.com/gin-gonic/gin
+- entrypoints: route-registration
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F1e38424b-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-package
+- [F1e38424b-S0002] 行 3-6 | go-import | 逻辑段 go-import：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: auth-access, go-import
+- [F1e38424b-S0003] 行 7-8 | go-type | 类型 AuthorityBtnRouter：定义该文件的数据结构或接口边界，支撑「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-type
+- [F1e38424b-S0004] 行 9-10 | go-const-var | 逻辑段 go-const-var：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-const-var
+- [F1e38424b-S0005] 行 11-20 | go-func | 函数 InitAuthorityBtnRouterRouter：完成初始化或注册流程，位于「鉴权与访问控制」域。
+- inputs: Router *gin.RouterGroup
+- outputs: -
+- side_effects: -
+- calls: InitAuthorityBtnRouterRouter, Group, Use, OperationRecord, POST
+- risks: -
+- tags: auth-access, go-func, security
+
+## [Fd8fed226] server/router/system/sys_authority.go
+- 语言: go
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 26
+- imports: github.com/flipped-aurora/gin-vue-admin/server/middleware, github.com/gin-gonic/gin
+- entrypoints: route-registration
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fd8fed226-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-package
+- [Fd8fed226-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: auth-access, go-import
+- [Fd8fed226-S0003] 行 8-9 | go-type | 类型 AuthorityRouter：定义该文件的数据结构或接口边界，支撑「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-type
+- [Fd8fed226-S0004] 行 10-26 | go-func | 函数 InitAuthorityRouter：完成初始化或注册流程，位于「鉴权与访问控制」域。
+- inputs: Router *gin.RouterGroup
+- outputs: -
+- side_effects: 变更路由注册
+- calls: InitAuthorityRouter, Group, Use, OperationRecord, POST, PUT, GET
+- risks: -
+- tags: auth-access, go-func, route, security
+
+## [F1b0c3a6b] server/router/system/sys_auto_code_history.go
+- 语言: go
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 18
+- imports: github.com/gin-gonic/gin
+- entrypoints: route-registration
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F1b0c3a6b-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-package
+- [F1b0c3a6b-S0002] 行 3-6 | go-import | 逻辑段 go-import：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: codegen-ai, go-import
+- [F1b0c3a6b-S0003] 行 7-8 | go-type | 类型 AutoCodeHistoryRouter：定义该文件的数据结构或接口边界，支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-type
+- [F1b0c3a6b-S0004] 行 9-18 | go-func | 函数 InitAutoCodeHistoryRouter：完成初始化或注册流程，位于「代码生成与AI工作流」域。
+- inputs: Router *gin.RouterGroup
+- outputs: -
+- side_effects: 变更路由注册
+- calls: InitAutoCodeHistoryRouter, Group, POST
+- risks: -
+- tags: codegen-ai, go-func, route
+
+## [F1fe2ffb2] server/router/system/sys_auto_code.go
+- 语言: go
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 56
+- imports: github.com/gin-gonic/gin
+- entrypoints: route-registration
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F1fe2ffb2-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-package
+- [F1fe2ffb2-S0002] 行 3-4 | go-import | 逻辑段 go-import：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-import
+- [F1fe2ffb2-S0003] 行 5-6 | go-type | 类型 AutoCodeRouter：定义该文件的数据结构或接口边界，支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-type
+- [F1fe2ffb2-S0004] 行 7-56 | go-func | 函数 InitAutoCodeRouter：完成初始化或注册流程，位于「MCP与Skills生态」域。
+- inputs: Router *gin.RouterGroup, RouterPublic *gin.RouterGroup
+- outputs: -
+- side_effects: 变更路由注册
+- calls: InitAutoCodeRouter, Group, GET, POST
+- risks: -
+- tags: mcp-skills, go-func, route, ai-tooling
+
+## [F2f331a50] server/router/system/sys_base.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 17
+- imports: github.com/gin-gonic/gin
+- entrypoints: route-registration
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F2f331a50-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F2f331a50-S0002] 行 3-6 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F2f331a50-S0003] 行 7-8 | go-type | 类型 BaseRouter：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F2f331a50-S0004] 行 9-17 | go-func | 函数 InitBaseRouter：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: Router *gin.RouterGroup
+- outputs: (R gin.IRoutes)
+- side_effects: 变更路由注册
+- calls: InitBaseRouter, Group, POST
+- risks: -
+- tags: system-config, go-func, route
+
+## [F27117755] server/router/system/sys_casbin.go
+- 语言: go
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 20
+- imports: github.com/flipped-aurora/gin-vue-admin/server/middleware, github.com/gin-gonic/gin
+- entrypoints: route-registration
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F27117755-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-package
+- [F27117755-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: auth-access, go-import
+- [F27117755-S0003] 行 8-9 | go-type | 类型 CasbinRouter：定义该文件的数据结构或接口边界，支撑「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-type
+- [F27117755-S0004] 行 10-20 | go-func | 函数 InitCasbinRouter：完成初始化或注册流程，位于「鉴权与访问控制」域。
+- inputs: Router *gin.RouterGroup
+- outputs: -
+- side_effects: 变更路由注册
+- calls: InitCasbinRouter, Group, Use, OperationRecord, POST
+- risks: -
+- tags: auth-access, go-func, route, security
+
+## [F2c2a9019] server/router/system/sys_dictionary_detail.go
+- 语言: go
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 27
+- imports: github.com/flipped-aurora/gin-vue-admin/server/middleware, github.com/gin-gonic/gin
+- entrypoints: route-registration
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F2c2a9019-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-package
+- [F2c2a9019-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: menu-rbac, go-import
+- [F2c2a9019-S0003] 行 8-9 | go-type | 类型 DictionaryDetailRouter：定义该文件的数据结构或接口边界，支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-type
+- [F2c2a9019-S0004] 行 10-27 | go-func | 函数 InitSysDictionaryDetailRouter：完成初始化或注册流程，位于「菜单与权限编排」域。
+- inputs: Router *gin.RouterGroup
+- outputs: -
+- side_effects: 变更路由注册
+- calls: InitSysDictionaryDetailRouter, Group, Use, OperationRecord, POST, DELETE, PUT, GET
+- risks: -
+- tags: menu-rbac, go-func, route
+
+## [F644659a7] server/router/system/sys_dictionary.go
+- 语言: go
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 25
+- imports: github.com/flipped-aurora/gin-vue-admin/server/middleware, github.com/gin-gonic/gin
+- entrypoints: route-registration
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F644659a7-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-package
+- [F644659a7-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: menu-rbac, go-import
+- [F644659a7-S0003] 行 8-9 | go-type | 类型 DictionaryRouter：定义该文件的数据结构或接口边界，支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-type
+- [F644659a7-S0004] 行 10-25 | go-func | 函数 InitSysDictionaryRouter：完成初始化或注册流程，位于「菜单与权限编排」域。
+- inputs: Router *gin.RouterGroup
+- outputs: -
+- side_effects: 变更路由注册
+- calls: InitSysDictionaryRouter, Group, Use, OperationRecord, POST, DELETE, PUT, GET
+- risks: -
+- tags: menu-rbac, go-func, route
+
+## [Fb11fba63] server/router/system/sys_error.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 29
+- imports: github.com/flipped-aurora/gin-vue-admin/server/middleware, github.com/gin-gonic/gin
+- entrypoints: route-registration
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fb11fba63-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fb11fba63-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Fb11fba63-S0003] 行 8-10 | go-type | 类型 SysErrorRouter：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [Fb11fba63-S0004] 行 11-29 | go-func | 函数 InitSysErrorRouter：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: Router *gin.RouterGroup, PublicRouter *gin.RouterGroup
+- outputs: -
+- side_effects: 变更路由注册
+- calls: InitSysErrorRouter, Group, Use, OperationRecord, DELETE, PUT, GET, POST
+- risks: -
+- tags: system-config, go-func, route
+
+## [F9ce07f3e] server/router/system/sys_export_template.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 36
+- imports: github.com/flipped-aurora/gin-vue-admin/server/middleware, github.com/gin-gonic/gin
+- entrypoints: route-registration
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F9ce07f3e-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F9ce07f3e-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F9ce07f3e-S0003] 行 8-11 | go-type | 类型 SysExportTemplateRouter：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F9ce07f3e-S0004] 行 12-36 | go-func | 函数 InitSysExportTemplateRouter：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: Router *gin.RouterGroup, pubRouter *gin.RouterGroup
+- outputs: -
+- side_effects: 变更路由注册
+- calls: InitSysExportTemplateRouter, Group, Use, OperationRecord, POST, DELETE, PUT, GET
+- risks: -
+- tags: system-config, go-func, route, security
+
+## [F7916a7e7] server/router/system/sys_initdb.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 16
+- imports: github.com/gin-gonic/gin
+- entrypoints: route-registration
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F7916a7e7-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F7916a7e7-S0002] 行 3-6 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F7916a7e7-S0003] 行 7-8 | go-type | 类型 InitRouter：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F7916a7e7-S0004] 行 9-16 | go-func | 函数 InitInitRouter：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: Router *gin.RouterGroup
+- outputs: -
+- side_effects: 变更路由注册
+- calls: InitInitRouter, Group, POST
+- risks: -
+- tags: system-config, go-func, route
+
+## [F273aa00e] server/router/system/sys_jwt.go
+- 语言: go
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 15
+- imports: github.com/gin-gonic/gin
+- entrypoints: route-registration
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F273aa00e-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-package
+- [F273aa00e-S0002] 行 3-6 | go-import | 逻辑段 go-import：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: auth-access, go-import
+- [F273aa00e-S0003] 行 7-8 | go-type | 类型 JwtRouter：定义该文件的数据结构或接口边界，支撑「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-type
+- [F273aa00e-S0004] 行 9-15 | go-func | 函数 InitJwtRouter：完成初始化或注册流程，位于「鉴权与访问控制」域。
+- inputs: Router *gin.RouterGroup
+- outputs: -
+- side_effects: 变更路由注册
+- calls: InitJwtRouter, Group, POST
+- risks: -
+- tags: auth-access, go-func, route, security
+
+## [Ffbcc6141] server/router/system/sys_login_log.go
+- 语言: go
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 24
+- imports: github.com/flipped-aurora/gin-vue-admin/server/api/v1, github.com/flipped-aurora/gin-vue-admin/server/middleware, github.com/gin-gonic/gin
+- entrypoints: route-registration
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Ffbcc6141-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-package
+- [Ffbcc6141-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: auth-access, go-import
+- [Ffbcc6141-S0003] 行 9-10 | go-type | 类型 LoginLogRouter：定义该文件的数据结构或接口边界，支撑「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-type
+- [Ffbcc6141-S0004] 行 11-24 | go-func | 函数 InitLoginLogRouter：完成初始化或注册流程，位于「鉴权与访问控制」域。
+- inputs: Router *gin.RouterGroup
+- outputs: -
+- side_effects: 变更路由注册
+- calls: InitLoginLogRouter, Group, Use, OperationRecord, DELETE, GET
+- risks: -
+- tags: auth-access, go-func, route
+
+## [Fb5b1548a] server/router/system/sys_menu.go
+- 语言: go
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 30
+- imports: github.com/flipped-aurora/gin-vue-admin/server/middleware, github.com/gin-gonic/gin
+- entrypoints: route-registration
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fb5b1548a-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-package
+- [Fb5b1548a-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: menu-rbac, go-import
+- [Fb5b1548a-S0003] 行 8-9 | go-type | 类型 MenuRouter：定义该文件的数据结构或接口边界，支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-type
+- [Fb5b1548a-S0004] 行 10-30 | go-func | 函数 InitMenuRouter：完成初始化或注册流程，位于「菜单与权限编排」域。
+- inputs: Router *gin.RouterGroup
+- outputs: (R gin.IRoutes)
+- side_effects: 变更路由注册
+- calls: InitMenuRouter, Group, Use, OperationRecord, POST, GET
+- risks: -
+- tags: menu-rbac, go-func, route, security
+

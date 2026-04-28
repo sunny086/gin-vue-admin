@@ -1,0 +1,805 @@
+## [F43fda365] web/src/api/fileUploadAndDownload.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 67
+- imports: @/utils/request
+- entrypoints: -
+- depends_on: @/utils/request
+- owned_by: frontend
+- 逻辑段:
+- [F43fda365-S0001] 行 1-9 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F43fda365-S0002] 行 10-24 | js-export | 函数/导出 getFileList：执行查询与读取流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F43fda365-S0003] 行 25-37 | js-export | 函数/导出 deleteFile：执行删除与清理流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F43fda365-S0004] 行 38-50 | js-export | 函数/导出 editFileName：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F43fda365-S0005] 行 51-60 | js-export | 函数/导出 importURL：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F43fda365-S0006] 行 61-67 | js-export | 函数/导出 uploadFile：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+
+## [F235f56b0] web/src/api/github.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 20
+- imports: axios
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [F235f56b0-S0001] 行 1-2 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: 发起网络调用
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F235f56b0-S0002] 行 3-4 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: 发起网络调用
+- calls: create
+- risks: -
+- tags: frontend-core, js-const
+- [F235f56b0-S0003] 行 5-13 | js-export | 函数/导出 Commits：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: Commits, service
+- risks: -
+- tags: frontend-core, js-export
+- [F235f56b0-S0004] 行 14-20 | js-export | 函数/导出 Members：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: Members, service
+- risks: -
+- tags: frontend-core, js-export
+
+## [F06637211] web/src/api/initdb.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 28
+- imports: @/utils/request
+- entrypoints: -
+- depends_on: @/utils/request
+- owned_by: frontend
+- 逻辑段:
+- [F06637211-S0001] 行 1-7 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F06637211-S0002] 行 8-21 | js-export | 函数/导出 initDB：完成初始化或注册流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F06637211-S0003] 行 22-28 | js-export | 函数/导出 checkDB：执行校验与约束判断，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+
+## [F2bf99056] web/src/api/jwt.js
+- 语言: js
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 15
+- imports: @/utils/request
+- entrypoints: -
+- depends_on: @/utils/request
+- owned_by: frontend
+- 逻辑段:
+- [F2bf99056-S0001] 行 1-8 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, js-import, security
+- [F2bf99056-S0002] 行 9-15 | js-export | 函数/导出 jsonInBlacklist：执行查询与读取流程，用于支撑「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: auth-access, js-export, security
+
+## [F2ac26fc8] web/src/api/menu.js
+- 语言: js
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 142
+- imports: @/utils/request
+- entrypoints: -
+- depends_on: @/utils/request
+- owned_by: frontend
+- 逻辑段:
+- [F2ac26fc8-S0001] 行 1-5 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, js-import
+- [F2ac26fc8-S0002] 行 6-19 | js-export | 函数/导出 asyncMenu：承载该模块的核心逻辑，用于支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+- [F2ac26fc8-S0003] 行 20-31 | js-export | 函数/导出 getMenuList：执行查询与读取流程，用于支撑「菜单与权限编排」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+- [F2ac26fc8-S0004] 行 32-43 | js-export | 函数/导出 addBaseMenu：执行创建或新增流程，用于支撑「菜单与权限编排」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+- [F2ac26fc8-S0005] 行 44-54 | js-export | 函数/导出 getBaseMenuTree：执行查询与读取流程，用于支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export, security
+- [F2ac26fc8-S0006] 行 55-66 | js-export | 函数/导出 addMenuAuthority：执行创建或新增流程，用于支撑「菜单与权限编排」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export, security
+- [F2ac26fc8-S0007] 行 67-78 | js-export | 函数/导出 getMenuAuthority：执行查询与读取流程，用于支撑「菜单与权限编排」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+- [F2ac26fc8-S0008] 行 79-90 | js-export | 函数/导出 deleteBaseMenu：执行删除与清理流程，用于支撑「菜单与权限编排」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+- [F2ac26fc8-S0009] 行 91-106 | js-export | 函数/导出 updateBaseMenu：执行更新与配置写入流程，用于支撑「菜单与权限编排」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+- [F2ac26fc8-S0010] 行 107-119 | js-export | 函数/导出 getBaseMenuById：执行查询与读取流程，用于支撑「菜单与权限编排」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+- [F2ac26fc8-S0011] 行 120-134 | js-export | 函数/导出 getMenuRoles：执行查询与读取流程，用于支撑「菜单与权限编排」域。
+- inputs: menuId
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export, security
+- [F2ac26fc8-S0012] 行 135-142 | js-export | 函数/导出 setMenuRoles：执行更新与配置写入流程，用于支撑「菜单与权限编排」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+
+## [F7cd0d6ad] web/src/api/plugin/api.js
+- 语言: js
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 10
+- imports: @/utils/request
+- entrypoints: -
+- depends_on: @/utils/request
+- owned_by: frontend
+- 逻辑段:
+- [F7cd0d6ad-S0001] 行 1-2 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, js-import
+- [F7cd0d6ad-S0002] 行 3-10 | js-export | 函数/导出 getShopPluginList：执行查询与读取流程，用于支撑「插件生态」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: plugin-ecosystem, js-export, plugin
+
+## [F48e0a5fb] web/src/api/skills.js
+- 语言: js
+- 领域: mcp-skills (MCP与Skills生态)
+- 行数: 170
+- imports: @/utils/request
+- entrypoints: -
+- depends_on: @/utils/request
+- owned_by: frontend
+- 逻辑段:
+- [F48e0a5fb-S0001] 行 1-2 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, js-import
+- [F48e0a5fb-S0002] 行 3-9 | js-export | 函数/导出 getSkillTools：执行查询与读取流程，用于支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: mcp-skills, js-export, ai-tooling
+- [F48e0a5fb-S0003] 行 10-17 | js-export | 函数/导出 getSkillList：执行查询与读取流程，用于支撑「MCP与Skills生态」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: mcp-skills, js-export, ai-tooling
+- [F48e0a5fb-S0004] 行 18-25 | js-export | 函数/导出 getSkillDetail：执行查询与读取流程，用于支撑「MCP与Skills生态」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: mcp-skills, js-export, ai-tooling
+- [F48e0a5fb-S0005] 行 26-33 | js-export | 函数/导出 saveSkill：执行更新与配置写入流程，用于支撑「MCP与Skills生态」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: mcp-skills, js-export, ai-tooling
+- [F48e0a5fb-S0006] 行 34-41 | js-export | 函数/导出 deleteSkill：执行删除与清理流程，用于支撑「MCP与Skills生态」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: mcp-skills, js-export, ai-tooling
+- [F48e0a5fb-S0007] 行 42-49 | js-export | 函数/导出 createSkillScript：执行创建或新增流程，用于支撑「MCP与Skills生态」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: mcp-skills, js-export, ai-tooling
+- [F48e0a5fb-S0008] 行 50-57 | js-export | 函数/导出 getSkillScript：执行查询与读取流程，用于支撑「MCP与Skills生态」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: mcp-skills, js-export, ai-tooling
+- [F48e0a5fb-S0009] 行 58-65 | js-export | 函数/导出 saveSkillScript：执行更新与配置写入流程，用于支撑「MCP与Skills生态」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: mcp-skills, js-export, ai-tooling
+- [F48e0a5fb-S0010] 行 66-73 | js-export | 函数/导出 createSkillResource：执行创建或新增流程，用于支撑「MCP与Skills生态」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: mcp-skills, js-export, ai-tooling
+- [F48e0a5fb-S0011] 行 74-81 | js-export | 函数/导出 getSkillResource：执行查询与读取流程，用于支撑「MCP与Skills生态」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: mcp-skills, js-export, ai-tooling
+- [F48e0a5fb-S0012] 行 82-89 | js-export | 函数/导出 saveSkillResource：执行更新与配置写入流程，用于支撑「MCP与Skills生态」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: mcp-skills, js-export, ai-tooling
+- [F48e0a5fb-S0013] 行 90-97 | js-export | 函数/导出 createSkillReference：执行创建或新增流程，用于支撑「MCP与Skills生态」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: mcp-skills, js-export, ai-tooling
+- [F48e0a5fb-S0014] 行 98-105 | js-export | 函数/导出 getSkillReference：执行查询与读取流程，用于支撑「MCP与Skills生态」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: mcp-skills, js-export, ai-tooling
+- [F48e0a5fb-S0015] 行 106-113 | js-export | 函数/导出 saveSkillReference：执行更新与配置写入流程，用于支撑「MCP与Skills生态」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: mcp-skills, js-export, ai-tooling
+- [F48e0a5fb-S0016] 行 114-121 | js-export | 函数/导出 createSkillTemplate：执行创建或新增流程，用于支撑「MCP与Skills生态」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: mcp-skills, js-export, ai-tooling
+- [F48e0a5fb-S0017] 行 122-129 | js-export | 函数/导出 getSkillTemplate：执行查询与读取流程，用于支撑「MCP与Skills生态」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: mcp-skills, js-export, ai-tooling
+- [F48e0a5fb-S0018] 行 130-137 | js-export | 函数/导出 saveSkillTemplate：执行更新与配置写入流程，用于支撑「MCP与Skills生态」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: mcp-skills, js-export, ai-tooling
+- [F48e0a5fb-S0019] 行 138-145 | js-export | 函数/导出 getGlobalConstraint：执行查询与读取流程，用于支撑「MCP与Skills生态」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: mcp-skills, js-export, ai-tooling
+- [F48e0a5fb-S0020] 行 146-153 | js-export | 函数/导出 saveGlobalConstraint：执行更新与配置写入流程，用于支撑「MCP与Skills生态」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: mcp-skills, js-export, ai-tooling
+- [F48e0a5fb-S0021] 行 154-162 | js-export | 函数/导出 packageSkill：承载该模块的核心逻辑，用于支撑「MCP与Skills生态」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: mcp-skills, js-export, ai-tooling
+- [F48e0a5fb-S0022] 行 163-170 | js-export | 函数/导出 downloadOnlineSkill：承载该模块的核心逻辑，用于支撑「MCP与Skills生态」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: mcp-skills, js-export, ai-tooling
+
+## [F427fdb61] web/src/api/sysApiToken.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 26
+- imports: @/utils/request
+- entrypoints: -
+- depends_on: @/utils/request
+- owned_by: frontend
+- 逻辑段:
+- [F427fdb61-S0001] 行 1-2 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F427fdb61-S0002] 行 3-10 | js-export | 函数/导出 createApiToken：执行创建或新增流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F427fdb61-S0003] 行 11-18 | js-export | 函数/导出 getApiTokenList：执行查询与读取流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F427fdb61-S0004] 行 19-26 | js-export | 函数/导出 deleteApiToken：执行删除与清理流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+
+## [Fe783ce62] web/src/api/sysDictionary.js
+- 语言: js
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 113
+- imports: @/utils/request
+- entrypoints: -
+- depends_on: @/utils/request
+- owned_by: frontend
+- 逻辑段:
+- [Fe783ce62-S0001] 行 1-9 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, js-import
+- [Fe783ce62-S0002] 行 10-25 | js-export | 函数/导出 createSysDictionary：执行创建或新增流程，用于支撑「菜单与权限编排」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+- [Fe783ce62-S0003] 行 26-41 | js-export | 函数/导出 deleteSysDictionary：执行删除与清理流程，用于支撑「菜单与权限编排」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+- [Fe783ce62-S0004] 行 42-57 | js-export | 函数/导出 updateSysDictionary：执行更新与配置写入流程，用于支撑「菜单与权限编排」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+- [Fe783ce62-S0005] 行 58-73 | js-export | 函数/导出 findSysDictionary：执行查询与读取流程，用于支撑「菜单与权限编排」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+- [Fe783ce62-S0006] 行 74-89 | js-export | 函数/导出 getSysDictionaryList：执行查询与读取流程，用于支撑「菜单与权限编排」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+- [Fe783ce62-S0007] 行 90-105 | js-export | 函数/导出 exportSysDictionary：承载该模块的核心逻辑，用于支撑「菜单与权限编排」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+- [Fe783ce62-S0008] 行 106-113 | js-export | 函数/导出 importSysDictionary：承载该模块的核心逻辑，用于支撑「菜单与权限编排」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+
+## [F7b604b49] web/src/api/sysDictionaryDetail.js
+- 语言: js
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 146
+- imports: @/utils/request
+- entrypoints: -
+- depends_on: @/utils/request
+- owned_by: frontend
+- 逻辑段:
+- [F7b604b49-S0001] 行 1-9 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, js-import
+- [F7b604b49-S0002] 行 10-25 | js-export | 函数/导出 createSysDictionaryDetail：执行创建或新增流程，用于支撑「菜单与权限编排」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+- [F7b604b49-S0003] 行 26-41 | js-export | 函数/导出 deleteSysDictionaryDetail：执行删除与清理流程，用于支撑「菜单与权限编排」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+- [F7b604b49-S0004] 行 42-57 | js-export | 函数/导出 updateSysDictionaryDetail：执行更新与配置写入流程，用于支撑「菜单与权限编排」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+- [F7b604b49-S0005] 行 58-73 | js-export | 函数/导出 findSysDictionaryDetail：执行查询与读取流程，用于支撑「菜单与权限编排」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+- [F7b604b49-S0006] 行 74-89 | js-export | 函数/导出 getSysDictionaryDetailList：执行查询与读取流程，用于支撑「菜单与权限编排」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+- [F7b604b49-S0007] 行 90-105 | js-export | 函数/导出 getDictionaryTreeList：执行查询与读取流程，用于支撑「菜单与权限编排」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+- [F7b604b49-S0008] 行 106-122 | js-export | 函数/导出 getDictionaryTreeListByType：执行查询与读取流程，用于支撑「菜单与权限编排」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+- [F7b604b49-S0009] 行 123-138 | js-export | 函数/导出 getDictionaryDetailsByParent：执行查询与读取流程，用于支撑「菜单与权限编排」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+- [F7b604b49-S0010] 行 139-146 | js-export | 函数/导出 getDictionaryPath：执行查询与读取流程，用于支撑「菜单与权限编排」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+
+## [F1ef0efd5] web/src/api/sysLoginLog.js
+- 语言: js
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 34
+- imports: @/utils/request
+- entrypoints: -
+- depends_on: @/utils/request
+- owned_by: frontend
+- 逻辑段:
+- [F1ef0efd5-S0001] 行 1-2 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, js-import
+- [F1ef0efd5-S0002] 行 3-10 | js-export | 函数/导出 deleteLoginLog：执行删除与清理流程，用于支撑「鉴权与访问控制」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: auth-access, js-export
+- [F1ef0efd5-S0003] 行 11-18 | js-export | 函数/导出 deleteLoginLogByIds：执行删除与清理流程，用于支撑「鉴权与访问控制」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: auth-access, js-export
+- [F1ef0efd5-S0004] 行 19-26 | js-export | 函数/导出 getLoginLogList：执行查询与读取流程，用于支撑「鉴权与访问控制」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: auth-access, js-export
+- [F1ef0efd5-S0005] 行 27-34 | js-export | 函数/导出 findLoginLog：执行查询与读取流程，用于支撑「鉴权与访问控制」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: auth-access, js-export
+
+## [Fae4389d0] web/src/api/sysOperationRecord.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 49
+- imports: @/utils/request
+- entrypoints: -
+- depends_on: @/utils/request
+- owned_by: frontend
+- 逻辑段:
+- [Fae4389d0-S0001] 行 1-9 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [Fae4389d0-S0002] 行 10-25 | js-export | 函数/导出 deleteSysOperationRecord：执行删除与清理流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [Fae4389d0-S0003] 行 26-41 | js-export | 函数/导出 deleteSysOperationRecordByIds：执行删除与清理流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [Fae4389d0-S0004] 行 42-49 | js-export | 函数/导出 getSysOperationRecordList：执行查询与读取流程，用于支撑「前端框架内核」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+
+## [F794afa20] web/src/api/sysParams.js
+- 语言: js
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 112
+- imports: @/utils/request
+- entrypoints: -
+- depends_on: @/utils/request
+- owned_by: frontend
+- 逻辑段:
+- [F794afa20-S0001] 行 1-9 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, js-import
+- [F794afa20-S0002] 行 10-25 | js-export | 函数/导出 createSysParams：执行创建或新增流程，用于支撑「菜单与权限编排」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+- [F794afa20-S0003] 行 26-41 | js-export | 函数/导出 deleteSysParams：执行删除与清理流程，用于支撑「菜单与权限编排」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+- [F794afa20-S0004] 行 42-57 | js-export | 函数/导出 deleteSysParamsByIds：执行删除与清理流程，用于支撑「菜单与权限编排」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+- [F794afa20-S0005] 行 58-73 | js-export | 函数/导出 updateSysParams：执行更新与配置写入流程，用于支撑「菜单与权限编排」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+- [F794afa20-S0006] 行 74-89 | js-export | 函数/导出 findSysParams：执行查询与读取流程，用于支撑「菜单与权限编排」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+- [F794afa20-S0007] 行 90-104 | js-export | 函数/导出 getSysParamsList：执行查询与读取流程，用于支撑「菜单与权限编排」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+- [F794afa20-S0008] 行 105-112 | js-export | 函数/导出 getSysParam：执行查询与读取流程，用于支撑「菜单与权限编排」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: menu-rbac, js-export
+
+## [F427caf3a] web/src/api/system.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 56
+- imports: @/utils/request
+- entrypoints: -
+- depends_on: @/utils/request
+- owned_by: frontend
+- 逻辑段:
+- [F427caf3a-S0001] 行 1-7 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F427caf3a-S0002] 行 8-21 | js-export | 函数/导出 getSystemConfig：执行查询与读取流程，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F427caf3a-S0003] 行 22-35 | js-export | 函数/导出 setSystemConfig：执行更新与配置写入流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F427caf3a-S0004] 行 36-48 | js-export | 函数/导出 getSystemState：执行查询与读取流程，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F427caf3a-S0005] 行 49-56 | js-export | 函数/导出 reloadSystem：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+

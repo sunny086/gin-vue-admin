@@ -1,0 +1,818 @@
+## [F64a2a0ae] server/service/system/sys_export_template.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 725
+- imports: bytes, encoding/json, errors, fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/request, github.com/flipped-aurora/gin-vue-admin/server/model/system, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/xuri/excelize/v2, gorm.io/gorm, mime/multipart, net/url, strconv, strings, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F64a2a0ae-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F64a2a0ae-S0002] 行 3-22 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, database
+- [F64a2a0ae-S0003] 行 23-25 | go-type | 类型 SysExportTemplateService：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F64a2a0ae-S0004] 行 26-29 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var
+- [F64a2a0ae-S0005] 行 30-36 | go-func | 函数 CreateSysExportTemplate：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: sysExportTemplate *system.SysExportTemplate
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: CreateSysExportTemplate, Create
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F64a2a0ae-S0006] 行 37-43 | go-func | 函数 DeleteSysExportTemplate：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: sysExportTemplate system.SysExportTemplate
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: DeleteSysExportTemplate, Delete
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F64a2a0ae-S0007] 行 44-50 | go-func | 函数 DeleteSysExportTemplateByIds：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: ids request.IdsReq
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: DeleteSysExportTemplateByIds, Delete
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F64a2a0ae-S0008] 行 51-88 | go-func | 函数 UpdateSysExportTemplate：执行更新与配置写入流程，位于「系统配置与运行时」域。
+- inputs: sysExportTemplate system.SysExportTemplate
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: UpdateSysExportTemplate, Transaction, Delete, Updates, Create
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+- [F64a2a0ae-S0009] 行 89-95 | go-func | 函数 GetSysExportTemplate：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: id uint
+- outputs: (sysExportTemplate system.SysExportTemplate, err error)
+- side_effects: -
+- calls: GetSysExportTemplate, Where, Preload, First
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F64a2a0ae-S0010] 行 96-129 | go-func | 函数 GetSysExportTemplateInfoList：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: info systemReq.SysExportTemplateSearch
+- outputs: (list []system.SysExportTemplate, total int64, err error)
+- side_effects: -
+- calls: GetSysExportTemplateInfoList, Model, Where, Count, Limit, Offset, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+- [F64a2a0ae-S0011] 行 130-372 | go-func | 函数 ExportExcel：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: templateID string, values url.Values
+- outputs: (file *bytes.Buffer, name string, err error)
+- side_effects: -
+- calls: ExportExcel, Get, ParseQuery, Errorf, Preload, First, NewFile, Close, Println, NewSheet, GetJSONKeys, Unmarshal
+- risks: 依赖全局状态，模块可测试性与解耦性下降 / 逻辑段较长，建议拆分以降低维护成本
+- tags: system-config, go-func, database
+- [F64a2a0ae-S0012] 行 373-557 | go-func | 函数 PreviewSQL：输出渲染结果，位于「系统配置与运行时」域。
+- inputs: templateID string, values url.Values
+- outputs: (sqlPreview string, err error)
+- side_effects: -
+- calls: PreviewSQL, Get, ParseQuery, Preload, First, GetJSONKeys, Unmarshal, byte, Join, WriteString, Sprintf, hasDeletedAtColumn
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+- [F64a2a0ae-S0013] 行 558-604 | go-func | 函数 ExportTemplate：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: templateID string
+- outputs: (file *bytes.Buffer, name string, err error)
+- side_effects: -
+- calls: ExportTemplate, First, NewFile, Close, Println, NewSheet, GetJSONKeys, Unmarshal, byte, SetCellValue, Sprintf, getColumnName
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F64a2a0ae-S0014] 行 605-612 | go-func | 函数 hasDeletedAtColumn：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: tableName string
+- outputs: bool
+- side_effects: -
+- calls: hasDeletedAtColumn, Raw, COUNT, Count
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F64a2a0ae-S0015] 行 613-662 | go-func | 函数 ImportExcel：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: templateID string, file *multipart.FileHeader
+- outputs: (err error)
+- side_effects: -
+- calls: ImportExcel, First, Open, Close, OpenReader, GetRows, New, Unmarshal, byte, MustGetGlobalDBByDBName, parseExcelToMap, Transaction
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+- [F64a2a0ae-S0016] 行 663-691 | go-func | 函数 parseExcelToMap：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: rows [][]string, templateInfoMap map[string]string
+- outputs: ([]map[string]interface{}, error)
+- side_effects: -
+- calls: parseExcelToMap, TrimSpace
+- risks: -
+- tags: system-config, go-func
+- [F64a2a0ae-S0017] 行 692-700 | go-func | 函数 importBySQL：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: tx *gorm.DB, sql string, items []map[string]interface{}
+- outputs: error
+- side_effects: -
+- calls: importBySQL, Exec
+- risks: -
+- tags: system-config, go-func, database
+- [F64a2a0ae-S0018] 行 701-715 | go-func | 函数 importByGORM：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: tx *gorm.DB, tableName string, items []map[string]interface{}
+- outputs: error
+- side_effects: -
+- calls: importByGORM, Migrator, HasColumn, Now, Table, CreateInBatches
+- risks: -
+- tags: system-config, go-func, database
+- [F64a2a0ae-S0019] 行 716-725 | go-func | 函数 getColumnName：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: n int
+- outputs: string
+- side_effects: -
+- calls: getColumnName, string, rune
+- risks: -
+- tags: system-config, go-func
+
+## [F9c35e44a] server/service/system/sys_initdb_mssql.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 93
+- imports: context, errors, github.com/flipped-aurora/gin-vue-admin/server/config, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system/request, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/google/uuid, github.com/gookit/color, gorm.io/driver/sqlserver, gorm.io/gorm, path/filepath
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F9c35e44a-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F9c35e44a-S0002] 行 3-16 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, database, config
+- [F9c35e44a-S0003] 行 17-18 | go-type | 类型 MssqlInitHandler：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type, database
+- [F9c35e44a-S0004] 行 19-23 | go-func | 函数 NewMssqlInitHandler：处理请求或事件分发，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: *MssqlInitHandler
+- side_effects: -
+- calls: NewMssqlInitHandler
+- risks: -
+- tags: system-config, go-func, database
+- [F9c35e44a-S0005] 行 24-40 | go-func | 函数 WriteConfig：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: ctx context.Context
+- outputs: error
+- side_effects: 修改全局状态
+- calls: WriteConfig, Value, New, String, StructToMap, Set
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database, config
+- [F9c35e44a-S0006] 行 41-69 | go-func | 函数 EnsureDB：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: ctx context.Context, conf *request.InitDB
+- outputs: (next context.Context, err error)
+- side_effects: -
+- calls: EnsureDB, Value, ToMssqlConfig, WithValue, MssqlEmptyDsn, Open, New, Abs
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database, config
+- [F9c35e44a-S0007] 行 70-73 | go-func | 函数 InitTables：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: ctx context.Context, inits initSlice
+- outputs: error
+- side_effects: -
+- calls: InitTables, createTables
+- risks: -
+- tags: system-config, go-func, database
+- [F9c35e44a-S0008] 行 74-93 | go-func | 函数 InitData：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: ctx context.Context, inits initSlice
+- outputs: error
+- side_effects: -
+- calls: InitData, WithCancel, cancel, DataInserted, Printf, InitializerName, InitializeData
+- risks: -
+- tags: system-config, go-func, database
+
+## [F791c4474] server/service/system/sys_initdb_mysql.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 98
+- imports: context, errors, fmt, github.com/flipped-aurora/gin-vue-admin/server/config, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system/request, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/google/uuid, github.com/gookit/color, gorm.io/driver/mysql, gorm.io/gorm, path/filepath
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F791c4474-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F791c4474-S0002] 行 3-20 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, database, config
+- [F791c4474-S0003] 行 21-22 | go-type | 类型 MysqlInitHandler：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type, database
+- [F791c4474-S0004] 行 23-27 | go-func | 函数 NewMysqlInitHandler：处理请求或事件分发，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: *MysqlInitHandler
+- side_effects: -
+- calls: NewMysqlInitHandler
+- risks: -
+- tags: system-config, go-func, database
+- [F791c4474-S0005] 行 28-44 | go-func | 函数 WriteConfig：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: ctx context.Context
+- outputs: error
+- side_effects: 修改全局状态
+- calls: WriteConfig, Value, New, String, StructToMap, Set
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database, config
+- [F791c4474-S0006] 行 45-74 | go-func | 函数 EnsureDB：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: ctx context.Context, conf *request.InitDB
+- outputs: (next context.Context, err error)
+- side_effects: -
+- calls: EnsureDB, Value, ToMysqlConfig, WithValue, MysqlEmptyDsn, Sprintf, createDatabase, Open, New, Dsn, Abs
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database, config
+- [F791c4474-S0007] 行 75-78 | go-func | 函数 InitTables：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: ctx context.Context, inits initSlice
+- outputs: error
+- side_effects: -
+- calls: InitTables, createTables
+- risks: -
+- tags: system-config, go-func, database
+- [F791c4474-S0008] 行 79-98 | go-func | 函数 InitData：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: ctx context.Context, inits initSlice
+- outputs: error
+- side_effects: -
+- calls: InitData, WithCancel, cancel, DataInserted, Printf, InitializerName, InitializeData
+- risks: -
+- tags: system-config, go-func, database
+
+## [Fcbcf92b3] server/service/system/sys_initdb_pgsql.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 102
+- imports: context, errors, fmt, github.com/flipped-aurora/gin-vue-admin/server/config, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system/request, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/google/uuid, github.com/gookit/color, gorm.io/driver/postgres, gorm.io/gorm, path/filepath
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fcbcf92b3-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fcbcf92b3-S0002] 行 3-20 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, database, config
+- [Fcbcf92b3-S0003] 行 21-22 | go-type | 类型 PgsqlInitHandler：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type, database
+- [Fcbcf92b3-S0004] 行 23-27 | go-func | 函数 NewPgsqlInitHandler：处理请求或事件分发，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: *PgsqlInitHandler
+- side_effects: -
+- calls: NewPgsqlInitHandler
+- risks: -
+- tags: system-config, go-func, database
+- [Fcbcf92b3-S0005] 行 28-44 | go-func | 函数 WriteConfig：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: ctx context.Context
+- outputs: error
+- side_effects: 修改全局状态
+- calls: WriteConfig, Value, New, String, StructToMap, Set
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database, config
+- [Fcbcf92b3-S0006] 行 45-78 | go-func | 函数 EnsureDB：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: ctx context.Context, conf *request.InitDB
+- outputs: (next context.Context, err error)
+- side_effects: -
+- calls: EnsureDB, Value, ToPgsqlConfig, WithValue, PgsqlEmptyDsn, Sprintf, createDatabase, Open, New, Dsn, Abs
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database, config
+- [Fcbcf92b3-S0007] 行 79-82 | go-func | 函数 InitTables：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: ctx context.Context, inits initSlice
+- outputs: error
+- side_effects: -
+- calls: InitTables, createTables
+- risks: -
+- tags: system-config, go-func, database
+- [Fcbcf92b3-S0008] 行 83-102 | go-func | 函数 InitData：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: ctx context.Context, inits initSlice
+- outputs: error
+- side_effects: -
+- calls: InitData, WithCancel, cancel, DataInserted, Printf, InitializerName, InitializeData
+- risks: -
+- tags: system-config, go-func, database
+
+## [F48d03cf6] server/service/system/sys_initdb_sqlite.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 89
+- imports: context, errors, github.com/flipped-aurora/gin-vue-admin/server/config, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system/request, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/glebarez/sqlite, github.com/google/uuid, github.com/gookit/color, gorm.io/gorm, path/filepath
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F48d03cf6-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F48d03cf6-S0002] 行 3-17 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, database, config
+- [F48d03cf6-S0003] 行 18-19 | go-type | 类型 SqliteInitHandler：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F48d03cf6-S0004] 行 20-24 | go-func | 函数 NewSqliteInitHandler：处理请求或事件分发，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: *SqliteInitHandler
+- side_effects: -
+- calls: NewSqliteInitHandler
+- risks: -
+- tags: system-config, go-func, database
+- [F48d03cf6-S0005] 行 25-41 | go-func | 函数 WriteConfig：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: ctx context.Context
+- outputs: error
+- side_effects: 修改全局状态
+- calls: WriteConfig, Value, New, String, StructToMap, Set
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database, config
+- [F48d03cf6-S0006] 行 42-65 | go-func | 函数 EnsureDB：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: ctx context.Context, conf *request.InitDB
+- outputs: (next context.Context, err error)
+- side_effects: -
+- calls: EnsureDB, Value, ToSqliteConfig, WithValue, SqliteEmptyDsn, Open, Abs
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database, config
+- [F48d03cf6-S0007] 行 66-69 | go-func | 函数 InitTables：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: ctx context.Context, inits initSlice
+- outputs: error
+- side_effects: -
+- calls: InitTables, createTables
+- risks: -
+- tags: system-config, go-func
+- [F48d03cf6-S0008] 行 70-89 | go-func | 函数 InitData：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: ctx context.Context, inits initSlice
+- outputs: error
+- side_effects: -
+- calls: InitData, WithCancel, cancel, DataInserted, Printf, InitializerName, InitializeData
+- risks: -
+- tags: system-config, go-func
+
+## [F9ad0d897] server/service/system/sys_initdb.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 190
+- imports: context, database/sql, errors, fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system/request, gorm.io/gorm, sort
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F9ad0d897-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F9ad0d897-S0002] 行 3-13 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, database
+- [F9ad0d897-S0003] 行 14-24 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var, database
+- [F9ad0d897-S0004] 行 25-30 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var
+- [F9ad0d897-S0005] 行 31-37 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: New, init
+- risks: -
+- tags: system-config, go-const-var
+- [F9ad0d897-S0006] 行 38-46 | go-type | 类型 SubInitializer：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: InitializerName, MigrateTable, InitializeData, TableCreated, DataInserted
+- risks: -
+- tags: system-config, go-type
+- [F9ad0d897-S0007] 行 47-54 | go-type | 类型 TypedDBInitHandler：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: EnsureDB, WriteConfig, InitTables, InitData
+- risks: -
+- tags: system-config, go-type
+- [F9ad0d897-S0008] 行 55-60 | go-type | 类型 orderedInitializer：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F9ad0d897-S0009] 行 61-62 | go-type | 类型 initSlice：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F9ad0d897-S0010] 行 63-68 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: InitDB
+- risks: -
+- tags: system-config, go-const-var
+- [F9ad0d897-S0011] 行 69-86 | go-func | 函数 RegisterInit：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: order int, i SubInitializer
+- outputs: -
+- side_effects: 触发 panic
+- calls: RegisterInit, InitializerName, Sprintf
+- risks: 存在 panic 路径，异常恢复依赖上层中间件
+- tags: system-config, go-func
+- [F9ad0d897-S0012] 行 87-89 | go-type | 类型 InitDBService：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F9ad0d897-S0013] 行 90-141 | go-func | 函数 InitDB：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: conf request.InitDB
+- outputs: (err error)
+- side_effects: 修改全局状态
+- calls: InitDB, TODO, WithValue, New, Sort, NewMysqlInitHandler, NewPgsqlInitHandler, NewSqliteInitHandler, NewMssqlInitHandler, EnsureDB, Value, InitTables
+- risks: 存在待办逻辑，行为边界未完全收敛 / 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+- [F9ad0d897-S0014] 行 142-160 | go-func | 函数 createDatabase：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: dsn string, driver string, createSql string
+- outputs: error
+- side_effects: -
+- calls: createDatabase, Open, Close, Println, Ping, Exec
+- risks: -
+- tags: system-config, go-func, database
+- [F9ad0d897-S0015] 行 161-178 | go-func | 函数 createTables：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: ctx context.Context, inits initSlice
+- outputs: error
+- side_effects: -
+- calls: createTables, WithCancel, cancel, TableCreated, MigrateTable
+- risks: -
+- tags: system-config, go-func
+- [F9ad0d897-S0016] 行 179-182 | go-func | 函数 Len：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: int
+- side_effects: -
+- calls: Len
+- risks: -
+- tags: system-config, go-func
+- [F9ad0d897-S0017] 行 183-186 | go-func | 函数 Less：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: i, j int
+- outputs: bool
+- side_effects: -
+- calls: Less
+- risks: -
+- tags: system-config, go-func
+- [F9ad0d897-S0018] 行 187-190 | go-func | 函数 Swap：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: i, j int
+- outputs: -
+- side_effects: -
+- calls: Swap
+- risks: -
+- tags: system-config, go-func
+
+## [F12ddfc11] server/service/system/sys_login_log.go
+- 语言: go
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 54
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/request, github.com/flipped-aurora/gin-vue-admin/server/model/system
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F12ddfc11-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-package
+- [F12ddfc11-S0002] 行 3-9 | go-import | 逻辑段 go-import：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: auth-access, go-import
+- [F12ddfc11-S0003] 行 10-11 | go-type | 类型 LoginLogService：定义该文件的数据结构或接口边界，支撑「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-type
+- [F12ddfc11-S0004] 行 12-13 | go-const-var | 逻辑段 go-const-var：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-const-var
+- [F12ddfc11-S0005] 行 14-18 | go-func | 函数 CreateLoginLog：执行创建或新增流程，位于「鉴权与访问控制」域。
+- inputs: loginLog system.SysLoginLog
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: CreateLoginLog, Create
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func
+- [F12ddfc11-S0006] 行 19-23 | go-func | 函数 DeleteLoginLogByIds：执行删除与清理流程，位于「鉴权与访问控制」域。
+- inputs: ids request.IdsReq
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: DeleteLoginLogByIds, Delete, in
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func
+- [F12ddfc11-S0007] 行 24-28 | go-func | 函数 DeleteLoginLog：执行删除与清理流程，位于「鉴权与访问控制」域。
+- inputs: loginLog system.SysLoginLog
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: DeleteLoginLog, Delete
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func
+- [F12ddfc11-S0008] 行 29-33 | go-func | 函数 GetLoginLog：执行查询与读取流程，位于「鉴权与访问控制」域。
+- inputs: id uint
+- outputs: (loginLog system.SysLoginLog, err error)
+- side_effects: -
+- calls: GetLoginLog, Where, First
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func
+- [F12ddfc11-S0009] 行 34-54 | go-func | 函数 GetLoginLogInfoList：执行查询与读取流程，位于「鉴权与访问控制」域。
+- inputs: info systemReq.SysLoginLogSearch
+- outputs: (list interface{}, total int64, err error)
+- side_effects: -
+- calls: GetLoginLogInfoList, Model, Where, Count, Limit, Offset, Order, Preload, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, database
+
+## [Fe3691b7a] server/service/system/sys_menu.go
+- 语言: go
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 391
+- imports: errors, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/request, github.com/flipped-aurora/gin-vue-admin/server/model/system, gorm.io/gorm, strconv
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fe3691b7a-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-package
+- [Fe3691b7a-S0002] 行 3-17 | go-import | 逻辑段 go-import：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: menu-rbac, go-import, database, security
+- [Fe3691b7a-S0003] 行 18-19 | go-type | 类型 MenuService：定义该文件的数据结构或接口边界，支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-type
+- [Fe3691b7a-S0004] 行 20-21 | go-const-var | 逻辑段 go-const-var：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-const-var
+- [Fe3691b7a-S0005] 行 22-77 | go-func | 函数 getMenuTreeMap：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: authorityId uint
+- outputs: (treeMap map[uint][]system.SysMenu, err error)
+- side_effects: -
+- calls: getMenuTreeMap, Where, Find, in, Order, Preload
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, security
+- [Fe3691b7a-S0006] 行 78-92 | go-func | 函数 GetMenuTree：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: authorityId uint
+- outputs: (menus []system.SysMenu, err error)
+- side_effects: -
+- calls: GetMenuTree, getMenuTreeMap, getChildrenList
+- risks: -
+- tags: menu-rbac, go-func, security
+- [Fe3691b7a-S0007] 行 93-105 | go-func | 函数 getChildrenList：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: menu *system.SysMenu, treeMap map[uint][]system.SysMenu
+- outputs: (err error)
+- side_effects: -
+- calls: getChildrenList
+- risks: -
+- tags: menu-rbac, go-func
+- [Fe3691b7a-S0008] 行 106-121 | go-func | 函数 GetInfoList：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: authorityID uint
+- outputs: (list interface{}, err error)
+- side_effects: -
+- calls: GetInfoList, getBaseMenuTreeMap, getBaseChildrenList
+- risks: -
+- tags: menu-rbac, go-func, security
+- [Fe3691b7a-S0009] 行 122-135 | go-func | 函数 getBaseChildrenList：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: menu *system.SysBaseMenu, treeMap map[uint][]system.SysBaseMenu
+- outputs: (err error)
+- side_effects: -
+- calls: getBaseChildrenList
+- risks: -
+- tags: menu-rbac, go-func
+- [Fe3691b7a-S0010] 行 136-189 | go-func | 函数 AddBaseMenu：执行创建或新增流程，位于「菜单与权限编排」域。
+- inputs: menu system.SysBaseMenu
+- outputs: error
+- side_effects: 写入数据库
+- calls: AddBaseMenu, Transaction, Is, Where, First, New, Model, Count, Delete, Create
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, database
+- [Fe3691b7a-S0011] 行 190-225 | go-func | 函数 getBaseMenuTreeMap：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: authorityID uint
+- outputs: (treeMap map[uint][]system.SysBaseMenu, err error)
+- side_effects: -
+- calls: getBaseMenuTreeMap, GetParentAuthorityID, Order, Preload, Where, Find, in
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, security
+- [Fe3691b7a-S0012] 行 226-240 | go-func | 函数 GetBaseMenuTree：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: authorityID uint
+- outputs: (menus []system.SysBaseMenu, err error)
+- side_effects: -
+- calls: GetBaseMenuTree, getBaseMenuTreeMap, getBaseChildrenList
+- risks: -
+- tags: menu-rbac, go-func, security
+- [Fe3691b7a-S0013] 行 241-289 | go-func | 函数 AddMenuAuthority：执行创建或新增流程，位于「菜单与权限编排」域。
+- inputs: menus []system.SysBaseMenu, adminAuthorityID, authorityId uint
+- outputs: (err error)
+- side_effects: -
+- calls: AddMenuAuthority, CheckAuthorityIDAuth, First, Where, Find, Itoa, int, New, SetMenuAuthority
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, security
+- [Fe3691b7a-S0014] 行 290-317 | go-func | 函数 GetMenuAuthority：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: info *request.GetAuthorityId
+- outputs: (menus []system.SysMenu, err error)
+- side_effects: -
+- calls: GetMenuAuthority, Where, Find, in, Order
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, security
+- [Fe3691b7a-S0015] 行 318-333 | go-func | 函数 GetAuthoritiesByMenuId：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: menuId uint
+- outputs: (authorityIds []uint, err error)
+- side_effects: -
+- calls: GetAuthoritiesByMenuId, Where, Find, Atoi, uint
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, security
+- [Fe3691b7a-S0016] 行 334-351 | go-func | 函数 GetDefaultRouterAuthorityIds：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: menuId uint
+- outputs: (authorityIds []uint, err error)
+- side_effects: -
+- calls: GetDefaultRouterAuthorityIds, First, Where, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, security
+- [Fe3691b7a-S0017] 行 352-378 | go-func | 函数 SetMenuAuthorities：执行更新与配置写入流程，位于「菜单与权限编排」域。
+- inputs: menuId uint, authorityIds []uint
+- outputs: error
+- side_effects: 写入数据库
+- calls: SetMenuAuthorities, Transaction, Where, Delete, Itoa, int, Create
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, database, security
+- [Fe3691b7a-S0018] 行 379-391 | go-func | 函数 UserAuthorityDefaultRouter：承载该模块的核心逻辑，位于「菜单与权限编排」域。
+- inputs: user *system.SysUser
+- outputs: -
+- side_effects: -
+- calls: UserAuthorityDefaultRouter, Model, Where, Pluck, First, in, Is
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, database, security
+
+## [F5356ca3a] server/service/system/sys_operation_record.go
+- 语言: go
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 84
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/request, github.com/flipped-aurora/gin-vue-admin/server/model/system
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F5356ca3a-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-package
+- [F5356ca3a-S0002] 行 3-15 | go-import | 逻辑段 go-import：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: menu-rbac, go-import
+- [F5356ca3a-S0003] 行 16-17 | go-type | 类型 OperationRecordService：定义该文件的数据结构或接口边界，支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-type
+- [F5356ca3a-S0004] 行 18-26 | go-const-var | 逻辑段 go-const-var：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-const-var
+- [F5356ca3a-S0005] 行 27-37 | go-func | 函数 DeleteSysOperationRecordByIds：执行删除与清理流程，位于「菜单与权限编排」域。
+- inputs: ids request.IdsReq
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: DeleteSysOperationRecordByIds, Delete, in
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F5356ca3a-S0006] 行 38-48 | go-func | 函数 DeleteSysOperationRecord：执行删除与清理流程，位于「菜单与权限编排」域。
+- inputs: sysOperationRecord system.SysOperationRecord
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: DeleteSysOperationRecord, Delete
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F5356ca3a-S0007] 行 49-60 | go-func | 函数 GetSysOperationRecord：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: id uint
+- outputs: (sysOperationRecord system.SysOperationRecord, err error)
+- side_effects: -
+- calls: GetSysOperationRecord, Where, First
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F5356ca3a-S0008] 行 61-84 | go-func | 函数 GetSysOperationRecordInfoList：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: info systemReq.SysOperationRecordSearch
+- outputs: (list interface{}, total int64, err error)
+- side_effects: -
+- calls: GetSysOperationRecordInfoList, Model, Where, Count, Order, Limit, Offset, Preload, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, database
+

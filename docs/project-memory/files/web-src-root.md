@@ -1,0 +1,436 @@
+# web-src-root
+
+- 文件数量：4
+
+## [F11e1eace] web/src/App.vue
+- 语言: vue
+- 领域: other (通用模块)
+- 行数: 47
+- imports: @/components/application/index.vue, @/pinia, element-plus/dist/locale/zh-cn.mjs
+- entrypoints: -
+- depends_on: @/components/application/index.vue, @/pinia
+- owned_by: frontend
+- 逻辑段:
+- [F11e1eace-S0001] 行 1-12 | vue-template | 模板区块：定义页面结构与交互骨架，承载「通用模块」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, vue-template, config
+- [F11e1eace-S0002] 行 13-22 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「通用模块」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: useAppStore, defineOptions
+- risks: -
+- tags: other, vue-script
+- [F11e1eace-S0003] 行 23-47 | vue-style | 样式区块：定义页面视觉表现与布局约束。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: calc
+- risks: -
+- tags: other, vue-style
+
+## [F9d813ce1] web/src/main.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 38
+- imports: ./App.vue, ./core/gin-vue-admin, ./style/element_visiable.scss, @/core/error-handel, @/core/gin-vue-admin.js, @/directive/auth, @/directive/clickOutSide, @/permission, @/pinia, @/router/index, element-plus, element-plus/dist/index.css, element-plus/theme-chalk/dark/css-vars.css, uno.css, vite-check-multiple-dom/client, vue
+- entrypoints: frontend-main
+- depends_on: ./App.vue, ./core/gin-vue-admin, ./style/element_visiable.scss, @/core/error-handel, @/core/gin-vue-admin.js, @/directive/auth, @/directive/clickOutSide, @/permission, @/pinia, @/router/index
+- owned_by: frontend
+- 逻辑段:
+- [F9d813ce1-S0001] 行 1-1 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F9d813ce1-S0002] 行 2-2 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F9d813ce1-S0003] 行 3-3 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F9d813ce1-S0004] 行 4-4 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F9d813ce1-S0005] 行 5-5 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F9d813ce1-S0006] 行 6-7 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F9d813ce1-S0007] 行 8-9 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F9d813ce1-S0008] 行 10-11 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F9d813ce1-S0009] 行 12-12 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F9d813ce1-S0010] 行 13-13 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F9d813ce1-S0011] 行 14-14 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F9d813ce1-S0012] 行 15-15 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F9d813ce1-S0013] 行 16-16 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F9d813ce1-S0014] 行 17-17 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F9d813ce1-S0015] 行 18-18 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F9d813ce1-S0016] 行 19-20 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F9d813ce1-S0017] 行 21-36 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: createApp, setupVueRootValidator, use, mount
+- risks: -
+- tags: frontend-core, js-const, config
+- [F9d813ce1-S0018] 行 37-38 | js-export | 函数/导出 export default：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-export
+
+## [F08bf7f5a] web/src/pathInfo.json
+- 语言: json
+- 领域: frontend-core (前端框架内核)
+- 行数: 86
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [F08bf7f5a-S0001] 行 1-86 | block | 逻辑段 block：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, block, security, ai-tooling, plugin
+
+## [F96bbbc7b] web/src/permission.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 225
+- imports: @/pinia/modules/router, @/pinia/modules/user, @/router, @/utils/page, nprogress, nprogress/nprogress.css
+- entrypoints: -
+- depends_on: @/pinia/modules/router, @/pinia/modules/user, @/router, @/utils/page
+- owned_by: frontend
+- 逻辑段:
+- [F96bbbc7b-S0001] 行 1-1 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F96bbbc7b-S0002] 行 2-2 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F96bbbc7b-S0003] 行 3-3 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F96bbbc7b-S0004] 行 4-4 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F96bbbc7b-S0005] 行 5-5 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F96bbbc7b-S0006] 行 6-15 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: configure
+- risks: -
+- tags: frontend-core, js-import, config
+- [F96bbbc7b-S0007] 行 16-17 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const
+- [F96bbbc7b-S0008] 行 18-22 | js-func | 函数/导出 isExternalUrl：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: val
+- outputs: -
+- side_effects: -
+- calls: isExternalUrl, test
+- risks: -
+- tags: frontend-core, js-func
+- [F96bbbc7b-S0009] 行 23-23 | js-func | 函数/导出 normalizeAbsolutePath：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: p
+- outputs: -
+- side_effects: -
+- calls: normalizeAbsolutePath
+- risks: -
+- tags: frontend-core, js-func
+- [F96bbbc7b-S0010] 行 24-27 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: String, replace
+- risks: -
+- tags: frontend-core, js-const
+- [F96bbbc7b-S0011] 行 28-32 | js-func | 函数/导出 normalizeRelativePath：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: p
+- outputs: -
+- side_effects: -
+- calls: normalizeRelativePath, String, replace
+- risks: -
+- tags: frontend-core, js-func
+- [F96bbbc7b-S0012] 行 33-41 | js-func | 函数/导出 addTopLevelIfAbsent：执行创建或新增流程，用于支撑「前端框架内核」域。
+- inputs: r
+- outputs: -
+- side_effects: 变更路由注册
+- calls: addTopLevelIfAbsent, hasRoute, addRoute
+- risks: -
+- tags: frontend-core, js-func, route
+- [F96bbbc7b-S0013] 行 42-55 | js-func | 函数/导出 addRouteByChildren：执行创建或新增流程，用于支撑「前端框架内核」域。
+- inputs: route, segments = [], parentName = null
+- outputs: -
+- side_effects: 变更路由注册
+- calls: addRouteByChildren, isExternalUrl, forEach
+- risks: -
+- tags: frontend-core, js-func, route
+- [F96bbbc7b-S0014] 行 56-56 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: filter, join
+- risks: -
+- tags: frontend-core, js-const
+- [F96bbbc7b-S0015] 行 57-57 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const
+- [F96bbbc7b-S0016] 行 58-78 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: 变更路由注册
+- calls: normalizeAbsolutePath, hasRoute, addTopLevelIfAbsent, forEach, addRouteByChildren
+- risks: -
+- tags: frontend-core, js-const, route
+- [F96bbbc7b-S0017] 行 79-80 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const
+- [F96bbbc7b-S0018] 行 81-81 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: filter, join
+- risks: -
+- tags: frontend-core, js-const
+- [F96bbbc7b-S0019] 行 82-84 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: normalizeRelativePath, filter, join
+- risks: -
+- tags: frontend-core, js-const
+- [F96bbbc7b-S0020] 行 85-93 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: 变更路由注册
+- calls: normalizeRelativePath, addRoute
+- risks: -
+- tags: frontend-core, js-const, route
+- [F96bbbc7b-S0021] 行 94-99 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: 变更路由注册
+- calls: isExternalUrl, forEach, addRouteByChildren
+- risks: -
+- tags: frontend-core, js-const, route
+- [F96bbbc7b-S0022] 行 100-100 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: filter, join
+- risks: -
+- tags: frontend-core, js-const
+- [F96bbbc7b-S0023] 行 101-116 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: 变更路由注册
+- calls: normalizeRelativePath, addRoute
+- risks: -
+- tags: frontend-core, js-const, route
+- [F96bbbc7b-S0024] 行 117-118 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: userStore
+- outputs: -
+- side_effects: -
+- calls: async
+- risks: -
+- tags: frontend-core, js-const
+- [F96bbbc7b-S0025] 行 119-122 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: useRouterStore, all, SetAsyncRouter, GetUserInfo
+- risks: -
+- tags: frontend-core, js-const
+- [F96bbbc7b-S0026] 行 123-123 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const
+- [F96bbbc7b-S0027] 行 124-125 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: hasRoute
+- risks: -
+- tags: frontend-core, js-const
+- [F96bbbc7b-S0028] 行 126-130 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: 变更路由注册
+- calls: addRoute
+- risks: -
+- tags: frontend-core, js-const, route
+- [F96bbbc7b-S0029] 行 131-148 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: 变更路由注册
+- calls: push, slice, forEach, addRouteByChildren, catch, error
+- risks: -
+- tags: frontend-core, js-const, route
+- [F96bbbc7b-S0030] 行 149-149 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const
+- [F96bbbc7b-S0031] 行 150-156 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getElementById, remove, beforeEach, async
+- risks: -
+- tags: frontend-core, js-const
+- [F96bbbc7b-S0032] 行 157-157 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: useUserStore
+- risks: -
+- tags: frontend-core, js-const
+- [F96bbbc7b-S0033] 行 158-158 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: useRouterStore
+- risks: -
+- tags: frontend-core, js-const
+- [F96bbbc7b-S0034] 行 159-225 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: start, handleKeepAlive, getPageTitle, includes, setupRouter, getItem, removeItem, afterEach, querySelector, scrollTo, done, onError
+- risks: -
+- tags: frontend-core, js-const, security
+

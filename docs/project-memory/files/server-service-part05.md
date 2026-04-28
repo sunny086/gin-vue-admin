@@ -1,0 +1,750 @@
+## [F2568a5ed] server/service/system/sys_params.go
+- 语言: go
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 83
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F2568a5ed-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-package
+- [F2568a5ed-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: menu-rbac, go-import
+- [F2568a5ed-S0003] 行 9-12 | go-type | 类型 SysParamsService：定义该文件的数据结构或接口边界，支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-type
+- [F2568a5ed-S0004] 行 13-19 | go-func | 函数 CreateSysParams：执行创建或新增流程，位于「菜单与权限编排」域。
+- inputs: sysParams *system.SysParams
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: CreateSysParams, Create
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F2568a5ed-S0005] 行 20-26 | go-func | 函数 DeleteSysParams：执行删除与清理流程，位于「菜单与权限编排」域。
+- inputs: ID string
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: DeleteSysParams, Delete
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F2568a5ed-S0006] 行 27-33 | go-func | 函数 DeleteSysParamsByIds：执行删除与清理流程，位于「菜单与权限编排」域。
+- inputs: IDs []string
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: DeleteSysParamsByIds, Delete
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F2568a5ed-S0007] 行 34-40 | go-func | 函数 UpdateSysParams：执行更新与配置写入流程，位于「菜单与权限编排」域。
+- inputs: sysParams system.SysParams
+- outputs: (err error)
+- side_effects: -
+- calls: UpdateSysParams, Model, Where, Updates
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, database
+- [F2568a5ed-S0008] 行 41-47 | go-func | 函数 GetSysParams：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: ID string
+- outputs: (sysParams system.SysParams, err error)
+- side_effects: -
+- calls: GetSysParams, Where, First
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F2568a5ed-S0009] 行 48-78 | go-func | 函数 GetSysParamsInfoList：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: info systemReq.SysParamsSearch
+- outputs: (list []system.SysParams, total int64, err error)
+- side_effects: -
+- calls: GetSysParamsInfoList, Model, Where, Count, Limit, Offset, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, database
+- [F2568a5ed-S0010] 行 79-83 | go-func | 函数 GetSysParam：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: key string
+- outputs: (param system.SysParams, err error)
+- side_effects: -
+- calls: GetSysParam, Where, First
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+
+## [Fccad9bc9] server/service/system/sys_skills.go
+- 语言: go
+- 领域: mcp-skills (MCP与Skills生态)
+- 行数: 786
+- imports: archive/zip, bytes, context, encoding/json, errors, fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system, github.com/flipped-aurora/gin-vue-admin/server/model/system/request, gopkg.in/yaml.v3, io, io/fs, net/http, os, path/filepath, sort, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fccad9bc9-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-package
+- [Fccad9bc9-S0002] 行 3-23 | go-import | 逻辑段 go-import：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: mcp-skills, go-import
+- [Fccad9bc9-S0003] 行 24-28 | go-const-var | 逻辑段 go-const-var：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-const-var
+- [Fccad9bc9-S0004] 行 29-30 | go-const-var | 逻辑段 go-const-var：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-const-var
+- [Fccad9bc9-S0005] 行 31-38 | go-const-var | 逻辑段 go-const-var：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-const-var
+- [Fccad9bc9-S0006] 行 39-46 | go-const-var | 逻辑段 go-const-var：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-const-var
+- [Fccad9bc9-S0007] 行 47-48 | go-const-var | 逻辑段 go-const-var：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-const-var
+- [Fccad9bc9-S0008] 行 49-50 | go-const-var | 逻辑段 go-const-var：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-const-var
+- [Fccad9bc9-S0009] 行 51-52 | go-const-var | 逻辑段 go-const-var：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-const-var
+- [Fccad9bc9-S0010] 行 53-54 | go-const-var | 逻辑段 go-const-var：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-const-var
+- [Fccad9bc9-S0011] 行 55-56 | go-const-var | 逻辑段 go-const-var：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-const-var
+- [Fccad9bc9-S0012] 行 57-58 | go-type | 类型 SkillsService：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [Fccad9bc9-S0013] 行 59-69 | go-func | 函数 Tools：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: _ context.Context
+- outputs: ([]system.SkillTool, error)
+- side_effects: -
+- calls: Tools, toolSkillsDir
+- risks: -
+- tags: mcp-skills, go-func
+- [Fccad9bc9-S0014] 行 70-88 | go-func | 函数 List：执行查询与读取流程，位于「MCP与Skills生态」域。
+- inputs: _ context.Context, tool string
+- outputs: ([]string, error)
+- side_effects: -
+- calls: List, toolSkillsDir, ReadDir, IsDir, Name, Strings
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling
+- [Fccad9bc9-S0015] 行 89-129 | go-func | 函数 Detail：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: _ context.Context, tool, skill string
+- outputs: (system.SkillDetail, error)
+- side_effects: -
+- calls: Detail, isSafeName, New, skillDir, Join, ReadFile, IsNotExist, parseSkillContent, string, listFiles
+- risks: -
+- tags: mcp-skills, go-func
+- [Fccad9bc9-S0016] 行 130-165 | go-func | 函数 Save：执行更新与配置写入流程，位于「MCP与Skills生态」域。
+- inputs: _ context.Context, req request.SkillSaveRequest
+- outputs: error
+- side_effects: 写入数据库, 写入文件系统
+- calls: Save, isSafeName, New, ensureSkillDir, buildSkillContent, WriteFile, Join, byte, copySkillDir
+- risks: -
+- tags: mcp-skills, go-func
+- [Fccad9bc9-S0017] 行 166-189 | go-func | 函数 Delete：执行删除与清理流程，位于「MCP与Skills生态」域。
+- inputs: _ context.Context, req request.SkillDeleteRequest
+- outputs: error
+- side_effects: 写入数据库
+- calls: Delete, TrimSpace, New, isSafeName, skillDir, Stat, IsNotExist, IsDir, RemoveAll
+- risks: -
+- tags: mcp-skills, go-func
+- [Fccad9bc9-S0018] 行 190-266 | go-func | 函数 Package：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: _ context.Context, req request.SkillPackageRequest
+- outputs: (string, []byte, error)
+- side_effects: 写入数据库
+- calls: Package, TrimSpace, New, isSafeName, skillDir, Stat, IsNotExist, IsDir, NewBuffer, NewWriter, WalkDir, Rel
+- risks: -
+- tags: mcp-skills, go-func
+- [Fccad9bc9-S0019] 行 267-295 | go-func | 函数 CreateScript：执行创建或新增流程，位于「MCP与Skills生态」域。
+- inputs: _ context.Context, req request.SkillScriptCreateRequest
+- outputs: (string, string, error)
+- side_effects: 写入文件系统
+- calls: CreateScript, isSafeName, New, buildScriptFileName, ensureSkillDir, Join, Stat, MkdirAll, Dir, scriptTemplate, WriteFile, byte
+- risks: -
+- tags: mcp-skills, go-func
+- [Fccad9bc9-S0020] 行 296-299 | go-func | 函数 GetScript：执行查询与读取流程，位于「MCP与Skills生态」域。
+- inputs: _ context.Context, req request.SkillFileRequest
+- outputs: (string, error)
+- side_effects: -
+- calls: GetScript, readSkillFile
+- risks: -
+- tags: mcp-skills, go-func
+- [Fccad9bc9-S0021] 行 300-303 | go-func | 函数 SaveScript：执行更新与配置写入流程，位于「MCP与Skills生态」域。
+- inputs: _ context.Context, req request.SkillFileSaveRequest
+- outputs: error
+- side_effects: -
+- calls: SaveScript, writeSkillFile
+- risks: -
+- tags: mcp-skills, go-func
+- [Fccad9bc9-S0022] 行 304-307 | go-func | 函数 CreateResource：执行创建或新增流程，位于「MCP与Skills生态」域。
+- inputs: _ context.Context, req request.SkillResourceCreateRequest
+- outputs: (string, string, error)
+- side_effects: -
+- calls: CreateResource, createMarkdownFile
+- risks: -
+- tags: mcp-skills, go-func
+- [Fccad9bc9-S0023] 行 308-311 | go-func | 函数 GetResource：执行查询与读取流程，位于「MCP与Skills生态」域。
+- inputs: _ context.Context, req request.SkillFileRequest
+- outputs: (string, error)
+- side_effects: -
+- calls: GetResource, readSkillFile
+- risks: -
+- tags: mcp-skills, go-func
+- [Fccad9bc9-S0024] 行 312-315 | go-func | 函数 SaveResource：执行更新与配置写入流程，位于「MCP与Skills生态」域。
+- inputs: _ context.Context, req request.SkillFileSaveRequest
+- outputs: error
+- side_effects: -
+- calls: SaveResource, writeSkillFile
+- risks: -
+- tags: mcp-skills, go-func
+- [Fccad9bc9-S0025] 行 316-319 | go-func | 函数 CreateReference：执行创建或新增流程，位于「MCP与Skills生态」域。
+- inputs: _ context.Context, req request.SkillReferenceCreateRequest
+- outputs: (string, string, error)
+- side_effects: -
+- calls: CreateReference, createMarkdownFile
+- risks: -
+- tags: mcp-skills, go-func
+- [Fccad9bc9-S0026] 行 320-323 | go-func | 函数 GetReference：执行查询与读取流程，位于「MCP与Skills生态」域。
+- inputs: _ context.Context, req request.SkillFileRequest
+- outputs: (string, error)
+- side_effects: -
+- calls: GetReference, readSkillFile
+- risks: -
+- tags: mcp-skills, go-func
+- [Fccad9bc9-S0027] 行 324-327 | go-func | 函数 SaveReference：执行更新与配置写入流程，位于「MCP与Skills生态」域。
+- inputs: _ context.Context, req request.SkillFileSaveRequest
+- outputs: error
+- side_effects: -
+- calls: SaveReference, writeSkillFile
+- risks: -
+- tags: mcp-skills, go-func
+- [Fccad9bc9-S0028] 行 328-331 | go-func | 函数 CreateTemplate：执行创建或新增流程，位于「MCP与Skills生态」域。
+- inputs: _ context.Context, req request.SkillTemplateCreateRequest
+- outputs: (string, string, error)
+- side_effects: -
+- calls: CreateTemplate, createMarkdownFile
+- risks: -
+- tags: mcp-skills, go-func
+- [Fccad9bc9-S0029] 行 332-335 | go-func | 函数 GetTemplate：执行查询与读取流程，位于「MCP与Skills生态」域。
+- inputs: _ context.Context, req request.SkillFileRequest
+- outputs: (string, error)
+- side_effects: -
+- calls: GetTemplate, readSkillFile
+- risks: -
+- tags: mcp-skills, go-func
+- [Fccad9bc9-S0030] 行 336-339 | go-func | 函数 SaveTemplate：执行更新与配置写入流程，位于「MCP与Skills生态」域。
+- inputs: _ context.Context, req request.SkillFileSaveRequest
+- outputs: error
+- side_effects: -
+- calls: SaveTemplate, writeSkillFile
+- risks: -
+- tags: mcp-skills, go-func
+- [Fccad9bc9-S0031] 行 340-355 | go-func | 函数 GetGlobalConstraint：执行查询与读取流程，位于「MCP与Skills生态」域。
+- inputs: _ context.Context, tool string
+- outputs: (string, bool, error)
+- side_effects: -
+- calls: GetGlobalConstraint, toolSkillsDir, Join, ReadFile, IsNotExist, string
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling
+- [Fccad9bc9-S0032] 行 356-387 | go-func | 函数 SaveGlobalConstraint：执行更新与配置写入流程，位于「MCP与Skills生态」域。
+- inputs: _ context.Context, req request.SkillGlobalConstraintSaveRequest
+- outputs: error
+- side_effects: 写入文件系统
+- calls: SaveGlobalConstraint, TrimSpace, New, toolSkillsDir, Join, MkdirAll, Dir, WriteFile, byte, writeConstraint
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling
+- [Fccad9bc9-S0033] 行 388-466 | go-func | 函数 DownloadOnlineSkill：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: _ context.Context, req request.DownloadOnlineSkillReq
+- outputs: error
+- side_effects: 发起网络调用
+- calls: DownloadOnlineSkill, toolSkillsDir, Marshal, Errorf, NewRequest, NewReader, Set, Do, Close, ReadAll, Unmarshal, TrimSpace
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling, plugin
+- [Fccad9bc9-S0034] 行 467-517 | go-func | 函数 extractZipToDir：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: zipPath, destDir string
+- outputs: error
+- side_effects: -
+- calls: extractZipToDir, OpenReader, Close, FromSlash, Contains, Join, HasPrefix, Clean, FileInfo, IsDir, MkdirAll, Dir
+- risks: -
+- tags: mcp-skills, go-func
+- [Fccad9bc9-S0035] 行 518-533 | go-func | 函数 toolSkillsDir：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: tool string
+- outputs: (string, error)
+- side_effects: -
+- calls: toolSkillsDir, New, TrimSpace, Join, MkdirAll
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: mcp-skills, go-func, ai-tooling
+- [Fccad9bc9-S0036] 行 534-541 | go-func | 函数 skillDir：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: tool, skill string
+- outputs: (string, error)
+- side_effects: -
+- calls: skillDir, toolSkillsDir, Join
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling
+- [Fccad9bc9-S0037] 行 542-555 | go-func | 函数 ensureSkillDir：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: tool, skill string
+- outputs: (string, error)
+- side_effects: -
+- calls: ensureSkillDir, isSafeName, New, skillDir, MkdirAll
+- risks: -
+- tags: mcp-skills, go-func
+- [Fccad9bc9-S0038] 行 556-584 | go-func | 函数 createMarkdownFile：执行创建或新增流程，位于「MCP与Skills生态」域。
+- inputs: tool, skill, subDir, fileName, defaultContent, label string
+- outputs: (string, string, error)
+- side_effects: 写入文件系统
+- calls: createMarkdownFile, isSafeName, New, buildResourceFileName, ensureSkillDir, Join, Stat, Errorf, MkdirAll, Dir, WriteFile, byte
+- risks: -
+- tags: mcp-skills, go-func
+- [Fccad9bc9-S0039] 行 585-603 | go-func | 函数 readSkillFile：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: tool, skill, subDir, fileName string
+- outputs: (string, error)
+- side_effects: -
+- calls: readSkillFile, isSafeName, New, isSafeFileName, skillDir, Join, ReadFile, string
+- risks: -
+- tags: mcp-skills, go-func
+- [Fccad9bc9-S0040] 行 604-621 | go-func | 函数 writeSkillFile：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: tool, skill, subDir, fileName, content string
+- outputs: error
+- side_effects: 写入文件系统
+- calls: writeSkillFile, isSafeName, New, isSafeFileName, ensureSkillDir, Join, MkdirAll, Dir, WriteFile, byte
+- risks: -
+- tags: mcp-skills, go-func
+- [Fccad9bc9-S0041] 行 622-646 | go-func | 函数 parseSkillContent：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: content string
+- outputs: (system.SkillMeta, string, error)
+- side_effects: -
+- calls: parseSkillContent, TrimPrefix, Split, TrimSpace, Join, Unmarshal, byte
+- risks: -
+- tags: mcp-skills, go-func
+- [Fccad9bc9-S0042] 行 647-662 | go-func | 函数 buildSkillContent：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: meta system.SkillMeta, markdown string
+- outputs: (string, error)
+- side_effects: -
+- calls: buildSkillContent, New, Marshal, TrimRight, string, TrimLeft, Sprintf
+- risks: -
+- tags: mcp-skills, go-func
+- [Fccad9bc9-S0043] 行 663-677 | go-func | 函数 listFiles：执行查询与读取流程，位于「MCP与Skills生态」域。
+- inputs: dir string
+- outputs: []string
+- side_effects: -
+- calls: listFiles, ReadDir, Type, IsRegular, Name, Strings
+- risks: -
+- tags: mcp-skills, go-func
+- [Fccad9bc9-S0044] 行 678-690 | go-func | 函数 isSafeName：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: name string
+- outputs: bool
+- side_effects: -
+- calls: isSafeName, TrimSpace, Contains, ContainsAny, Base
+- risks: -
+- tags: mcp-skills, go-func
+- [Fccad9bc9-S0045] 行 691-703 | go-func | 函数 isSafeFileName：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: name string
+- outputs: bool
+- side_effects: -
+- calls: isSafeFileName, TrimSpace, Contains, ContainsAny, Base
+- risks: -
+- tags: mcp-skills, go-func
+- [Fccad9bc9-S0046] 行 704-728 | go-func | 函数 buildScriptFileName：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: fileName, scriptType string
+- outputs: (string, string, error)
+- side_effects: -
+- calls: buildScriptFileName, TrimSpace, New, isSafeFileName, TrimSuffix, Ext, ToLower
+- risks: -
+- tags: mcp-skills, go-func
+- [Fccad9bc9-S0047] 行 729-743 | go-func | 函数 buildResourceFileName：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: fileName string
+- outputs: (string, error)
+- side_effects: -
+- calls: buildResourceFileName, TrimSpace, New, isSafeFileName, TrimSuffix, Ext
+- risks: -
+- tags: mcp-skills, go-func
+- [Fccad9bc9-S0048] 行 744-756 | go-func | 函数 scriptTemplate：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: lang string
+- outputs: string
+- side_effects: -
+- calls: scriptTemplate
+- risks: 存在待办逻辑，行为边界未完全收敛
+- tags: mcp-skills, go-func, config
+- [Fccad9bc9-S0049] 行 757-786 | go-func | 函数 copySkillDir：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: src, dst string
+- outputs: error
+- side_effects: 写入文件系统
+- calls: copySkillDir, WalkDir, Rel, Join, IsDir, MkdirAll, Type, IsRegular, ReadFile, Dir, WriteFile
+- risks: -
+- tags: mcp-skills, go-func
+
+## [Fa8835b74] server/service/system/sys_system.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 63
+- imports: github.com/flipped-aurora/gin-vue-admin/server/config, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system, github.com/flipped-aurora/gin-vue-admin/server/utils, go.uber.org/zap
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fa8835b74-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fa8835b74-S0002] 行 3-15 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, config
+- [Fa8835b74-S0003] 行 16-17 | go-type | 类型 SystemConfigService：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [Fa8835b74-S0004] 行 18-19 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var
+- [Fa8835b74-S0005] 行 20-30 | go-func | 函数 GetSystemConfig：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: (conf config.Server, err error)
+- side_effects: -
+- calls: GetSystemConfig
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, config
+- [Fa8835b74-S0006] 行 31-44 | go-func | 函数 SetSystemConfig：执行更新与配置写入流程，位于「系统配置与运行时」域。
+- inputs: system system.System
+- outputs: (err error)
+- side_effects: -
+- calls: SetSystemConfig, StructToMap, Set, WriteConfig
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [Fa8835b74-S0007] 行 45-63 | go-func | 函数 GetServerInfo：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: (server *utils.Server, err error)
+- side_effects: -
+- calls: GetServerInfo, InitOS, InitCPU, Error, String, InitRAM, InitDisk
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+
+## [F821c34e2] server/service/system/sys_user.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 337
+- imports: errors, fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common, github.com/flipped-aurora/gin-vue-admin/server/model/system, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/google/uuid, gorm.io/gorm, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F821c34e2-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F821c34e2-S0002] 行 3-23 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, database
+- [F821c34e2-S0003] 行 24-25 | go-type | 类型 UserService：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F821c34e2-S0004] 行 26-27 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var
+- [F821c34e2-S0005] 行 28-46 | go-func | 函数 Register：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: u system.SysUser
+- outputs: (userInter system.SysUser, err error)
+- side_effects: 写入数据库
+- calls: Register, Is, Where, First, New, BcryptHash, Create
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+- [F821c34e2-S0006] 行 47-68 | go-func | 函数 Login：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: u *system.SysUser
+- outputs: (userInter *system.SysUser, err error)
+- side_effects: -
+- calls: Login, Errorf, Where, Preload, First, BcryptCheck, New, UserAuthorityDefaultRouter
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F821c34e2-S0007] 行 69-88 | go-func | 函数 ChangePassword：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: u *system.SysUser, newPassword string
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: ChangePassword, Select, Where, First, BcryptCheck, New, BcryptHash, Model, Update
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+- [F821c34e2-S0008] 行 89-139 | go-func | 函数 GetUserInfoList：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: info systemReq.GetUserList
+- outputs: (list interface{}, total int64, err error)
+- side_effects: -
+- calls: GetUserInfoList, Model, Where, Count, Limit, Offset, Order, Preload, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database, security
+- [F821c34e2-S0009] 行 140-188 | go-func | 函数 SetUserAuthority：执行更新与配置写入流程，位于「系统配置与运行时」域。
+- inputs: id uint, authorityId uint
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: SetUserAuthority, Where, First, Is, New, Find, Preload, in, Model, Update
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database, security
+- [F821c34e2-S0010] 行 189-229 | go-func | 函数 SetUserAuthorities：执行更新与配置写入流程，位于「系统配置与运行时」域。
+- inputs: adminAuthorityID, id uint, authorityIds []uint
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: SetUserAuthorities, Transaction, Where, First, Debug, Error, New, Delete, CheckAuthorityIDAuth, Create, Model, Update
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database, security
+- [F821c34e2-S0011] 行 230-247 | go-func | 函数 DeleteUser：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: id int
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: DeleteUser, Transaction, Where, Delete
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+- [F821c34e2-S0012] 行 248-267 | go-func | 函数 SetUserInfo：执行更新与配置写入流程，位于「系统配置与运行时」域。
+- inputs: req system.SysUser
+- outputs: error
+- side_effects: -
+- calls: SetUserInfo, Model, Select, Where, Updates, Now
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+- [F821c34e2-S0013] 行 268-279 | go-func | 函数 SetSelfInfo：执行更新与配置写入流程，位于「系统配置与运行时」域。
+- inputs: req system.SysUser
+- outputs: error
+- side_effects: -
+- calls: SetSelfInfo, Model, Where, Updates
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+- [F821c34e2-S0014] 行 280-290 | go-func | 函数 SetSelfSetting：执行更新与配置写入流程，位于「系统配置与运行时」域。
+- inputs: req common.JSONMap, uid uint
+- outputs: error
+- side_effects: 写入数据库
+- calls: SetSelfSetting, Model, Where, Update
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+- [F821c34e2-S0015] 行 291-306 | go-func | 函数 GetUserInfo：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: uuid uuid.UUID
+- outputs: (user system.SysUser, err error)
+- side_effects: -
+- calls: GetUserInfo, Preload, First, UserAuthorityDefaultRouter
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F821c34e2-S0016] 行 307-318 | go-func | 函数 FindUserById：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: id int
+- outputs: (user *system.SysUser, err error)
+- side_effects: -
+- calls: FindUserById, Where, First
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F821c34e2-S0017] 行 319-332 | go-func | 函数 FindUserByUuid：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: uuid string
+- outputs: (user *system.SysUser, err error)
+- side_effects: -
+- calls: FindUserByUuid, Where, First, New
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F821c34e2-S0018] 行 333-337 | go-func | 函数 ResetPassword：执行更新与配置写入流程，位于「系统配置与运行时」域。
+- inputs: ID uint, password string
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: ResetPassword, Model, Where, Update, BcryptHash
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+
+## [F9181c691] server/service/system/sys_version.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 231
+- imports: context, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system, gorm.io/gorm
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F9181c691-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F9181c691-S0002] 行 3-10 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, database
+- [F9181c691-S0003] 行 11-14 | go-type | 类型 SysVersionService：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F9181c691-S0004] 行 15-21 | go-func | 函数 CreateSysVersion：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: ctx context.Context, sysVersion *system.SysVersion
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: CreateSysVersion, Create
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F9181c691-S0005] 行 22-28 | go-func | 函数 DeleteSysVersion：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: ctx context.Context, ID string
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: DeleteSysVersion, Delete
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F9181c691-S0006] 行 29-35 | go-func | 函数 DeleteSysVersionByIds：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: ctx context.Context, IDs []string
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: DeleteSysVersionByIds, Where, Delete
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F9181c691-S0007] 行 36-42 | go-func | 函数 GetSysVersion：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: ctx context.Context, ID string
+- outputs: (sysVersion system.SysVersion, err error)
+- side_effects: -
+- calls: GetSysVersion, Where, First
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F9181c691-S0008] 行 43-71 | go-func | 函数 GetSysVersionInfoList：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: ctx context.Context, info systemReq.SysVersionSearch
+- outputs: (list []system.SysVersion, total int64, err error)
+- side_effects: -
+- calls: GetSysVersionInfoList, Model, Where, Count, Limit, Offset, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+- [F9181c691-S0009] 行 72-77 | go-func | 函数 GetSysVersionPublic：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: ctx context.Context
+- outputs: -
+- side_effects: -
+- calls: GetSysVersionPublic
+- risks: -
+- tags: system-config, go-func
+- [F9181c691-S0010] 行 78-83 | go-func | 函数 GetMenusByIds：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: ctx context.Context, ids []uint
+- outputs: (menus []system.SysBaseMenu, err error)
+- side_effects: -
+- calls: GetMenusByIds, Where, Preload, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F9181c691-S0011] 行 84-89 | go-func | 函数 GetApisByIds：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: ctx context.Context, ids []uint
+- outputs: (apis []system.SysApi, err error)
+- side_effects: -
+- calls: GetApisByIds, Where, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F9181c691-S0012] 行 90-95 | go-func | 函数 GetDictionariesByIds：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: ctx context.Context, ids []uint
+- outputs: (dictionaries []system.SysDictionary, err error)
+- side_effects: -
+- calls: GetDictionariesByIds, Where, Preload, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F9181c691-S0013] 行 96-103 | go-func | 函数 ImportMenus：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: ctx context.Context, menus []system.SysBaseMenu
+- outputs: error
+- side_effects: -
+- calls: ImportMenus, Transaction, createMenusRecursively
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+- [F9181c691-S0014] 行 104-177 | go-func | 函数 createMenusRecursively：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: tx *gorm.DB, menus []system.SysBaseMenu, parentId uint
+- outputs: error
+- side_effects: 写入数据库
+- calls: createMenusRecursively, Where, First, Create
+- risks: -
+- tags: system-config, go-func, database
+- [F9181c691-S0015] 行 178-204 | go-func | 函数 ImportApis：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: apis []system.SysApi
+- outputs: error
+- side_effects: 写入数据库
+- calls: ImportApis, Transaction, Where, First, Create
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+- [F9181c691-S0016] 行 205-231 | go-func | 函数 ImportDictionaries：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: dictionaries []system.SysDictionary
+- outputs: error
+- side_effects: 写入数据库
+- calls: ImportDictionaries, Transaction, Where, First, Create
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+

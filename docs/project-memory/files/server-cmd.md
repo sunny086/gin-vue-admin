@@ -1,0 +1,170 @@
+# server-cmd
+
+- 文件数量：4
+
+## [F6aac769f] server/cmd/mcp/config.go
+- 语言: go
+- 领域: mcp-skills (MCP与Skills生态)
+- 行数: 193
+- imports: bufio, errors, flag, fmt, github.com/flipped-aurora/gin-vue-admin/server/config, github.com/flipped-aurora/gin-vue-admin/server/global, gopkg.in/yaml.v3, io, os, path/filepath, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F6aac769f-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-package
+- [F6aac769f-S0002] 行 3-17 | go-import | 逻辑段 go-import：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: mcp-skills, go-import, config
+- [F6aac769f-S0003] 行 18-22 | go-type | 类型 standaloneConfig：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type, ai-tooling, config
+- [F6aac769f-S0004] 行 23-46 | go-func | 函数 loadStandaloneConfig：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: (string, error)
+- side_effects: -
+- calls: loadStandaloneConfig, resolveConfigPath, ReadFile, Errorf, Unmarshal, applyStandaloneDefaults
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: mcp-skills, go-func, config
+- [F6aac769f-S0005] 行 47-84 | go-func | 函数 resolveConfigPath：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: (string, error)
+- side_effects: -
+- calls: resolveConfigPath, parseConfigFlag, Abs, TrimSpace, Getenv, Getwd, Executable, Dir, Join, Stat, IsDir, New
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling, config
+- [F6aac769f-S0006] 行 85-98 | go-func | 函数 parseConfigFlag：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: args []string
+- outputs: (string, error)
+- side_effects: -
+- calls: parseConfigFlag, NewFlagSet, SetOutput, StringVar, Parse, TrimSpace
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling, config
+- [F6aac769f-S0007] 行 99-147 | go-func | 函数 applyStandaloneDefaults：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: configPath string, cfg *standaloneConfig
+- outputs: -
+- side_effects: -
+- calls: applyStandaloneDefaults, Sprintf, Dir, detectProjectRoot, IsAbs, Clean, Join, detectGoModule
+- risks: -
+- tags: mcp-skills, go-func, security, ai-tooling, config
+- [F6aac769f-S0008] 行 148-166 | go-func | 函数 detectProjectRoot：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: startDir string
+- outputs: (string, error)
+- side_effects: -
+- calls: detectProjectRoot, Join, isDir, Dir, New
+- risks: -
+- tags: mcp-skills, go-func
+- [F6aac769f-S0009] 行 167-188 | go-func | 函数 detectGoModule：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: goModPath string
+- outputs: (string, error)
+- side_effects: -
+- calls: detectGoModule, Open, Close, NewScanner, Scan, TrimSpace, Text, HasPrefix, TrimPrefix, Err, New
+- risks: -
+- tags: mcp-skills, go-func
+- [F6aac769f-S0010] 行 189-193 | go-func | 函数 isDir：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: path string
+- outputs: bool
+- side_effects: -
+- calls: isDir, Stat, IsDir
+- risks: -
+- tags: mcp-skills, go-func
+
+## [F1700a352] server/cmd/mcp/config.yaml
+- 语言: yaml
+- 领域: mcp-skills (MCP与Skills生态)
+- 行数: 15
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F1700a352-S0001] 行 1-10 | yaml-key | 配置键 mcp：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, yaml-key, security, ai-tooling
+- [F1700a352-S0002] 行 11-15 | yaml-key | 配置键 autocode：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, yaml-key
+
+## [F6b572999] server/cmd/mcp/logger.go
+- 语言: go
+- 领域: mcp-skills (MCP与Skills生态)
+- 行数: 18
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, go.uber.org/zap
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F6b572999-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-package
+- [F6b572999-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: mcp-skills, go-import
+- [F6b572999-S0003] 行 8-18 | go-func | 函数 initializeStandaloneLogger：完成初始化或注册流程，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: error
+- side_effects: 修改全局状态
+- calls: initializeStandaloneLogger, NewDevelopment, ReplaceGlobals
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: mcp-skills, go-func
+
+## [F34549b8e] server/cmd/mcp/main.go
+- 语言: go
+- 领域: mcp-skills (MCP与Skills生态)
+- 行数: 36
+- imports: fmt, github.com/flipped-aurora/gin-vue-admin/server/global, go.uber.org/zap
+- entrypoints: backend-subcommand, main-function
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F34549b8e-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-package
+- [F34549b8e-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: mcp-skills, go-import, ai-tooling
+- [F34549b8e-S0003] 行 12-36 | go-func | 函数 main：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: 触发 panic
+- calls: main, loadStandaloneConfig, initializeStandaloneLogger, Sprintf, NewStreamableHTTPServer, Info, String, Start, Fatal, Error
+- risks: 存在 panic 路径，异常恢复依赖上层中间件 / 依赖全局状态，模块可测试性与解耦性下降
+- tags: mcp-skills, go-func, ai-tooling, config
+

@@ -1,0 +1,831 @@
+# web-components
+
+- 文件数量：26
+
+## [Fd0a86a35] web/src/components/application/index.vue
+- 语言: vue
+- 领域: frontend-ui (前端业务界面)
+- 行数: 40
+- imports: @/components/errorPreview/index.vue, @/utils/bus, vue
+- entrypoints: -
+- depends_on: @/components/errorPreview/index.vue, @/utils/bus
+- owned_by: frontend
+- 逻辑段:
+- [Fd0a86a35-S0001] 行 1-4 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template
+- [Fd0a86a35-S0002] 行 5-13 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: ref
+- risks: -
+- tags: frontend-ui, vue-script
+- [Fd0a86a35-S0003] 行 14-22 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Fd0a86a35-S0004] 行 23-28 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Fd0a86a35-S0005] 行 29-40 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: code
+- outputs: -
+- side_effects: -
+- calls: cb, handleClose, on, onUnmounted, off
+- risks: -
+- tags: frontend-ui, vue-script-func
+
+## [F37971927] web/src/components/arrayCtrl/arrayCtrl.vue
+- 语言: vue
+- 领域: frontend-ui (前端业务界面)
+- 行数: 68
+- imports: vue
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [F37971927-S0001] 行 1-28 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: handleClose
+- risks: -
+- tags: frontend-ui, vue-template
+- [F37971927-S0002] 行 29-48 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineOptions, ref, defineModel, defineProps
+- risks: -
+- tags: frontend-ui, vue-script, database
+- [F37971927-S0003] 行 49-52 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: tag
+- outputs: -
+- side_effects: -
+- calls: splice, indexOf
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F37971927-S0004] 行 53-59 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: nextTick, focus
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F37971927-S0005] 行 60-68 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: push
+- risks: -
+- tags: frontend-ui, vue-script-func
+
+## [Fb0c83f23] web/src/components/bottomInfo/bottomInfo.vue
+- 语言: vue
+- 领域: frontend-ui (前端业务界面)
+- 行数: 45
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [Fb0c83f23-S0001] 行 1-4 | preamble | 逻辑段 preamble：承载「前端业务界面」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, preamble
+- [Fb0c83f23-S0002] 行 5-32 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template
+- [Fb0c83f23-S0003] 行 33-45 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineOptions, log
+- risks: -
+- tags: frontend-ui, vue-script
+
+## [F302b552e] web/src/components/charts/index.vue
+- 语言: vue
+- 领域: frontend-ui (前端业务界面)
+- 行数: 48
+- imports: @/hooks/use-windows-resize, vue, vue-echarts
+- entrypoints: -
+- depends_on: @/hooks/use-windows-resize
+- owned_by: frontend
+- 逻辑段:
+- [F302b552e-S0001] 行 1-9 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template
+- [F302b552e-S0002] 行 10-46 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineProps, ref, nextTick, useWindowResize
+- risks: -
+- tags: frontend-ui, vue-script
+- [F302b552e-S0003] 行 47-48 | vue-style | 样式区块：定义页面视觉表现与布局约束。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-style
+
+## [F54be29a9] web/src/components/commandMenu/index.vue
+- 语言: vue
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 196
+- imports: @/pinia, @/pinia/modules/router, vue, vue-router
+- entrypoints: -
+- depends_on: @/pinia, @/pinia/modules/router
+- owned_by: frontend
+- 逻辑段:
+- [F54be29a9-S0001] 行 1-29 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-template
+- [F54be29a9-S0002] 行 30-37 | vue-template | 模板区块：定义页面结构与交互骨架，承载「菜单与权限编排」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-template
+- [F54be29a9-S0003] 行 38-54 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineOptions, useAppStore, useUserStore, useRouter, useRouterStore, ref, reactive
+- risks: -
+- tags: menu-rbac, vue-script
+- [F54be29a9-S0004] 行 55-74 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: menus
+- outputs: -
+- side_effects: -
+- calls: forEach, push, deepMenus, indexOf, changeRouter
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [F54be29a9-S0005] 行 75-84 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: deepMenus, push
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [F54be29a9-S0006] 行 85-112 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: changeMode, LoginOut, push, filter, indexOf, addQuickMenu, addQuickOption
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [F54be29a9-S0007] 行 113-116 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [F54be29a9-S0008] 行 117-137 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: e
+- outputs: -
+- side_effects: -
+- calls: forEach, indexOf, open, push
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [F54be29a9-S0009] 行 138-141 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: darkMode
+- outputs: -
+- side_effects: -
+- calls: toggleTheme
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [F54be29a9-S0010] 行 142-154 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「菜单与权限编排」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineExpose, watch, addQuickMenu, addQuickOption
+- risks: -
+- tags: menu-rbac, vue-script-func
+- [F54be29a9-S0011] 行 155-196 | vue-style | 样式区块：定义页面视觉表现与布局约束。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, vue-style
+
+## [Ff28937ae] web/src/components/customPic/index.vue
+- 语言: vue
+- 领域: frontend-ui (前端业务界面)
+- 行数: 91
+- imports: @/assets/noBody.png, @/pinia/modules/user, vue
+- entrypoints: -
+- depends_on: @/assets/noBody.png, @/pinia/modules/user
+- owned_by: frontend
+- 逻辑段:
+- [Ff28937ae-S0001] 行 1-6 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template
+- [Ff28937ae-S0002] 行 7-10 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template
+- [Ff28937ae-S0003] 行 11-21 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template
+- [Ff28937ae-S0004] 行 22-77 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineOptions, defineProps, ref, useUserStore, computed, slice
+- risks: -
+- tags: frontend-ui, vue-script, config
+- [Ff28937ae-S0005] 行 78-91 | vue-style | 样式区块：定义页面视觉表现与布局约束。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-style
+
+## [F2d829685] web/src/components/errorPreview/index.vue
+- 语言: vue
+- 领域: frontend-ui (前端业务界面)
+- 行数: 127
+- imports: vue
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [F2d829685-S0001] 行 1-55 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template
+- [F2d829685-S0002] 行 56-117 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineProps, defineEmits, computed
+- risks: -
+- tags: frontend-ui, vue-script
+- [F2d829685-S0003] 行 118-121 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: emits
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F2d829685-S0004] 行 122-127 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: emits, closeModal
+- risks: -
+- tags: frontend-ui, vue-script-func
+
+## [F10ade707] web/src/components/exportExcel/exportExcel.vue
+- 语言: vue
+- 领域: frontend-ui (前端业务界面)
+- 行数: 85
+- imports: @/api/exportTemplate, element-plus
+- entrypoints: -
+- depends_on: @/api/exportTemplate
+- owned_by: frontend
+- 逻辑段:
+- [F10ade707-S0001] 行 1-6 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template
+- [F10ade707-S0002] 行 7-39 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineProps
+- risks: -
+- tags: frontend-ui, vue-script
+- [F10ade707-S0003] 行 40-85 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, error, parse, stringify, entries, encodeURIComponent, join, exportExcel, success, open
+- risks: -
+- tags: frontend-ui, vue-script-func, config
+
+## [Fd1f0061e] web/src/components/exportExcel/exportTemplate.vue
+- 语言: vue
+- 领域: frontend-ui (前端业务界面)
+- 行数: 41
+- imports: @/api/exportTemplate, element-plus
+- entrypoints: -
+- depends_on: @/api/exportTemplate
+- owned_by: frontend
+- 逻辑段:
+- [Fd1f0061e-S0001] 行 1-6 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template
+- [Fd1f0061e-S0002] 行 7-18 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineProps
+- risks: -
+- tags: frontend-ui, vue-script
+- [Fd1f0061e-S0003] 行 19-41 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, error, exportTemplate, success, open
+- risks: -
+- tags: frontend-ui, vue-script-func, config
+
+## [F75f9d7de] web/src/components/exportExcel/importExcel.vue
+- 语言: vue
+- 领域: frontend-ui (前端业务界面)
+- 行数: 46
+- imports: @/pinia, element-plus
+- entrypoints: -
+- depends_on: @/pinia
+- owned_by: frontend
+- 逻辑段:
+- [F75f9d7de-S0001] 行 1-12 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template, security
+- [F75f9d7de-S0002] 行 13-36 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineProps, useUserStore, defineEmits
+- risks: -
+- tags: frontend-ui, vue-script, security, config
+- [F75f9d7de-S0003] 行 37-46 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: res
+- outputs: -
+- side_effects: -
+- calls: success, emit, error
+- risks: -
+- tags: frontend-ui, vue-script-func
+
+## [Fb1456344] web/src/components/logo/index.vue
+- 语言: vue
+- 领域: frontend-ui (前端业务界面)
+- 行数: 83
+- imports: @/pinia/modules/app.js, pinia, vue
+- entrypoints: -
+- depends_on: @/pinia/modules/app.js
+- owned_by: frontend
+- 逻辑段:
+- [Fb1456344-S0001] 行 1-23 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineProps, useAppStore, storeToRefs, ref
+- risks: -
+- tags: frontend-ui, vue-script
+- [Fb1456344-S0002] 行 24-58 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: url
+- outputs: -
+- side_effects: -
+- calls: checkImageExists, Promise, Image, resolve, watchEffect, async, error, warn
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Fb1456344-S0003] 行 59-66 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getSize
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Fb1456344-S0004] 行 67-83 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getSize
+- risks: -
+- tags: frontend-ui, vue-template
+
+## [Fa8bd0bdb] web/src/components/office/docx.vue
+- 语言: vue
+- 领域: frontend-ui (前端业务界面)
+- 行数: 32
+- imports: @vue-office/docx, @vue-office/docx/lib/index.css, vue
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [Fa8bd0bdb-S0001] 行 1-3 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template
+- [Fa8bd0bdb-S0002] 行 4-4 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-script
+- [Fa8bd0bdb-S0003] 行 5-8 | vue-script-export | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-script-export
+- [Fa8bd0bdb-S0004] 行 9-28 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineModel, ref, watch
+- risks: -
+- tags: frontend-ui, vue-script, database
+- [Fa8bd0bdb-S0005] 行 29-30 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Fa8bd0bdb-S0006] 行 31-32 | vue-style | 样式区块：定义页面视觉表现与布局约束。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-style
+
+## [Fcd1f9f94] web/src/components/office/excel.vue
+- 语言: vue
+- 领域: frontend-ui (前端业务界面)
+- 行数: 37
+- imports: @vue-office/excel, @vue-office/excel/lib/index.css, vue
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [Fcd1f9f94-S0001] 行 1-8 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template
+- [Fcd1f9f94-S0002] 行 9-9 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-script
+- [Fcd1f9f94-S0003] 行 10-13 | vue-script-export | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-script-export
+- [Fcd1f9f94-S0004] 行 14-32 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineProps, ref, watch
+- risks: -
+- tags: frontend-ui, vue-script
+- [Fcd1f9f94-S0005] 行 33-33 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Fcd1f9f94-S0006] 行 34-35 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Fcd1f9f94-S0007] 行 36-37 | vue-style | 样式区块：定义页面视觉表现与布局约束。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-style
+
+## [Fcadf0367] web/src/components/office/index.vue
+- 语言: vue
+- 领域: frontend-ui (前端业务界面)
+- 行数: 50
+- imports: @/components/office/docx.vue, @/components/office/excel.vue, @/components/office/pdf.vue, vue
+- entrypoints: -
+- depends_on: @/components/office/docx.vue, @/components/office/excel.vue, @/components/office/pdf.vue
+- owned_by: frontend
+- 逻辑段:
+- [Fcadf0367-S0001] 行 1-18 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template
+- [Fcadf0367-S0002] 行 19-19 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-script
+- [Fcadf0367-S0003] 行 20-23 | vue-script-export | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-script-export
+- [Fcadf0367-S0004] 行 24-50 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: ref, defineModel, watch, split, includes, toLowerCase, computed
+- risks: -
+- tags: frontend-ui, vue-script, database, config
+
+## [F4874b2d1] web/src/components/office/pdf.vue
+- 语言: vue
+- 领域: frontend-ui (前端业务界面)
+- 行数: 40
+- imports: @vue-office/docx/lib/index.css, @vue-office/pdf, vue
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [F4874b2d1-S0001] 行 1-7 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template
+- [F4874b2d1-S0002] 行 8-8 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-script
+- [F4874b2d1-S0003] 行 9-12 | vue-script-export | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-script-export
+- [F4874b2d1-S0004] 行 13-32 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: log, defineProps, ref, watch
+- risks: -
+- tags: frontend-ui, vue-script
+- [F4874b2d1-S0005] 行 33-35 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: log
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F4874b2d1-S0006] 行 36-40 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: log
+- risks: -
+- tags: frontend-ui, vue-script-func
+
+## [F1fce0d47] web/src/components/richtext/rich-edit.vue
+- 语言: vue
+- 领域: frontend-ui (前端业务界面)
+- 行数: 165
+- imports: @/pinia/modules/user, @/utils/image, @wangeditor/editor-for-vue, @wangeditor/editor/dist/css/style.css, element-plus, vue
+- entrypoints: -
+- depends_on: @/pinia/modules/user, @/utils/image
+- owned_by: frontend
+- 逻辑段:
+- [F1fce0d47-S0001] 行 1-19 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template, config
+- [F1fce0d47-S0002] 行 20-33 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineEmits
+- risks: -
+- tags: frontend-ui, vue-script, config
+- [F1fce0d47-S0003] 行 34-77 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: editor
+- outputs: -
+- side_effects: -
+- calls: emits, useUserStore, defineProps, shallowRef, ref, customInsert, getUrl, insertFn, error, onBeforeUnmount, destroy
+- risks: -
+- tags: frontend-ui, vue-script-func, security
+- [F1fce0d47-S0004] 行 78-90 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: editor
+- outputs: -
+- side_effects: -
+- calls: watch
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F1fce0d47-S0005] 行 91-165 | vue-style | 样式区块：定义页面视觉表现与布局约束。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: deep
+- risks: -
+- tags: frontend-ui, vue-style
+
+## [Fe365e846] web/src/components/richtext/rich-view.vue
+- 语言: vue
+- 领域: frontend-ui (前端业务界面)
+- 行数: 132
+- imports: @wangeditor/editor-for-vue, @wangeditor/editor/dist/css/style.css, vue
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [Fe365e846-S0001] 行 1-12 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-ui, vue-template, config
+- [Fe365e846-S0002] 行 13-22 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineEmits, ref
+- risks: -
+- tags: frontend-ui, vue-script
+- [Fe365e846-S0003] 行 23-44 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: editor
+- outputs: -
+- side_effects: -
+- calls: emits, defineProps, shallowRef, ref, onBeforeUnmount, destroy
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Fe365e846-S0004] 行 45-57 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: editor
+- outputs: -
+- side_effects: -
+- calls: watch
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Fe365e846-S0005] 行 58-132 | vue-style | 样式区块：定义页面视觉表现与布局约束。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: deep
+- risks: -
+- tags: frontend-ui, vue-style
+
+## [F365c07e9] web/src/components/selectFile/selectFile.vue
+- 语言: vue
+- 领域: frontend-ui (前端业务界面)
+- 行数: 88
+- imports: @/pinia, @/utils/format, element-plus, vue
+- entrypoints: -
+- depends_on: @/pinia, @/utils/format
+- owned_by: frontend
+- 逻辑段:
+- [F365c07e9-S0001] 行 1-20 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getBaseUrl
+- risks: -
+- tags: frontend-ui, vue-template, security
+- [F365c07e9-S0002] 行 21-53 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineOptions, defineProps, useUserStore, ref, defineModel, defineEmits
+- risks: -
+- tags: frontend-ui, vue-script, database, security
+- [F365c07e9-S0003] 行 54-70 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: res
+- outputs: -
+- side_effects: -
+- calls: ElMessage, pop, push, emits
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F365c07e9-S0004] 行 71-78 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: file
+- outputs: -
+- side_effects: -
+- calls: indexOf, splice
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F365c07e9-S0005] 行 79-88 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: err
+- outputs: -
+- side_effects: -
+- calls: ElMessage, emits
+- risks: -
+- tags: frontend-ui, vue-script-func
+
+## [F5325afa9] web/src/components/selectImage/selectComponent.vue
+- 语言: vue
+- 领域: frontend-ui (前端业务界面)
+- 行数: 87
+- imports: @/utils/image, @element-plus/icons-vue, vue
+- entrypoints: -
+- depends_on: @/utils/image
+- owned_by: frontend
+- 逻辑段:
+- [F5325afa9-S0001] 行 1-52 | vue-template | 模板区块：定义页面结构与交互骨架，承载「前端业务界面」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: isVideoExt, calc, getUrl
+- risks: -
+- tags: frontend-ui, vue-template
+- [F5325afa9-S0002] 行 53-70 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineProps, defineEmits
+- risks: -
+- tags: frontend-ui, vue-script
+- [F5325afa9-S0003] 行 71-74 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: emits
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [F5325afa9-S0004] 行 75-87 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: emits, computed, getUrl
+- risks: -
+- tags: frontend-ui, vue-script-func
+

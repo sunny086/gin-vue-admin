@@ -1,0 +1,839 @@
+## [Fc619a2e2] server/utils/breakpoint_continue.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 122
+- imports: errors, os, strconv, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fc619a2e2-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fc619a2e2-S0002] 行 3-14 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Fc619a2e2-S0003] 行 15-25 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var
+- [Fc619a2e2-S0004] 行 26-44 | go-func | 函数 BreakPointContinue：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: content []byte, fileName string, contentNumber int, contentTotal int, fileMd5 string
+- outputs: (string, error)
+- side_effects: -
+- calls: BreakPointContinue, Contains, New, MkdirAll, makeFileContent
+- risks: -
+- tags: system-config, go-func
+- [Fc619a2e2-S0005] 行 45-59 | go-func | 函数 CheckMd5：执行校验与约束判断，位于「系统配置与运行时」域。
+- inputs: content []byte, chunkMd5 string
+- outputs: (CanUpload bool)
+- side_effects: -
+- calls: CheckMd5, MD5V
+- risks: -
+- tags: system-config, go-func
+- [Fc619a2e2-S0006] 行 60-83 | go-func | 函数 makeFileContent：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: content []byte, fileName string, FileDir string, contentNumber int
+- outputs: (string, error)
+- side_effects: 写入数据库
+- calls: makeFileContent, Contains, New, Itoa, Create, Close, Write
+- risks: -
+- tags: system-config, go-func
+- [Fc619a2e2-S0007] 行 84-114 | go-func | 函数 MakeFile：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: fileName string, FileMd5 string
+- outputs: (string, error)
+- side_effects: -
+- calls: MakeFile, Contains, New, ReadDir, MkdirAll, OpenFile, Close, ReadFile, Itoa, Write, Remove
+- risks: -
+- tags: system-config, go-func
+- [Fc619a2e2-S0008] 行 115-122 | go-func | 函数 RemoveChunk：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: FileMd5 string
+- outputs: error
+- side_effects: -
+- calls: RemoveChunk, Contains, New, RemoveAll
+- risks: -
+- tags: system-config, go-func
+
+## [F1da111ff] server/utils/captcha/redis.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 62
+- imports: context, github.com/flipped-aurora/gin-vue-admin/server/global, go.uber.org/zap, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F1da111ff-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F1da111ff-S0002] 行 3-10 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F1da111ff-S0003] 行 11-18 | go-func | 函数 NewDefaultRedisStore：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: *RedisStore
+- side_effects: -
+- calls: NewDefaultRedisStore, TODO
+- risks: 存在待办逻辑，行为边界未完全收敛
+- tags: system-config, go-func
+- [F1da111ff-S0004] 行 19-24 | go-type | 类型 RedisStore：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F1da111ff-S0005] 行 25-31 | go-func | 函数 UseWithCtx：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: ctx context.Context
+- outputs: *RedisStore
+- side_effects: -
+- calls: UseWithCtx
+- risks: -
+- tags: system-config, go-func
+- [F1da111ff-S0006] 行 32-40 | go-func | 函数 Set：执行更新与配置写入流程，位于「系统配置与运行时」域。
+- inputs: id string, value string
+- outputs: error
+- side_effects: -
+- calls: Set, Err, Error
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F1da111ff-S0007] 行 41-56 | go-func | 函数 Get：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: key string, clear bool
+- outputs: string
+- side_effects: -
+- calls: Get, Result, Error, Del, Err
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F1da111ff-S0008] 行 57-62 | go-func | 函数 Verify：执行校验与约束判断，位于「系统配置与运行时」域。
+- inputs: id, answer string, clear bool
+- outputs: bool
+- side_effects: -
+- calls: Verify, Get
+- risks: -
+- tags: system-config, go-func
+
+## [F723bc930] server/utils/casbin_util.go
+- 语言: go
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 53
+- imports: github.com/casbin/casbin/v2, github.com/casbin/casbin/v2/model, github.com/flipped-aurora/gin-vue-admin/server/global, go.uber.org/zap, sync
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F723bc930-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-package
+- [F723bc930-S0002] 行 3-12 | go-import | 逻辑段 go-import：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: auth-access, go-import, database, security
+- [F723bc930-S0003] 行 13-18 | go-const-var | 逻辑段 go-const-var：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-const-var, security
+- [F723bc930-S0004] 行 19-53 | go-func | 函数 GetCasbin：执行查询与读取流程，位于「鉴权与访问控制」域。
+- inputs: -
+- outputs: *casbin.SyncedCachedEnforcer
+- side_effects: -
+- calls: GetCasbin, Do, NewAdapterByDB, L, Error, some, where, keyMatch2, NewModelFromString, NewSyncedCachedEnforcer, SetExpireTime, LoadPolicy
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, database, security
+
+## [Fbe4804b4] server/utils/claims.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 149
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system, github.com/gin-gonic/gin, github.com/google/uuid, net, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fbe4804b4-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fbe4804b4-S0002] 行 3-13 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Fbe4804b4-S0003] 行 14-27 | go-func | 函数 ClearToken：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: ClearToken, SplitHostPort, ParseIP, SetCookie
+- risks: -
+- tags: system-config, go-func, security
+- [Fbe4804b4-S0004] 行 28-41 | go-func | 函数 SetToken：执行更新与配置写入流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context, token string, maxAge int
+- outputs: -
+- side_effects: -
+- calls: SetToken, SplitHostPort, ParseIP, SetCookie
+- risks: -
+- tags: system-config, go-func, security
+- [Fbe4804b4-S0005] 行 42-56 | go-func | 函数 GetToken：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: string
+- side_effects: -
+- calls: GetToken, Get, NewJWT, Cookie, ParseToken, Error, SetToken, int, Unix, Now
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, security
+- [Fbe4804b4-S0006] 行 57-67 | go-func | 函数 GetClaims：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: (*systemReq.CustomClaims, error)
+- side_effects: -
+- calls: GetClaims, GetToken, NewJWT, ParseToken, Error
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, security
+- [Fbe4804b4-S0007] 行 68-81 | go-func | 函数 GetUserID：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: uint
+- side_effects: -
+- calls: GetUserID, Get, GetClaims
+- risks: -
+- tags: system-config, go-func, security
+- [Fbe4804b4-S0008] 行 82-95 | go-func | 函数 GetUserUuid：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: uuid.UUID
+- side_effects: -
+- calls: GetUserUuid, Get, GetClaims
+- risks: -
+- tags: system-config, go-func, security
+- [Fbe4804b4-S0009] 行 96-109 | go-func | 函数 GetUserAuthorityId：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: uint
+- side_effects: -
+- calls: GetUserAuthorityId, Get, GetClaims
+- risks: -
+- tags: system-config, go-func, security
+- [Fbe4804b4-S0010] 行 110-123 | go-func | 函数 GetUserInfo：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: *systemReq.CustomClaims
+- side_effects: -
+- calls: GetUserInfo, Get, GetClaims
+- risks: -
+- tags: system-config, go-func, security
+- [Fbe4804b4-S0011] 行 124-136 | go-func | 函数 GetUserName：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: string
+- side_effects: -
+- calls: GetUserName, Get, GetClaims
+- risks: -
+- tags: system-config, go-func
+- [Fbe4804b4-S0012] 行 137-149 | go-func | 函数 LoginToken：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: user system.Login
+- outputs: (token string, claims systemReq.CustomClaims, err error)
+- side_effects: -
+- calls: LoginToken, NewJWT, CreateClaims, GetUUID, GetUserId, GetNickname, GetUsername, GetAuthorityId, CreateToken
+- risks: -
+- tags: system-config, go-func, security
+
+## [Fd7e844f8] server/utils/directory.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 125
+- imports: errors, github.com/flipped-aurora/gin-vue-admin/server/global, go.uber.org/zap, os, path/filepath, reflect, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fd7e844f8-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fd7e844f8-S0002] 行 3-19 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Fd7e844f8-S0003] 行 20-39 | go-func | 函数 PathExists：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: path string
+- outputs: (bool, error)
+- side_effects: -
+- calls: PathExists, Stat, IsDir, New, IsNotExist
+- risks: -
+- tags: system-config, go-func
+- [Fd7e844f8-S0004] 行 40-62 | go-func | 函数 CreateDir：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: dirs ...string
+- outputs: (err error)
+- side_effects: -
+- calls: CreateDir, PathExists, Debug, MkdirAll, Error, Any, string
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [Fd7e844f8-S0005] 行 63-91 | go-func | 函数 FileMove：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: src string, dst string
+- outputs: (err error)
+- side_effects: -
+- calls: FileMove, Abs, Dir, Stat, MkdirAll, Rename
+- risks: -
+- tags: system-config, go-func
+- [Fd7e844f8-S0006] 行 92-101 | go-func | 函数 DeLFile：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: filePath string
+- outputs: error
+- side_effects: -
+- calls: DeLFile, RemoveAll, interface
+- risks: -
+- tags: system-config, go-func
+- [Fd7e844f8-S0007] 行 102-117 | go-func | 函数 TrimSpace：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: target interface{}
+- outputs: -
+- side_effects: -
+- calls: TrimSpace, TypeOf, Kind, Elem, ValueOf, NumField, Field, SetString, String
+- risks: -
+- tags: system-config, go-func
+- [Fd7e844f8-S0008] 行 118-125 | go-func | 函数 FileExist：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: path string
+- outputs: bool
+- side_effects: -
+- calls: FileExist, Lstat, IsDir, IsNotExist
+- risks: -
+- tags: system-config, go-func
+
+## [Fe7f128ef] server/utils/fmt_plus.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 126
+- imports: fmt, github.com/flipped-aurora/gin-vue-admin/server/model/common, math/rand, reflect, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fe7f128ef-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fe7f128ef-S0002] 行 3-16 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Fe7f128ef-S0003] 行 17-37 | go-func | 函数 StructToMap：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: obj interface{}
+- outputs: map[string]interface{}
+- side_effects: -
+- calls: StructToMap, TypeOf, ValueOf, NumField, Field, Get, Interface
+- risks: -
+- tags: system-config, go-func
+- [Fe7f128ef-S0004] 行 38-41 | go-func | 函数 ArrayToString：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: array []interface{}
+- outputs: string
+- side_effects: -
+- calls: ArrayToString, Replace, Trim, Sprint
+- risks: -
+- tags: system-config, go-func
+- [Fe7f128ef-S0005] 行 42-45 | go-func | 函数 anonymous：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-func
+- [Fe7f128ef-S0006] 行 46-52 | go-func | 函数 FirstUpper：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: s string
+- outputs: string
+- side_effects: -
+- calls: FirstUpper, ToUpper
+- risks: -
+- tags: system-config, go-func
+- [Fe7f128ef-S0007] 行 53-60 | go-func | 函数 FirstLower：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: s string
+- outputs: string
+- side_effects: -
+- calls: FirstLower, ToLower
+- risks: -
+- tags: system-config, go-func
+- [Fe7f128ef-S0008] 行 61-71 | go-func | 函数 MaheHump：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: s string
+- outputs: string
+- side_effects: -
+- calls: MaheHump, Split, Title, Join
+- risks: -
+- tags: system-config, go-func
+- [Fe7f128ef-S0009] 行 72-88 | go-func | 函数 HumpToUnderscore：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: s string
+- outputs: string
+- side_effects: -
+- calls: HumpToUnderscore, WriteRune, ToLower, String
+- risks: -
+- tags: system-config, go-func
+- [Fe7f128ef-S0010] 行 89-97 | go-func | 函数 RandomString：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: n int
+- outputs: string
+- side_effects: -
+- calls: RandomString, rune, RandomInt, string
+- risks: -
+- tags: system-config, go-func
+- [Fe7f128ef-S0011] 行 98-102 | go-func | 函数 RandomInt：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: min, max int
+- outputs: int
+- side_effects: -
+- calls: RandomInt, Intn
+- risks: -
+- tags: system-config, go-func
+- [Fe7f128ef-S0012] 行 103-126 | go-func | 函数 anonymous：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: GetID, GetParentID, SetChildren
+- risks: -
+- tags: system-config, go-func
+
+## [F79433e3b] server/utils/hash.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 32
+- imports: crypto/md5, encoding/hex, golang.org/x/crypto/bcrypt
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F79433e3b-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F79433e3b-S0002] 行 3-9 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F79433e3b-S0003] 行 10-15 | go-func | 函数 BcryptHash：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: password string
+- outputs: string
+- side_effects: -
+- calls: BcryptHash, GenerateFromPassword, byte, string
+- risks: -
+- tags: system-config, go-func
+- [F79433e3b-S0004] 行 16-26 | go-func | 函数 BcryptCheck：执行校验与约束判断，位于「系统配置与运行时」域。
+- inputs: password, hash string
+- outputs: bool
+- side_effects: -
+- calls: BcryptCheck, CompareHashAndPassword, byte
+- risks: -
+- tags: system-config, go-func
+- [F79433e3b-S0005] 行 27-32 | go-func | 函数 MD5V：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: str []byte, b ...byte
+- outputs: string
+- side_effects: -
+- calls: MD5V, New, Write, EncodeToString, Sum
+- risks: -
+- tags: system-config, go-func
+
+## [F7eb310a8] server/utils/human_duration_test.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 50
+- imports: testing, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F7eb310a8-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F7eb310a8-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F7eb310a8-S0003] 行 8-50 | go-func | 函数 TestParseDuration：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: t *testing.T
+- outputs: -
+- side_effects: -
+- calls: TestParseDuration, Run, ParseDuration, Errorf
+- risks: -
+- tags: system-config, go-func
+
+## [Fd990f13d] server/utils/human_duration.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 30
+- imports: strconv, strings, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fd990f13d-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fd990f13d-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Fd990f13d-S0003] 行 9-30 | go-func | 函数 ParseDuration：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: d string
+- outputs: (time.Duration, error)
+- side_effects: -
+- calls: ParseDuration, TrimSpace, Contains, Index, Atoi, Duration, ParseInt
+- risks: -
+- tags: system-config, go-func
+
+## [F3c2f7ea0] server/utils/json_test.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 54
+- imports: fmt, testing
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F3c2f7ea0-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F3c2f7ea0-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F3c2f7ea0-S0003] 行 8-54 | go-func | 函数 TestGetJSONKeys：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: t *testing.T
+- outputs: -
+- side_effects: -
+- calls: TestGetJSONKeys, GetJSONKeys, Errorf, Error, Println
+- risks: -
+- tags: system-config, go-func
+
+## [F46b07bd5] server/utils/json.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 35
+- imports: encoding/json, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F46b07bd5-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F46b07bd5-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F46b07bd5-S0003] 行 8-35 | go-func | 函数 GetJSONKeys：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: jsonStr string
+- outputs: (keys []string, err error)
+- side_effects: -
+- calls: GetJSONKeys, NewDecoder, NewReader, Token, Delim, More, Decode
+- risks: -
+- tags: system-config, go-func
+
+## [F8a666886] server/utils/jwt.go
+- 语言: go
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 106
+- imports: context, errors, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system/request, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F8a666886-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-package
+- [F8a666886-S0002] 行 3-12 | go-import | 逻辑段 go-import：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: auth-access, go-import, security
+- [F8a666886-S0003] 行 13-16 | go-type | 类型 JWT：定义该文件的数据结构或接口边界，支撑「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-type
+- [F8a666886-S0004] 行 17-25 | go-const-var | 逻辑段 go-const-var：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: New
+- risks: -
+- tags: auth-access, go-const-var, security
+- [F8a666886-S0005] 行 26-31 | go-func | 函数 NewJWT：承载该模块的核心逻辑，位于「鉴权与访问控制」域。
+- inputs: -
+- outputs: *JWT
+- side_effects: -
+- calls: NewJWT, byte
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func
+- [F8a666886-S0006] 行 32-48 | go-func | 函数 CreateClaims：执行创建或新增流程，位于「鉴权与访问控制」域。
+- inputs: baseClaims request.BaseClaims
+- outputs: request.CustomClaims
+- side_effects: -
+- calls: CreateClaims, ParseDuration, int64, NewNumericDate, Now, Add
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, security
+- [F8a666886-S0007] 行 49-54 | go-func | 函数 CreateToken：执行创建或新增流程，位于「鉴权与访问控制」域。
+- inputs: claims request.CustomClaims
+- outputs: (string, error)
+- side_effects: -
+- calls: CreateToken, NewWithClaims, SignedString
+- risks: -
+- tags: auth-access, go-func, security
+- [F8a666886-S0008] 行 55-62 | go-func | 函数 CreateTokenByOldToken：执行创建或新增流程，位于「鉴权与访问控制」域。
+- inputs: oldToken string, claims request.CustomClaims
+- outputs: (string, error)
+- side_effects: -
+- calls: CreateTokenByOldToken, Do, CreateToken
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, security
+- [F8a666886-S0009] 行 63-95 | go-func | 函数 ParseToken：执行更新与配置写入流程，位于「鉴权与访问控制」域。
+- inputs: tokenString string
+- outputs: (*request.CustomClaims, error)
+- side_effects: -
+- calls: ParseToken, ParseWithClaims, Is
+- risks: -
+- tags: auth-access, go-func, security
+- [F8a666886-S0010] 行 96-106 | go-func | 函数 SetRedisJWT：执行更新与配置写入流程，位于「鉴权与访问控制」域。
+- inputs: jwt string, userName string
+- outputs: (err error)
+- side_effects: -
+- calls: SetRedisJWT, ParseDuration, Set, Background, Err
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, security
+
+## [F6af2ba84] server/utils/plugin/plugin.go
+- 语言: go
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 19
+- imports: github.com/gin-gonic/gin
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F6af2ba84-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-package, plugin
+- [F6af2ba84-S0002] 行 3-6 | go-import | 逻辑段 go-import：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: plugin-ecosystem, go-import
+- [F6af2ba84-S0003] 行 7-11 | go-const-var | 逻辑段 go-const-var：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-const-var
+- [F6af2ba84-S0004] 行 12-19 | go-type | 类型 Plugin：定义该文件的数据结构或接口边界，支撑「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: Register, RouterPath
+- risks: -
+- tags: plugin-ecosystem, go-type
+
+## [F6e606b91] server/utils/plugin/v2/plugin.go
+- 语言: go
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 12
+- imports: github.com/gin-gonic/gin
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F6e606b91-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-package, plugin
+- [F6e606b91-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: plugin-ecosystem, go-import
+- [F6e606b91-S0003] 行 8-12 | go-type | 类型 Plugin：定义该文件的数据结构或接口边界，支撑「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: Register
+- risks: -
+- tags: plugin-ecosystem, go-type
+
+## [Fa508757d] server/utils/plugin/v2/registry.go
+- 语言: go
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 28
+- imports: sync
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fa508757d-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-package, plugin
+- [Fa508757d-S0002] 行 3-4 | go-import | 逻辑段 go-import：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-import
+- [Fa508757d-S0003] 行 5-10 | go-const-var | 逻辑段 go-const-var：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-const-var, plugin
+- [Fa508757d-S0004] 行 11-20 | go-func | 函数 Register：完成初始化或注册流程，位于「插件生态」域。
+- inputs: p Plugin
+- outputs: -
+- side_effects: -
+- calls: Register, Lock, Unlock
+- risks: -
+- tags: plugin-ecosystem, go-func, plugin
+- [Fa508757d-S0005] 行 21-28 | go-func | 函数 Registered：完成初始化或注册流程，位于「插件生态」域。
+- inputs: -
+- outputs: []Plugin
+- side_effects: -
+- calls: Registered, RLock, RUnlock, copy
+- risks: -
+- tags: plugin-ecosystem, go-func
+
+## [Fac6abb29] server/utils/request/http.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 128
+- imports: bytes, context, encoding/json, net/http, net/url, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fac6abb29-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fac6abb29-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Fac6abb29-S0003] 行 12-22 | go-func | 函数 HttpRequest：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: HttpRequest, doJSONRequest, Background
+- risks: -
+- tags: system-config, go-func
+- [Fac6abb29-S0004] 行 23-37 | go-func | 函数 HttpRequestWithTimeout：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: HttpRequestWithTimeout, doJSONRequest, Background
+- risks: -
+- tags: system-config, go-func
+- [Fac6abb29-S0005] 行 38-56 | go-func | 函数 HttpRequestWithContextAndTimeout：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: HttpRequestWithContextAndTimeout, doJSONRequest
+- risks: -
+- tags: system-config, go-func
+- [Fac6abb29-S0006] 行 57-128 | go-func | 函数 doJSONRequest：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: doJSONRequest, Background, Parse, Query, Set, Encode, Marshal, NewBuffer, NewRequestWithContext, String, Get, Do
+- risks: -
+- tags: system-config, go-func
+

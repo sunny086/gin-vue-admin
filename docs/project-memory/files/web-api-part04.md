@@ -1,0 +1,247 @@
+## [F1d1ebc10] web/src/api/system/sysError.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 126
+- imports: @/utils/request
+- entrypoints: -
+- depends_on: @/utils/request
+- owned_by: frontend
+- 逻辑段:
+- [F1d1ebc10-S0001] 行 1-9 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F1d1ebc10-S0002] 行 10-25 | js-export | 函数/导出 createSysError：执行创建或新增流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F1d1ebc10-S0003] 行 26-41 | js-export | 函数/导出 deleteSysError：执行删除与清理流程，用于支撑「前端框架内核」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F1d1ebc10-S0004] 行 42-57 | js-export | 函数/导出 deleteSysErrorByIds：执行删除与清理流程，用于支撑「前端框架内核」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F1d1ebc10-S0005] 行 58-73 | js-export | 函数/导出 updateSysError：执行更新与配置写入流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F1d1ebc10-S0006] 行 74-89 | js-export | 函数/导出 findSysError：执行查询与读取流程，用于支撑「前端框架内核」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F1d1ebc10-S0007] 行 90-104 | js-export | 函数/导出 getSysErrorList：执行查询与读取流程，用于支撑「前端框架内核」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F1d1ebc10-S0008] 行 105-119 | js-export | 函数/导出 getSysErrorPublic：执行查询与读取流程，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F1d1ebc10-S0009] 行 120-126 | js-export | 函数/导出 getSysErrorSolution：执行查询与读取流程，用于支撑「前端框架内核」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+
+## [F64352644] web/src/api/user.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 182
+- imports: @/utils/request
+- entrypoints: -
+- depends_on: @/utils/request
+- owned_by: frontend
+- 逻辑段:
+- [F64352644-S0001] 行 1-5 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F64352644-S0002] 行 6-17 | js-export | 函数/导出 login：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F64352644-S0003] 行 18-28 | js-export | 函数/导出 captcha：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F64352644-S0004] 行 29-40 | js-export | 函数/导出 register：完成初始化或注册流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F64352644-S0005] 行 41-56 | js-export | 函数/导出 changePassword：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F64352644-S0006] 行 57-72 | js-export | 函数/导出 getUserList：执行查询与读取流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F64352644-S0007] 行 73-88 | js-export | 函数/导出 setUserAuthority：执行更新与配置写入流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F64352644-S0008] 行 89-104 | js-export | 函数/导出 deleteUser：执行删除与清理流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F64352644-S0009] 行 105-120 | js-export | 函数/导出 setUserInfo：执行更新与配置写入流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F64352644-S0010] 行 121-136 | js-export | 函数/导出 setSelfInfo：执行更新与配置写入流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F64352644-S0011] 行 137-152 | js-export | 函数/导出 setSelfSetting：执行更新与配置写入流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F64352644-S0012] 行 153-167 | js-export | 函数/导出 setUserAuthorities：执行更新与配置写入流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F64352644-S0013] 行 168-174 | js-export | 函数/导出 getUserInfo：执行查询与读取流程，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F64352644-S0014] 行 175-182 | js-export | 函数/导出 resetPassword：执行更新与配置写入流程，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+
+## [F0b27e03d] web/src/api/version.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 115
+- imports: @/utils/request
+- entrypoints: -
+- depends_on: @/utils/request
+- owned_by: frontend
+- 逻辑段:
+- [F0b27e03d-S0001] 行 1-10 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F0b27e03d-S0002] 行 11-26 | js-export | 函数/导出 deleteSysVersion：执行删除与清理流程，用于支撑「前端框架内核」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F0b27e03d-S0003] 行 27-42 | js-export | 函数/导出 deleteSysVersionByIds：执行删除与清理流程，用于支撑「前端框架内核」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F0b27e03d-S0004] 行 43-58 | js-export | 函数/导出 findSysVersion：执行查询与读取流程，用于支撑「前端框架内核」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F0b27e03d-S0005] 行 59-74 | js-export | 函数/导出 getSysVersionList：执行查询与读取流程，用于支撑「前端框架内核」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F0b27e03d-S0006] 行 75-90 | js-export | 函数/导出 exportVersion：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F0b27e03d-S0007] 行 91-107 | js-export | 函数/导出 downloadVersionJson：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: params
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+- [F0b27e03d-S0008] 行 108-115 | js-export | 函数/导出 importVersion：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: data
+- outputs: -
+- side_effects: -
+- calls: service
+- risks: -
+- tags: frontend-core, js-export
+

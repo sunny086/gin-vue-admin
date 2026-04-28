@@ -1,0 +1,274 @@
+## [Fc35823d0] server/utils/upload/upload.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 47
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, mime/multipart
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fc35823d0-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fc35823d0-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Fc35823d0-S0003] 行 12-19 | go-type | 类型 OSS：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: UploadFile, DeleteFile
+- risks: -
+- tags: system-config, go-type
+- [Fc35823d0-S0004] 行 20-47 | go-func | 函数 NewOss：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: OSS
+- side_effects: 触发 panic
+- calls: NewOss, GetMinio, Warn, Error
+- risks: 存在 panic 路径，异常恢复依赖上层中间件 / 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+
+## [F0bd51b92] server/utils/validator_test.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 38
+- imports: github.com/flipped-aurora/gin-vue-admin/server/model/common/request, testing
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F0bd51b92-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F0bd51b92-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F0bd51b92-S0003] 行 8-12 | go-type | 类型 PageInfoTest：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F0bd51b92-S0004] 行 13-38 | go-func | 函数 TestVerify：执行校验与约束判断，位于「系统配置与运行时」域。
+- inputs: t *testing.T
+- outputs: -
+- side_effects: -
+- calls: TestVerify, NotEmpty, Verify, Error
+- risks: -
+- tags: system-config, go-func
+
+## [F36317a9b] server/utils/validator.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 295
+- imports: errors, reflect, regexp, strconv, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F36317a9b-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F36317a9b-S0002] 行 3-10 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F36317a9b-S0003] 行 11-12 | go-type | 类型 Rules：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F36317a9b-S0004] 行 13-14 | go-type | 类型 RulesMap：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F36317a9b-S0005] 行 15-22 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var
+- [F36317a9b-S0006] 行 23-36 | go-func | 函数 RegisterRule：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: key string, rule Rules
+- outputs: (err error)
+- side_effects: -
+- calls: RegisterRule, New
+- risks: -
+- tags: system-config, go-func
+- [F36317a9b-S0007] 行 37-46 | go-func | 函数 NotEmpty：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: NotEmpty
+- risks: -
+- tags: system-config, go-func
+- [F36317a9b-S0008] 行 47-56 | go-func | 函数 RegexpMatch：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: rule string
+- outputs: string
+- side_effects: -
+- calls: RegexpMatch
+- risks: -
+- tags: system-config, go-func
+- [F36317a9b-S0009] 行 57-66 | go-func | 函数 Lt：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: mark string
+- outputs: string
+- side_effects: -
+- calls: Lt
+- risks: -
+- tags: system-config, go-func
+- [F36317a9b-S0010] 行 67-76 | go-func | 函数 Le：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: mark string
+- outputs: string
+- side_effects: -
+- calls: Le
+- risks: -
+- tags: system-config, go-func
+- [F36317a9b-S0011] 行 77-86 | go-func | 函数 Eq：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: mark string
+- outputs: string
+- side_effects: -
+- calls: Eq
+- risks: -
+- tags: system-config, go-func
+- [F36317a9b-S0012] 行 87-96 | go-func | 函数 Ne：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: mark string
+- outputs: string
+- side_effects: -
+- calls: Ne
+- risks: -
+- tags: system-config, go-func
+- [F36317a9b-S0013] 行 97-106 | go-func | 函数 Ge：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: mark string
+- outputs: string
+- side_effects: -
+- calls: Ge
+- risks: -
+- tags: system-config, go-func
+- [F36317a9b-S0014] 行 107-117 | go-func | 函数 Gt：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: mark string
+- outputs: string
+- side_effects: -
+- calls: Gt, Rules
+- risks: -
+- tags: system-config, go-func
+- [F36317a9b-S0015] 行 118-172 | go-func | 函数 Verify：执行校验与约束判断，位于「系统配置与运行时」域。
+- inputs: st interface{}, roleMap Rules
+- outputs: (err error)
+- side_effects: -
+- calls: Verify, TypeOf, ValueOf, Kind, New, NumField, Field, Interface, isBlank, Split, regexpMatch, String
+- risks: -
+- tags: system-config, go-func
+- [F36317a9b-S0016] 行 173-195 | go-func | 函数 compareVerify：执行校验与约束判断，位于「系统配置与运行时」域。
+- inputs: value reflect.Value, VerifyStr string
+- outputs: bool
+- side_effects: -
+- calls: compareVerify, Kind, compare, rune, String, Len, Uint, Float, Int
+- risks: -
+- tags: system-config, go-func
+- [F36317a9b-S0017] 行 196-219 | go-func | 函数 isBlank：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: value reflect.Value
+- outputs: bool
+- side_effects: -
+- calls: isBlank, Kind, Len, Bool, Int, Uint, Float, IsNil, DeepEqual, Interface, Zero, Type
+- risks: -
+- tags: system-config, go-func
+- [F36317a9b-S0018] 行 220-291 | go-func | 函数 compare：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: value interface{}, VerifyStr string
+- outputs: bool
+- side_effects: -
+- calls: compare, Split, ValueOf, Kind, ParseInt, Int, Atoi, Uint, uint64, ParseFloat, Float
+- risks: -
+- tags: system-config, go-func
+- [F36317a9b-S0019] 行 292-295 | go-func | 函数 regexpMatch：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: rule, matchStr string
+- outputs: bool
+- side_effects: -
+- calls: regexpMatch, MustCompile, MatchString
+- risks: -
+- tags: system-config, go-func
+
+## [Fe5a7c8d4] server/utils/verify.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 20
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fe5a7c8d4-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fe5a7c8d4-S0002] 行 3-20 | go-const-var | 逻辑段 go-const-var：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: NotEmpty, Ge
+- risks: -
+- tags: codegen-ai, go-const-var
+
+## [F0bfefad4] server/utils/zip.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 54
+- imports: archive/zip, fmt, io, os, path/filepath, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F0bfefad4-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F0bfefad4-S0002] 行 3-12 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F0bfefad4-S0003] 行 13-54 | go-func | 函数 Unzip：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: zipFile string, destDir string
+- outputs: ([]string, error)
+- side_effects: -
+- calls: Unzip, OpenReader, Close, Contains, Errorf, Join, FileInfo, IsDir, MkdirAll, Dir, Open, OpenFile
+- risks: -
+- tags: system-config, go-func
+

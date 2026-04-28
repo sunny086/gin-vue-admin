@@ -1,0 +1,698 @@
+## [Fe2067e9a] server/mcp/gva_execute.go
+- 语言: go
+- 领域: mcp-skills (MCP与Skills生态)
+- 行数: 751
+- imports: context, encoding/json, errors, fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system, github.com/flipped-aurora/gin-vue-admin/server/model/system/request, github.com/mark3labs/mcp-go/mcp, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fe2067e9a-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-package, ai-tooling
+- [Fe2067e9a-S0002] 行 3-16 | go-import | 逻辑段 go-import：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: mcp-skills, go-import, ai-tooling
+- [Fe2067e9a-S0003] 行 17-21 | go-func | 函数 init：完成初始化或注册流程，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: init, RegisterTool
+- risks: -
+- tags: mcp-skills, go-func
+- [Fe2067e9a-S0004] 行 22-24 | go-type | 类型 GVAExecutor：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [Fe2067e9a-S0005] 行 25-30 | go-type | 类型 ExecuteRequest：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [Fe2067e9a-S0006] 行 31-41 | go-type | 类型 ExecuteResponse：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [Fe2067e9a-S0007] 行 42-54 | go-type | 类型 ExecutionPlan：定义该文件的数据结构或接口边界，支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-type, plugin
+- [Fe2067e9a-S0008] 行 55-217 | go-func | 函数 New：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: mcp.Tool
+- side_effects: -
+- calls: New, NewTool, WithDescription, WithObject, Description, Required, Properties, TableName, AdditionalProperties, WithString
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling, plugin, config
+- [Fe2067e9a-S0009] 行 218-291 | go-func | 函数 Handle：处理请求或事件分发，位于「MCP与Skills生态」域。
+- inputs: ctx context.Context, request mcp.CallToolRequest
+- outputs: (*mcp.CallToolResult, error)
+- side_effects: -
+- calls: Handle, GetArguments, New, Marshal, Errorf, Unmarshal, validateExecutionPlan, executeCreation, Info, Sprintf, Join, MarshalIndent
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: mcp-skills, go-func, ai-tooling
+- [Fe2067e9a-S0010] 行 292-440 | go-func | 函数 validateExecutionPlan：执行校验与约束判断，位于「插件生态」域。
+- inputs: plan *ExecutionPlan
+- outputs: error
+- side_effects: -
+- calls: validateExecutionPlan, New, Errorf, string, ToUpper, Info, Sprintf
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: plugin-ecosystem, go-func, plugin
+- [Fe2067e9a-S0011] 行 441-517 | go-func | 函数 executeCreation：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: ctx context.Context, plan *ExecutionPlan
+- outputs: *ExecuteResponse
+- side_effects: -
+- calls: executeCreation, buildDirectoryStructure, collectExpectedFilePaths, createAutoCodePackage, Sprintf, createDictionariesFromInfo, Pretreatment, createAutoCodeModule
+- risks: -
+- tags: mcp-skills, go-func
+- [Fe2067e9a-S0012] 行 518-635 | go-func | 函数 buildDirectoryStructure：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: plan *ExecutionPlan
+- outputs: map[string]string
+- side_effects: -
+- calls: buildDirectoryStructure, Sprintf
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, plugin, config
+- [Fe2067e9a-S0013] 行 636-680 | go-func | 函数 collectExpectedFilePaths：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: plan *ExecutionPlan
+- outputs: []string
+- side_effects: -
+- calls: collectExpectedFilePaths, buildDirectoryStructure, Sprintf, ToLower
+- risks: -
+- tags: mcp-skills, go-func
+- [Fe2067e9a-S0014] 行 681-689 | go-func | 函数 checkDictionaryExists：执行校验与约束判断，位于「MCP与Skills生态」域。
+- inputs: dictType string
+- outputs: (bool, error)
+- side_effects: -
+- calls: checkDictionaryExists, findDictionaryByType, Background
+- risks: -
+- tags: mcp-skills, go-func
+- [Fe2067e9a-S0015] 行 690-751 | go-func | 函数 createDictionariesFromInfo：执行创建或新增流程，位于「MCP与Skills生态」域。
+- inputs: ctx context.Context, dictionariesInfo []*DictionaryGenerateRequest
+- outputs: string
+- side_effects: -
+- calls: createDictionariesFromInfo, Sprintf, checkDictionaryExists, createDictionary, enabledBoolPointer, s, findDictionaryByType, int, createDictionaryDetail, Join
+- risks: -
+- tags: mcp-skills, go-func
+
+## [Fb6736109] server/mcp/gva_review.go
+- 语言: go
+- 领域: mcp-skills (MCP与Skills生态)
+- 行数: 171
+- imports: context, encoding/json, errors, fmt, github.com/mark3labs/mcp-go/mcp, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fb6736109-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-package, ai-tooling
+- [Fb6736109-S0002] 行 3-13 | go-import | 逻辑段 go-import：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: mcp-skills, go-import, ai-tooling
+- [Fb6736109-S0003] 行 14-16 | go-type | 类型 GVAReviewer：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [Fb6736109-S0004] 行 17-21 | go-func | 函数 init：完成初始化或注册流程，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: init, RegisterTool
+- risks: -
+- tags: mcp-skills, go-func
+- [Fb6736109-S0005] 行 22-27 | go-type | 类型 ReviewRequest：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [Fb6736109-S0006] 行 28-35 | go-type | 类型 ReviewResponse：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [Fb6736109-S0007] 行 36-80 | go-func | 函数 New：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: mcp.Tool
+- side_effects: -
+- calls: New, NewTool, WithDescription, WithString, Description, Required
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling
+- [Fb6736109-S0008] 行 81-142 | go-func | 函数 Handle：处理请求或事件分发，位于「MCP与Skills生态」域。
+- inputs: ctx context.Context, request mcp.CallToolRequest
+- outputs: (*mcp.CallToolResult, error)
+- side_effects: -
+- calls: Handle, GetArguments, New, Unmarshal, byte, Errorf, generateAdjustmentPrompt, Sprintf, MarshalIndent, NewTextContent, string
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling
+- [Fb6736109-S0009] 行 143-171 | go-func | 函数 generateAdjustmentPrompt：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: userRequirement string, generatedFiles []string
+- outputs: string
+- side_effects: -
+- calls: generateAdjustmentPrompt, WriteString, Sprintf, push, String
+- risks: -
+- tags: mcp-skills, go-func
+
+## [Fb152e9c4] server/mcp/http_client.go
+- 语言: go
+- 领域: mcp-skills (MCP与Skills生态)
+- 行数: 154
+- imports: bytes, context, encoding/json, errors, fmt, github.com/flipped-aurora/gin-vue-admin/server/global, io, net/http, net/url, strings, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fb152e9c4-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-package, ai-tooling
+- [Fb152e9c4-S0002] 行 3-17 | go-import | 逻辑段 go-import：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: mcp-skills, go-import
+- [Fb152e9c4-S0003] 行 18-23 | go-type | 类型 Type：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [Fb152e9c4-S0004] 行 24-45 | go-func | 函数 ResolveMCPServiceURL：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: ResolveMCPServiceURL, TrimSpace, TrimRight, HasPrefix, Sprintf
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: mcp-skills, go-func, ai-tooling
+- [Fb152e9c4-S0005] 行 46-54 | go-func | 函数 upstreamBaseURL：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: upstreamBaseURL, TrimSpace, TrimRight
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: mcp-skills, go-func
+- [Fb152e9c4-S0006] 行 55-62 | go-func | 函数 requestTimeout：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: time.Duration
+- side_effects: -
+- calls: requestTimeout, Duration
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: mcp-skills, go-func
+- [Fb152e9c4-S0007] 行 63-66 | go-func | 函数 anonymous：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-func
+- [Fb152e9c4-S0008] 行 67-70 | go-func | 函数 anonymous：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-func
+- [Fb152e9c4-S0009] 行 71-74 | go-func | 函数 anonymous：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-func
+- [Fb152e9c4-S0010] 行 75-154 | go-func | 函数 anonymous：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: authTokenFromContext, Errorf, configuredAuthHeader, TrimSpace, HasPrefix, upstreamBaseURL, Parse, Encode, Marshal, NewReader, WithTimeout, requestTimeout
+- risks: -
+- tags: mcp-skills, go-func, security, config
+
+## [F29892826] server/mcp/menu_creator.go
+- 语言: go
+- 领域: mcp-skills (MCP与Skills生态)
+- 行数: 229
+- imports: context, encoding/json, errors, fmt, github.com/flipped-aurora/gin-vue-admin/server/model/system, github.com/mark3labs/mcp-go/mcp
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F29892826-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-package, ai-tooling
+- [F29892826-S0002] 行 3-12 | go-import | 逻辑段 go-import：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: mcp-skills, go-import, ai-tooling
+- [F29892826-S0003] 行 13-16 | go-func | 函数 init：完成初始化或注册流程，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: init, RegisterTool
+- risks: -
+- tags: mcp-skills, go-func
+- [F29892826-S0004] 行 17-33 | go-type | 类型 MenuCreateRequest：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [F29892826-S0005] 行 34-39 | go-type | 类型 MenuParameterRequest：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [F29892826-S0006] 行 40-44 | go-type | 类型 MenuButtonRequest：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [F29892826-S0007] 行 45-52 | go-type | 类型 MenuCreateResponse：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [F29892826-S0008] 行 53-54 | go-type | 类型 MenuCreator：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [F29892826-S0009] 行 55-113 | go-func | 函数 New：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: mcp.Tool
+- side_effects: -
+- calls: New, NewTool, WithDescription, WithNumber, Description, DefaultNumber, WithString, Required, WithBoolean, DefaultString
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling
+- [F29892826-S0010] 行 114-217 | go-func | 函数 Handle：处理请求或事件分发，位于「MCP与Skills生态」域。
+- inputs: ctx context.Context, request mcp.CallToolRequest
+- outputs: (*mcp.CallToolResult, error)
+- side_effects: -
+- calls: Handle, GetArguments, New, uint, int, Unmarshal, byte, Errorf, findMenuID, textResultWithJSON, Sprintf
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling
+- [F29892826-S0011] 行 218-229 | go-func | 函数 findMenuID：执行查询与读取流程，位于「MCP与Skills生态」域。
+- inputs: menus []system.SysBaseMenu, name, path string
+- outputs: uint
+- side_effects: -
+- calls: findMenuID
+- risks: -
+- tags: mcp-skills, go-func
+
+## [F13f91093] server/mcp/menu_lister.go
+- 语言: go
+- 领域: mcp-skills (MCP与Skills生态)
+- 行数: 60
+- imports: context, github.com/flipped-aurora/gin-vue-admin/server/model/system, github.com/mark3labs/mcp-go/mcp
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F13f91093-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-package, ai-tooling
+- [F13f91093-S0002] 行 3-9 | go-import | 逻辑段 go-import：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: mcp-skills, go-import, ai-tooling
+- [F13f91093-S0003] 行 10-13 | go-func | 函数 init：完成初始化或注册流程，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: init, RegisterTool
+- risks: -
+- tags: mcp-skills, go-func
+- [F13f91093-S0004] 行 14-21 | go-type | 类型 MenuListResponse：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [F13f91093-S0005] 行 22-23 | go-type | 类型 MenuLister：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [F13f91093-S0006] 行 24-45 | go-func | 函数 New：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: mcp.Tool
+- side_effects: -
+- calls: New, NewTool, WithDescription, WithString, Description
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling
+- [F13f91093-S0007] 行 46-60 | go-func | 函数 Handle：处理请求或事件分发，位于「MCP与Skills生态」域。
+- inputs: ctx context.Context, _ mcp.CallToolRequest
+- outputs: (*mcp.CallToolResult, error)
+- side_effects: -
+- calls: Handle, textResultWithJSON
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling
+
+## [Ff56bf507] server/mcp/page.go
+- 语言: go
+- 领域: mcp-skills (MCP与Skills生态)
+- 行数: 9
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Ff56bf507-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-package, ai-tooling
+- [Ff56bf507-S0002] 行 3-9 | go-type | 类型 Type：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+
+## [F252d62d0] server/mcp/process_utils_unix.go
+- 语言: go
+- 领域: mcp-skills (MCP与Skills生态)
+- 行数: 38
+- imports: errors, os/exec, syscall
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F252d62d0-S0001] 行 1-2 | preamble | 逻辑段 preamble：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, preamble
+- [F252d62d0-S0002] 行 3-4 | go-package | 逻辑段 go-package：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-package, ai-tooling
+- [F252d62d0-S0003] 行 5-10 | go-import | 逻辑段 go-import：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: mcp-skills, go-import
+- [F252d62d0-S0004] 行 11-16 | go-func | 函数 prepareDetachedProcess：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: cmd *exec.Cmd
+- outputs: -
+- side_effects: -
+- calls: prepareDetachedProcess
+- risks: -
+- tags: mcp-skills, go-func
+- [F252d62d0-S0005] 行 17-25 | go-func | 函数 processExists：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: pid int
+- outputs: bool
+- side_effects: -
+- calls: processExists, Kill, Is
+- risks: -
+- tags: mcp-skills, go-func
+- [F252d62d0-S0006] 行 26-38 | go-func | 函数 terminateProcess：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: pid int
+- outputs: error
+- side_effects: -
+- calls: terminateProcess, Kill, Is
+- risks: -
+- tags: mcp-skills, go-func
+
+## [Ff0675589] server/mcp/process_utils_windows.go
+- 语言: go
+- 领域: mcp-skills (MCP与Skills生态)
+- 行数: 59
+- imports: errors, golang.org/x/sys/windows, os, os/exec, syscall
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Ff0675589-S0001] 行 1-2 | preamble | 逻辑段 preamble：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, preamble
+- [Ff0675589-S0002] 行 3-4 | go-package | 逻辑段 go-package：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-package, ai-tooling
+- [Ff0675589-S0003] 行 5-13 | go-import | 逻辑段 go-import：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: mcp-skills, go-import
+- [Ff0675589-S0004] 行 14-15 | go-const-var | 逻辑段 go-const-var：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-const-var
+- [Ff0675589-S0005] 行 16-22 | go-func | 函数 prepareDetachedProcess：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: cmd *exec.Cmd
+- outputs: -
+- side_effects: -
+- calls: prepareDetachedProcess
+- risks: -
+- tags: mcp-skills, go-func
+- [Ff0675589-S0006] 行 23-41 | go-func | 函数 processExists：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: pid int
+- outputs: bool
+- side_effects: -
+- calls: processExists, OpenProcess, uint32, CloseHandle, GetExitCodeProcess
+- risks: -
+- tags: mcp-skills, go-func
+- [Ff0675589-S0007] 行 42-59 | go-func | 函数 terminateProcess：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: pid int
+- outputs: error
+- side_effects: -
+- calls: terminateProcess, FindProcess, Kill, Is
+- risks: -
+- tags: mcp-skills, go-func
+
+## [Fc01277b0] server/mcp/requirement_analyzer.go
+- 语言: go
+- 领域: mcp-skills (MCP与Skills生态)
+- 行数: 200
+- imports: context, encoding/json, errors, fmt, github.com/mark3labs/mcp-go/mcp
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fc01277b0-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-package, ai-tooling
+- [Fc01277b0-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: mcp-skills, go-import, ai-tooling
+- [Fc01277b0-S0003] 行 12-15 | go-func | 函数 init：完成初始化或注册流程，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: init, RegisterTool
+- risks: -
+- tags: mcp-skills, go-func
+- [Fc01277b0-S0004] 行 16-18 | go-type | 类型 RequirementAnalyzer：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [Fc01277b0-S0005] 行 19-23 | go-type | 类型 RequirementAnalysisRequest：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [Fc01277b0-S0006] 行 24-28 | go-type | 类型 RequirementAnalysisResponse：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [Fc01277b0-S0007] 行 29-68 | go-func | 函数 New：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: mcp.Tool
+- side_effects: -
+- calls: New, NewTool, WithDescription, WithString, Required, Description
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling
+- [Fc01277b0-S0008] 行 69-94 | go-func | 函数 Handle：处理请求或事件分发，位于「MCP与Skills生态」域。
+- inputs: ctx context.Context, request mcp.CallToolRequest
+- outputs: (*mcp.CallToolResult, error)
+- side_effects: -
+- calls: Handle, GetArguments, New, analyzeRequirement, Errorf, Marshal, NewTextContent, string
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling
+- [Fc01277b0-S0009] 行 95-104 | go-func | 函数 analyzeRequirement：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: userRequirement string
+- outputs: (*RequirementAnalysisResponse, error)
+- side_effects: -
+- calls: analyzeRequirement, generateAIPrompt
+- risks: -
+- tags: mcp-skills, go-func
+- [Fc01277b0-S0010] 行 105-200 | go-func | 函数 generateAIPrompt：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: userRequirement string
+- outputs: string
+- side_effects: -
+- calls: generateAIPrompt, Sprintf
+- risks: -
+- tags: mcp-skills, go-func
+
+## [F09974f11] server/mcp/result.go
+- 语言: go
+- 领域: mcp-skills (MCP与Skills生态)
+- 行数: 30
+- imports: encoding/json, fmt, github.com/mark3labs/mcp-go/mcp
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F09974f11-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-package, ai-tooling
+- [F09974f11-S0002] 行 3-9 | go-import | 逻辑段 go-import：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: mcp-skills, go-import, ai-tooling
+- [F09974f11-S0003] 行 10-30 | go-func | 函数 textResultWithJSON：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: title string, payload any
+- outputs: (*mcp.CallToolResult, error)
+- side_effects: -
+- calls: textResultWithJSON, MarshalIndent, Errorf, string, Sprintf
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling
+
+## [F343c1e0b] server/mcp/server.go
+- 语言: go
+- 领域: mcp-skills (MCP与Skills生态)
+- 行数: 53
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, net/http, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F343c1e0b-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-package, ai-tooling
+- [F343c1e0b-S0002] 行 3-10 | go-import | 逻辑段 go-import：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: mcp-skills, go-import, ai-tooling
+- [F343c1e0b-S0003] 行 11-24 | go-func | 函数 NewMCPServer：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: *mcpServer.MCPServer
+- side_effects: 修改全局状态
+- calls: NewMCPServer, RegisterAllTools
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: mcp-skills, go-func, ai-tooling, config
+- [F343c1e0b-S0004] 行 25-53 | go-func | 函数 NewStreamableHTTPServer：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: *mcpServer.StreamableHTTPServer
+- side_effects: -
+- calls: NewStreamableHTTPServer, HasPrefix, NewServeMux, NewMCPServer, WithHTTPContextFunc, WithStreamableHTTPServer, Handle, HandleFunc, WriteHeader, Write, byte
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: mcp-skills, go-func, ai-tooling, config
+

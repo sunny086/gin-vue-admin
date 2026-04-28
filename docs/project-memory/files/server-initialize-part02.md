@@ -1,0 +1,207 @@
+## [F90efcab2] server/initialize/register_init.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 11
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F90efcab2-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F90efcab2-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F90efcab2-S0003] 行 8-11 | go-func | 函数 init：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: init
+- risks: -
+- tags: system-config, go-func
+
+## [F92921955] server/initialize/reload.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 46
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, go.uber.org/zap
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F92921955-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F92921955-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F92921955-S0003] 行 9-46 | go-func | 函数 Reload：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: error
+- side_effects: 修改全局状态
+- calls: Reload, Info, ReadInConfig, Error, DB, Close, Gorm, OtherInit, DBList, RegisterTables, Timer
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+
+## [Ffeb754af] server/initialize/router_biz.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 20
+- imports: github.com/flipped-aurora/gin-vue-admin/server/router, github.com/gin-gonic/gin
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Ffeb754af-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Ffeb754af-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Ffeb754af-S0003] 行 9-13 | go-func | 函数 holder：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: routers ...*gin.RouterGroup
+- outputs: -
+- side_effects: -
+- calls: holder
+- risks: -
+- tags: system-config, go-func
+- [Ffeb754af-S0004] 行 14-20 | go-func | 函数 initBizRouter：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: routers ...*gin.RouterGroup
+- outputs: -
+- side_effects: -
+- calls: initBizRouter, holder
+- risks: -
+- tags: system-config, go-func
+
+## [F262e27e1] server/initialize/router.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 118
+- imports: github.com/flipped-aurora/gin-vue-admin/server/docs, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/middleware, github.com/flipped-aurora/gin-vue-admin/server/router, github.com/gin-gonic/gin, net/http, os
+- entrypoints: route-registration
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F262e27e1-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F262e27e1-S0002] 行 3-15 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F262e27e1-S0003] 行 16-19 | go-type | 类型 justFilesFilesystem：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F262e27e1-S0004] 行 20-35 | go-func | 函数 Open：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: name string
+- outputs: (http.File, error)
+- side_effects: -
+- calls: Open, Stat, IsDir
+- risks: -
+- tags: system-config, go-func
+- [F262e27e1-S0005] 行 36-118 | go-func | 函数 Routers：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: *gin.Engine
+- side_effects: 变更路由注册, 修改全局状态
+- calls: Routers, New, Use, GinRecovery, Mode, Logger, StaticFile, Static, StaticFS, Dir, LoadTls, RunTLS
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: mcp-skills, go-func, route, security, config
+
+## [Fa03aee81] server/initialize/timer.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 38
+- imports: fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/task, github.com/robfig/cron/v3
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fa03aee81-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fa03aee81-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Fa03aee81-S0003] 行 12-38 | go-func | 函数 Timer：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: 启动并发协程
+- calls: Timer, WithSeconds, AddTaskByFunc, ClearTable, Println
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+
+## [Fdd946de4] server/initialize/validator.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 23
+- imports: github.com/flipped-aurora/gin-vue-admin/server/utils
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fdd946de4-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fdd946de4-S0002] 行 3-4 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-import
+- [Fdd946de4-S0003] 行 5-23 | go-func | 函数 init：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: init, RegisterRule, NotEmpty
+- risks: -
+- tags: system-config, go-func
+

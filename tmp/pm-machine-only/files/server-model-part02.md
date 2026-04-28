@@ -1,0 +1,829 @@
+## [F714d2e16] server/model/system/request/sys_auto_code.go
+- 语言: go
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 292
+- imports: encoding/json, fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/pkg/errors, go/token, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F714d2e16-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-package
+- [F714d2e16-S0002] 行 3-12 | go-import | 逻辑段 go-import：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: codegen-ai, go-import, security
+- [F714d2e16-S0003] 行 13-51 | go-type | 类型 AutoCode：定义该文件的数据结构或接口边界，支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-type, database
+- [F714d2e16-S0004] 行 52-60 | go-type | 类型 DataSource：定义该文件的数据结构或接口边界，支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-type
+- [F714d2e16-S0005] 行 61-101 | go-func | 函数 Apis：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: -
+- outputs: []model.SysApi
+- side_effects: -
+- calls: Apis
+- risks: -
+- tags: codegen-ai, go-func
+- [F714d2e16-S0006] 行 102-119 | go-func | 函数 Menu：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: template string
+- outputs: model.SysBaseMenu
+- side_effects: -
+- calls: Menu, Sprintf
+- risks: -
+- tags: codegen-ai, go-func, plugin
+- [F714d2e16-S0007] 行 120-211 | go-func | 函数 Pretreatment：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: -
+- outputs: error
+- side_effects: -
+- calls: Pretreatment, IsKeyword, HasSuffix, New, rune, string
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, security
+- [F714d2e16-S0008] 行 212-223 | go-func | 函数 History：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: -
+- outputs: SysAutoHistoryCreate
+- side_effects: -
+- calls: History, Marshal, string
+- risks: -
+- tags: codegen-ai, go-func
+- [F714d2e16-S0009] 行 224-250 | go-type | 类型 AutoCodeField：定义该文件的数据结构或接口边界，支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-type
+- [F714d2e16-S0010] 行 251-271 | go-type | 类型 AutoFunc：定义该文件的数据结构或接口边界，支撑「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-type
+- [F714d2e16-S0011] 行 272-277 | go-type | 类型 InitMenu：定义该文件的数据结构或接口边界，支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-type
+- [F714d2e16-S0012] 行 278-282 | go-type | 类型 InitApi：定义该文件的数据结构或接口边界，支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-type
+- [F714d2e16-S0013] 行 283-287 | go-type | 类型 InitDictionary：定义该文件的数据结构或接口边界，支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-type
+- [F714d2e16-S0014] 行 288-292 | go-type | 类型 LLMAutoCode：定义该文件的数据结构或接口边界，支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-type, database
+
+## [F032c160b] server/model/system/request/sys_auto_history.go
+- 语言: go
+- 领域: data-model (数据模型与初始化数据)
+- 行数: 58
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F032c160b-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「数据模型与初始化数据」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-package
+- [F032c160b-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「数据模型与初始化数据」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: data-model, go-import
+- [F032c160b-S0003] 行 8-21 | go-type | 类型 SysAutoHistoryCreate：定义该文件的数据结构或接口边界，支撑「数据模型与初始化数据」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-type
+- [F032c160b-S0004] 行 22-42 | go-func | 函数 Create：执行创建或新增流程，位于「代码生成与AI工作流」域。
+- inputs: -
+- outputs: model.SysAutoCodeHistory
+- side_effects: 写入数据库
+- calls: Create
+- risks: -
+- tags: codegen-ai, go-func
+- [F032c160b-S0005] 行 43-49 | go-type | 类型 SysAutoHistoryRollBack：定义该文件的数据结构或接口边界，支撑「数据模型与初始化数据」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-type
+- [F032c160b-S0006] 行 50-58 | go-func | 函数 ApiIds：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: entity model.SysAutoCodeHistory
+- outputs: common.IdsReq
+- side_effects: -
+- calls: ApiIds, int
+- risks: -
+- tags: codegen-ai, go-func
+
+## [F076d3121] server/model/system/request/sys_casbin.go
+- 语言: go
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 28
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F076d3121-S0001] 行 1-3 | go-package | 逻辑段 go-package：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-package
+- [F076d3121-S0002] 行 4-9 | go-type | 类型 CasbinInfo：定义该文件的数据结构或接口边界，支撑「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-type
+- [F076d3121-S0003] 行 10-14 | go-type | 类型 CasbinInReceive：定义该文件的数据结构或接口边界，支撑「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-type, security
+- [F076d3121-S0004] 行 15-28 | go-func | 函数 DefaultCasbin：承载该模块的核心逻辑，位于「鉴权与访问控制」域。
+- inputs: -
+- outputs: []CasbinInfo
+- side_effects: -
+- calls: DefaultCasbin
+- risks: -
+- tags: auth-access, go-func, security
+
+## [F1641fd7d] server/model/system/request/sys_dictionary_detail.go
+- 语言: go
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 44
+- imports: github.com/flipped-aurora/gin-vue-admin/server/model/common/request, github.com/flipped-aurora/gin-vue-admin/server/model/system
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F1641fd7d-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-package
+- [F1641fd7d-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: menu-rbac, go-import
+- [F1641fd7d-S0003] 行 8-15 | go-type | 类型 SysDictionaryDetailSearch：定义该文件的数据结构或接口边界，支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-type
+- [F1641fd7d-S0004] 行 16-26 | go-type | 类型 CreateSysDictionaryDetailRequest：定义该文件的数据结构或接口边界，支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-type
+- [F1641fd7d-S0005] 行 27-38 | go-type | 类型 UpdateSysDictionaryDetailRequest：定义该文件的数据结构或接口边界，支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-type
+- [F1641fd7d-S0006] 行 39-44 | go-type | 类型 GetDictionaryDetailsByParentRequest：定义该文件的数据结构或接口边界，支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-type
+
+## [F81992aeb] server/model/system/request/sys_dictionary.go
+- 语言: go
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 10
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F81992aeb-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-package
+- [F81992aeb-S0002] 行 3-6 | go-type | 类型 SysDictionarySearch：定义该文件的数据结构或接口边界，支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-type, database
+- [F81992aeb-S0003] 行 7-10 | go-type | 类型 ImportSysDictionaryRequest：定义该文件的数据结构或接口边界，支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-type
+
+## [F1fa44e5f] server/model/system/request/sys_error.go
+- 语言: go
+- 领域: data-model (数据模型与初始化数据)
+- 行数: 15
+- imports: github.com/flipped-aurora/gin-vue-admin/server/model/common/request, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F1fa44e5f-S0001] 行 1-1 | preamble | 逻辑段 preamble：承载「数据模型与初始化数据」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, preamble
+- [F1fa44e5f-S0002] 行 2-3 | go-package | 逻辑段 go-package：承载「数据模型与初始化数据」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-package
+- [F1fa44e5f-S0003] 行 4-8 | go-import | 逻辑段 go-import：承载「数据模型与初始化数据」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: data-model, go-import
+- [F1fa44e5f-S0004] 行 9-15 | go-type | 类型 SysErrorSearch：定义该文件的数据结构或接口边界，支撑「数据模型与初始化数据」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-type
+
+## [F88b341aa] server/model/system/request/sys_export_template.go
+- 语言: go
+- 领域: data-model (数据模型与初始化数据)
+- 行数: 15
+- imports: github.com/flipped-aurora/gin-vue-admin/server/model/common/request, github.com/flipped-aurora/gin-vue-admin/server/model/system, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F88b341aa-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「数据模型与初始化数据」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-package
+- [F88b341aa-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「数据模型与初始化数据」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: data-model, go-import
+- [F88b341aa-S0003] 行 9-15 | go-type | 类型 SysExportTemplateSearch：定义该文件的数据结构或接口边界，支撑「数据模型与初始化数据」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-type
+
+## [F2959c4b1] server/model/system/request/sys_init.go
+- 语言: go
+- 领域: data-model (数据模型与初始化数据)
+- 行数: 125
+- imports: fmt, github.com/flipped-aurora/gin-vue-admin/server/config, os
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F2959c4b1-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「数据模型与初始化数据」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-package
+- [F2959c4b1-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「数据模型与初始化数据」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: data-model, go-import, config
+- [F2959c4b1-S0003] 行 9-22 | go-type | 类型 InitDB：定义该文件的数据结构或接口边界，支撑「数据模型与初始化数据」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-type, database
+- [F2959c4b1-S0004] 行 23-34 | go-func | 函数 MysqlEmptyDsn：承载该模块的核心逻辑，位于「数据模型与初始化数据」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: MysqlEmptyDsn, Sprintf, tcp
+- risks: -
+- tags: data-model, go-func, database
+- [F2959c4b1-S0005] 行 35-46 | go-func | 函数 PgsqlEmptyDsn：承载该模块的核心逻辑，位于「数据模型与初始化数据」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: PgsqlEmptyDsn
+- risks: -
+- tags: data-model, go-func, database
+- [F2959c4b1-S0006] 行 47-51 | go-func | 函数 SqliteEmptyDsn：承载该模块的核心逻辑，位于「数据模型与初始化数据」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: SqliteEmptyDsn, string
+- risks: -
+- tags: data-model, go-func
+- [F2959c4b1-S0007] 行 52-57 | go-func | 函数 MssqlEmptyDsn：承载该模块的核心逻辑，位于「数据模型与初始化数据」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: MssqlEmptyDsn
+- risks: -
+- tags: data-model, go-func, database, config
+- [F2959c4b1-S0008] 行 58-75 | go-func | 函数 ToMysqlConfig：承载该模块的核心逻辑，位于「数据模型与初始化数据」域。
+- inputs: -
+- outputs: config.Mysql
+- side_effects: -
+- calls: ToMysqlConfig
+- risks: -
+- tags: data-model, go-func, database, config
+- [F2959c4b1-S0009] 行 76-93 | go-func | 函数 ToPgsqlConfig：承载该模块的核心逻辑，位于「数据模型与初始化数据」域。
+- inputs: -
+- outputs: config.Pgsql
+- side_effects: -
+- calls: ToPgsqlConfig
+- risks: -
+- tags: data-model, go-func, database, config
+- [F2959c4b1-S0010] 行 94-109 | go-func | 函数 ToSqliteConfig：承载该模块的核心逻辑，位于「数据模型与初始化数据」域。
+- inputs: -
+- outputs: config.Sqlite
+- side_effects: -
+- calls: ToSqliteConfig
+- risks: -
+- tags: data-model, go-func, config
+- [F2959c4b1-S0011] 行 110-125 | go-func | 函数 ToMssqlConfig：承载该模块的核心逻辑，位于「数据模型与初始化数据」域。
+- inputs: -
+- outputs: config.Mssql
+- side_effects: -
+- calls: ToMssqlConfig
+- risks: -
+- tags: data-model, go-func, database, config
+
+## [F93f640bd] server/model/system/request/sys_login_log.go
+- 语言: go
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 12
+- imports: github.com/flipped-aurora/gin-vue-admin/server/model/common/request, github.com/flipped-aurora/gin-vue-admin/server/model/system
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F93f640bd-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-package
+- [F93f640bd-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: auth-access, go-import
+- [F93f640bd-S0003] 行 8-12 | go-type | 类型 SysLoginLogSearch：定义该文件的数据结构或接口边界，支撑「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-type
+
+## [Fce9ed15e] server/model/system/request/sys_menu.go
+- 语言: go
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 34
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fce9ed15e-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-package
+- [Fce9ed15e-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: menu-rbac, go-import, security
+- [Fce9ed15e-S0003] 行 9-14 | go-type | 类型 AddMenuAuthorityInfo：定义该文件的数据结构或接口边界，支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-type, security
+- [Fce9ed15e-S0004] 行 15-19 | go-type | 类型 SetMenuAuthorities：定义该文件的数据结构或接口边界，支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-type, security
+- [Fce9ed15e-S0005] 行 20-34 | go-func | 函数 DefaultMenu：承载该模块的核心逻辑，位于「菜单与权限编排」域。
+- inputs: -
+- outputs: []system.SysBaseMenu
+- side_effects: -
+- calls: DefaultMenu
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+
+## [Fa88c8a26] server/model/system/request/sys_operation_record.go
+- 语言: go
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 12
+- imports: github.com/flipped-aurora/gin-vue-admin/server/model/common/request, github.com/flipped-aurora/gin-vue-admin/server/model/system
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fa88c8a26-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-package
+- [Fa88c8a26-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: menu-rbac, go-import
+- [Fa88c8a26-S0003] 行 8-12 | go-type | 类型 SysOperationRecordSearch：定义该文件的数据结构或接口边界，支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-type
+
+## [F6a6addf9] server/model/system/request/sys_params.go
+- 语言: go
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 15
+- imports: github.com/flipped-aurora/gin-vue-admin/server/model/common/request, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F6a6addf9-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-package
+- [F6a6addf9-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: menu-rbac, go-import
+- [F6a6addf9-S0003] 行 8-15 | go-type | 类型 SysParamsSearch：定义该文件的数据结构或接口边界，支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-type
+
+## [Fe14f24ad] server/model/system/request/sys_skills.go
+- 语言: go
+- 领域: mcp-skills (MCP与Skills生态)
+- 行数: 81
+- imports: github.com/flipped-aurora/gin-vue-admin/server/model/system
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fe14f24ad-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-package
+- [Fe14f24ad-S0002] 行 3-4 | go-import | 逻辑段 go-import：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-import
+- [Fe14f24ad-S0003] 行 5-8 | go-type | 类型 SkillToolRequest：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [Fe14f24ad-S0004] 行 9-13 | go-type | 类型 SkillDetailRequest：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [Fe14f24ad-S0005] 行 14-18 | go-type | 类型 SkillDeleteRequest：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [Fe14f24ad-S0006] 行 19-23 | go-type | 类型 SkillPackageRequest：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [Fe14f24ad-S0007] 行 24-31 | go-type | 类型 SkillSaveRequest：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [Fe14f24ad-S0008] 行 32-38 | go-type | 类型 SkillScriptCreateRequest：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [Fe14f24ad-S0009] 行 39-44 | go-type | 类型 SkillResourceCreateRequest：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [Fe14f24ad-S0010] 行 45-50 | go-type | 类型 SkillReferenceCreateRequest：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [Fe14f24ad-S0011] 行 51-56 | go-type | 类型 SkillTemplateCreateRequest：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [Fe14f24ad-S0012] 行 57-62 | go-type | 类型 SkillFileRequest：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [Fe14f24ad-S0013] 行 63-69 | go-type | 类型 SkillFileSaveRequest：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [Fe14f24ad-S0014] 行 70-75 | go-type | 类型 SkillGlobalConstraintSaveRequest：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [Fe14f24ad-S0015] 行 76-81 | go-type | 类型 DownloadOnlineSkillReq：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+
+## [Fd72698c6] server/model/system/request/sys_user.go
+- 语言: go
+- 领域: data-model (数据模型与初始化数据)
+- 行数: 78
+- imports: github.com/flipped-aurora/gin-vue-admin/server/model/system
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fd72698c6-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「数据模型与初始化数据」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-package
+- [Fd72698c6-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「数据模型与初始化数据」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: data-model, go-import
+- [Fd72698c6-S0003] 行 9-21 | go-type | 类型 Register：定义该文件的数据结构或接口边界，支撑「数据模型与初始化数据」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-type, security
+- [Fd72698c6-S0004] 行 22-29 | go-type | 类型 Login：定义该文件的数据结构或接口边界，支撑「数据模型与初始化数据」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-type
+- [Fd72698c6-S0005] 行 30-35 | go-type | 类型 ChangePasswordReq：定义该文件的数据结构或接口边界，支撑「数据模型与初始化数据」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-type
+- [Fd72698c6-S0006] 行 36-41 | go-type | 类型 ResetPassword：定义该文件的数据结构或接口边界，支撑「数据模型与初始化数据」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-type, database
+- [Fd72698c6-S0007] 行 42-46 | go-type | 类型 SetUserAuth：定义该文件的数据结构或接口边界，支撑「数据模型与初始化数据」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-type, security
+- [Fd72698c6-S0008] 行 47-51 | go-type | 类型 SetUserAuthorities：定义该文件的数据结构或接口边界，支撑「数据模型与初始化数据」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-type, security
+- [Fd72698c6-S0009] 行 52-62 | go-type | 类型 ChangeUserInfo：定义该文件的数据结构或接口边界，支撑「数据模型与初始化数据」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-type, database, security
+- [Fd72698c6-S0010] 行 63-73 | go-type | 类型 GetUserList：定义该文件的数据结构或接口边界，支撑「数据模型与初始化数据」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: false
+- risks: -
+- tags: data-model, go-type
+- [Fd72698c6-S0011] 行 74-78 | go-type | 类型 SetRoleUsers：定义该文件的数据结构或接口边界，支撑「数据模型与初始化数据」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-type, security
+
+## [F7ff2b78d] server/model/system/request/sys_version.go
+- 语言: go
+- 领域: data-model (数据模型与初始化数据)
+- 行数: 41
+- imports: github.com/flipped-aurora/gin-vue-admin/server/model/common/request, github.com/flipped-aurora/gin-vue-admin/server/model/system, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F7ff2b78d-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「数据模型与初始化数据」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-package
+- [F7ff2b78d-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「数据模型与初始化数据」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: data-model, go-import
+- [F7ff2b78d-S0003] 行 9-16 | go-type | 类型 SysVersionSearch：定义该文件的数据结构或接口边界，支撑「数据模型与初始化数据」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-type
+- [F7ff2b78d-S0004] 行 17-26 | go-type | 类型 ExportVersionRequest：定义该文件的数据结构或接口边界，支撑「数据模型与初始化数据」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-type
+- [F7ff2b78d-S0005] 行 27-34 | go-type | 类型 ImportVersionRequest：定义该文件的数据结构或接口边界，支撑「数据模型与初始化数据」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-type
+- [F7ff2b78d-S0006] 行 35-41 | go-type | 类型 VersionInfo：定义该文件的数据结构或接口边界，支撑「数据模型与初始化数据」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: data-model, go-type
+

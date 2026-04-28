@@ -1,0 +1,228 @@
+## [F7db1bd2a] server/router/system/sys_operation_record.go
+- 语言: go
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 19
+- imports: github.com/gin-gonic/gin
+- entrypoints: route-registration
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F7db1bd2a-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-package
+- [F7db1bd2a-S0002] 行 3-6 | go-import | 逻辑段 go-import：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: menu-rbac, go-import
+- [F7db1bd2a-S0003] 行 7-8 | go-type | 类型 OperationRecordRouter：定义该文件的数据结构或接口边界，支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-type
+- [F7db1bd2a-S0004] 行 9-19 | go-func | 函数 InitSysOperationRecordRouter：完成初始化或注册流程，位于「菜单与权限编排」域。
+- inputs: Router *gin.RouterGroup
+- outputs: -
+- side_effects: 变更路由注册
+- calls: InitSysOperationRecordRouter, Group, DELETE, GET
+- risks: -
+- tags: menu-rbac, go-func, route
+
+## [Fc97d947d] server/router/system/sys_params.go
+- 语言: go
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 26
+- imports: github.com/flipped-aurora/gin-vue-admin/server/middleware, github.com/gin-gonic/gin
+- entrypoints: route-registration
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fc97d947d-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-package
+- [Fc97d947d-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: menu-rbac, go-import
+- [Fc97d947d-S0003] 行 8-10 | go-type | 类型 SysParamsRouter：定义该文件的数据结构或接口边界，支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-type
+- [Fc97d947d-S0004] 行 11-26 | go-func | 函数 InitSysParamsRouter：完成初始化或注册流程，位于「菜单与权限编排」域。
+- inputs: Router *gin.RouterGroup, PublicRouter *gin.RouterGroup
+- outputs: -
+- side_effects: 变更路由注册
+- calls: InitSysParamsRouter, Group, Use, OperationRecord, POST, DELETE, PUT, GET
+- risks: -
+- tags: menu-rbac, go-func, route
+
+## [Faeacbfb9] server/router/system/sys_skills.go
+- 语言: go
+- 领域: mcp-skills (MCP与Skills生态)
+- 行数: 36
+- imports: github.com/gin-gonic/gin
+- entrypoints: route-registration
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Faeacbfb9-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-package
+- [Faeacbfb9-S0002] 行 3-4 | go-import | 逻辑段 go-import：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-import
+- [Faeacbfb9-S0003] 行 5-6 | go-type | 类型 SkillsRouter：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [Faeacbfb9-S0004] 行 7-36 | go-func | 函数 InitSkillsRouter：完成初始化或注册流程，位于「MCP与Skills生态」域。
+- inputs: Router *gin.RouterGroup, pubRouter *gin.RouterGroup
+- outputs: -
+- side_effects: 变更路由注册
+- calls: InitSkillsRouter, Group, GET, POST
+- risks: -
+- tags: mcp-skills, go-func, route, ai-tooling
+
+## [F43ca19e4] server/router/system/sys_system.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 23
+- imports: github.com/flipped-aurora/gin-vue-admin/server/middleware, github.com/gin-gonic/gin
+- entrypoints: route-registration
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F43ca19e4-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F43ca19e4-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F43ca19e4-S0003] 行 8-9 | go-type | 类型 SysRouter：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F43ca19e4-S0004] 行 10-23 | go-func | 函数 InitSystemRouter：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: Router *gin.RouterGroup
+- outputs: -
+- side_effects: 变更路由注册
+- calls: InitSystemRouter, Group, Use, OperationRecord, POST
+- risks: -
+- tags: system-config, go-func, route
+
+## [Faafe83b2] server/router/system/sys_user.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 29
+- imports: github.com/flipped-aurora/gin-vue-admin/server/middleware, github.com/gin-gonic/gin
+- entrypoints: route-registration
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Faafe83b2-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Faafe83b2-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Faafe83b2-S0003] 行 8-9 | go-type | 类型 UserRouter：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [Faafe83b2-S0004] 行 10-29 | go-func | 函数 InitUserRouter：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: Router *gin.RouterGroup
+- outputs: -
+- side_effects: 变更路由注册
+- calls: InitUserRouter, Group, Use, OperationRecord, POST, DELETE, PUT, GET
+- risks: -
+- tags: system-config, go-func, route
+
+## [F0aa0a141] server/router/system/sys_version.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 26
+- imports: github.com/flipped-aurora/gin-vue-admin/server/middleware, github.com/gin-gonic/gin
+- entrypoints: route-registration
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F0aa0a141-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F0aa0a141-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F0aa0a141-S0003] 行 8-10 | go-type | 类型 SysVersionRouter：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F0aa0a141-S0004] 行 11-26 | go-func | 函数 InitSysVersionRouter：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: Router *gin.RouterGroup
+- outputs: -
+- side_effects: 变更路由注册
+- calls: InitSysVersionRouter, Group, Use, OperationRecord, DELETE, POST, GET
+- risks: -
+- tags: system-config, go-func, route
+

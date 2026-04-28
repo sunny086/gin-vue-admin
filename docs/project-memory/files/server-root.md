@@ -1,0 +1,522 @@
+# server-root
+
+- 文件数量：7
+
+## [F2582a986] server/config.docker.yaml
+- 语言: yaml
+- 领域: system-config (系统配置与运行时)
+- 行数: 283
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F2582a986-S0001] 行 1-3 | preamble | 逻辑段 preamble：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, preamble, security, config
+- [F2582a986-S0002] 行 4-9 | yaml-key | 配置键 jwt：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, security, config
+- [F2582a986-S0003] 行 10-21 | yaml-key | 配置键 zap：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, config
+- [F2582a986-S0004] 行 22-34 | yaml-key | 配置键 redis：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, config
+- [F2582a986-S0005] 行 35-46 | yaml-key | 配置键 redis-list：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, config
+- [F2582a986-S0006] 行 47-63 | yaml-key | 配置键 mongo：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, config
+- [F2582a986-S0007] 行 64-73 | yaml-key | 配置键 email：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, config
+- [F2582a986-S0008] 行 74-91 | yaml-key | 配置键 system：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, database, config
+- [F2582a986-S0009] 行 92-100 | yaml-key | 配置键 captcha：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, database, config
+- [F2582a986-S0010] 行 101-114 | yaml-key | 配置键 mysql：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, database, config
+- [F2582a986-S0011] 行 115-125 | yaml-key | 配置键 pgsql：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, database, config
+- [F2582a986-S0012] 行 126-136 | yaml-key | 配置键 oracle：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, config
+- [F2582a986-S0013] 行 137-147 | yaml-key | 配置键 mssql：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, database, config
+- [F2582a986-S0014] 行 148-158 | yaml-key | 配置键 sqlite：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, database, config
+- [F2582a986-S0015] 行 159-174 | yaml-key | 配置键 db-list：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, database, config
+- [F2582a986-S0016] 行 175-179 | yaml-key | 配置键 local：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, yaml-key, config
+- [F2582a986-S0017] 行 180-187 | yaml-key | 配置键 autocode：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: configuration
+- risks: -
+- tags: codegen-ai, yaml-key, config
+- [F2582a986-S0018] 行 188-197 | yaml-key | 配置键 qiniu：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, config
+- [F2582a986-S0019] 行 198-207 | yaml-key | 配置键 minio：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, config
+- [F2582a986-S0020] 行 208-216 | yaml-key | 配置键 aliyun-oss：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, config
+- [F2582a986-S0021] 行 217-225 | yaml-key | 配置键 tencent-cos：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: configuration
+- risks: -
+- tags: system-config, yaml-key, config
+- [F2582a986-S0022] 行 226-237 | yaml-key | 配置键 aws-s3：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, config
+- [F2582a986-S0023] 行 238-246 | yaml-key | 配置键 cloudflare-r2：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, config
+- [F2582a986-S0024] 行 247-254 | yaml-key | 配置键 hua-wei-obs：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, config
+- [F2582a986-S0025] 行 255-258 | yaml-key | 配置键 excel：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, config
+- [F2582a986-S0026] 行 259-263 | yaml-key | 配置键 disk-list：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: Use, CorsByRules
+- risks: -
+- tags: system-config, yaml-key
+- [F2582a986-S0027] 行 264-277 | yaml-key | 配置键 cors：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key
+- [F2582a986-S0028] 行 278-283 | yaml-key | 配置键 mcp：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, yaml-key, ai-tooling
+
+## [F72f3b2ea] server/config.yaml
+- 语言: yaml
+- 领域: system-config (系统配置与运行时)
+- 行数: 284
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F72f3b2ea-S0001] 行 1-3 | preamble | 逻辑段 preamble：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, preamble, security, config
+- [F72f3b2ea-S0002] 行 4-9 | yaml-key | 配置键 jwt：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, security, config
+- [F72f3b2ea-S0003] 行 10-21 | yaml-key | 配置键 zap：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, config
+- [F72f3b2ea-S0004] 行 22-34 | yaml-key | 配置键 redis：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, config
+- [F72f3b2ea-S0005] 行 35-46 | yaml-key | 配置键 redis-list：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, config
+- [F72f3b2ea-S0006] 行 47-63 | yaml-key | 配置键 mongo：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, config
+- [F72f3b2ea-S0007] 行 64-73 | yaml-key | 配置键 email：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, config
+- [F72f3b2ea-S0008] 行 74-93 | yaml-key | 配置键 system：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, database, config
+- [F72f3b2ea-S0009] 行 94-102 | yaml-key | 配置键 captcha：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, database, config
+- [F72f3b2ea-S0010] 行 103-116 | yaml-key | 配置键 mysql：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, database, config
+- [F72f3b2ea-S0011] 行 117-127 | yaml-key | 配置键 pgsql：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, database, config
+- [F72f3b2ea-S0012] 行 128-138 | yaml-key | 配置键 oracle：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, config
+- [F72f3b2ea-S0013] 行 139-149 | yaml-key | 配置键 mssql：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, database, config
+- [F72f3b2ea-S0014] 行 150-160 | yaml-key | 配置键 sqlite：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, database, config
+- [F72f3b2ea-S0015] 行 161-176 | yaml-key | 配置键 db-list：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, database, config
+- [F72f3b2ea-S0016] 行 177-181 | yaml-key | 配置键 local：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, yaml-key, config
+- [F72f3b2ea-S0017] 行 182-189 | yaml-key | 配置键 autocode：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: configuration
+- risks: -
+- tags: codegen-ai, yaml-key, config
+- [F72f3b2ea-S0018] 行 190-199 | yaml-key | 配置键 qiniu：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, config
+- [F72f3b2ea-S0019] 行 200-209 | yaml-key | 配置键 minio：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, config
+- [F72f3b2ea-S0020] 行 210-218 | yaml-key | 配置键 aliyun-oss：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, config
+- [F72f3b2ea-S0021] 行 219-227 | yaml-key | 配置键 tencent-cos：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: configuration
+- risks: -
+- tags: system-config, yaml-key, config
+- [F72f3b2ea-S0022] 行 228-239 | yaml-key | 配置键 aws-s3：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, config
+- [F72f3b2ea-S0023] 行 240-248 | yaml-key | 配置键 cloudflare-r2：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, config
+- [F72f3b2ea-S0024] 行 249-256 | yaml-key | 配置键 hua-wei-obs：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, config
+- [F72f3b2ea-S0025] 行 257-260 | yaml-key | 配置键 excel：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key, config
+- [F72f3b2ea-S0026] 行 261-265 | yaml-key | 配置键 disk-list：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: Use, CorsByRules
+- risks: -
+- tags: system-config, yaml-key
+- [F72f3b2ea-S0027] 行 266-278 | yaml-key | 配置键 cors：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, yaml-key
+- [F72f3b2ea-S0028] 行 279-284 | yaml-key | 配置键 mcp：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, yaml-key, ai-tooling
+
+## [F97647ff1] server/Dockerfile
+- 语言: dockerfile
+- 领域: system-config (系统配置与运行时)
+- 行数: 32
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F97647ff1-S0001] 行 1-32 | block | 逻辑段 block：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, block, database, config
+
+## [F56d027a7] server/go.mod
+- 语言: text
+- 领域: system-config (系统配置与运行时)
+- 行数: 208
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F56d027a7-S0001] 行 1-208 | block | 逻辑段 block：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: require
+- risks: -
+- tags: mcp-skills, block, database, security, ai-tooling, plugin, config
+
+## [F893b85e4] server/go.sum
+- 语言: text
+- 领域: system-config (系统配置与运行时)
+- 行数: 881
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F893b85e4-S0001] 行 1-881 | block | 逻辑段 block：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: 逻辑段较长，建议拆分以降低维护成本
+- tags: mcp-skills, block, database, security, ai-tooling, plugin, config
+
+## [F2ce18386] server/main.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 52
+- imports: github.com/flipped-aurora/gin-vue-admin/server/core, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/initialize, go.uber.org/zap
+- entrypoints: backend-main, main-function
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F2ce18386-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F2ce18386-S0002] 行 3-29 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, security, config
+- [F2ce18386-S0003] 行 30-38 | go-func | 函数 main：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: main, initializeSystem, RunServer
+- risks: -
+- tags: system-config, go-func
+- [F2ce18386-S0004] 行 39-52 | go-func | 函数 initializeSystem：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: 修改全局状态
+- calls: initializeSystem, Viper, OtherInit, Zap, ReplaceGlobals, Gorm, Timer, DBList, SetupHandlers, RegisterTables
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+
+## [F311be680] server/README.md
+- 语言: markdown
+- 领域: system-config (系统配置与运行时)
+- 行数: 55
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F311be680-S0001] 行 1-55 | md-heading | 文档章节「server项目结构」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, md-heading, database, config
+

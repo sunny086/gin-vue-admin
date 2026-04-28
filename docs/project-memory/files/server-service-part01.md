@@ -1,0 +1,845 @@
+# server-service
+
+- 文件数量：47
+
+## [Fd35056a5] server/service/enter.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 14
+- imports: github.com/flipped-aurora/gin-vue-admin/server/service/example, github.com/flipped-aurora/gin-vue-admin/server/service/system
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fd35056a5-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fd35056a5-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Fd35056a5-S0003] 行 8-9 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var
+- [Fd35056a5-S0004] 行 10-14 | go-type | 类型 ServiceGroup：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+
+## [F5577ab0e] server/service/example/enter.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 9
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F5577ab0e-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F5577ab0e-S0002] 行 3-9 | go-type | 类型 ServiceGroup：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+
+## [F3b15300f] server/service/example/exa_attachment_category.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 67
+- imports: errors, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/example, gorm.io/gorm
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F3b15300f-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F3b15300f-S0002] 行 3-9 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, database
+- [F3b15300f-S0003] 行 10-12 | go-type | 类型 AttachmentCategoryService：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F3b15300f-S0004] 行 13-36 | go-func | 函数 AddCategory：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: req *example.ExaAttachmentCategory
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: AddCategory, Is, Take, New, Model, Where, Updates, Create
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+- [F3b15300f-S0005] 行 37-46 | go-func | 函数 DeleteCategory：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: id *int
+- outputs: error
+- side_effects: 写入数据库
+- calls: DeleteCategory, Model, Where, Count, New, Unscoped, Delete
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+- [F3b15300f-S0006] 行 47-56 | go-func | 函数 GetCategoryList：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: (res []*example.ExaAttachmentCategory, err error)
+- side_effects: -
+- calls: GetCategoryList, Model, Find, getChildrenList
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+- [F3b15300f-S0007] 行 57-67 | go-func | 函数 getChildrenList：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: categories []example.ExaAttachmentCategory, parentID uint
+- outputs: []*example.ExaAttachmentCategory
+- side_effects: -
+- calls: getChildrenList
+- risks: -
+- tags: system-config, go-func
+
+## [F4573b516] server/service/example/exa_breakpoint_continue.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 72
+- imports: errors, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/example, gorm.io/gorm
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F4573b516-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F4573b516-S0002] 行 3-10 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, database
+- [F4573b516-S0003] 行 11-12 | go-type | 类型 FileUploadAndDownloadService：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F4573b516-S0004] 行 13-20 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var
+- [F4573b516-S0005] 行 21-42 | go-func | 函数 FindOrCreateFile：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: fileMd5 string, fileName string, chunkTotal int
+- outputs: (file example.ExaFile, err error)
+- side_effects: 写入数据库
+- calls: FindOrCreateFile, Is, Where, First, Preload, FirstOrCreate, Create
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+- [F4573b516-S0006] 行 43-57 | go-func | 函数 CreateFileChunk：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: id uint, fileChunkPath string, fileChunkNumber int
+- outputs: error
+- side_effects: 写入数据库
+- calls: CreateFileChunk, Create
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F4573b516-S0007] 行 58-72 | go-func | 函数 DeleteFileChunk：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: fileMd5 string, filePath string
+- outputs: error
+- side_effects: 写入数据库
+- calls: DeleteFileChunk, Where, First, Updates, Delete, Unscoped
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+
+## [F2ce873ef] server/service/example/exa_customer.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 88
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/request, github.com/flipped-aurora/gin-vue-admin/server/model/example, github.com/flipped-aurora/gin-vue-admin/server/model/system
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F2ce873ef-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F2ce873ef-S0002] 行 3-10 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F2ce873ef-S0003] 行 11-12 | go-type | 类型 CustomerService：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F2ce873ef-S0004] 行 13-20 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var
+- [F2ce873ef-S0005] 行 21-31 | go-func | 函数 CreateExaCustomer：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: e example.ExaCustomer
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: CreateExaCustomer, Create
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F2ce873ef-S0006] 行 32-42 | go-func | 函数 DeleteExaCustomer：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: e example.ExaCustomer
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: DeleteExaCustomer, Delete
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F2ce873ef-S0007] 行 43-53 | go-func | 函数 UpdateExaCustomer：执行更新与配置写入流程，位于「系统配置与运行时」域。
+- inputs: e *example.ExaCustomer
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: UpdateExaCustomer, Save
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F2ce873ef-S0008] 行 54-64 | go-func | 函数 GetExaCustomer：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: id uint
+- outputs: (customer example.ExaCustomer, err error)
+- side_effects: -
+- calls: GetExaCustomer, Where, First
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F2ce873ef-S0009] 行 65-88 | go-func | 函数 GetCustomerInfoList：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: sysUserAuthorityID uint, info request.PageInfo
+- outputs: (list interface{}, total int64, err error)
+- side_effects: -
+- calls: GetCustomerInfoList, Model, GetAuthorityInfo, Where, Count, Limit, Offset, Preload, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database, security
+
+## [F4ab12222] server/service/example/exa_file_upload_download.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 131
+- imports: errors, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/example, github.com/flipped-aurora/gin-vue-admin/server/model/example/request, github.com/flipped-aurora/gin-vue-admin/server/utils/upload, gorm.io/gorm, mime/multipart, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F4ab12222-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F4ab12222-S0002] 行 3-20 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, database
+- [F4ab12222-S0003] 行 21-30 | go-func | 函数 Upload：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: file example.ExaFileUploadAndDownload
+- outputs: error
+- side_effects: 写入数据库
+- calls: Upload, Create
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F4ab12222-S0004] 行 31-42 | go-func | 函数 FindFile：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: id uint
+- outputs: (example.ExaFileUploadAndDownload, error)
+- side_effects: -
+- calls: FindFile, Where, First
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F4ab12222-S0005] 行 43-57 | go-func | 函数 DeleteFile：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: file example.ExaFileUploadAndDownload
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: DeleteFile, FindFile, NewOss, New, Where, Unscoped, Delete
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F4ab12222-S0006] 行 58-68 | go-func | 函数 EditFileName：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: file example.ExaFileUploadAndDownload
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: EditFileName, Where, First, Update
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F4ab12222-S0007] 行 69-95 | go-func | 函数 GetFileRecordInfoList：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: info request.ExaAttachmentCategorySearch
+- outputs: (list []example.ExaFileUploadAndDownload, total int64, err error)
+- side_effects: -
+- calls: GetFileRecordInfoList, Model, Where, Count, Limit, Offset, Order, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+- [F4ab12222-S0008] 行 96-127 | go-func | 函数 UploadFile：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: header *multipart.FileHeader, noSave string, classId int
+- outputs: (file example.ExaFileUploadAndDownload, err error)
+- side_effects: -
+- calls: UploadFile, NewOss, Split, Where, First, Is, Upload
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+- [F4ab12222-S0009] 行 128-131 | go-func | 函数 ImportURL：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: file *[]example.ExaFileUploadAndDownload
+- outputs: error
+- side_effects: 写入数据库
+- calls: ImportURL, Create
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+
+## [F413674fb] server/service/system/ai_workflow_markdown.go
+- 语言: go
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 469
+- imports: context, fmt, github.com/flipped-aurora/gin-vue-admin/server/global, os, path/filepath, strings, time, unicode
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F413674fb-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-package
+- [F413674fb-S0002] 行 3-18 | go-import | 逻辑段 go-import：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: codegen-ai, go-import
+- [F413674fb-S0003] 行 19-24 | go-const-var | 逻辑段 go-const-var：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-const-var, ai-tooling
+- [F413674fb-S0004] 行 25-93 | go-func | 函数 DumpMarkdown：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: ctx context.Context, userID uint, info systemReq.SysAIWorkflowMarkdownDump
+- outputs: (result systemResp.AIWorkflowMarkdownDumpResult, err error)
+- side_effects: 写入文件系统
+- calls: DumpMarkdown, Errorf, TrimSpace, cloneJSONMap, sanitizeMessages, titleFromMessages, titleFromForm, summaryFromResult, buildAIWorkflowMarkdown, Join, workflowMarkdownSubDir, MkdirAll
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, ai-tooling
+- [F413674fb-S0005] 行 94-100 | go-func | 函数 workflowMarkdownSubDir：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: tab string
+- outputs: string
+- side_effects: -
+- calls: workflowMarkdownSubDir
+- risks: -
+- tags: codegen-ai, go-func, ai-tooling
+- [F413674fb-S0006] 行 101-123 | go-func | 函数 buildWorkflowMarkdownFileName：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: tab, title string, sessionID uint
+- outputs: string
+- side_effects: -
+- calls: buildWorkflowMarkdownFileName, sanitizeWorkflowFileStem, Sprintf, Now, Format
+- risks: -
+- tags: codegen-ai, go-func, ai-tooling
+- [F413674fb-S0007] 行 124-143 | go-func | 函数 sanitizeWorkflowFileStem：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: title string
+- outputs: string
+- side_effects: -
+- calls: sanitizeWorkflowFileStem, TrimSpace, IsLetter, IsDigit, WriteRune, ToLower, IsSpace, Len, WriteByte, Trim, String
+- risks: -
+- tags: codegen-ai, go-func
+- [F413674fb-S0008] 行 144-150 | go-func | 函数 buildAIWorkflowMarkdown：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: session system.SysAIWorkflowSession
+- outputs: string
+- side_effects: -
+- calls: buildAIWorkflowMarkdown, buildAnalysisMarkdown, buildPromptWorkflowMarkdown
+- risks: -
+- tags: codegen-ai, go-func
+- [F413674fb-S0009] 行 151-232 | go-func | 函数 buildAnalysisMarkdown：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: session system.SysAIWorkflowSession
+- outputs: string
+- side_effects: -
+- calls: buildAnalysisMarkdown, writeMarkdownTitle, writeMarkdownMeta, firstNonEmpty, getString, writeMarkdownSection, writeMarkdownKeyValue, formatBool, getBool, writeStringListSection, getStringSlice, getMapSlice
+- risks: -
+- tags: codegen-ai, go-func
+- [F413674fb-S0010] 行 233-285 | go-func | 函数 buildPromptWorkflowMarkdown：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: session system.SysAIWorkflowSession
+- outputs: string
+- side_effects: -
+- calls: buildPromptWorkflowMarkdown, writeMarkdownTitle, writeMarkdownMeta, firstNonEmpty, getString, writeMarkdownSection, writeMarkdownKeyValue, getMapSlice, TrimSpace, WriteString, Sprintf, formatBool
+- risks: -
+- tags: codegen-ai, go-func, ai-tooling
+- [F413674fb-S0011] 行 286-290 | go-func | 函数 writeMarkdownTitle：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: builder *strings.Builder, title string
+- outputs: -
+- side_effects: -
+- calls: writeMarkdownTitle, WriteString
+- risks: -
+- tags: codegen-ai, go-func
+- [F413674fb-S0012] 行 291-300 | go-func | 函数 writeMarkdownMeta：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: builder *strings.Builder, pairs ...string
+- outputs: -
+- side_effects: -
+- calls: writeMarkdownMeta, TrimSpace, WriteString, Sprintf
+- risks: -
+- tags: codegen-ai, go-func
+- [F413674fb-S0013] 行 301-305 | go-func | 函数 writeMarkdownSection：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: builder *strings.Builder, title string
+- outputs: -
+- side_effects: -
+- calls: writeMarkdownSection, WriteString
+- risks: -
+- tags: codegen-ai, go-func
+- [F413674fb-S0014] 行 306-319 | go-func | 函数 writeMarkdownKeyValue：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: builder *strings.Builder, pairs ...string
+- outputs: -
+- side_effects: -
+- calls: writeMarkdownKeyValue, TrimSpace, WriteString, Sprintf
+- risks: -
+- tags: codegen-ai, go-func
+- [F413674fb-S0015] 行 320-336 | go-func | 函数 writeStringListSection：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: builder *strings.Builder, title string, list []string
+- outputs: -
+- side_effects: -
+- calls: writeStringListSection, WriteString, TrimSpace
+- risks: -
+- tags: codegen-ai, go-func
+- [F413674fb-S0016] 行 337-355 | go-func | 函数 writeMarkdownAppendix：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: builder *strings.Builder, resultData common.JSONMap
+- outputs: -
+- side_effects: -
+- calls: writeMarkdownAppendix, getString, TrimSpace, WriteString
+- risks: -
+- tags: codegen-ai, go-func
+- [F413674fb-S0017] 行 356-373 | go-func | 函数 getString：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: data map[string]interface{}, key string
+- outputs: string
+- side_effects: -
+- calls: getString, TrimSpace, String, Sprintf
+- risks: -
+- tags: codegen-ai, go-func
+- [F413674fb-S0018] 行 374-391 | go-func | 函数 getBool：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: data map[string]interface{}, key string
+- outputs: bool
+- side_effects: -
+- calls: getBool, EqualFold, TrimSpace
+- risks: -
+- tags: codegen-ai, go-func
+- [F413674fb-S0019] 行 392-399 | go-func | 函数 getStringSlice：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: data map[string]interface{}, key string
+- outputs: []string
+- side_effects: -
+- calls: getStringSlice, toStringSlice
+- risks: -
+- tags: codegen-ai, go-func
+- [F413674fb-S0020] 行 400-407 | go-func | 函数 getMapSlice：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: data map[string]interface{}, key string
+- outputs: []map[string]interface{}
+- side_effects: -
+- calls: getMapSlice, toMapSlice
+- risks: -
+- tags: codegen-ai, go-func
+- [F413674fb-S0021] 行 408-435 | go-func | 函数 toStringSlice：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: value interface{}
+- outputs: []string
+- side_effects: -
+- calls: toStringSlice, TrimSpace, Sprintf
+- risks: -
+- tags: codegen-ai, go-func
+- [F413674fb-S0022] 行 436-452 | go-func | 函数 toMapSlice：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: value interface{}
+- outputs: []map[string]interface{}
+- side_effects: -
+- calls: toMapSlice
+- risks: -
+- tags: codegen-ai, go-func
+- [F413674fb-S0023] 行 453-459 | go-func | 函数 formatBool：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: value bool
+- outputs: string
+- side_effects: -
+- calls: formatBool
+- risks: -
+- tags: codegen-ai, go-func
+- [F413674fb-S0024] 行 460-469 | go-func | 函数 markdownCell：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: value string
+- outputs: string
+- side_effects: -
+- calls: markdownCell, TrimSpace, ReplaceAll
+- risks: -
+- tags: codegen-ai, go-func
+
+## [F446b6e8c] server/service/system/ai_workflow_session.go
+- 语言: go
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 185
+- imports: context, errors, github.com/flipped-aurora/gin-vue-admin/server/global, gorm.io/gorm, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F446b6e8c-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-package
+- [F446b6e8c-S0002] 行 3-14 | go-import | 逻辑段 go-import：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: codegen-ai, go-import, database
+- [F446b6e8c-S0003] 行 15-16 | go-type | 类型 aiWorkflowSession：定义该文件的数据结构或接口边界，支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-type
+- [F446b6e8c-S0004] 行 17-18 | go-const-var | 逻辑段 go-const-var：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-const-var
+- [F446b6e8c-S0005] 行 19-57 | go-func | 函数 Save：执行更新与配置写入流程，位于「代码生成与AI工作流」域。
+- inputs: ctx context.Context, userID uint, info systemReq.SysAIWorkflowSessionUpsert
+- outputs: (session system.SysAIWorkflowSession, err error)
+- side_effects: 写入数据库
+- calls: Save, New, WithContext, Where, First, truncateText, firstNonEmpty, TrimSpace, titleFromMessages, titleFromForm, summaryFromResult, cloneJSONMap
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, ai-tooling
+- [F446b6e8c-S0006] 行 58-79 | go-func | 函数 GetList：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: ctx context.Context, userID uint, info systemReq.SysAIWorkflowSessionSearch
+- outputs: (list []systemResp.SysAIWorkflowSessionListItem, total int64, err error)
+- side_effects: -
+- calls: GetList, WithContext, Model, Where, TrimSpace, Count, Select, Scopes, Paginate, Order, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database
+- [F446b6e8c-S0007] 行 80-84 | go-func | 函数 GetDetail：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: ctx context.Context, userID uint, id uint
+- outputs: (session system.SysAIWorkflowSession, err error)
+- side_effects: -
+- calls: GetDetail, WithContext, Where, First
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [F446b6e8c-S0008] 行 85-95 | go-func | 函数 Delete：执行删除与清理流程，位于「代码生成与AI工作流」域。
+- inputs: ctx context.Context, userID uint, id uint
+- outputs: error
+- side_effects: 写入数据库
+- calls: Delete, WithContext, Where
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database
+- [F446b6e8c-S0009] 行 96-104 | go-func | 函数 titleFromMessages：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: messages []system.AIWorkflowMessage
+- outputs: string
+- side_effects: -
+- calls: titleFromMessages, TrimSpace
+- risks: -
+- tags: codegen-ai, go-func
+- [F446b6e8c-S0010] 行 105-116 | go-func | 函数 titleFromForm：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: info systemReq.SysAIWorkflowSessionUpsert
+- outputs: string
+- side_effects: -
+- calls: titleFromForm, TrimSpace
+- risks: -
+- tags: codegen-ai, go-func
+- [F446b6e8c-S0011] 行 117-126 | go-func | 函数 summaryFromResult：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: resultData map[string]interface{}
+- outputs: string
+- side_effects: -
+- calls: summaryFromResult, TrimSpace
+- risks: -
+- tags: codegen-ai, go-func
+- [F446b6e8c-S0012] 行 127-145 | go-func | 函数 sanitizeMessages：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: messages []system.AIWorkflowMessage
+- outputs: []system.AIWorkflowMessage
+- side_effects: -
+- calls: sanitizeMessages, TrimSpace, cloneJSONMap
+- risks: -
+- tags: codegen-ai, go-func
+- [F446b6e8c-S0013] 行 146-156 | go-func | 函数 cloneJSONMap：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: source map[string]interface{}
+- outputs: map[string]interface{}
+- side_effects: -
+- calls: cloneJSONMap
+- risks: -
+- tags: codegen-ai, go-func
+- [F446b6e8c-S0014] 行 157-165 | go-func | 函数 lastAssistantMessageID：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: messages []system.AIWorkflowMessage
+- outputs: string
+- side_effects: -
+- calls: lastAssistantMessageID, TrimSpace
+- risks: -
+- tags: codegen-ai, go-func
+- [F446b6e8c-S0015] 行 166-174 | go-func | 函数 firstNonEmpty：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: values ...string
+- outputs: string
+- side_effects: -
+- calls: firstNonEmpty, TrimSpace
+- risks: -
+- tags: codegen-ai, go-func
+- [F446b6e8c-S0016] 行 175-185 | go-func | 函数 truncateText：控制服务运行状态，位于「代码生成与AI工作流」域。
+- inputs: value string, size int
+- outputs: string
+- side_effects: -
+- calls: truncateText, rune, TrimSpace, string
+- risks: -
+- tags: codegen-ai, go-func
+
+## [Fb174d1dd] server/service/system/auto_code_history.go
+- 语言: go
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 218
+- imports: context, encoding/json, fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/flipped-aurora/gin-vue-admin/server/utils/ast, github.com/pkg/errors, go.uber.org/zap, path, path/filepath, strconv, strings, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fb174d1dd-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-package
+- [Fb174d1dd-S0002] 行 3-23 | go-import | 逻辑段 go-import：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: codegen-ai, go-import
+- [Fb174d1dd-S0003] 行 24-25 | go-const-var | 逻辑段 go-const-var：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-const-var
+- [Fb174d1dd-S0004] 行 26-30 | go-type | 类型 autoCodeHistory：定义该文件的数据结构或接口边界，支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-type
+- [Fb174d1dd-S0005] 行 31-42 | go-func | 函数 Create：执行创建或新增流程，位于「代码生成与AI工作流」域。
+- inputs: ctx context.Context, info request.SysAutoHistoryCreate
+- outputs: error
+- side_effects: 写入数据库
+- calls: Create, WithContext, Wrap
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [Fb174d1dd-S0006] 行 43-54 | go-func | 函数 First：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: ctx context.Context, info common.GetById
+- outputs: (string, error)
+- side_effects: -
+- calls: First, WithContext, Model, Where, Pluck, Wrap
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database
+- [Fb174d1dd-S0007] 行 55-63 | go-func | 函数 Repeat：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: businessDB, structName, abbreviation, Package string
+- outputs: bool
+- side_effects: -
+- calls: Repeat, Model, Where, and, Count, Debug
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database
+- [Fb174d1dd-S0008] 行 64-186 | go-func | 函数 RollBack：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: ctx context.Context, info request.SysAutoHistoryRollBack
+- outputs: error
+- side_effects: 写入数据库
+- calls: RollBack, Where, First, Delete, ApiIds, DeleteApisByIds, Error, DeleteBaseMenu, int, Wrap, DropTable, Join
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database
+- [Fb174d1dd-S0009] 行 187-197 | go-func | 函数 Delete：执行删除与清理流程，位于「代码生成与AI工作流」域。
+- inputs: ctx context.Context, info common.GetById
+- outputs: error
+- side_effects: 写入数据库
+- calls: Delete, WithContext, Where, Uint, Wrap
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [Fb174d1dd-S0010] 行 198-210 | go-func | 函数 GetList：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: ctx context.Context, info common.PageInfo
+- outputs: (list []model.SysAutoCodeHistory, total int64, err error)
+- side_effects: -
+- calls: GetList, WithContext, Model, Count, Scopes, Paginate, Order, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database
+- [Fb174d1dd-S0011] 行 211-218 | go-func | 函数 DropTable：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: BusinessDb, tableName string
+- outputs: error
+- side_effects: -
+- calls: DropTable, MustGetGlobalDBByDBName, Exec
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+
+## [F45de1bac] server/service/system/auto_code_llm.go
+- 语言: go
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 126
+- imports: context, errors, fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common, github.com/flipped-aurora/gin-vue-admin/server/utils/request, github.com/goccy/go-json, io, net/http, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F45de1bac-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-package
+- [F45de1bac-S0002] 行 3-17 | go-import | 逻辑段 go-import：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: codegen-ai, go-import
+- [F45de1bac-S0003] 行 18-59 | go-func | 函数 LLMAuto：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: ctx context.Context, llm common.JSONMap
+- outputs: (interface{}, error)
+- side_effects: -
+- calls: LLMAuto, buildLLMAutoPath, HttpRequestWithContextAndTimeout, Errorf, Close, ReadAll, previewResponseBody, Get, Unmarshal
+- risks: -
+- tags: codegen-ai, go-func
+- [F45de1bac-S0004] 行 60-90 | go-func | 函数 LLMAutoStream：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: ctx context.Context, llm common.JSONMap
+- outputs: (*http.Response, error)
+- side_effects: -
+- calls: LLMAutoStream, buildLLMAutoPath, cloneLLMAutoJSONMap, ToLower, TrimSpace, Sprintf, HttpRequestWithContextAndTimeout, Errorf
+- risks: -
+- tags: codegen-ai, go-func
+- [F45de1bac-S0005] 行 91-103 | go-func | 函数 buildLLMAutoPath：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: llm common.JSONMap
+- outputs: (string, error)
+- side_effects: -
+- calls: buildLLMAutoPath, New, TrimSpace, Sprintf, ReplaceAll
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, config
+- [F45de1bac-S0006] 行 104-111 | go-func | 函数 cloneLLMAutoJSONMap：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: src common.JSONMap
+- outputs: common.JSONMap
+- side_effects: -
+- calls: cloneLLMAutoJSONMap
+- risks: -
+- tags: codegen-ai, go-func
+- [F45de1bac-S0007] 行 112-126 | go-func | 函数 previewResponseBody：输出渲染结果，位于「代码生成与AI工作流」域。
+- inputs: body []byte
+- outputs: string
+- side_effects: -
+- calls: previewResponseBody, TrimSpace, string, ReplaceAll, Join, Fields, rune
+- risks: -
+- tags: codegen-ai, go-func
+
+## [F9815a819] server/service/system/auto_code_mcp.go
+- 语言: go
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 46
+- imports: context, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system/request, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/flipped-aurora/gin-vue-admin/server/utils/autocode, os, path/filepath, text/template
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F9815a819-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-package
+- [F9815a819-S0002] 行 3-13 | go-import | 逻辑段 go-import：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: codegen-ai, go-import
+- [F9815a819-S0003] 行 14-46 | go-func | 函数 CreateMcp：执行创建或新增流程，位于「MCP与Skills生态」域。
+- inputs: ctx context.Context, info request.AutoMcpTool
+- outputs: (toolFilePath string, err error)
+- side_effects: 写入数据库
+- calls: CreateMcp, Join, Base, New, Funcs, GetTemplateFuncMap, ParseFiles, HumpToUnderscore, Create, Close, Execute
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: mcp-skills, go-func, ai-tooling
+
+## [Fa36a660c] server/service/system/auto_code_package_test.go
+- 语言: go
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 109
+- imports: context, github.com/flipped-aurora/gin-vue-admin/server/model/system/request, reflect, testing
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fa36a660c-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-package
+- [Fa36a660c-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: codegen-ai, go-import
+- [Fa36a660c-S0003] 行 12-54 | go-func | 函数 Test_autoCodePackage_Create：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: t *testing.T
+- outputs: -
+- side_effects: 写入数据库
+- calls: Test_autoCodePackage_Create, Background, Run, Create, Errorf
+- risks: -
+- tags: codegen-ai, go-func, plugin
+- [Fa36a660c-S0004] 行 55-109 | go-func | 函数 Test_autoCodePackage_templates：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: t *testing.T
+- outputs: -
+- side_effects: -
+- calls: Test_autoCodePackage_templates, Background, Run, templates, Errorf, Logf, Log, DeepEqual
+- risks: -
+- tags: codegen-ai, go-func, plugin
+

@@ -1,0 +1,816 @@
+# server-api
+
+- 文件数量：35
+
+## [Fc144f422] server/api/v1/enter.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 14
+- imports: github.com/flipped-aurora/gin-vue-admin/server/api/v1/example, github.com/flipped-aurora/gin-vue-admin/server/api/v1/system
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fc144f422-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fc144f422-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Fc144f422-S0003] 行 8-9 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var
+- [Fc144f422-S0004] 行 10-14 | go-type | 类型 ApiGroup：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+
+## [Fccbe24d5] server/api/v1/example/enter.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 18
+- imports: github.com/flipped-aurora/gin-vue-admin/server/service
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fccbe24d5-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fccbe24d5-S0002] 行 3-4 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-import
+- [Fccbe24d5-S0003] 行 5-11 | go-type | 类型 ApiGroup：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [Fccbe24d5-S0004] 行 12-18 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var
+
+## [F982cf4d0] server/api/v1/example/exa_attachment_category.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 83
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/response, github.com/flipped-aurora/gin-vue-admin/server/model/example, github.com/gin-gonic/gin, go.uber.org/zap
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F982cf4d0-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F982cf4d0-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F982cf4d0-S0003] 行 12-20 | go-type | 类型 AttachmentCategoryApi：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F982cf4d0-S0004] 行 21-38 | go-func | 函数 GetCategoryList：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetCategoryList, Error, FailWithMessage, OkWithData
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F982cf4d0-S0005] 行 39-63 | go-func | 函数 AddCategory：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: AddCategory, ShouldBindJSON, Error, FailWithMessage, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F982cf4d0-S0006] 行 64-83 | go-func | 函数 DeleteCategory：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: DeleteCategory, ShouldBindJSON, FailWithMessage, OkWithMessage
+- risks: -
+- tags: system-config, go-func
+
+## [Ff7a17591] server/api/v1/example/exa_breakpoint_continue.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 157
+- imports: fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/response, github.com/flipped-aurora/gin-vue-admin/server/model/example, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/gin-gonic/gin, go.uber.org/zap, io, mime/multipart, strconv, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Ff7a17591-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Ff7a17591-S0002] 行 3-28 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Ff7a17591-S0003] 行 29-88 | go-func | 函数 BreakpointContinue：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: BreakpointContinue, FormValue, Atoi, FormFile, Error, FailWithMessage, Open, Close, Println, ReadAll, CheckMd5, FindOrCreateFile
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [Ff7a17591-S0004] 行 89-110 | go-func | 函数 FindFile：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: FindFile, Query, Atoi, FindOrCreateFile, Error, FailWithMessage, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [Ff7a17591-S0005] 行 111-131 | go-func | 函数 BreakpointContinueFinish：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: BreakpointContinueFinish, Query, MakeFile, Error, FailWithDetailed, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [Ff7a17591-S0006] 行 132-157 | go-func | 函数 RemoveChunk：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: RemoveChunk, ShouldBindJSON, FailWithMessage, Error, Contains, DeleteFileChunk, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+
+## [F99795ac2] server/api/v1/example/exa_customer.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 177
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/request, github.com/flipped-aurora/gin-vue-admin/server/model/common/response, github.com/flipped-aurora/gin-vue-admin/server/model/example, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/gin-gonic/gin, go.uber.org/zap
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F99795ac2-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F99795ac2-S0002] 行 3-13 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F99795ac2-S0003] 行 14-24 | go-type | 类型 CustomerApi：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F99795ac2-S0004] 行 25-56 | go-func | 函数 CreateExaCustomer：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: CreateExaCustomer, ShouldBindJSON, FailWithMessage, Error, Verify, GetUserID, GetUserAuthorityId, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F99795ac2-S0005] 行 57-86 | go-func | 函数 DeleteExaCustomer：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: DeleteExaCustomer, ShouldBindJSON, FailWithMessage, Error, Verify, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F99795ac2-S0006] 行 87-121 | go-func | 函数 UpdateExaCustomer：执行更新与配置写入流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: UpdateExaCustomer, ShouldBindJSON, FailWithMessage, Error, Verify, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F99795ac2-S0007] 行 122-151 | go-func | 函数 GetExaCustomer：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetExaCustomer, ShouldBindQuery, FailWithMessage, Error, Verify, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F99795ac2-S0008] 行 152-177 | go-func | 函数 GetExaCustomerList：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetExaCustomerList, ShouldBindQuery, FailWithMessage, Error, Verify, GetCustomerInfoList, GetUserAuthorityId, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+
+## [F1340b2cb] server/api/v1/example/exa_file_upload_download.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 136
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/response, github.com/flipped-aurora/gin-vue-admin/server/model/example, github.com/flipped-aurora/gin-vue-admin/server/model/example/request, github.com/gin-gonic/gin, go.uber.org/zap, strconv
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F1340b2cb-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F1340b2cb-S0002] 行 3-13 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F1340b2cb-S0003] 行 14-24 | go-type | 类型 FileUploadAndDownloadApi：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F1340b2cb-S0004] 行 25-44 | go-func | 函数 UploadFile：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: UploadFile, DefaultQuery, FormFile, Atoi, DefaultPostForm, Error, FailWithMessage, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F1340b2cb-S0005] 行 45-68 | go-func | 函数 EditFileName：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: EditFileName, ShouldBindJSON, FailWithMessage, Error, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F1340b2cb-S0006] 行 69-92 | go-func | 函数 DeleteFile：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: DeleteFile, ShouldBindJSON, FailWithMessage, Error, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F1340b2cb-S0007] 行 93-121 | go-func | 函数 GetFileList：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetFileList, ShouldBindJSON, FailWithMessage, Error, GetFileRecordInfoList, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F1340b2cb-S0008] 行 122-136 | go-func | 函数 ImportURL：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: ImportURL, ShouldBindJSON, FailWithMessage, Error, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+
+## [Fb04e82ad] server/api/v1/system/ai_workflow_session.go
+- 语言: go
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 103
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/response, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/gin-gonic/gin, go.uber.org/zap
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fb04e82ad-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-package
+- [Fb04e82ad-S0002] 行 3-12 | go-import | 逻辑段 go-import：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: codegen-ai, go-import
+- [Fb04e82ad-S0003] 行 13-14 | go-type | 类型 AIWorkflowSessionApi：定义该文件的数据结构或接口边界，支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-type
+- [Fb04e82ad-S0004] 行 15-31 | go-func | 函数 Save：执行更新与配置写入流程，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: 写入数据库
+- calls: Save, ShouldBindJSON, FailWithMessage, Error, Context, GetUserID, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [Fb04e82ad-S0005] 行 32-53 | go-func | 函数 GetList：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetList, ShouldBindJSON, FailWithMessage, Error, Context, GetUserID, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [Fb04e82ad-S0006] 行 54-70 | go-func | 函数 GetDetail：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetDetail, ShouldBindJSON, FailWithMessage, Error, Context, GetUserID, Uint, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [Fb04e82ad-S0007] 行 71-86 | go-func | 函数 Delete：执行删除与清理流程，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: 写入数据库
+- calls: Delete, ShouldBindJSON, FailWithMessage, Error, Context, GetUserID, Uint, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [Fb04e82ad-S0008] 行 87-103 | go-func | 函数 DumpMarkdown：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: DumpMarkdown, ShouldBindJSON, FailWithMessage, Error, Context, GetUserID, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+
+## [Fdc1388c0] server/api/v1/system/auto_code_history.go
+- 语言: go
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 116
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/response, github.com/gin-gonic/gin, go.uber.org/zap
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fdc1388c0-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-package
+- [Fdc1388c0-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: codegen-ai, go-import
+- [Fdc1388c0-S0003] 行 12-22 | go-type | 类型 AutoCodeHistoryApi：定义该文件的数据结构或接口边界，支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-type
+- [Fdc1388c0-S0004] 行 23-46 | go-func | 函数 First：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: First, ShouldBindJSON, FailWithMessage, Error, Context, OkWithDetailed
+- risks: -
+- tags: codegen-ai, go-func
+- [Fdc1388c0-S0005] 行 47-71 | go-func | 函数 Delete：执行删除与清理流程，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: 写入数据库
+- calls: Delete, ShouldBindJSON, FailWithMessage, Error, Context, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [Fdc1388c0-S0006] 行 72-95 | go-func | 函数 RollBack：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: RollBack, ShouldBindJSON, FailWithMessage, Error, Context, OkWithMessage
+- risks: -
+- tags: codegen-ai, go-func
+- [Fdc1388c0-S0007] 行 96-116 | go-func | 函数 GetList：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetList, ShouldBindJSON, FailWithMessage, Error, Context, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+
+## [F715ea4cc] server/api/v1/system/auto_code_mcp.go
+- 语言: go
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 174
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/mcp/client, github.com/flipped-aurora/gin-vue-admin/server/model/common/response, github.com/flipped-aurora/gin-vue-admin/server/model/system/request, github.com/gin-gonic/gin, github.com/mark3labs/mcp-go/mcp, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F715ea4cc-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-package
+- [F715ea4cc-S0002] 行 3-14 | go-import | 逻辑段 go-import：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: mcp-skills, go-import, ai-tooling
+- [F715ea4cc-S0003] 行 15-30 | go-func | 函数 MCP：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: MCP, ShouldBindJSON, FailWithMessage, Error, CreateMcp, Context, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: mcp-skills, go-func
+- [F715ea4cc-S0004] 行 31-37 | go-func | 函数 MCPStatus：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: MCPStatus, OkWithData, GetManagedStandaloneStatus, Context, buildMCPServerConfig
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling
+- [F715ea4cc-S0005] 行 38-53 | go-func | 函数 MCPStart：控制服务运行状态，位于「MCP与Skills生态」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: MCPStart, StartManagedStandalone, Context, FailWithDetailed, buildMCPServerConfig, Error, OkWithDetailed
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling
+- [F715ea4cc-S0006] 行 54-69 | go-func | 函数 MCPStop：控制服务运行状态，位于「MCP与Skills生态」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: MCPStop, StopManagedStandalone, Context, FailWithDetailed, buildMCPServerConfig, Error, OkWithDetailed
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling
+- [F715ea4cc-S0007] 行 70-97 | go-func | 函数 MCPList：执行查询与读取流程，位于「MCP与Skills生态」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: MCPList, ResolveMCPServiceURL, NewClient, mcpServerName, incomingMCPHeaders, FailWithDetailed, GetManagedStandaloneStatus, Context, buildMCPServerConfig, Error, Close, ListTools
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling
+- [F715ea4cc-S0008] 行 98-103 | go-func | 函数 MCPRoutes：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: MCPRoutes, OkWithData
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: mcp-skills, go-func
+- [F715ea4cc-S0009] 行 104-138 | go-func | 函数 MCPTest：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: MCPTest, ShouldBindJSON, FailWithMessage, Error, ResolveMCPServiceURL, NewClient, mcpServerName, incomingMCPHeaders, Close, CallTool, Context, OkWithData
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling
+- [F715ea4cc-S0010] 行 139-150 | go-func | 函数 incomingMCPHeaders：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: c *gin.Context
+- outputs: map[string]string
+- side_effects: -
+- calls: incomingMCPHeaders, ConfiguredAuthHeader, GetHeader
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling
+- [F715ea4cc-S0011] 行 151-167 | go-func | 函数 buildMCPServerConfig：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: map[string]interface{}
+- side_effects: -
+- calls: buildMCPServerConfig, ResolveMCPServiceURL, ConfiguredAuthHeader, mcpServerName
+- risks: -
+- tags: mcp-skills, go-func, ai-tooling
+- [F715ea4cc-S0012] 行 168-174 | go-func | 函数 mcpServerName：承载该模块的核心逻辑，位于「MCP与Skills生态」域。
+- inputs: -
+- outputs: string
+- side_effects: -
+- calls: mcpServerName, TrimSpace
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: mcp-skills, go-func, ai-tooling
+
+## [F69c195e8] server/api/v1/system/auto_code_package.go
+- 语言: go
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 101
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/response, github.com/flipped-aurora/gin-vue-admin/server/model/system/request, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/gin-gonic/gin, go.uber.org/zap, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F69c195e8-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-package
+- [F69c195e8-S0002] 行 3-13 | go-import | 逻辑段 go-import：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: codegen-ai, go-import
+- [F69c195e8-S0003] 行 14-24 | go-type | 类型 AutoCodePackageApi：定义该文件的数据结构或接口边界，支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-type
+- [F69c195e8-S0004] 行 25-53 | go-func | 函数 Create：执行创建或新增流程，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: 写入数据库
+- calls: Create, ShouldBindJSON, Verify, FailWithMessage, Error, Contains, Context, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [F69c195e8-S0005] 行 54-73 | go-func | 函数 Delete：执行删除与清理流程，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: 写入数据库
+- calls: Delete, ShouldBindJSON, Context, Error, FailWithMessage, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [F69c195e8-S0006] 行 74-91 | go-func | 函数 All：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: All, Context, Error, FailWithMessage, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [F69c195e8-S0007] 行 92-101 | go-func | 函数 Templates：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: Templates, Context, Error, FailWithMessage, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+
+## [Fd4df00ad] server/api/v1/system/auto_code_plugin.go
+- 语言: go
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 219
+- imports: fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/response, github.com/flipped-aurora/gin-vue-admin/server/model/system/request, github.com/flipped-aurora/gin-vue-admin/server/plugin/plugin-tool/utils, github.com/gin-gonic/gin, go.uber.org/zap, os, path/filepath
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fd4df00ad-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-package
+- [Fd4df00ad-S0002] 行 3-16 | go-import | 逻辑段 go-import：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: plugin-ecosystem, go-import, plugin
+- [Fd4df00ad-S0003] 行 17-27 | go-type | 类型 AutoCodePluginApi：定义该文件的数据结构或接口边界，支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-type
+- [Fd4df00ad-S0004] 行 28-66 | go-func | 函数 Install：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: Install, FormFile, FailWithMessage, Error, OkWithData
+- risks: -
+- tags: codegen-ai, go-func
+- [Fd4df00ad-S0005] 行 67-85 | go-func | 函数 Packaged：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: Packaged, Query, PubPlug, Error, FailWithMessage, OkWithMessage, Sprintf
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [Fd4df00ad-S0006] 行 86-109 | go-func | 函数 InitMenu：完成初始化或注册流程，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: InitMenu, ShouldBindJSON, FailWithMessage, Error, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [Fd4df00ad-S0007] 行 110-133 | go-func | 函数 InitAPI：完成初始化或注册流程，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: InitAPI, ShouldBindJSON, FailWithMessage, Error, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [Fd4df00ad-S0008] 行 134-156 | go-func | 函数 InitDictionary：完成初始化或注册流程，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: InitDictionary, ShouldBindJSON, FailWithMessage, Error, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [Fd4df00ad-S0009] 行 157-207 | go-func | 函数 GetPluginList：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetPluginList, Join, ReadDir, IsDir, Name, GetPluginData, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, plugin, config
+- [Fd4df00ad-S0010] 行 208-219 | go-func | 函数 Remove：执行删除与清理流程，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: Remove, Query, Error, FailWithMessage, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, plugin
+
+## [Fb6cd4bca] server/api/v1/system/auto_code_template.go
+- 语言: go
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 122
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/response, github.com/flipped-aurora/gin-vue-admin/server/model/system/request, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/gin-gonic/gin, go.uber.org/zap
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fb6cd4bca-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-package
+- [Fb6cd4bca-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: codegen-ai, go-import
+- [Fb6cd4bca-S0003] 行 12-22 | go-type | 类型 AutoCodeTemplateApi：定义该文件的数据结构或接口边界，支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-type
+- [Fb6cd4bca-S0004] 行 23-58 | go-func | 函数 Preview：输出渲染结果，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: Preview, ShouldBindJSON, FailWithMessage, Error, Verify, Pretreatment, FirstUpper, Context, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [Fb6cd4bca-S0005] 行 59-93 | go-func | 函数 Create：执行创建或新增流程，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: 写入数据库
+- calls: Create, ShouldBindJSON, FailWithMessage, Error, Verify, Pretreatment, Context, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [Fb6cd4bca-S0006] 行 94-122 | go-func | 函数 AddFunc：执行创建或新增流程，位于「代码生成与AI工作流」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: AddFunc, ShouldBindJSON, FailWithMessage, Error, GetApiAndServer, OkWithDetailed, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+
+## [F8599db48] server/api/v1/system/enter.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 60
+- imports: github.com/flipped-aurora/gin-vue-admin/server/service
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F8599db48-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F8599db48-S0002] 行 3-4 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-import
+- [F8599db48-S0003] 行 5-32 | go-type | 类型 ApiGroup：定义该文件的数据结构或接口边界，支撑「MCP与Skills生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-type
+- [F8599db48-S0004] 行 33-60 | go-const-var | 逻辑段 go-const-var：承载「MCP与Skills生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, go-const-var, security, ai-tooling
+
+## [F8db5cfbe] server/api/v1/system/sys_api_token.go
+- 语言: go
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 82
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/response, github.com/flipped-aurora/gin-vue-admin/server/model/system, github.com/gin-gonic/gin, go.uber.org/zap
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F8db5cfbe-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-package
+- [F8db5cfbe-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: auth-access, go-import
+- [F8db5cfbe-S0003] 行 12-14 | go-type | 类型 ApiTokenApi：定义该文件的数据结构或接口边界，支撑「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-type
+- [F8db5cfbe-S0004] 行 15-44 | go-func | 函数 CreateApiToken：执行创建或新增流程，位于「鉴权与访问控制」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: CreateApiToken, ShouldBindJSON, FailWithMessage, Error, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, security
+- [F8db5cfbe-S0005] 行 45-66 | go-func | 函数 GetApiTokenList：执行查询与读取流程，位于「鉴权与访问控制」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetApiTokenList, ShouldBindJSON, FailWithMessage, Error, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func
+- [F8db5cfbe-S0006] 行 67-82 | go-func | 函数 DeleteApiToken：执行删除与清理流程，位于「鉴权与访问控制」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: DeleteApiToken, ShouldBindJSON, FailWithMessage, Error, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func
+

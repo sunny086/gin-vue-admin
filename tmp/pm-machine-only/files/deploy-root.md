@@ -1,0 +1,293 @@
+# deploy-root
+
+- 文件数量：10
+
+## [F7b68c3d7] deploy/docker-compose/docker-compose.yaml
+- 语言: yaml
+- 领域: deploy-ops (部署与运维)
+- 行数: 91
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: devops
+- 逻辑段:
+- [F7b68c3d7-S0001] 行 1-3 | preamble | 逻辑段 preamble：承载「部署与运维」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: deploy-ops, preamble
+- [F7b68c3d7-S0002] 行 4-11 | yaml-key | 配置键 networks：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: deploy-ops, yaml-key, database, config
+- [F7b68c3d7-S0003] 行 12-15 | yaml-key | 配置键 volumes：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: deploy-ops, yaml-key, database
+- [F7b68c3d7-S0004] 行 16-91 | yaml-key | 配置键 services：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: deploy-ops, yaml-key, database, config
+
+## [F5c3f3866] deploy/docker/Dockerfile
+- 语言: dockerfile
+- 领域: deploy-ops (部署与运维)
+- 行数: 18
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: devops
+- 逻辑段:
+- [F5c3f3866-S0001] 行 1-18 | block | 逻辑段 block：承载「部署与运维」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: deploy-ops, block, database, config
+
+## [F3b6474f3] deploy/docker/entrypoint.sh
+- 语言: shell
+- 领域: deploy-ops (部署与运维)
+- 行数: 19
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: devops
+- 逻辑段:
+- [F3b6474f3-S0001] 行 1-19 | block | 逻辑段 block：承载「部署与运维」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: deploy-ops, block, database
+
+## [Fd600d50e] deploy/kubernetes/server/gva-server-configmap.yaml
+- 语言: yaml
+- 领域: deploy-ops (部署与运维)
+- 行数: 149
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: devops
+- 逻辑段:
+- [Fd600d50e-S0001] 行 1-2 | preamble | 逻辑段 preamble：承载「部署与运维」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: deploy-ops, preamble
+- [Fd600d50e-S0002] 行 3-11 | yaml-key | 配置键 metadata：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: deploy-ops, yaml-key, config
+- [Fd600d50e-S0003] 行 12-149 | yaml-key | 配置键 data：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: configuration, ParseDuration
+- risks: -
+- tags: codegen-ai, yaml-key, database, security, config
+
+## [F63129221] deploy/kubernetes/server/gva-server-deployment.yaml
+- 语言: yaml
+- 领域: deploy-ops (部署与运维)
+- 行数: 74
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: devops
+- 逻辑段:
+- [F63129221-S0001] 行 1-2 | preamble | 逻辑段 preamble：承载「部署与运维」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: deploy-ops, preamble
+- [F63129221-S0002] 行 3-11 | yaml-key | 配置键 metadata：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: deploy-ops, yaml-key
+- [F63129221-S0003] 行 12-74 | yaml-key | 配置键 spec：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: deploy-ops, yaml-key, config
+
+## [F155d3c93] deploy/kubernetes/server/gva-server-service.yaml
+- 语言: yaml
+- 领域: deploy-ops (部署与运维)
+- 行数: 22
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: devops
+- 逻辑段:
+- [F155d3c93-S0001] 行 1-2 | preamble | 逻辑段 preamble：承载「部署与运维」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: deploy-ops, preamble
+- [F155d3c93-S0002] 行 3-11 | yaml-key | 配置键 metadata：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: deploy-ops, yaml-key
+- [F155d3c93-S0003] 行 12-22 | yaml-key | 配置键 spec：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: deploy-ops, yaml-key
+
+## [F6cb5c038] deploy/kubernetes/web/gva-web-configmap.yaml
+- 语言: yaml
+- 领域: deploy-ops (部署与运维)
+- 行数: 32
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: devops
+- 逻辑段:
+- [F6cb5c038-S0001] 行 1-2 | preamble | 逻辑段 preamble：承载「部署与运维」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: deploy-ops, preamble
+- [F6cb5c038-S0002] 行 3-4 | yaml-key | 配置键 metadata：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: deploy-ops, yaml-key
+- [F6cb5c038-S0003] 行 5-32 | yaml-key | 配置键 data：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: deploy-ops, yaml-key
+
+## [F397847ce] deploy/kubernetes/web/gva-web-deploymemt.yaml
+- 语言: yaml
+- 领域: deploy-ops (部署与运维)
+- 行数: 52
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: devops
+- 逻辑段:
+- [F397847ce-S0001] 行 1-2 | preamble | 逻辑段 preamble：承载「部署与运维」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: deploy-ops, preamble
+- [F397847ce-S0002] 行 3-11 | yaml-key | 配置键 metadata：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: deploy-ops, yaml-key
+- [F397847ce-S0003] 行 12-52 | yaml-key | 配置键 spec：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: deploy-ops, yaml-key, config
+
+## [Fdc7c1c0d] deploy/kubernetes/web/gva-web-ingress.yaml
+- 语言: yaml
+- 领域: deploy-ops (部署与运维)
+- 行数: 18
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: devops
+- 逻辑段:
+- [Fdc7c1c0d-S0001] 行 1-2 | preamble | 逻辑段 preamble：承载「部署与运维」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: deploy-ops, preamble
+- [Fdc7c1c0d-S0002] 行 3-6 | yaml-key | 配置键 metadata：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: deploy-ops, yaml-key
+- [Fdc7c1c0d-S0003] 行 7-18 | yaml-key | 配置键 spec：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: deploy-ops, yaml-key
+
+## [Fee9031e9] deploy/kubernetes/web/gva-web-service.yaml
+- 语言: yaml
+- 领域: deploy-ops (部署与运维)
+- 行数: 22
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: devops
+- 逻辑段:
+- [Fee9031e9-S0001] 行 1-2 | preamble | 逻辑段 preamble：承载「部署与运维」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: deploy-ops, preamble
+- [Fee9031e9-S0002] 行 3-11 | yaml-key | 配置键 metadata：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: deploy-ops, yaml-key
+- [Fee9031e9-S0003] 行 12-22 | yaml-key | 配置键 spec：约束运行参数与部署行为。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: deploy-ops, yaml-key
+

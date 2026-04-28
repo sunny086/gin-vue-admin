@@ -1,0 +1,723 @@
+## [Fb1b09268] web/src/view/systemTools/loginLog/index.vue
+- 语言: vue
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 181
+- imports: @/utils/format, element-plus, vue
+- entrypoints: -
+- depends_on: @/utils/format
+- owned_by: frontend
+- 逻辑段:
+- [Fb1b09268-S0001] 行 1-48 | vue-template | 模板区块：定义页面结构与交互骨架，承载「鉴权与访问控制」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, vue-template
+- [Fb1b09268-S0002] 行 49-54 | vue-template | 模板区块：定义页面结构与交互骨架，承载「鉴权与访问控制」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, vue-template
+- [Fb1b09268-S0003] 行 55-57 | vue-template | 模板区块：定义页面结构与交互骨架，承载「鉴权与访问控制」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: formatDate
+- risks: -
+- tags: auth-access, vue-template
+- [Fb1b09268-S0004] 行 58-86 | vue-template | 模板区块：定义页面结构与交互骨架，承载「鉴权与访问控制」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: deleteRow
+- risks: -
+- tags: auth-access, vue-template
+- [Fb1b09268-S0005] 行 87-103 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: ref
+- risks: -
+- tags: auth-access, vue-script
+- [Fb1b09268-S0006] 行 104-107 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: val
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, vue-script-func
+- [Fb1b09268-S0007] 行 108-117 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getLoginLogList
+- risks: -
+- tags: auth-access, vue-script-func
+- [Fb1b09268-S0008] 行 118-132 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: async, deleteLoginLog, ElMessage, getTableData
+- risks: -
+- tags: auth-access, vue-script-func
+- [Fb1b09268-S0009] 行 133-153 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, confirm, then, deleteLoginLogByIds, ElMessage, getTableData
+- risks: -
+- tags: auth-access, vue-script-func
+- [Fb1b09268-S0010] 行 154-159 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getTableData
+- risks: -
+- tags: auth-access, vue-script-func
+- [Fb1b09268-S0011] 行 160-164 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getTableData
+- risks: -
+- tags: auth-access, vue-script-func
+- [Fb1b09268-S0012] 行 165-169 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: val
+- outputs: -
+- side_effects: -
+- calls: getTableData
+- risks: -
+- tags: auth-access, vue-script-func
+- [Fb1b09268-S0013] 行 170-178 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「鉴权与访问控制」的业务逻辑。
+- inputs: val
+- outputs: -
+- side_effects: -
+- calls: getTableData
+- risks: -
+- tags: auth-access, vue-script-func
+- [Fb1b09268-S0014] 行 179-181 | vue-style | 样式区块：定义页面视觉表现与布局约束。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, vue-style
+
+## [Ffb3d65c1] web/src/view/systemTools/pubPlug/pubPlug.vue
+- 语言: vue
+- 领域: frontend-ui (前端业务界面)
+- 行数: 306
+- imports: @/api/api, @/api/autoCode.js, @/api/menu, @/api/sysDictionary, @/components/warningBar/warningBar.vue, element-plus, vue
+- entrypoints: -
+- depends_on: @/api/api, @/api/autoCode.js, @/api/menu, @/api/sysDictionary, @/components/warningBar/warningBar.vue
+- owned_by: frontend
+- 逻辑段:
+- [Ffb3d65c1-S0001] 行 1-53 | vue-template | 模板区块：定义页面结构与交互骨架，承载「插件生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, vue-template, plugin
+- [Ffb3d65c1-S0002] 行 54-77 | vue-template | 模板区块：定义页面结构与交互骨架，承载「插件生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, vue-template, plugin
+- [Ffb3d65c1-S0003] 行 78-94 | vue-template | 模板区块：定义页面结构与交互骨架，承载「插件生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, vue-template
+- [Ffb3d65c1-S0004] 行 95-113 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「代码生成与AI工作流」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: ref
+- risks: -
+- tags: codegen-ai, vue-script
+- [Ffb3d65c1-S0005] 行 114-126 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: menus
+- outputs: -
+- side_effects: -
+- calls: forEach, push, fmtMenu
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Ffb3d65c1-S0006] 行 127-144 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getMenuList, fmtMenu, getAllApis, getSysDictionaryList
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Ffb3d65c1-S0007] 行 145-150 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: query, item
+- outputs: -
+- side_effects: -
+- calls: indexOf
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Ffb3d65c1-S0008] 行 151-154 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: query, item
+- outputs: -
+- side_effects: -
+- calls: indexOf
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Ffb3d65c1-S0009] 行 155-161 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「前端业务界面」的业务逻辑。
+- inputs: query, item
+- outputs: -
+- side_effects: -
+- calls: indexOf, initData
+- risks: -
+- tags: frontend-ui, vue-script-func
+- [Ffb3d65c1-S0010] 行 162-185 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, confirm, Api, Menu, Dictionary, then, pubPlug, success, catch, ElMessage
+- risks: -
+- tags: plugin-ecosystem, vue-script-func, plugin
+- [Ffb3d65c1-S0011] 行 186-225 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: error, confirm, then, async, initMenu, success, catch, ElMessage
+- risks: -
+- tags: plugin-ecosystem, vue-script-func, plugin
+- [Ffb3d65c1-S0012] 行 226-261 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: error, confirm, then, async, initAPI, success, catch, ElMessage
+- risks: -
+- tags: plugin-ecosystem, vue-script-func, plugin
+- [Ffb3d65c1-S0013] 行 262-298 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: error, confirm, then, async, initDictionary, success, catch, ElMessage
+- risks: -
+- tags: plugin-ecosystem, vue-script-func, plugin
+- [Ffb3d65c1-S0014] 行 299-306 | vue-style | 样式区块：定义页面视觉表现与布局约束。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, vue-style, plugin
+
+## [Fdd734ddf] web/src/view/systemTools/skills/index.vue
+- 语言: vue
+- 领域: mcp-skills (MCP与Skills生态)
+- 行数: 1461
+- imports: @/api/plugin/api, @/components/warningBar/warningBar.vue, @element-plus/icons-vue, ace-builds/src-noconflict/mode-javascript, ace-builds/src-noconflict/mode-markdown, ace-builds/src-noconflict/mode-python, ace-builds/src-noconflict/mode-sh, ace-builds/src-noconflict/theme-github_dark, element-plus, vue, vue3-ace-editor
+- entrypoints: -
+- depends_on: @/api/plugin/api, @/components/warningBar/warningBar.vue
+- owned_by: frontend
+- 逻辑段:
+- [Fdd734ddf-S0001] 行 1-84 | vue-template | 模板区块：定义页面结构与交互骨架，承载「MCP与Skills生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: handleToolSelect, calc, handleDeleteSkill
+- risks: -
+- tags: mcp-skills, vue-template, ai-tooling, plugin
+- [Fdd734ddf-S0002] 行 85-123 | vue-template | 模板区块：定义页面结构与交互骨架，承载「MCP与Skills生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, vue-template, config
+- [Fdd734ddf-S0003] 行 124-138 | vue-template | 模板区块：定义页面结构与交互骨架，承载「MCP与Skills生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, vue-template
+- [Fdd734ddf-S0004] 行 139-150 | vue-template | 模板区块：定义页面结构与交互骨架，承载「MCP与Skills生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: Bash
+- risks: -
+- tags: mcp-skills, vue-template
+- [Fdd734ddf-S0005] 行 151-162 | vue-template | 模板区块：定义页面结构与交互骨架，承载「MCP与Skills生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, vue-template
+- [Fdd734ddf-S0006] 行 163-174 | vue-template | 模板区块：定义页面结构与交互骨架，承载「MCP与Skills生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, vue-template
+- [Fdd734ddf-S0007] 行 175-216 | vue-template | 模板区块：定义页面结构与交互骨架，承载「MCP与Skills生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: appendMarkdown
+- risks: -
+- tags: mcp-skills, vue-template
+- [Fdd734ddf-S0008] 行 217-224 | vue-template | 模板区块：定义页面结构与交互骨架，承载「MCP与Skills生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, vue-template
+- [Fdd734ddf-S0009] 行 225-243 | vue-template | 模板区块：定义页面结构与交互骨架，承载「MCP与Skills生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: openScriptEditor, insertFileSnippet
+- risks: -
+- tags: mcp-skills, vue-template
+- [Fdd734ddf-S0010] 行 244-251 | vue-template | 模板区块：定义页面结构与交互骨架，承载「MCP与Skills生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, vue-template
+- [Fdd734ddf-S0011] 行 252-270 | vue-template | 模板区块：定义页面结构与交互骨架，承载「MCP与Skills生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: openResourceEditor, insertFileSnippet
+- risks: -
+- tags: mcp-skills, vue-template
+- [Fdd734ddf-S0012] 行 271-278 | vue-template | 模板区块：定义页面结构与交互骨架，承载「MCP与Skills生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, vue-template
+- [Fdd734ddf-S0013] 行 279-297 | vue-template | 模板区块：定义页面结构与交互骨架，承载「MCP与Skills生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: openReferenceEditor, insertFileSnippet
+- risks: -
+- tags: mcp-skills, vue-template
+- [Fdd734ddf-S0014] 行 298-305 | vue-template | 模板区块：定义页面结构与交互骨架，承载「MCP与Skills生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, vue-template
+- [Fdd734ddf-S0015] 行 306-330 | vue-template | 模板区块：定义页面结构与交互骨架，承载「MCP与Skills生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: openTemplateEditor, insertFileSnippet
+- risks: -
+- tags: mcp-skills, vue-template
+- [Fdd734ddf-S0016] 行 331-350 | vue-template | 模板区块：定义页面结构与交互骨架，承载「MCP与Skills生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: Python, JavaScript, Shell
+- risks: -
+- tags: mcp-skills, vue-template
+- [Fdd734ddf-S0017] 行 351-363 | vue-template | 模板区块：定义页面结构与交互骨架，承载「MCP与Skills生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, vue-template
+- [Fdd734ddf-S0018] 行 364-376 | vue-template | 模板区块：定义页面结构与交互骨架，承载「MCP与Skills生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, vue-template
+- [Fdd734ddf-S0019] 行 377-389 | vue-template | 模板区块：定义页面结构与交互骨架，承载「MCP与Skills生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, vue-template
+- [Fdd734ddf-S0020] 行 390-411 | vue-template | 模板区块：定义页面结构与交互骨架，承载「MCP与Skills生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, vue-template
+- [Fdd734ddf-S0021] 行 412-448 | vue-template | 模板区块：定义页面结构与交互骨架，承载「MCP与Skills生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, vue-template
+- [Fdd734ddf-S0022] 行 449-467 | vue-template | 模板区块：定义页面结构与交互骨架，承载「MCP与Skills生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, vue-template
+- [Fdd734ddf-S0023] 行 468-478 | vue-template | 模板区块：定义页面结构与交互骨架，承载「MCP与Skills生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, vue-template
+- [Fdd734ddf-S0024] 行 479-490 | vue-template | 模板区块：定义页面结构与交互骨架，承载「插件生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, vue-template, plugin
+- [Fdd734ddf-S0025] 行 491-523 | vue-template | 模板区块：定义页面结构与交互骨架，承载「插件生态」的界面呈现。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: has, handleDownloadSkill
+- risks: -
+- tags: plugin-ecosystem, vue-template, plugin
+- [Fdd734ddf-S0026] 行 524-682 | vue-script | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineOptions, ref, computed, reactive, skillsFilesToRows, filter, toLowerCase, includes, onMounted, async, loadTools, loadSkills
+- risks: -
+- tags: mcp-skills, vue-script, ai-tooling, plugin, config
+- [Fdd734ddf-S0027] 行 683-696 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: loadTools, getSkillTools, find, catch, warning
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0028] 行 697-708 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: loadSkills, getSkillList, catch, error
+- risks: -
+- tags: mcp-skills, vue-script-func, ai-tooling
+- [Fdd734ddf-S0029] 行 709-731 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: skillName
+- outputs: -
+- side_effects: -
+- calls: loadSkillDetail, getSkillDetail, catch, error
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0030] 行 732-750 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: openGlobalConstraint, warning, getGlobalConstraint, info, openEditor, catch, error
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0031] 行 751-765 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: resetDetail
+- risks: -
+- tags: mcp-skills, vue-script-func, config
+- [Fdd734ddf-S0032] 行 766-772 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: key
+- outputs: -
+- side_effects: -
+- calls: handleToolSelect, resetDetail, loadSkills
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0033] 行 773-776 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: skillName
+- outputs: -
+- side_effects: -
+- calls: handleSkillSelect, loadSkillDetail
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0034] 行 777-807 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: skillName
+- outputs: -
+- side_effects: -
+- calls: handleDeleteSkill, confirm, catch, deleteSkill, resetDetail, loadSkills, success, error
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0035] 行 808-813 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: openCreateDialog
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0036] 行 814-843 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: createSkill, trim, warning, Bash, defaultSkillTemplate, saveSkill, success, loadSkills, loadSkillDetail, catch, error
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0037] 行 844-890 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: saveCurrentSkill, trim, warning, confirm, filter, catch, saveSkill, success, error
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0038] 行 891-904 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: disposition
+- outputs: -
+- side_effects: -
+- calls: extractFileNameFromDisposition, match, decodeURIComponent, catch
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0039] 行 905-953 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: packageCurrentSkill, warning, packageSkill, error, String, toLowerCase, includes, text, parse, catch, extractFileNameFromDisposition, createObjectURL
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0040] 行 954-957 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: content
+- outputs: -
+- side_effects: -
+- calls: appendMarkdown
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0041] 行 958-982 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: kind, fileName
+- outputs: -
+- side_effects: -
+- calls: insertFileSnippet, appendMarkdown, success
+- risks: -
+- tags: mcp-skills, vue-script-func, config
+- [Fdd734ddf-S0042] 行 983-990 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: insertFullTemplate, trim, defaultSkillTemplate
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0043] 行 991-1000 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: openScriptDialog, warning
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0044] 行 1001-1022 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: createScript, trim, warning, createSkillScript, loadSkillDetail, openEditor, catch, error
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0045] 行 1023-1038 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: fileName
+- outputs: -
+- side_effects: -
+- calls: openScriptEditor, getSkillScript, openEditor, catch, error
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0046] 行 1039-1047 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: openResourceDialog, warning
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0047] 行 1048-1068 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: createResource, trim, warning, createSkillResource, loadSkillDetail, openEditor, catch, error
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0048] 行 1069-1084 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: fileName
+- outputs: -
+- side_effects: -
+- calls: openResourceEditor, getSkillResource, openEditor, catch, error
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0049] 行 1085-1093 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: openReferenceDialog, warning
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0050] 行 1094-1114 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: createReference, trim, warning, createSkillReference, loadSkillDetail, openEditor, catch, error
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0051] 行 1115-1130 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: fileName
+- outputs: -
+- side_effects: -
+- calls: openReferenceEditor, getSkillReference, openEditor, catch, error
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0052] 行 1131-1139 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: openTemplateDialog, warning
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0053] 行 1140-1160 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: createTemplate, trim, warning, createSkillTemplate, loadSkillDetail, openEditor, catch, error
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0054] 行 1161-1176 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: fileName
+- outputs: -
+- side_effects: -
+- calls: openTemplateEditor, getSkillTemplate, openEditor, catch, error
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0055] 行 1177-1184 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: type, fileName, content
+- outputs: -
+- side_effects: -
+- calls: openEditor, detectLang
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0056] 行 1185-1261 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: saveEditor, saveSkillScript, success, saveSkillResource, saveSkillReference, saveSkillTemplate, confirm, filter, catch, saveGlobalConstraint, error
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0057] 行 1262-1271 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: fileName
+- outputs: -
+- side_effects: -
+- calls: detectLang, toLowerCase, endsWith
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0058] 行 1272-1281 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defaultSkillTemplate
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0059] 行 1282-1312 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: list
+- outputs: -
+- side_effects: -
+- calls: skillsFilesToRows, ref, reactive, Set, computed, push
+- risks: -
+- tags: mcp-skills, vue-script-func, ai-tooling, plugin
+- [Fdd734ddf-S0060] 行 1313-1317 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: message
+- outputs: -
+- side_effects: -
+- calls: toString, includes
+- risks: -
+- tags: plugin-ecosystem, vue-script-func
+- [Fdd734ddf-S0061] 行 1318-1330 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「插件生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, confirm, open, catch
+- risks: -
+- tags: plugin-ecosystem, vue-script-func, plugin
+- [Fdd734ddf-S0062] 行 1331-1338 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getOnlineSkills
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0063] 行 1339-1354 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, getShopPluginList
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0064] 行 1355-1359 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getOnlineSkills
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0065] 行 1360-1365 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getOnlineSkills
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0066] 行 1366-1370 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: page
+- outputs: -
+- side_effects: -
+- calls: getOnlineSkills
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0067] 行 1371-1376 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: size
+- outputs: -
+- side_effects: -
+- calls: getOnlineSkills
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0068] 行 1377-1380 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: key
+- outputs: -
+- side_effects: -
+- calls: find
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0069] 行 1381-1385 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0070] 行 1386-1391 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: row
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, vue-script-func
+- [Fdd734ddf-S0071] 行 1392-1461 | vue-script-func | 脚本区块：编排状态、事件与接口调用，落实「MCP与Skills生态」的业务逻辑。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, warning, filter, closeDownloadTargetDialog, add, downloadOnlineSkill, push, isPluginMarketAuthError, promptPluginMarketLogin, getToolLabel, catch, includes
+- risks: -
+- tags: mcp-skills, vue-script-func
+

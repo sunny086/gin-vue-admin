@@ -1,0 +1,839 @@
+## [F76491ce5] server/utils/ast/package_initialize_gorm.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 197
+- imports: fmt, go/ast, go/token, io
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F76491ce5-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F76491ce5-S0002] 行 3-10 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, database, security
+- [F76491ce5-S0003] 行 11-22 | go-type | 类型 PackageInitializeGorm：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F76491ce5-S0004] 行 23-35 | go-func | 函数 Parse：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: filename string, writer io.Writer
+- outputs: (file *ast.File, err error)
+- side_effects: -
+- calls: Parse, RelativePath, AbsolutePath
+- risks: -
+- tags: system-config, go-func
+- [F76491ce5-S0005] 行 36-88 | go-func | 函数 Rollback：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: file *ast.File
+- outputs: error
+- side_effects: 写入数据库
+- calls: Rollback, Inspect, AutoMigrate, NewImport
+- risks: -
+- tags: system-config, go-func, database
+- [F76491ce5-S0006] 行 89-132 | go-func | 函数 Injection：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: file *ast.File
+- outputs: error
+- side_effects: 写入数据库
+- calls: Injection, NewImport, FindFunction, addDbVar, Inspect, AutoMigrate, NewIdent
+- risks: -
+- tags: system-config, go-func, database
+- [F76491ce5-S0007] 行 133-140 | go-func | 函数 Format：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: filename string, writer io.Writer, file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Format
+- risks: -
+- tags: system-config, go-func
+- [F76491ce5-S0008] 行 141-197 | go-func | 函数 addDbVar：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: astBody *ast.BlockStmt
+- outputs: -
+- side_effects: 写入数据库
+- calls: addDbVar, GetGlobalDBByDBName, Sprintf, AutoMigrate
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database, security
+
+## [F3ee947ce] server/utils/ast/package_initialize_router_test.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 159
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, path/filepath, testing
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F3ee947ce-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F3ee947ce-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F3ee947ce-S0003] 行 9-84 | go-func | 函数 TestPackageInitializeRouter_Injection：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: t *testing.T
+- outputs: -
+- side_effects: -
+- calls: TestPackageInitializeRouter_Injection, Join, Run, Parse, Errorf, Injection, Format
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [F3ee947ce-S0004] 行 85-159 | go-func | 函数 TestPackageInitializeRouter_Rollback：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: t *testing.T
+- outputs: -
+- side_effects: -
+- calls: TestPackageInitializeRouter_Rollback, Join, Run, Parse, Errorf, Rollback, Format
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+
+## [F2da220ef] server/utils/ast/package_initialize_router.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 151
+- imports: fmt, go/ast, go/token, io
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F2da220ef-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F2da220ef-S0002] 行 3-12 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import, FunctionName
+- risks: -
+- tags: system-config, go-import, security
+- [F2da220ef-S0003] 行 13-28 | go-type | 类型 PackageInitializeRouter：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F2da220ef-S0004] 行 29-41 | go-func | 函数 Parse：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: filename string, writer io.Writer
+- outputs: (file *ast.File, err error)
+- side_effects: -
+- calls: Parse, RelativePath, AbsolutePath
+- risks: -
+- tags: system-config, go-func
+- [F2da220ef-S0005] 行 42-90 | go-func | 函数 Rollback：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Rollback, FindFunction, IsBlockStmt, VariableExistsInBlock
+- risks: -
+- tags: system-config, go-func
+- [F2da220ef-S0006] 行 91-119 | go-func | 函数 Injection：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Injection, FindFunction, IsBlockStmt, VariableExistsInBlock, CreateAssignStmt, CreateStmt, Sprintf, s
+- risks: -
+- tags: system-config, go-func
+- [F2da220ef-S0007] 行 120-126 | go-func | 函数 Format：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: filename string, writer io.Writer, file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Format
+- risks: -
+- tags: system-config, go-func
+- [F2da220ef-S0008] 行 127-151 | go-func | 函数 CreateAssignStmt：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: *ast.AssignStmt
+- side_effects: -
+- calls: CreateAssignStmt
+- risks: -
+- tags: system-config, go-func, security
+
+## [Fa8eb3d03] server/utils/ast/package_module_enter_test.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 186
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, path/filepath, testing
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fa8eb3d03-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fa8eb3d03-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Fa8eb3d03-S0003] 行 9-97 | go-func | 函数 TestPackageModuleEnter_Rollback：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: t *testing.T
+- outputs: -
+- side_effects: -
+- calls: TestPackageModuleEnter_Rollback, Join, Run, Parse, Errorf, Rollback, Format
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+- [Fa8eb3d03-S0004] 行 98-186 | go-func | 函数 TestPackageModuleEnter_Injection：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: t *testing.T
+- outputs: -
+- side_effects: -
+- calls: TestPackageModuleEnter_Injection, Join, Run, Parse, Errorf, Injection, Format
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func
+
+## [Fb225e944] server/utils/ast/package_module_enter.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 181
+- imports: go/ast, go/token, io
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fb225e944-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fb225e944-S0002] 行 3-10 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, security
+- [Fb225e944-S0003] 行 11-24 | go-type | 类型 PackageModuleEnter：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [Fb225e944-S0004] 行 25-37 | go-func | 函数 Parse：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: filename string, writer io.Writer
+- outputs: (file *ast.File, err error)
+- side_effects: -
+- calls: Parse, RelativePath, AbsolutePath
+- risks: -
+- tags: system-config, go-func
+- [Fb225e944-S0005] 行 38-81 | go-func | 函数 Rollback：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Rollback, Group, NewImport
+- risks: -
+- tags: system-config, go-func, security
+- [Fb225e944-S0006] 行 82-174 | go-func | 函数 Injection：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Injection, NewImport, Group
+- risks: -
+- tags: system-config, go-func, security
+- [Fb225e944-S0007] 行 175-181 | go-func | 函数 Format：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: filename string, writer io.Writer, file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Format
+- risks: -
+- tags: system-config, go-func
+
+## [Fa680a751] server/utils/ast/plugin_enter_test.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 201
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, path/filepath, testing
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fa680a751-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fa680a751-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Fa680a751-S0003] 行 9-112 | go-func | 函数 TestPluginEnter_Injection：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: t *testing.T
+- outputs: -
+- side_effects: -
+- calls: TestPluginEnter_Injection, Join, Run, Parse, Errorf, Injection, Format
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, plugin
+- [Fa680a751-S0004] 行 113-201 | go-func | 函数 TestPluginEnter_Rollback：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: t *testing.T
+- outputs: -
+- side_effects: -
+- calls: TestPluginEnter_Rollback, Join, Run, Parse, Errorf, Rollback, Format
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, plugin
+
+## [Fc1f1662e] server/utils/ast/plugin_enter.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 168
+- imports: go/ast, go/token, io
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fc1f1662e-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fc1f1662e-S0002] 行 3-10 | go-import | 逻辑段 go-import：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: plugin-ecosystem, go-import, security
+- [Fc1f1662e-S0003] 行 11-24 | go-type | 类型 PluginEnter：定义该文件的数据结构或接口边界，支撑「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-type
+- [Fc1f1662e-S0004] 行 25-37 | go-func | 函数 Parse：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: filename string, writer io.Writer
+- outputs: (file *ast.File, err error)
+- side_effects: -
+- calls: Parse, RelativePath, AbsolutePath
+- risks: -
+- tags: plugin-ecosystem, go-func
+- [Fc1f1662e-S0005] 行 38-86 | go-func | 函数 Rollback：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Rollback, Inspect, NewImport
+- risks: -
+- tags: plugin-ecosystem, go-func, security
+- [Fc1f1662e-S0006] 行 87-161 | go-func | 函数 Injection：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Injection, NewImport, Inspect
+- risks: -
+- tags: plugin-ecosystem, go-func, security
+- [Fc1f1662e-S0007] 行 162-168 | go-func | 函数 Format：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: filename string, writer io.Writer, file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Format
+- risks: -
+- tags: plugin-ecosystem, go-func
+
+## [F44d6f53d] server/utils/ast/plugin_gen_test.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 128
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, path/filepath, testing
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F44d6f53d-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F44d6f53d-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F44d6f53d-S0003] 行 9-68 | go-func | 函数 TestPluginGenModel_Injection：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: t *testing.T
+- outputs: -
+- side_effects: -
+- calls: TestPluginGenModel_Injection, Join, Run, Parse, Errorf, Injection, Format
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, plugin
+- [F44d6f53d-S0004] 行 69-128 | go-func | 函数 TestPluginGenModel_Rollback：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: t *testing.T
+- outputs: -
+- side_effects: -
+- calls: TestPluginGenModel_Rollback, Join, Run, Parse, Errorf, Rollback, Format
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, plugin
+
+## [Faba05922] server/utils/ast/plugin_gen.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 190
+- imports: go/ast, go/token, io
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Faba05922-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Faba05922-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, security
+- [Faba05922-S0003] 行 9-19 | go-type | 类型 PluginGen：定义该文件的数据结构或接口边界，支撑「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-type
+- [Faba05922-S0004] 行 20-31 | go-func | 函数 Parse：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: filename string, writer io.Writer
+- outputs: (file *ast.File, err error)
+- side_effects: -
+- calls: Parse, RelativePath, AbsolutePath
+- risks: -
+- tags: plugin-ecosystem, go-func
+- [Faba05922-S0005] 行 32-96 | go-func | 函数 Rollback：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Rollback, NewImport
+- risks: -
+- tags: plugin-ecosystem, go-func
+- [Faba05922-S0006] 行 97-183 | go-func | 函数 Injection：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Injection, NewImport
+- risks: -
+- tags: plugin-ecosystem, go-func, security
+- [Faba05922-S0007] 行 184-190 | go-func | 函数 Format：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: filename string, writer io.Writer, file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Format
+- risks: -
+- tags: plugin-ecosystem, go-func
+
+## [Fcc8a920b] server/utils/ast/plugin_initialize_gorm_test.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 139
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, path/filepath, testing
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fcc8a920b-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fcc8a920b-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Fcc8a920b-S0003] 行 9-79 | go-func | 函数 TestPluginInitializeGorm_Injection：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: t *testing.T
+- outputs: -
+- side_effects: -
+- calls: TestPluginInitializeGorm_Injection, Join, Run, Parse, Errorf, Injection, Format
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database, plugin
+- [Fcc8a920b-S0004] 行 80-139 | go-func | 函数 TestPluginInitializeGorm_Rollback：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: t *testing.T
+- outputs: -
+- side_effects: -
+- calls: TestPluginInitializeGorm_Rollback, Join, Run, Parse, Errorf, Rollback, Format
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database, plugin
+
+## [F082e526c] server/utils/ast/plugin_initialize_gorm.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 112
+- imports: go/ast, io
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F082e526c-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F082e526c-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F082e526c-S0003] 行 8-18 | go-type | 类型 PluginInitializeGorm：定义该文件的数据结构或接口边界，支撑「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-type
+- [F082e526c-S0004] 行 19-31 | go-func | 函数 Parse：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: filename string, writer io.Writer
+- outputs: (file *ast.File, err error)
+- side_effects: -
+- calls: Parse, RelativePath, AbsolutePath
+- risks: -
+- tags: plugin-ecosystem, go-func
+- [F082e526c-S0005] 行 32-76 | go-func | 函数 Rollback：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Rollback, Inspect, NewImport
+- risks: -
+- tags: plugin-ecosystem, go-func, database
+- [F082e526c-S0006] 行 77-105 | go-func | 函数 Injection：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Injection, NewImport, Inspect
+- risks: -
+- tags: plugin-ecosystem, go-func, database
+- [F082e526c-S0007] 行 106-112 | go-func | 函数 Format：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: filename string, writer io.Writer, file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Format
+- risks: -
+- tags: plugin-ecosystem, go-func
+
+## [Fe7303249] server/utils/ast/plugin_initialize_router_test.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 156
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, path/filepath, testing
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fe7303249-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fe7303249-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Fe7303249-S0003] 行 9-82 | go-func | 函数 TestPluginInitializeRouter_Injection：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: t *testing.T
+- outputs: -
+- side_effects: -
+- calls: TestPluginInitializeRouter_Injection, Join, Run, Parse, Errorf, Injection, Format
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, plugin
+- [Fe7303249-S0004] 行 83-156 | go-func | 函数 TestPluginInitializeRouter_Rollback：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: t *testing.T
+- outputs: -
+- side_effects: -
+- calls: TestPluginInitializeRouter_Rollback, Join, Run, Parse, Errorf, Rollback, Format
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, plugin
+
+## [Fbf3032e6] server/utils/ast/plugin_initialize_router.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 125
+- imports: fmt, go/ast, io
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fbf3032e6-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fbf3032e6-S0002] 行 3-10 | go-import | 逻辑段 go-import：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import, FunctionName
+- risks: -
+- tags: plugin-ecosystem, go-import
+- [Fbf3032e6-S0003] 行 11-26 | go-type | 类型 PluginInitializeRouter：定义该文件的数据结构或接口边界，支撑「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-type
+- [Fbf3032e6-S0004] 行 27-39 | go-func | 函数 Parse：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: filename string, writer io.Writer
+- outputs: (file *ast.File, err error)
+- side_effects: -
+- calls: Parse, RelativePath, AbsolutePath
+- risks: -
+- tags: plugin-ecosystem, go-func
+- [Fbf3032e6-S0005] 行 40-85 | go-func | 函数 Rollback：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Rollback, FindFunction, NewImport
+- risks: -
+- tags: plugin-ecosystem, go-func
+- [Fbf3032e6-S0006] 行 86-118 | go-func | 函数 Injection：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Injection, NewImport, FindFunction, Inspect, Sprintf, s, CreateStmt
+- risks: -
+- tags: plugin-ecosystem, go-func
+- [Fbf3032e6-S0007] 行 119-125 | go-func | 函数 Format：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: filename string, writer io.Writer, file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Format
+- risks: -
+- tags: plugin-ecosystem, go-func
+
+## [F476b5174] server/utils/ast/plugin_initialize_v2_test.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 101
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, path/filepath, testing
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F476b5174-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F476b5174-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F476b5174-S0003] 行 9-52 | go-func | 函数 TestPluginInitialize_Injection：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: t *testing.T
+- outputs: -
+- side_effects: -
+- calls: TestPluginInitialize_Injection, Join, Run, Parse, Errorf, Injection, Format
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, plugin
+- [F476b5174-S0004] 行 53-101 | go-func | 函数 TestPluginInitialize_Rollback：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: t *testing.T
+- outputs: -
+- side_effects: -
+- calls: TestPluginInitialize_Rollback, Join, Run, Parse, Errorf, Rollback, Format
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, plugin
+
+## [F87156171] server/utils/ast/plugin_initialize_v2.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 83
+- imports: go/ast, go/token, io, strconv, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F87156171-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F87156171-S0002] 行 3-10 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, security
+- [F87156171-S0003] 行 11-21 | go-type | 类型 PluginInitializeV2：定义该文件的数据结构或接口边界，支撑「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, go-type
+- [F87156171-S0004] 行 22-34 | go-func | 函数 Parse：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: filename string, writer io.Writer
+- outputs: (file *ast.File, err error)
+- side_effects: -
+- calls: Parse, RelativePath, AbsolutePath
+- risks: -
+- tags: plugin-ecosystem, go-func
+- [F87156171-S0005] 行 35-72 | go-func | 函数 Injection：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Injection, TrimSpace, Trim, CheckImport, NewIdent, Quote
+- risks: -
+- tags: plugin-ecosystem, go-func, security
+- [F87156171-S0006] 行 73-76 | go-func | 函数 Rollback：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Rollback
+- risks: -
+- tags: plugin-ecosystem, go-func
+- [F87156171-S0007] 行 77-83 | go-func | 函数 Format：承载该模块的核心逻辑，位于「插件生态」域。
+- inputs: filename string, writer io.Writer, file *ast.File
+- outputs: error
+- side_effects: -
+- calls: Format
+- risks: -
+- tags: plugin-ecosystem, go-func
+
+## [Fc696756e] server/utils/autocode/template_funcs.go
+- 语言: go
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 714
+- imports: fmt, slices, strings, text/template
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fc696756e-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-package
+- [Fc696756e-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: codegen-ai, go-import
+- [Fc696756e-S0003] 行 12-26 | go-func | 函数 GetTemplateFuncMap：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: -
+- outputs: template.FuncMap
+- side_effects: -
+- calls: GetTemplateFuncMap
+- risks: -
+- tags: codegen-ai, go-func
+- [Fc696756e-S0004] 行 27-124 | go-func | 函数 GenerateField：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: field systemReq.AutoCodeField
+- outputs: string
+- side_effects: -
+- calls: GenerateField, Sprintf, enum
+- risks: -
+- tags: codegen-ai, go-func, database
+- [Fc696756e-S0005] 行 125-201 | go-func | 函数 GenerateSearchConditions：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: fields []*systemReq.AutoCodeField
+- outputs: string
+- side_effects: -
+- calls: GenerateSearchConditions, Contains, Sprintf, Where, Join
+- risks: 存在待办逻辑，行为边界未完全收敛
+- tags: codegen-ai, go-func
+- [Fc696756e-S0006] 行 202-283 | go-func | 函数 GenerateSearchFormItem：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: field systemReq.AutoCodeField
+- outputs: string
+- side_effects: -
+- calls: GenerateSearchFormItem, Sprintf
+- risks: -
+- tags: codegen-ai, go-func
+- [Fc696756e-S0007] 行 284-457 | go-func | 函数 GenerateTableColumn：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: field systemReq.AutoCodeField
+- outputs: string
+- side_effects: -
+- calls: GenerateTableColumn, Sprintf, filterDataSource, filterDict, formatBoolean, formatDate, getUrl, onDownloadFile
+- risks: -
+- tags: codegen-ai, go-func
+- [Fc696756e-S0008] 行 458-578 | go-func | 函数 GenerateFormItem：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: field systemReq.AutoCodeField
+- outputs: string
+- side_effects: -
+- calls: GenerateFormItem, Sprintf
+- risks: -
+- tags: codegen-ai, go-func
+- [Fc696756e-S0009] 行 579-644 | go-func | 函数 GenerateDescriptionItem：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: field systemReq.AutoCodeField
+- outputs: string
+- side_effects: -
+- calls: GenerateDescriptionItem, Sprintf, filterDataSource, returnArrImg, getUrl, onDownloadFile
+- risks: -
+- tags: codegen-ai, go-func
+- [Fc696756e-S0010] 行 645-678 | go-func | 函数 GenerateDefaultFormValue：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: field systemReq.AutoCodeField
+- outputs: string
+- side_effects: -
+- calls: GenerateDefaultFormValue, Date, Sprintf
+- risks: -
+- tags: codegen-ai, go-func
+- [Fc696756e-S0011] 行 679-714 | go-func | 函数 GenerateSearchField：承载该模块的核心逻辑，位于「代码生成与AI工作流」域。
+- inputs: field systemReq.AutoCodeField
+- outputs: string
+- side_effects: -
+- calls: GenerateSearchField, Sprintf
+- risks: -
+- tags: codegen-ai, go-func
+

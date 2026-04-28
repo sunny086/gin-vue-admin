@@ -1,0 +1,543 @@
+# web-root
+
+- 文件数量：14
+
+## [F030a817a] web/.dockerignore
+- 语言: text
+- 领域: other (通用模块)
+- 行数: 1
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [F030a817a-S0001] 行 1-1 | block | 逻辑段 block：承载「通用模块」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, block
+
+## [Fa8122fa6] web/.gitignore
+- 语言: text
+- 领域: other (通用模块)
+- 行数: 5
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [Fa8122fa6-S0001] 行 1-5 | block | 逻辑段 block：承载「通用模块」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, block, config
+
+## [F2a84f520] web/.prettierrc
+- 语言: text
+- 领域: other (通用模块)
+- 行数: 13
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [F2a84f520-S0001] 行 1-13 | block | 逻辑段 block：承载「通用模块」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, block
+
+## [F09ee33cb] web/babel.config.js
+- 语言: js
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 5
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [F09ee33cb-S0001] 行 1-5 | block | 逻辑段 block：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, block, plugin
+
+## [Fc1d87288] web/Dockerfile
+- 语言: dockerfile
+- 领域: system-config (系统配置与运行时)
+- 行数: 26
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [Fc1d87288-S0001] 行 1-26 | block | 逻辑段 block：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, block
+
+## [F7cebb6d3] web/eslint.config.mjs
+- 语言: js
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 30
+- imports: @eslint/js, eslint-plugin-vue, globals
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [F7cebb6d3-S0001] 行 1-1 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, js-import
+- [F7cebb6d3-S0002] 行 2-2 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, js-import, plugin
+- [F7cebb6d3-S0003] 行 3-4 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, js-import
+- [F7cebb6d3-S0004] 行 5-30 | js-export | 函数/导出 export default：承载该模块的核心逻辑，用于支撑「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, js-export, plugin, config
+
+## [F802968e5] web/index.html
+- 语言: html
+- 领域: other (通用模块)
+- 行数: 116
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [F802968e5-S0001] 行 1-116 | block | 逻辑段 block：承载「通用模块」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: bezier, calc, translateY, rotate, scale
+- risks: -
+- tags: other, block
+
+## [F8487f87d] web/jsconfig.json
+- 语言: json
+- 领域: other (通用模块)
+- 行数: 11
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [F8487f87d-S0001] 行 1-11 | block | 逻辑段 block：承载「通用模块」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, block
+
+## [F8f47b02a] web/limit.js
+- 语言: js
+- 领域: other (通用模块)
+- 行数: 38
+- imports: fs, path
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [F8f47b02a-S0001] 行 1-1 | preamble | 逻辑段 preamble：承载「通用模块」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, preamble
+- [F8f47b02a-S0002] 行 2-2 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, js-import
+- [F8f47b02a-S0003] 行 3-3 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, js-import
+- [F8f47b02a-S0004] 行 4-20 | js-const | 逻辑段 js-const：承载「通用模块」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: resolve, readdir, log, forEach, split, replaceStr
+- risks: -
+- tags: other, js-const
+- [F8f47b02a-S0005] 行 21-25 | js-func | 函数/导出 replaceStr：承载该模块的核心逻辑，用于支撑「通用模块」域。
+- inputs: filePath, sourceRegx, targetSrt
+- outputs: -
+- side_effects: -
+- calls: replaceStr, readFile, log
+- risks: -
+- tags: other, js-func
+- [F8f47b02a-S0006] 行 26-38 | js-const | 逻辑段 js-const：承载「通用模块」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: 写入文件系统
+- calls: toString, replace, writeFile, log
+- risks: -
+- tags: other, js-const
+
+## [F8fa812a8] web/openDocument.js
+- 语言: js
+- 领域: other (通用模块)
+- 行数: 21
+- imports: child_process
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [F8fa812a8-S0001] 行 1-5 | preamble | 逻辑段 preamble：承载「通用模块」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, preamble
+- [F8fa812a8-S0002] 行 6-7 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, js-import
+- [F8fa812a8-S0003] 行 8-8 | js-const | 逻辑段 js-const：承载「通用模块」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, js-const
+- [F8fa812a8-S0004] 行 9-21 | js-const | 逻辑段 js-const：承载「通用模块」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: exec
+- risks: -
+- tags: other, js-const
+
+## [Ff5d6bc26] web/package.json
+- 语言: json
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 88
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [Ff5d6bc26-S0001] 行 1-88 | block | 逻辑段 block：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: 发起网络调用
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, block, plugin, config
+
+## [Fca94808b] web/README.md
+- 语言: markdown
+- 领域: other (通用模块)
+- 行数: 107
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [Fca94808b-S0001] 行 1-2 | md-heading | 文档章节「gin-vue-admin web」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, md-heading
+- [Fca94808b-S0002] 行 3-8 | md-heading | 文档章节「Project setup」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, md-heading
+- [Fca94808b-S0003] 行 9-14 | md-heading | 文档章节「Compiles and hot-reloads for develo…」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, md-heading
+- [Fca94808b-S0004] 行 15-20 | md-heading | 文档章节「Compiles and minifies for production」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, md-heading
+- [Fca94808b-S0005] 行 21-26 | md-heading | 文档章节「Run your tests」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, md-heading
+- [Fca94808b-S0006] 行 27-107 | md-heading | 文档章节「Lints and fixes files」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: other, md-heading, config
+
+## [Fba2397eb] web/uno.config.js
+- 语言: js
+- 领域: other (通用模块)
+- 行数: 27
+- imports: @unocss/preset-wind3, @unocss/transformer-directives, @unocss/vite
+- entrypoints: -
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [Fba2397eb-S0001] 行 1-1 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, js-import
+- [Fba2397eb-S0002] 行 2-2 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, js-import
+- [Fba2397eb-S0003] 行 3-4 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: other, js-import
+- [Fba2397eb-S0004] 行 5-27 | js-export | 函数/导出 export default：承载该模块的核心逻辑，用于支撑「通用模块」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineConfig, presetWind3, transformerDirectives
+- risks: -
+- tags: other, js-export
+
+## [F3e657751] web/vite.config.js
+- 语言: js
+- 领域: plugin-ecosystem (插件生态)
+- 行数: 119
+- imports: ./src/core/config, ./vitePlugin/componentName/index.js, ./vitePlugin/secret, @unocss/vite, @vitejs/plugin-legacy, @vitejs/plugin-vue, path, vite, vite-auto-import-svg, vite-check-multiple-dom, vite-plugin-banner, vite-plugin-vue-devtools
+- entrypoints: -
+- depends_on: ./src/core/config, ./vitePlugin/componentName/index.js, ./vitePlugin/secret
+- owned_by: frontend
+- 逻辑段:
+- [F3e657751-S0001] 行 1-1 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, js-import, plugin
+- [F3e657751-S0002] 行 2-2 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, js-import, config
+- [F3e657751-S0003] 行 3-3 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, js-import, plugin
+- [F3e657751-S0004] 行 4-4 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, js-import
+- [F3e657751-S0005] 行 5-5 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, js-import
+- [F3e657751-S0006] 行 6-6 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, js-import, plugin
+- [F3e657751-S0007] 行 7-7 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, js-import, plugin
+- [F3e657751-S0008] 行 8-8 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, js-import
+- [F3e657751-S0009] 行 9-9 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, js-import
+- [F3e657751-S0010] 行 10-10 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, js-import
+- [F3e657751-S0011] 行 11-11 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, js-import
+- [F3e657751-S0012] 行 12-14 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, js-import, config
+- [F3e657751-S0013] 行 15-16 | js-export | 函数/导出 export default：承载该模块的核心逻辑，用于支撑「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: AddSecret
+- risks: -
+- tags: plugin-ecosystem, js-export
+- [F3e657751-S0014] 行 17-19 | js-const | 逻辑段 js-const：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: loadEnv, cwd, viteLogo
+- risks: -
+- tags: plugin-ecosystem, js-const, config
+- [F3e657751-S0015] 行 20-21 | js-const | 逻辑段 js-const：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: parse, Date
+- risks: -
+- tags: plugin-ecosystem, js-const
+- [F3e657751-S0016] 行 22-23 | js-const | 逻辑段 js-const：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, js-const
+- [F3e657751-S0017] 行 24-28 | js-const | 逻辑段 js-const：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: resolve
+- risks: -
+- tags: plugin-ecosystem, js-const
+- [F3e657751-S0018] 行 29-30 | js-const | 逻辑段 js-const：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, js-const
+- [F3e657751-S0019] 行 31-38 | js-const | 逻辑段 js-const：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, js-const
+- [F3e657751-S0020] 行 39-39 | js-const | 逻辑段 js-const：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, js-const
+- [F3e657751-S0021] 行 40-40 | js-const | 逻辑段 js-const：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, js-const
+- [F3e657751-S0022] 行 41-42 | js-const | 逻辑段 js-const：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, js-const
+- [F3e657751-S0023] 行 43-67 | js-const | 逻辑段 js-const：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: Number
+- risks: -
+- tags: plugin-ecosystem, js-const, config
+- [F3e657751-S0024] 行 68-74 | js-func | 函数/导出 rewrite：承载该模块的核心逻辑，用于支撑「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: replace, RegExp
+- risks: -
+- tags: plugin-ecosystem, js-func, plugin, config
+- [F3e657751-S0025] 行 75-119 | js-func | 函数/导出 rewrite：承载该模块的核心逻辑，用于支撑「插件生态」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: replace, RegExp, vueDevTools, legacyPlugin, vuePlugin, svgBuilder, Banner, VueFilePathPlugin, UnoCSS, vueRootValidator
+- risks: -
+- tags: plugin-ecosystem, js-func, plugin, config
+

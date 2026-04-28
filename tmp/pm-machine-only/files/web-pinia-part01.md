@@ -1,0 +1,824 @@
+# web-pinia
+
+- 文件数量：6
+
+## [F5dec0b2e] web/src/pinia/index.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 9
+- imports: @/pinia/modules/app, @/pinia/modules/dictionary, @/pinia/modules/user, pinia
+- entrypoints: -
+- depends_on: @/pinia/modules/app, @/pinia/modules/dictionary, @/pinia/modules/user
+- owned_by: frontend
+- 逻辑段:
+- [F5dec0b2e-S0001] 行 1-1 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F5dec0b2e-S0002] 行 2-2 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F5dec0b2e-S0003] 行 3-3 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F5dec0b2e-S0004] 行 4-5 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F5dec0b2e-S0005] 行 6-9 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: createPinia
+- risks: -
+- tags: frontend-core, js-const
+
+## [F685cca7d] web/src/pinia/modules/app.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 163
+- imports: @/utils/format, @vueuse/core, pinia, vue
+- entrypoints: -
+- depends_on: @/utils/format
+- owned_by: frontend
+- 逻辑段:
+- [F685cca7d-S0001] 行 1-1 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F685cca7d-S0002] 行 2-2 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F685cca7d-S0003] 行 3-3 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F685cca7d-S0004] 行 4-5 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F685cca7d-S0005] 行 6-6 | js-export | 函数/导出 useAppStore：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineStore
+- risks: -
+- tags: frontend-core, js-export
+- [F685cca7d-S0006] 行 7-7 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: ref
+- risks: -
+- tags: frontend-core, js-const
+- [F685cca7d-S0007] 行 8-8 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: ref
+- risks: -
+- tags: frontend-core, js-const
+- [F685cca7d-S0008] 行 9-9 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: ref
+- risks: -
+- tags: frontend-core, js-const
+- [F685cca7d-S0009] 行 10-25 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: reactive
+- risks: -
+- tags: frontend-core, js-const, config
+- [F685cca7d-S0010] 行 26-32 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: useDark
+- risks: -
+- tags: frontend-core, js-const
+- [F685cca7d-S0011] 行 33-34 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: usePreferredDark
+- risks: -
+- tags: frontend-core, js-const
+- [F685cca7d-S0012] 行 35-38 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: darkMode
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const
+- [F685cca7d-S0013] 行 39-42 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: e
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const, config
+- [F685cca7d-S0014] 行 43-46 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: e
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const, config
+- [F685cca7d-S0015] 行 47-50 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: e
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const, config
+- [F685cca7d-S0016] 行 51-54 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: e
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const, config
+- [F685cca7d-S0017] 行 55-65 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: e
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const
+- [F685cca7d-S0018] 行 66-78 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: e
+- outputs: -
+- side_effects: -
+- calls: watchEffect
+- risks: -
+- tags: frontend-core, js-const, config
+- [F685cca7d-S0019] 行 79-82 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: e
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const, config
+- [F685cca7d-S0020] 行 83-86 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: e
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const, config
+- [F685cca7d-S0021] 行 87-90 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: e
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const, config
+- [F685cca7d-S0022] 行 91-94 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: e
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const, config
+- [F685cca7d-S0023] 行 95-98 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: e
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const, config
+- [F685cca7d-S0024] 行 99-102 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: e
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const, config
+- [F685cca7d-S0025] 行 103-106 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: e
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const, config
+- [F685cca7d-S0026] 行 107-122 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const
+- [F685cca7d-S0027] 行 123-163 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: watchEffect, toggle, setBodyPrimaryColor
+- risks: -
+- tags: frontend-core, js-const, config
+
+## [Fd9e950ce] web/src/pinia/modules/dictionary.js
+- 语言: js
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 253
+- imports: @/api/sysDictionary, @/api/sysDictionaryDetail, pinia, vue
+- entrypoints: -
+- depends_on: @/api/sysDictionary, @/api/sysDictionaryDetail
+- owned_by: frontend
+- 逻辑段:
+- [Fd9e950ce-S0001] 行 1-1 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, js-import
+- [Fd9e950ce-S0002] 行 2-3 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, js-import
+- [Fd9e950ce-S0003] 行 4-4 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, js-import
+- [Fd9e950ce-S0004] 行 5-6 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, js-import
+- [Fd9e950ce-S0005] 行 7-7 | js-export | 函数/导出 useDictionaryStore：承载该模块的核心逻辑，用于支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineStore
+- risks: -
+- tags: menu-rbac, js-export
+- [Fd9e950ce-S0006] 行 8-9 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: ref
+- risks: -
+- tags: menu-rbac, js-const
+- [Fd9e950ce-S0007] 行 10-14 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: dictionaryRes
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, js-const
+- [Fd9e950ce-S0008] 行 15-41 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: items, currentDepth, targetDepth
+- outputs: -
+- side_effects: -
+- calls: filterTreeByDepth
+- risks: -
+- tags: menu-rbac, js-const
+- [Fd9e950ce-S0009] 行 42-42 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: items
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, js-const
+- [Fd9e950ce-S0010] 行 43-44 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, js-const
+- [Fd9e950ce-S0011] 行 45-63 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: nodes
+- outputs: -
+- side_effects: -
+- calls: forEach, push, traverse
+- risks: -
+- tags: menu-rbac, js-const
+- [Fd9e950ce-S0012] 行 64-76 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: items
+- outputs: -
+- side_effects: -
+- calls: normalizeTreeData
+- risks: -
+- tags: menu-rbac, js-const
+- [Fd9e950ce-S0013] 行 77-102 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: normalizeTreeData, filterTreeByDepth
+- risks: -
+- tags: menu-rbac, js-const
+- [Fd9e950ce-S0014] 行 103-116 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: findNodeByValue
+- risks: -
+- tags: menu-rbac, js-const
+- [Fd9e950ce-S0015] 行 117-120 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: type, depth = 0, value = null
+- outputs: -
+- side_effects: -
+- calls: async
+- risks: -
+- tags: menu-rbac, js-const
+- [Fd9e950ce-S0016] 行 121-131 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, js-const
+- [Fd9e950ce-S0017] 行 132-139 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getDictionaryTreeListByType
+- risks: -
+- tags: menu-rbac, js-const
+- [Fd9e950ce-S0018] 行 140-156 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: findNodeByValue, flattenTree
+- risks: -
+- tags: menu-rbac, js-const
+- [Fd9e950ce-S0019] 行 157-173 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: setDictionaryMap, catch, error
+- risks: -
+- tags: menu-rbac, js-const
+- [Fd9e950ce-S0020] 行 174-180 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, js-const
+- [Fd9e950ce-S0021] 行 181-188 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getDictionaryTreeListByType
+- risks: -
+- tags: menu-rbac, js-const
+- [Fd9e950ce-S0022] 行 189-196 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: normalizeTreeData
+- risks: -
+- tags: menu-rbac, js-const
+- [Fd9e950ce-S0023] 行 197-200 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: filterTreeByDepth, flattenTree
+- risks: -
+- tags: menu-rbac, js-const
+- [Fd9e950ce-S0024] 行 201-206 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: setDictionaryMap
+- risks: -
+- tags: menu-rbac, js-const
+- [Fd9e950ce-S0025] 行 207-208 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: findSysDictionary
+- risks: -
+- tags: menu-rbac, js-const
+- [Fd9e950ce-S0026] 行 209-209 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, js-const
+- [Fd9e950ce-S0027] 行 210-226 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: forEach, push, setDictionaryMap, catch, error
+- risks: -
+- tags: menu-rbac, js-const
+- [Fd9e950ce-S0028] 行 227-228 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: findSysDictionary
+- risks: -
+- tags: menu-rbac, js-const
+- [Fd9e950ce-S0029] 行 229-229 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, js-const
+- [Fd9e950ce-S0030] 行 230-253 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: forEach, push, setDictionaryMap
+- risks: -
+- tags: menu-rbac, js-const
+
+## [Fe30555b4] web/src/pinia/modules/params.js
+- 语言: js
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 32
+- imports: @/api/sysParams, pinia, vue
+- entrypoints: -
+- depends_on: @/api/sysParams
+- owned_by: frontend
+- 逻辑段:
+- [Fe30555b4-S0001] 行 1-1 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, js-import
+- [Fe30555b4-S0002] 行 2-2 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, js-import
+- [Fe30555b4-S0003] 行 3-4 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, js-import
+- [Fe30555b4-S0004] 行 5-5 | js-export | 函数/导出 useParamsStore：承载该模块的核心逻辑，用于支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineStore
+- risks: -
+- tags: menu-rbac, js-export
+- [Fe30555b4-S0005] 行 6-7 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: ref
+- risks: -
+- tags: menu-rbac, js-const
+- [Fe30555b4-S0006] 行 8-11 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: paramsRes
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, js-const
+- [Fe30555b4-S0007] 行 12-15 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: key
+- outputs: -
+- side_effects: -
+- calls: async
+- risks: -
+- tags: menu-rbac, js-const
+- [Fe30555b4-S0008] 行 16-17 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getSysParam
+- risks: -
+- tags: menu-rbac, js-const
+- [Fe30555b4-S0009] 行 18-32 | js-const | 逻辑段 js-const：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: setParamsMap
+- risks: -
+- tags: menu-rbac, js-const
+
+## [F736c5bc5] web/src/pinia/modules/router.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 208
+- imports: @/api/menu, @/core/config.js, @/pathInfo.json, @/utils/asyncRouter, @/utils/bus.js, pinia, vue, vue-router
+- entrypoints: -
+- depends_on: @/api/menu, @/core/config.js, @/pathInfo.json, @/utils/asyncRouter, @/utils/bus.js
+- owned_by: frontend
+- 逻辑段:
+- [F736c5bc5-S0001] 行 1-1 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F736c5bc5-S0002] 行 2-2 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F736c5bc5-S0003] 行 3-3 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F736c5bc5-S0004] 行 4-4 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F736c5bc5-S0005] 行 5-5 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F736c5bc5-S0006] 行 6-6 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F736c5bc5-S0007] 行 7-7 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F736c5bc5-S0008] 行 8-9 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import, config
+- [F736c5bc5-S0009] 行 10-10 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const
+- [F736c5bc5-S0010] 行 11-11 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const
+- [F736c5bc5-S0011] 行 12-13 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const
+- [F736c5bc5-S0012] 行 14-32 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: routes, routeMap, parent
+- outputs: -
+- side_effects: -
+- calls: forEach, push, formatRouter
+- risks: -
+- tags: frontend-core, js-const
+- [F736c5bc5-S0013] 行 33-40 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: routes
+- outputs: -
+- side_effects: -
+- calls: forEach, some
+- risks: -
+- tags: frontend-core, js-const
+- [F736c5bc5-S0014] 行 41-50 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: push, KeepAliveFilter
+- risks: -
+- tags: frontend-core, js-const
+- [F736c5bc5-S0015] 行 51-51 | js-export | 函数/导出 useRouterStore：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineStore
+- risks: -
+- tags: frontend-core, js-export
+- [F736c5bc5-S0016] 行 52-52 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: ref
+- risks: -
+- tags: frontend-core, js-const
+- [F736c5bc5-S0017] 行 53-53 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: ref
+- risks: -
+- tags: frontend-core, js-const
+- [F736c5bc5-S0018] 行 54-54 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: history
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const
+- [F736c5bc5-S0019] 行 55-62 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: push, forEach
+- risks: -
+- tags: frontend-core, js-const, config
+- [F736c5bc5-S0020] 行 63-64 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const
+- [F736c5bc5-S0021] 行 65-80 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: push, from, Set
+- risks: -
+- tags: frontend-core, js-const
+- [F736c5bc5-S0022] 行 81-85 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: to
+- outputs: -
+- side_effects: -
+- calls: async, some
+- risks: -
+- tags: frontend-core, js-const
+- [F736c5bc5-S0023] 行 86-102 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: splice, handleKeepAlive
+- risks: -
+- tags: frontend-core, js-const
+- [F736c5bc5-S0024] 行 103-106 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: useRoute, on
+- risks: -
+- tags: frontend-core, js-const
+- [F736c5bc5-S0025] 行 107-108 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: ref
+- risks: -
+- tags: frontend-core, js-const
+- [F736c5bc5-S0026] 行 109-110 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: ref
+- risks: -
+- tags: frontend-core, js-const
+- [F736c5bc5-S0027] 行 111-112 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: ref
+- risks: -
+- tags: frontend-core, js-const
+- [F736c5bc5-S0028] 行 113-114 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const
+- [F736c5bc5-S0029] 行 115-116 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: ref
+- risks: -
+- tags: frontend-core, js-const
+- [F736c5bc5-S0030] 行 117-126 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: name
+- outputs: -
+- side_effects: -
+- calls: setItem
+- risks: -
+- tags: frontend-core, js-const
+- [F736c5bc5-S0031] 行 127-128 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: menuMap, routeName
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const
+- [F736c5bc5-S0032] 行 129-132 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: some
+- risks: -
+- tags: frontend-core, js-const
+- [F736c5bc5-S0033] 行 133-141 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: findTopActive, watchEffect
+- risks: -
+- tags: frontend-core, js-const
+- [F736c5bc5-S0034] 行 142-155 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getItem, forEach, push, findTopActive, setLeftMenu
+- risks: -
+- tags: frontend-core, js-const
+- [F736c5bc5-S0035] 行 156-157 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const
+- [F736c5bc5-S0036] 行 158-159 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async
+- risks: -
+- tags: frontend-core, js-const
+- [F736c5bc5-S0037] 行 160-170 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const
+- [F736c5bc5-S0038] 行 171-171 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: asyncMenu
+- risks: -
+- tags: frontend-core, js-const
+- [F736c5bc5-S0039] 行 172-208 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: push, formatRouter, asyncRouterHandle, KeepAliveFilter
+- risks: -
+- tags: frontend-core, js-const
+

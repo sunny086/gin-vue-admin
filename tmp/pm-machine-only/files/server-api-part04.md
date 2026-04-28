@@ -1,0 +1,216 @@
+## [F2f5229b1] server/api/v1/system/sys_user.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 517
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common, github.com/flipped-aurora/gin-vue-admin/server/model/common/request, github.com/flipped-aurora/gin-vue-admin/server/model/common/response, github.com/flipped-aurora/gin-vue-admin/server/model/system, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/gin-gonic/gin, github.com/redis/go-redis/v9, go.uber.org/zap, strconv, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F2f5229b1-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F2f5229b1-S0002] 行 3-26 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, security
+- [F2f5229b1-S0003] 行 27-101 | go-func | 函数 Login：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: Login, ShouldBindJSON, FailWithMessage, Error, Verify, ClientIP, Get, Set, Duration, interfaceToInt, Increment, CreateLoginLog
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, security
+- [F2f5229b1-S0004] 行 102-169 | go-func | 函数 TokenNext：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: c *gin.Context, user system.SysUser
+- outputs: -
+- side_effects: -
+- calls: TokenNext, LoginToken, Error, FailWithMessage, CreateLoginLog, ClientIP, UserAgent, SetToken, int, Unix, Now, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, security
+- [F2f5229b1-S0005] 行 170-205 | go-func | 函数 Register：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: Register, ShouldBindJSON, FailWithMessage, Error, Verify, FailWithDetailed, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F2f5229b1-S0006] 行 206-237 | go-func | 函数 ChangePassword：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: ChangePassword, ShouldBindJSON, FailWithMessage, Error, Verify, GetUserID, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F2f5229b1-S0007] 行 238-272 | go-func | 函数 GetUserList：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetUserList, ShouldBindJSON, FailWithMessage, Error, Verify, GetUserInfoList, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F2f5229b1-S0008] 行 273-313 | go-func | 函数 SetUserAuthority：执行更新与配置写入流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: SetUserAuthority, ShouldBindJSON, FailWithMessage, Error, Verify, GetUserID, GetUserInfo, NewJWT, CreateToken, Header, FormatInt, Unix
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, security
+- [F2f5229b1-S0009] 行 314-339 | go-func | 函数 SetUserAuthorities：执行更新与配置写入流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: SetUserAuthorities, ShouldBindJSON, FailWithMessage, Error, GetUserAuthorityId, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, security
+- [F2f5229b1-S0010] 行 340-374 | go-func | 函数 DeleteUser：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: DeleteUser, ShouldBindJSON, FailWithMessage, Error, Verify, GetUserID, uint, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, security
+- [F2f5229b1-S0011] 行 375-422 | go-func | 函数 SetUserInfo：执行更新与配置写入流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: SetUserInfo, ShouldBindJSON, FailWithMessage, Error, Verify, GetUserAuthorityId, SetUserAuthorities, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, security
+- [F2f5229b1-S0012] 行 423-457 | go-func | 函数 SetSelfInfo：执行更新与配置写入流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: SetSelfInfo, ShouldBindJSON, FailWithMessage, Error, GetUserID, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F2f5229b1-S0013] 行 458-482 | go-func | 函数 SetSelfSetting：执行更新与配置写入流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: SetSelfSetting, ShouldBindJSON, FailWithMessage, Error, GetUserID, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F2f5229b1-S0014] 行 483-501 | go-func | 函数 GetUserInfo：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetUserInfo, GetUserUuid, Error, FailWithMessage, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F2f5229b1-S0015] 行 502-517 | go-func | 函数 ResetPassword：执行更新与配置写入流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: ResetPassword, ShouldBindJSON, FailWithMessage, Error, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+
+## [Fc8ec2690] server/api/v1/system/sys_version.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 487
+- imports: encoding/json, fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/response, github.com/flipped-aurora/gin-vue-admin/server/model/system, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/gin-gonic/gin, go.uber.org/zap, net/http, sort, strconv, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fc8ec2690-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fc8ec2690-S0002] 行 3-20 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Fc8ec2690-S0003] 行 21-23 | go-type | 类型 SysVersionApi：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [Fc8ec2690-S0004] 行 24-49 | go-func | 函数 buildMenuTree：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: menus []system.SysBaseMenu
+- outputs: []system.SysBaseMenu
+- side_effects: -
+- calls: buildMenuTree, convertMenuToStruct, Slice
+- risks: -
+- tags: system-config, go-func
+- [Fc8ec2690-S0005] 行 50-117 | go-func | 函数 convertMenuToStruct：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: menu system.SysBaseMenu, menuMap map[uint]*system.SysBaseMenu
+- outputs: system.SysBaseMenu
+- side_effects: -
+- calls: convertMenuToStruct, Slice
+- risks: -
+- tags: system-config, go-func
+- [Fc8ec2690-S0006] 行 118-139 | go-func | 函数 DeleteSysVersion：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: DeleteSysVersion, Context, Query, Error, FailWithMessage, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [Fc8ec2690-S0007] 行 140-162 | go-func | 函数 DeleteSysVersionByIds：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: DeleteSysVersionByIds, Context, QueryArray, Error, FailWithMessage, OkWithMessage
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [Fc8ec2690-S0008] 行 163-185 | go-func | 函数 FindSysVersion：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: FindSysVersion, Context, Query, GetSysVersion, Error, FailWithMessage, OkWithData
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [Fc8ec2690-S0009] 行 186-216 | go-func | 函数 GetSysVersionList：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetSysVersionList, Context, ShouldBindQuery, FailWithMessage, Error, GetSysVersionInfoList, OkWithDetailed
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [Fc8ec2690-S0010] 行 217-237 | go-func | 函数 GetSysVersionPublic：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: GetSysVersionPublic, Context, OkWithDetailed
+- risks: -
+- tags: system-config, go-func
+- [Fc8ec2690-S0011] 行 238-371 | go-func | 函数 ExportVersion：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: ExportVersion, Context, ShouldBindJSON, FailWithMessage, Error, GetMenusByIds, GetApisByIds, GetDictionariesByIds, buildMenuTree, Now, Format, MarshalIndent
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [Fc8ec2690-S0012] 行 372-425 | go-func | 函数 DownloadVersionJson：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: DownloadVersionJson, Context, Query, FailWithMessage, GetSysVersion, Error, byte, Format, MarshalIndent, Sprintf, Now, Header
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [Fc8ec2690-S0013] 行 426-487 | go-func | 函数 ImportVersion：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: -
+- side_effects: -
+- calls: ImportVersion, Context, ShouldBindJSON, FailWithMessage, Error, ImportMenus, ImportApis, ImportDictionaries, Marshal, Pointer, Sprintf, Now
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+

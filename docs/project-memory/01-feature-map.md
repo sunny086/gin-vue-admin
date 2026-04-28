@@ -1,0 +1,198 @@
+# 01-feature-map
+
+## 后端功能域（基于路由扫描）
+- 路由总量：191
+- 路由域分布：
+- customer: 4
+- addBaseMenu: 1
+- addCategory: 1
+- addFunc: 1
+- addMenuAuthority: 1
+- admin_register: 1
+- breakpointContinue: 1
+- breakpointContinueFinish: 1
+- canRemoveAuthorityBtn: 1
+- captcha: 1
+- changePassword: 1
+- checkdb: 1
+- copyAuthority: 1
+- createApi: 1
+- createApiToken: 1
+- createAuthority: 1
+- createPackage: 1
+- createReference: 1
+- createResource: 1
+- createScript: 1
+- createSysDictionary: 1
+- createSysDictionaryDetail: 1
+- createSysError: 1
+- createSysExportTemplate: 1
+- createSysParams: 1
+- createTemp: 1
+- createTemplate: 1
+- customerList: 1
+- deleteAIWorkflowSession: 1
+- deleteApi: 1
+
+## 前端功能页（web/src/view）
+- 页面文件总数：81
+- web/src/view/about/index.vue
+- web/src/view/dashboard/components/banner.vue
+- web/src/view/dashboard/components/card.vue
+- web/src/view/dashboard/components/charts-content-numbers.vue
+- web/src/view/dashboard/components/charts-people-numbers.vue
+- web/src/view/dashboard/components/charts.vue
+- web/src/view/dashboard/components/notice.vue
+- web/src/view/dashboard/components/pluginTable.vue
+- web/src/view/dashboard/components/quickLinks.vue
+- web/src/view/dashboard/components/table.vue
+- web/src/view/dashboard/components/wiki.vue
+- web/src/view/dashboard/index.vue
+- web/src/view/error/index.vue
+- web/src/view/error/reload.vue
+- web/src/view/example/breakpoint/breakpoint.vue
+- web/src/view/example/customer/customer.vue
+- web/src/view/example/index.vue
+- web/src/view/example/upload/scanUpload.vue
+- web/src/view/example/upload/upload.vue
+- web/src/view/init/index.vue
+- web/src/view/layout/aside/asideComponent/asyncSubmenu.vue
+- web/src/view/layout/aside/asideComponent/index.vue
+- web/src/view/layout/aside/asideComponent/menuItem.vue
+- web/src/view/layout/aside/combinationMode.vue
+- web/src/view/layout/aside/headMode.vue
+- web/src/view/layout/aside/index.vue
+- web/src/view/layout/aside/normalMode.vue
+- web/src/view/layout/aside/sidebarMode.vue
+- web/src/view/layout/header/index.vue
+- web/src/view/layout/header/tools.vue
+- web/src/view/layout/iframe.vue
+- web/src/view/layout/index.vue
+- web/src/view/layout/screenfull/index.vue
+- web/src/view/layout/search/search.vue
+- web/src/view/layout/setting/components/layoutModeCard.vue
+- web/src/view/layout/setting/components/settingItem.vue
+- web/src/view/layout/setting/components/themeColorPicker.vue
+- web/src/view/layout/setting/components/themeModeSelector.vue
+- web/src/view/layout/setting/index.vue
+- web/src/view/layout/setting/modules/appearance/index.vue
+- web/src/view/layout/setting/modules/general/index.vue
+- web/src/view/layout/setting/modules/layout/index.vue
+- web/src/view/layout/tabs/index.vue
+- web/src/view/login/index.vue
+- web/src/view/person/person.vue
+- web/src/view/routerHolder.vue
+- web/src/view/superAdmin/api/api.vue
+- web/src/view/superAdmin/authority/authority.vue
+- web/src/view/superAdmin/authority/components/apis.vue
+- web/src/view/superAdmin/authority/components/datas.vue
+- web/src/view/superAdmin/authority/components/menus.vue
+- web/src/view/superAdmin/dictionary/sysDictionary.vue
+- web/src/view/superAdmin/dictionary/sysDictionaryDetail.vue
+- web/src/view/superAdmin/index.vue
+- web/src/view/superAdmin/menu/components/components-cascader.vue
+- web/src/view/superAdmin/menu/icon.vue
+- web/src/view/superAdmin/menu/menu.vue
+- web/src/view/superAdmin/operation/sysOperationRecord.vue
+- web/src/view/superAdmin/params/sysParams.vue
+- web/src/view/superAdmin/user/user.vue
+- web/src/view/system/state.vue
+- web/src/view/systemTools/aiWrokflow/index.vue
+- web/src/view/systemTools/apiToken/index.vue
+- web/src/view/systemTools/autoCode/component/fieldDialog.vue
+- web/src/view/systemTools/autoCode/component/previewCodeDialog.vue
+- web/src/view/systemTools/autoCode/index.vue
+- web/src/view/systemTools/autoCode/mcp.vue
+- web/src/view/systemTools/autoCode/mcpTest.vue
+- web/src/view/systemTools/autoCode/picture.vue
+- web/src/view/systemTools/autoCodeAdmin/index.vue
+- web/src/view/systemTools/autoPkg/autoPkg.vue
+- web/src/view/systemTools/exportTemplate/exportTemplate.vue
+- web/src/view/systemTools/formCreate/index.vue
+- web/src/view/systemTools/index.vue
+- web/src/view/systemTools/installPlugin/index.vue
+- web/src/view/systemTools/loginLog/index.vue
+- web/src/view/systemTools/pubPlug/pubPlug.vue
+- web/src/view/systemTools/skills/index.vue
+- web/src/view/systemTools/sysError/sysError.vue
+- web/src/view/systemTools/system/system.vue
+- web/src/view/systemTools/version/version.vue
+
+## 插件能力映射
+- 插件相关文件数：62
+- server/plugin/announcement/api/enter.go
+- server/plugin/announcement/api/info.go
+- server/plugin/announcement/config/config.go
+- server/plugin/announcement/gen/gen.go
+- server/plugin/announcement/initialize/api.go
+- server/plugin/announcement/initialize/dictionary.go
+- server/plugin/announcement/initialize/gorm.go
+- server/plugin/announcement/initialize/menu.go
+- server/plugin/announcement/initialize/router.go
+- server/plugin/announcement/initialize/viper.go
+- server/plugin/announcement/model/info.go
+- server/plugin/announcement/model/request/info.go
+- server/plugin/announcement/plugin.go
+- server/plugin/announcement/plugin/plugin.go
+- server/plugin/announcement/router/enter.go
+- server/plugin/announcement/router/info.go
+- server/plugin/announcement/service/enter.go
+- server/plugin/announcement/service/info.go
+- server/plugin/email/api/enter.go
+- server/plugin/email/api/sys_email.go
+- server/plugin/email/config/email.go
+- server/plugin/email/global/gloabl.go
+- server/plugin/email/main.go
+- server/plugin/email/model/response/email.go
+- server/plugin/email/README.MD
+- server/plugin/email/router/enter.go
+- server/plugin/email/router/sys_email.go
+- server/plugin/email/service/enter.go
+- server/plugin/email/service/sys_email.go
+- server/plugin/email/utils/email.go
+- server/plugin/plugin-tool/utils/check.go
+- server/plugin/register.go
+- server/resource/plugin/server/api/api.go.tpl
+- server/resource/plugin/server/api/enter.go.tpl
+- server/resource/plugin/server/config/config.go.tpl
+- server/resource/plugin/server/gen/gen.go.tpl
+- server/resource/plugin/server/initialize/api.go.tpl
+- server/resource/plugin/server/initialize/dictionary.go.tpl
+- server/resource/plugin/server/initialize/gorm.go.tpl
+- server/resource/plugin/server/initialize/menu.go.tpl
+- server/resource/plugin/server/initialize/router.go.tpl
+- server/resource/plugin/server/initialize/viper.go.tpl
+- server/resource/plugin/server/model/model.go.tpl
+- server/resource/plugin/server/model/request/request.go.tpl
+- server/resource/plugin/server/plugin.go.tpl
+- server/resource/plugin/server/plugin/plugin.go.tpl
+- server/resource/plugin/server/router/enter.go.tpl
+- server/resource/plugin/server/router/router.go.tpl
+- server/resource/plugin/server/service/enter.go.tpl
+- server/resource/plugin/server/service/service.go.tpl
+- server/resource/plugin/web/api/api.js.tpl
+- server/resource/plugin/web/form/form.vue.tpl
+- server/resource/plugin/web/view/view.vue.tpl
+- server/utils/plugin/plugin.go
+- server/utils/plugin/v2/plugin.go
+- server/utils/plugin/v2/registry.go
+- web/src/api/plugin/api.js
+- web/src/plugin/announcement/api/info.js
+- web/src/plugin/announcement/form/info.vue
+- web/src/plugin/announcement/view/info.vue
+- web/src/plugin/email/api/email.js
+- web/src/plugin/email/view/index.vue
+
+## 部署与运维资产
+- 部署文件数：10
+- deploy/docker-compose/docker-compose.yaml
+- deploy/docker/Dockerfile
+- deploy/docker/entrypoint.sh
+- deploy/kubernetes/server/gva-server-configmap.yaml
+- deploy/kubernetes/server/gva-server-deployment.yaml
+- deploy/kubernetes/server/gva-server-service.yaml
+- deploy/kubernetes/web/gva-web-configmap.yaml
+- deploy/kubernetes/web/gva-web-deploymemt.yaml
+- deploy/kubernetes/web/gva-web-ingress.yaml
+- deploy/kubernetes/web/gva-web-service.yaml
+

@@ -1,0 +1,426 @@
+# server-middleware
+
+- 文件数量：10
+
+## [F408b83b5] server/middleware/casbin_rbac.go
+- 语言: go
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 33
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/response, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/gin-gonic/gin, strconv, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F408b83b5-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-package
+- [F408b83b5-S0002] 行 3-12 | go-import | 逻辑段 go-import：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: auth-access, go-import
+- [F408b83b5-S0003] 行 13-33 | go-func | 函数 CasbinHandler：处理请求或事件分发，位于「鉴权与访问控制」域。
+- inputs: -
+- outputs: gin.HandlerFunc
+- side_effects: -
+- calls: CasbinHandler, GetClaims, TrimPrefix, Itoa, int, GetCasbin, Enforce, FailWithDetailed, Abort, Next
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func
+
+## [Fcffb856b] server/middleware/cors.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 74
+- imports: github.com/flipped-aurora/gin-vue-admin/server/config, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/gin-gonic/gin, net/http
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fcffb856b-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fcffb856b-S0002] 行 3-10 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import, config
+- [Fcffb856b-S0003] 行 11-30 | go-func | 函数 Cors：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: gin.HandlerFunc
+- side_effects: -
+- calls: Cors, Get, Header, AbortWithStatus, Next
+- risks: -
+- tags: system-config, go-func
+- [Fcffb856b-S0004] 行 31-64 | go-func | 函数 CorsByRules：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: gin.HandlerFunc
+- side_effects: -
+- calls: CorsByRules, Cors, checkCors, GetHeader, Header, AbortWithStatus, Next
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [Fcffb856b-S0005] 行 65-74 | go-func | 函数 checkCors：执行校验与约束判断，位于「系统配置与运行时」域。
+- inputs: currentOrigin string
+- outputs: *config.CORSWhitelist
+- side_effects: -
+- calls: checkCors
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, config
+
+## [Fd4c04cb0] server/middleware/email.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 59
+- imports: bytes, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system, github.com/flipped-aurora/gin-vue-admin/server/plugin/email/utils, github.com/gin-gonic/gin, go.uber.org/zap, io, strconv, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fd4c04cb0-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fd4c04cb0-S0002] 行 3-17 | go-import | 逻辑段 go-import：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: plugin-ecosystem, go-import, plugin
+- [Fd4c04cb0-S0003] 行 18-59 | go-func | 函数 ErrorToEmail：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: gin.HandlerFunc
+- side_effects: -
+- calls: ErrorToEmail, GetClaims, Atoi, Get, Where, First, ReadAll, NopCloser, NewBuffer, ClientIP, UserAgent, string
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+
+## [Ff951fb96] server/middleware/error.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 81
+- imports: context, fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system, github.com/flipped-aurora/gin-vue-admin/server/service, github.com/gin-gonic/gin, go.uber.org/zap, net, net/http, net/http/httputil, os, runtime/debug, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Ff951fb96-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Ff951fb96-S0002] 行 3-20 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Ff951fb96-S0003] 行 21-81 | go-func | 函数 GinRecovery：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: stack bool
+- outputs: gin.HandlerFunc
+- side_effects: -
+- calls: GinRecovery, Contains, ToLower, Error, DumpRequest, Any, String, string, Abort, Sprintf, Stack, CreateSysError
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+
+## [F951cec3f] server/middleware/jwt.go
+- 语言: go
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 90
+- imports: errors, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/response, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/gin-gonic/gin, github.com/golang-jwt/jwt/v5, strconv, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F951cec3f-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-package
+- [F951cec3f-S0002] 行 3-15 | go-import | 逻辑段 go-import：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: auth-access, go-import, security
+- [F951cec3f-S0003] 行 16-85 | go-func | 函数 JWTAuth：承载该模块的核心逻辑，位于「鉴权与访问控制」域。
+- inputs: -
+- outputs: gin.HandlerFunc
+- side_effects: -
+- calls: JWTAuth, GetToken, NoAuth, Abort, isBlacklist, ClearToken, NewJWT, ParseToken, Is, Error, FindUserByUuid, String
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, security
+- [F951cec3f-S0004] 行 86-90 | go-func | 函数 isBlacklist：执行查询与读取流程，位于「鉴权与访问控制」域。
+- inputs: jwt string
+- outputs: bool
+- side_effects: -
+- calls: isBlacklist, Get
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, security
+
+## [F9fff22d7] server/middleware/limit_ip.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 93
+- imports: context, errors, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common/response, github.com/gin-gonic/gin, go.uber.org/zap, net/http, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F9fff22d7-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F9fff22d7-S0002] 行 3-15 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F9fff22d7-S0003] 行 16-26 | go-type | 类型 LimitConfig：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F9fff22d7-S0004] 行 27-39 | go-func | 函数 LimitWithTime：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: gin.HandlerFunc
+- side_effects: -
+- calls: LimitWithTime, CheckOrMark, GenerationKey, JSON, Error, Abort, Next
+- risks: -
+- tags: system-config, go-func
+- [F9fff22d7-S0005] 行 40-43 | go-func | 函数 DefaultGenerationKey：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: c *gin.Context
+- outputs: string
+- side_effects: -
+- calls: DefaultGenerationKey, ClientIP
+- risks: -
+- tags: system-config, go-func
+- [F9fff22d7-S0006] 行 44-54 | go-func | 函数 DefaultCheckOrMark：执行校验与约束判断，位于「系统配置与运行时」域。
+- inputs: key string, expire int, limit int
+- outputs: (err error)
+- side_effects: 修改全局状态
+- calls: DefaultCheckOrMark, SetLimitWithTime, Duration, Error
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F9fff22d7-S0007] 行 55-64 | go-func | 函数 DefaultLimit：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: gin.HandlerFunc
+- side_effects: -
+- calls: DefaultLimit, LimitWithTime
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F9fff22d7-S0008] 行 65-93 | go-func | 函数 SetLimitWithTime：执行更新与配置写入流程，位于「系统配置与运行时」域。
+- inputs: key string, limit int, expiration time.Duration
+- outputs: error
+- side_effects: -
+- calls: SetLimitWithTime, Exists, Background, Result, TxPipeline, Incr, Expire, Exec, Get, Int, PTTL, New
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+
+## [Fce795caf] server/middleware/loadtls.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 28
+- imports: fmt, github.com/gin-gonic/gin, github.com/unrolled/secure
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fce795caf-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fce795caf-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Fce795caf-S0003] 行 12-28 | go-func | 函数 LoadTls：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: gin.HandlerFunc
+- side_effects: -
+- calls: LoadTls, New, Process, Println, Next
+- risks: -
+- tags: system-config, go-func
+
+## [Fbfd9b77c] server/middleware/logger.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 90
+- imports: bytes, encoding/json, fmt, github.com/gin-gonic/gin, io, strings, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fbfd9b77c-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fbfd9b77c-S0002] 行 3-14 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [Fbfd9b77c-S0003] 行 15-27 | go-type | 类型 LogLayout：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [Fbfd9b77c-S0004] 行 28-40 | go-type | 类型 Logger：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [Fbfd9b77c-S0005] 行 41-79 | go-func | 函数 SetLoggerMiddleware：执行更新与配置写入流程，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: gin.HandlerFunc
+- side_effects: -
+- calls: SetLoggerMiddleware, Now, Filter, GetRawData, NopCloser, NewBuffer, Next, Since, ClientIP, UserAgent, TrimRight, ByType
+- risks: -
+- tags: system-config, go-func
+- [Fbfd9b77c-S0006] 行 80-90 | go-func | 函数 DefaultLogger：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: gin.HandlerFunc
+- side_effects: -
+- calls: DefaultLogger, Marshal, Println, string, SetLoggerMiddleware
+- risks: -
+- tags: system-config, go-func
+
+## [F3d4c44ab] server/middleware/operation.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 130
+- imports: bytes, encoding/json, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system, github.com/flipped-aurora/gin-vue-admin/server/utils, github.com/gin-gonic/gin, go.uber.org/zap, io, net/http, net/url, strconv, strings, sync, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F3d4c44ab-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F3d4c44ab-S0002] 行 3-21 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F3d4c44ab-S0003] 行 22-22 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var
+- [F3d4c44ab-S0004] 行 23-24 | go-const-var | 逻辑段 go-const-var：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-const-var
+- [F3d4c44ab-S0005] 行 25-30 | go-func | 函数 init：完成初始化或注册流程，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: init
+- risks: -
+- tags: system-config, go-func
+- [F3d4c44ab-S0006] 行 31-120 | go-func | 函数 OperationRecord：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: -
+- outputs: gin.HandlerFunc
+- side_effects: 写入数据库
+- calls: OperationRecord, ReadAll, Error, NopCloser, NewBuffer, QueryUnescape, Split, Marshal, GetClaims, int, Atoi, Get
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F3d4c44ab-S0007] 行 121-125 | go-type | 类型 responseBodyWriter：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F3d4c44ab-S0008] 行 126-130 | go-func | 函数 Write：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: b []byte
+- outputs: (int, error)
+- side_effects: -
+- calls: Write
+- risks: -
+- tags: system-config, go-func
+
+## [Fdfe0a9ed] server/middleware/timeout.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 56
+- imports: context, github.com/gin-gonic/gin, net/http, time
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fdfe0a9ed-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [Fdfe0a9ed-S0002] 行 3-12 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import, Get, TimeoutMiddleware
+- risks: -
+- tags: system-config, go-import
+- [Fdfe0a9ed-S0003] 行 13-56 | go-func | 函数 TimeoutMiddleware：承载该模块的核心逻辑，位于「系统配置与运行时」域。
+- inputs: timeout time.Duration
+- outputs: gin.HandlerFunc
+- side_effects: 触发 panic, 启动并发协程
+- calls: TimeoutMiddleware, WithTimeout, Context, cancel, WithContext, Next, Done, Header, AbortWithStatusJSON
+- risks: 存在 panic 路径，异常恢复依赖上层中间件
+- tags: system-config, go-func
+

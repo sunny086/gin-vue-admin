@@ -67,6 +67,10 @@ images: build build-image-web build-image-server
 doc:
 	@cd server && swag init
 
+# 生成双视图项目画像文档（机器检索版 + 开发者接手版）
+project-memory:
+	@node tools/project_memory/cli.mjs --scope=server,web,deploy,root --out=docs/project-memory --dev-out=docs/project-memory-dev --lang=zh --max-lines-per-doc=850
+
 #插件快捷打包： make plugin PLUGIN="这里是插件文件夹名称,默认为email"
 plugin:
 	if [ -d ".plugin" ];then rm -rf .plugin ; else echo "OK!"; fi && mkdir -p .plugin/${PLUGIN}/{server/plugin,web/plugin} \

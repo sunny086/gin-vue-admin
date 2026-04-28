@@ -1,0 +1,793 @@
+## [F02d017a3] server/service/system/sys_auto_code_mssql.go
+- 语言: go
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 84
+- imports: fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system/response
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F02d017a3-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-package
+- [F02d017a3-S0002] 行 3-8 | go-import | 逻辑段 go-import：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: codegen-ai, go-import
+- [F02d017a3-S0003] 行 9-10 | go-const-var | 逻辑段 go-const-var：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-const-var, database
+- [F02d017a3-S0004] 行 11-15 | go-type | 类型 autoCodeMssql：定义该文件的数据结构或接口边界，支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-type, database
+- [F02d017a3-S0005] 行 16-29 | go-func | 函数 GetDB：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: businessDB string
+- outputs: (data []response.Db, err error)
+- side_effects: -
+- calls: GetDB, Raw, Scan
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database
+- [F02d017a3-S0006] 行 30-45 | go-func | 函数 GetTables：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: businessDB string, dbName string
+- outputs: (data []response.Table, err error)
+- side_effects: -
+- calls: GetTables, Sprintf, Raw, Scan
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database
+- [F02d017a3-S0007] 行 46-84 | go-func | 函数 GetColumn：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: businessDB string, tableName string, dbName string
+- outputs: (data []response.Column, err error)
+- side_effects: -
+- calls: GetColumn, Sprintf, Raw, Scan
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database
+
+## [Fe770c679] server/service/system/sys_auto_code_mysql.go
+- 语言: go
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 84
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system/response
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fe770c679-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-package
+- [Fe770c679-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: codegen-ai, go-import
+- [Fe770c679-S0003] 行 8-9 | go-const-var | 逻辑段 go-const-var：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-const-var, database
+- [Fe770c679-S0004] 行 10-14 | go-type | 类型 autoCodeMysql：定义该文件的数据结构或接口边界，支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-type, database
+- [Fe770c679-S0005] 行 15-28 | go-func | 函数 GetDB：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: businessDB string
+- outputs: (data []response.Db, err error)
+- side_effects: -
+- calls: GetDB, Raw, Scan
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database
+- [Fe770c679-S0006] 行 29-43 | go-func | 函数 GetTables：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: businessDB string, dbName string
+- outputs: (data []response.Table, err error)
+- side_effects: -
+- calls: GetTables, Raw, Scan
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database
+- [Fe770c679-S0007] 行 44-84 | go-func | 函数 GetColumn：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: businessDB string, tableName string, dbName string
+- outputs: (data []response.Column, err error)
+- side_effects: -
+- calls: GetColumn, CONCAT_WS, Raw, Scan
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database
+
+## [F9de52267] server/service/system/sys_auto_code_oracle.go
+- 语言: go
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 73
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system/response
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F9de52267-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-package
+- [F9de52267-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: codegen-ai, go-import
+- [F9de52267-S0003] 行 8-9 | go-const-var | 逻辑段 go-const-var：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-const-var
+- [F9de52267-S0004] 行 10-14 | go-type | 类型 autoCodeOracle：定义该文件的数据结构或接口边界，支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-type
+- [F9de52267-S0005] 行 15-24 | go-func | 函数 GetDB：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: businessDB string
+- outputs: (data []response.Db, err error)
+- side_effects: -
+- calls: GetDB, lower, Raw, Scan
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database
+- [F9de52267-S0006] 行 25-35 | go-func | 函数 GetTables：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: businessDB string, dbName string
+- outputs: (data []response.Table, err error)
+- side_effects: -
+- calls: GetTables, lower, Raw, Scan
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database
+- [F9de52267-S0007] 行 36-73 | go-func | 函数 GetColumn：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: businessDB string, tableName string, dbName string
+- outputs: (data []response.Column, err error)
+- side_effects: -
+- calls: GetColumn, lower, JOIN, Raw, Scan
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database
+
+## [F2f28acb2] server/service/system/sys_auto_code_pgsql.go
+- 语言: go
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 136
+- imports: github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system/response
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F2f28acb2-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-package
+- [F2f28acb2-S0002] 行 3-7 | go-import | 逻辑段 go-import：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: codegen-ai, go-import
+- [F2f28acb2-S0003] 行 8-9 | go-const-var | 逻辑段 go-const-var：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-const-var, database
+- [F2f28acb2-S0004] 行 10-14 | go-type | 类型 autoCodePgsql：定义该文件的数据结构或接口边界，支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-type, database
+- [F2f28acb2-S0005] 行 15-29 | go-func | 函数 GetDB：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: businessDB string
+- outputs: (data []response.Db, err error)
+- side_effects: -
+- calls: GetDB, Raw, Scan
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database
+- [F2f28acb2-S0006] 行 30-45 | go-func | 函数 GetTables：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: businessDB string, dbName string
+- outputs: (data []response.Table, err error)
+- side_effects: -
+- calls: GetTables, Raw, Scan
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database
+- [F2f28acb2-S0007] 行 46-136 | go-func | 函数 GetColumn：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: businessDB string, tableName string, dbName string
+- outputs: (data []response.Column, err error)
+- side_effects: -
+- calls: GetColumn, concat_ws, WHERE, in, COUNT, ReplaceAll, Raw, Scan
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database
+
+## [F9249985d] server/service/system/sys_auto_code_sqlite.go
+- 语言: go
+- 领域: codegen-ai (代码生成与AI工作流)
+- 行数: 85
+- imports: fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system/response, path/filepath, strings
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F9249985d-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-package
+- [F9249985d-S0002] 行 3-10 | go-import | 逻辑段 go-import：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: codegen-ai, go-import
+- [F9249985d-S0003] 行 11-12 | go-const-var | 逻辑段 go-const-var：承载「代码生成与AI工作流」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-const-var
+- [F9249985d-S0004] 行 13-17 | go-type | 类型 autoCodeSqlite：定义该文件的数据结构或接口边界，支撑「代码生成与AI工作流」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: codegen-ai, go-type
+- [F9249985d-S0005] 行 18-44 | go-func | 函数 GetDB：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: businessDB string
+- outputs: (data []response.Db, err error)
+- side_effects: -
+- calls: GetDB, Raw, Find, Base, Ext, TrimSuffix
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database
+- [F9249985d-S0006] 行 45-62 | go-func | 函数 GetTables：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: businessDB string, dbName string
+- outputs: (data []response.Table, err error)
+- side_effects: -
+- calls: GetTables, Raw, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database
+- [F9249985d-S0007] 行 63-85 | go-func | 函数 GetColumn：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: businessDB string, tableName string, dbName string
+- outputs: (data []response.Column, err error)
+- side_effects: -
+- calls: GetColumn, Sprintf, table_info, Raw, Scan
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database
+
+## [Fc95d441a] server/service/system/sys_base_menu.go
+- 语言: go
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 148
+- imports: errors, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system, gorm.io/gorm
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fc95d441a-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-package
+- [Fc95d441a-S0002] 行 3-10 | go-import | 逻辑段 go-import：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: menu-rbac, go-import, database
+- [Fc95d441a-S0003] 行 11-18 | go-type | 类型 BaseMenuService：定义该文件的数据结构或接口边界，支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-type
+- [Fc95d441a-S0004] 行 19-20 | go-const-var | 逻辑段 go-const-var：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-const-var
+- [Fc95d441a-S0005] 行 21-70 | go-func | 函数 DeleteBaseMenu：执行删除与清理流程，位于「菜单与权限编排」域。
+- inputs: id int
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: DeleteBaseMenu, First, New, Transaction, Delete
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, database
+- [Fc95d441a-S0006] 行 71-143 | go-func | 函数 UpdateBaseMenu：执行更新与配置写入流程，位于「菜单与权限编排」域。
+- inputs: menu system.SysBaseMenu
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: UpdateBaseMenu, Transaction, Where, Find, Is, First, Debug, New, Unscoped, Delete, Error, Create
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, database
+- [Fc95d441a-S0007] 行 144-148 | go-func | 函数 GetBaseMenuById：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: id int
+- outputs: (menu system.SysBaseMenu, err error)
+- side_effects: -
+- calls: GetBaseMenuById, Preload, Where, First
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+
+## [F3bfff6c5] server/service/system/sys_casbin.go
+- 语言: go
+- 领域: auth-access (鉴权与访问控制)
+- 行数: 216
+- imports: errors, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system/request, github.com/flipped-aurora/gin-vue-admin/server/utils, gorm.io/gorm, strconv
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F3bfff6c5-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-package
+- [F3bfff6c5-S0002] 行 3-21 | go-import | 逻辑段 go-import：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: auth-access, go-import, database, security
+- [F3bfff6c5-S0003] 行 22-23 | go-type | 类型 CasbinService：定义该文件的数据结构或接口边界，支撑「鉴权与访问控制」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-type
+- [F3bfff6c5-S0004] 行 24-25 | go-const-var | 逻辑段 go-const-var：承载「鉴权与访问控制」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: auth-access, go-const-var
+- [F3bfff6c5-S0005] 行 26-81 | go-func | 函数 UpdateCasbin：执行更新与配置写入流程，位于「鉴权与访问控制」域。
+- inputs: adminAuthorityID, AuthorityID uint, casbinInfos []request.CasbinInfo
+- outputs: error
+- side_effects: -
+- calls: UpdateCasbin, CheckAuthorityIDAuth, GetAllApis, New, Itoa, int, ClearCasbin, GetCasbin, AddPolicies
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, security
+- [F3bfff6c5-S0006] 行 82-100 | go-func | 函数 UpdateCasbinApi：执行更新与配置写入流程，位于「鉴权与访问控制」域。
+- inputs: oldPath string, newPath string, oldMethod string, newMethod string
+- outputs: error
+- side_effects: -
+- calls: UpdateCasbinApi, Model, Where, Updates, GetCasbin, LoadPolicy
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, database, security
+- [F3bfff6c5-S0007] 行 101-119 | go-func | 函数 GetPolicyPathByAuthorityId：执行查询与读取流程，位于「鉴权与访问控制」域。
+- inputs: AuthorityID uint
+- outputs: (pathMaps []request.CasbinInfo)
+- side_effects: -
+- calls: GetPolicyPathByAuthorityId, GetCasbin, Itoa, int, GetFilteredPolicy
+- risks: -
+- tags: auth-access, go-func, security
+- [F3bfff6c5-S0008] 行 120-131 | go-func | 函数 ClearCasbin：承载该模块的核心逻辑，位于「鉴权与访问控制」域。
+- inputs: v int, p ...string
+- outputs: bool
+- side_effects: -
+- calls: ClearCasbin, GetCasbin, RemoveFilteredPolicy
+- risks: -
+- tags: auth-access, go-func, database, security
+- [F3bfff6c5-S0009] 行 132-141 | go-func | 函数 RemoveFilteredPolicy：执行删除与清理流程，位于「鉴权与访问控制」域。
+- inputs: db *gorm.DB, authorityId string
+- outputs: error
+- side_effects: 写入数据库
+- calls: RemoveFilteredPolicy, Delete
+- risks: -
+- tags: auth-access, go-func, database, security
+- [F3bfff6c5-S0010] 行 142-155 | go-func | 函数 SyncPolicy：承载该模块的核心逻辑，位于「鉴权与访问控制」域。
+- inputs: db *gorm.DB, authorityId string, rules [][]string
+- outputs: error
+- side_effects: -
+- calls: SyncPolicy, RemoveFilteredPolicy, AddPolicies
+- risks: -
+- tags: auth-access, go-func, database, security
+- [F3bfff6c5-S0011] 行 156-168 | go-func | 函数 AddPolicies：执行创建或新增流程，位于「鉴权与访问控制」域。
+- inputs: db *gorm.DB, rules [][]string
+- outputs: error
+- side_effects: 写入数据库
+- calls: AddPolicies, Create
+- risks: -
+- tags: auth-access, go-func, database, security
+- [F3bfff6c5-S0012] 行 169-175 | go-func | 函数 FreshCasbin：承载该模块的核心逻辑，位于「鉴权与访问控制」域。
+- inputs: -
+- outputs: (err error)
+- side_effects: -
+- calls: FreshCasbin, GetCasbin, LoadPolicy
+- risks: -
+- tags: auth-access, go-func, security
+- [F3bfff6c5-S0013] 行 176-191 | go-func | 函数 GetAuthoritiesByApi：执行查询与读取流程，位于「鉴权与访问控制」域。
+- inputs: path, method string
+- outputs: (authorityIds []uint, err error)
+- side_effects: -
+- calls: GetAuthoritiesByApi, Where, Find, Atoi, uint
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, database, security
+- [F3bfff6c5-S0014] 行 192-216 | go-func | 函数 SetApiAuthorities：执行更新与配置写入流程，位于「鉴权与访问控制」域。
+- inputs: path, method string, authorityIds []uint
+- outputs: error
+- side_effects: 写入数据库
+- calls: SetApiAuthorities, Transaction, Where, Delete, Itoa, int, Create
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: auth-access, go-func, database, security
+
+## [F516bdaa9] server/service/system/sys_dictionary_detail.go
+- 语言: go
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 393
+- imports: fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system, github.com/flipped-aurora/gin-vue-admin/server/model/system/request, strconv
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F516bdaa9-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-package
+- [F516bdaa9-S0002] 行 3-17 | go-import | 逻辑段 go-import：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: menu-rbac, go-import
+- [F516bdaa9-S0003] 行 18-19 | go-type | 类型 DictionaryDetailService：定义该文件的数据结构或接口边界，支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-type
+- [F516bdaa9-S0004] 行 20-21 | go-const-var | 逻辑段 go-const-var：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-const-var
+- [F516bdaa9-S0005] 行 22-50 | go-func | 函数 CreateSysDictionaryDetail：执行创建或新增流程，位于「菜单与权限编排」域。
+- inputs: sysDictionaryDetail system.SysDictionaryDetail
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: CreateSysDictionaryDetail, First, Itoa, int, Create
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F516bdaa9-S0006] 行 51-71 | go-func | 函数 DeleteSysDictionaryDetail：执行删除与清理流程，位于「菜单与权限编排」域。
+- inputs: sysDictionaryDetail system.SysDictionaryDetail
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: DeleteSysDictionaryDetail, Model, Where, Count, Errorf, Delete
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, database
+- [F516bdaa9-S0007] 行 72-106 | go-func | 函数 UpdateSysDictionaryDetail：执行更新与配置写入流程，位于「菜单与权限编排」域。
+- inputs: sysDictionaryDetail *system.SysDictionaryDetail
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: UpdateSysDictionaryDetail, First, checkCircularReference, Errorf, Itoa, int, Save, updateChildrenLevelAndPath
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F516bdaa9-S0008] 行 107-125 | go-func | 函数 checkCircularReference：执行校验与约束判断，位于「菜单与权限编排」域。
+- inputs: id, parentID uint
+- outputs: bool
+- side_effects: -
+- calls: checkCircularReference, First
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F516bdaa9-S0009] 行 126-167 | go-func | 函数 updateChildrenLevelAndPath：执行更新与配置写入流程，位于「菜单与权限编排」域。
+- inputs: parentID uint
+- outputs: error
+- side_effects: 写入数据库
+- calls: updateChildrenLevelAndPath, Where, Find, First, Itoa, int, Save
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F516bdaa9-S0010] 行 168-178 | go-func | 函数 GetSysDictionaryDetail：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: id uint
+- outputs: (sysDictionaryDetail system.SysDictionaryDetail, err error)
+- side_effects: -
+- calls: GetSysDictionaryDetail, Where, First
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F516bdaa9-S0011] 行 179-212 | go-func | 函数 GetSysDictionaryDetailInfoList：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: info request.SysDictionaryDetailSearch
+- outputs: (list interface{}, total int64, err error)
+- side_effects: -
+- calls: GetSysDictionaryDetailInfoList, Model, Where, Count, Limit, Offset, Order, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, database
+- [F516bdaa9-S0012] 行 213-219 | go-func | 函数 GetDictionaryList：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: dictionaryID uint
+- outputs: (list []system.SysDictionaryDetail, err error)
+- side_effects: -
+- calls: GetDictionaryList, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F516bdaa9-S0013] 行 220-246 | go-func | 函数 GetDictionaryTreeList：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: dictionaryID uint
+- outputs: (list []system.SysDictionaryDetail, err error)
+- side_effects: -
+- calls: GetDictionaryTreeList, Where, Order, Find, loadChildren
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F516bdaa9-S0014] 行 247-272 | go-func | 函数 loadChildren：承载该模块的核心逻辑，位于「菜单与权限编排」域。
+- inputs: detail *system.SysDictionaryDetail
+- outputs: error
+- side_effects: -
+- calls: loadChildren, Where, Order, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F516bdaa9-S0015] 行 273-309 | go-func | 函数 GetDictionaryDetailsByParent：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: req request.GetDictionaryDetailsByParentRequest
+- outputs: (list []system.SysDictionaryDetail, err error)
+- side_effects: -
+- calls: GetDictionaryDetailsByParent, Model, Where, Order, Find, loadChildren
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, database
+- [F516bdaa9-S0016] 行 310-317 | go-func | 函数 GetDictionaryListByType：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: t string
+- outputs: (list []system.SysDictionaryDetail, err error)
+- side_effects: -
+- calls: GetDictionaryListByType, Model, Joins, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, database
+- [F516bdaa9-S0017] 行 318-348 | go-func | 函数 GetDictionaryTreeListByType：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: t string
+- outputs: (list []system.SysDictionaryDetail, err error)
+- side_effects: -
+- calls: GetDictionaryTreeListByType, Model, Joins, Where, Order, Find, loadChildren
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, database
+- [F516bdaa9-S0018] 行 349-355 | go-func | 函数 GetDictionaryInfoByValue：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: dictionaryID uint, value string
+- outputs: (detail system.SysDictionaryDetail, err error)
+- side_effects: -
+- calls: GetDictionaryInfoByValue, First
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F516bdaa9-S0019] 行 356-363 | go-func | 函数 GetDictionaryInfoByTypeValue：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: t string, value string
+- outputs: (detail system.SysDictionaryDetail, err error)
+- side_effects: -
+- calls: GetDictionaryInfoByTypeValue, Model, Joins, First
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, database
+- [F516bdaa9-S0020] 行 364-384 | go-func | 函数 GetDictionaryPath：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: id uint
+- outputs: (path []system.SysDictionaryDetail, err error)
+- side_effects: -
+- calls: GetDictionaryPath, First
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [F516bdaa9-S0021] 行 385-393 | go-func | 函数 GetDictionaryPathByValue：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: dictionaryID uint, value string
+- outputs: (path []system.SysDictionaryDetail, err error)
+- side_effects: -
+- calls: GetDictionaryPathByValue, GetDictionaryInfoByValue, GetDictionaryPath
+- risks: -
+- tags: menu-rbac, go-func
+
+## [Fa6add5d7] server/service/system/sys_dictionary.go
+- 语言: go
+- 领域: menu-rbac (菜单与权限编排)
+- 行数: 298
+- imports: encoding/json, errors, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/system, github.com/flipped-aurora/gin-vue-admin/server/model/system/request, github.com/gin-gonic/gin, gorm.io/gorm
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [Fa6add5d7-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-package
+- [Fa6add5d7-S0002] 行 3-20 | go-import | 逻辑段 go-import：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: menu-rbac, go-import, database
+- [Fa6add5d7-S0003] 行 21-22 | go-type | 类型 DictionaryService：定义该文件的数据结构或接口边界，支撑「菜单与权限编排」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-type
+- [Fa6add5d7-S0004] 行 23-24 | go-const-var | 逻辑段 go-const-var：承载「菜单与权限编排」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: menu-rbac, go-const-var
+- [Fa6add5d7-S0005] 行 25-38 | go-func | 函数 CreateSysDictionary：执行创建或新增流程，位于「菜单与权限编排」域。
+- inputs: sysDictionary system.SysDictionary
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: CreateSysDictionary, Is, First, New, Create
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, database
+- [Fa6add5d7-S0006] 行 39-63 | go-func | 函数 DeleteSysDictionary：执行删除与清理流程，位于「菜单与权限编排」域。
+- inputs: sysDictionary system.SysDictionary
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: DeleteSysDictionary, Where, Preload, First, Is, New, Delete
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, database
+- [Fa6add5d7-S0007] 行 64-100 | go-func | 函数 UpdateSysDictionary：执行更新与配置写入流程，位于「菜单与权限编排」域。
+- inputs: sysDictionary *system.SysDictionary
+- outputs: (err error)
+- side_effects: -
+- calls: UpdateSysDictionary, Where, First, Debug, Error, New, Is, checkCircularReference, Model, Updates
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, database
+- [Fa6add5d7-S0008] 行 101-120 | go-func | 函数 GetSysDictionary：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: Type string, Id uint, status *bool
+- outputs: (sysDictionary system.SysDictionary, err error)
+- side_effects: -
+- calls: GetSysDictionary, Where, Preload, Order, First
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, database
+- [Fa6add5d7-S0009] 行 121-133 | go-func | 函数 GetSysDictionaryInfoList：执行查询与读取流程，位于「菜单与权限编排」域。
+- inputs: c *gin.Context, req request.SysDictionarySearch
+- outputs: (list interface{}, err error)
+- side_effects: -
+- calls: GetSysDictionaryInfoList, WithContext, Where, Preload, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func
+- [Fa6add5d7-S0010] 行 134-162 | go-func | 函数 checkCircularReference：执行校验与约束判断，位于「菜单与权限编排」域。
+- inputs: currentID uint, parentID uint
+- outputs: error
+- side_effects: -
+- calls: checkCircularReference, New, Where, First, Is
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, database
+- [Fa6add5d7-S0011] 行 163-205 | go-func | 函数 ExportSysDictionary：承载该模块的核心逻辑，位于「菜单与权限编排」域。
+- inputs: id uint
+- outputs: (exportData map[string]interface{}, err error)
+- side_effects: -
+- calls: ExportSysDictionary, Where, Preload, Order, First
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, database
+- [Fa6add5d7-S0012] 行 206-298 | go-func | 函数 ImportSysDictionary：承载该模块的核心逻辑，位于「菜单与权限编排」域。
+- inputs: jsonStr string
+- outputs: error
+- side_effects: 写入数据库
+- calls: ImportSysDictionary, Unmarshal, byte, New, Error, Is, First, Transaction, Create, int, Model, Where
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: menu-rbac, go-func, database
+
+## [F6bd36273] server/service/system/sys_error.go
+- 语言: go
+- 领域: system-config (系统配置与运行时)
+- 行数: 127
+- imports: context, fmt, github.com/flipped-aurora/gin-vue-admin/server/global, github.com/flipped-aurora/gin-vue-admin/server/model/common, github.com/flipped-aurora/gin-vue-admin/server/model/system
+- entrypoints: -
+- depends_on: -
+- owned_by: backend
+- 逻辑段:
+- [F6bd36273-S0001] 行 1-2 | go-package | 逻辑段 go-package：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-package
+- [F6bd36273-S0002] 行 3-11 | go-import | 逻辑段 go-import：承载「系统配置与运行时」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: system-config, go-import
+- [F6bd36273-S0003] 行 12-15 | go-type | 类型 SysErrorService：定义该文件的数据结构或接口边界，支撑「系统配置与运行时」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: system-config, go-type
+- [F6bd36273-S0004] 行 16-25 | go-func | 函数 CreateSysError：执行创建或新增流程，位于「系统配置与运行时」域。
+- inputs: ctx context.Context, sysError *system.SysError
+- outputs: (err error)
+- side_effects: 写入数据库, 修改全局状态
+- calls: CreateSysError, Create
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F6bd36273-S0005] 行 26-32 | go-func | 函数 DeleteSysError：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: ctx context.Context, ID string
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: DeleteSysError, Delete
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F6bd36273-S0006] 行 33-39 | go-func | 函数 DeleteSysErrorByIds：执行删除与清理流程，位于「系统配置与运行时」域。
+- inputs: ctx context.Context, IDs []string
+- outputs: (err error)
+- side_effects: 写入数据库
+- calls: DeleteSysErrorByIds, Delete
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F6bd36273-S0007] 行 40-46 | go-func | 函数 UpdateSysError：执行更新与配置写入流程，位于「系统配置与运行时」域。
+- inputs: ctx context.Context, sysError system.SysError
+- outputs: (err error)
+- side_effects: -
+- calls: UpdateSysError, Model, Where, Updates
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+- [F6bd36273-S0008] 行 47-53 | go-func | 函数 GetSysError：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: ctx context.Context, ID string
+- outputs: (sysError system.SysError, err error)
+- side_effects: -
+- calls: GetSysError, Where, First
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func
+- [F6bd36273-S0009] 行 54-85 | go-func | 函数 GetSysErrorInfoList：执行查询与读取流程，位于「系统配置与运行时」域。
+- inputs: ctx context.Context, info systemReq.SysErrorSearch
+- outputs: (list []system.SysError, total int64, err error)
+- side_effects: -
+- calls: GetSysErrorInfoList, Model, Order, Where, Count, Limit, Offset, Find
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: system-config, go-func, database
+- [F6bd36273-S0010] 行 86-127 | go-func | 函数 GetSysErrorSolution：执行查询与读取流程，位于「代码生成与AI工作流」域。
+- inputs: ctx context.Context, ID string
+- outputs: (err error)
+- side_effects: 写入数据库, 启动并发协程
+- calls: GetSysErrorSolution, WithContext, Model, Where, Update, First, LLMAuto, Background, Sprintf, Updates
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: codegen-ai, go-func, database
+

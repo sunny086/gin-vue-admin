@@ -1,0 +1,70 @@
+# web-router
+
+- 文件数量：1
+
+## [Fb924de80] web/src/router/index.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 42
+- imports: vue-router
+- entrypoints: frontend-router, router-definition
+- depends_on: -
+- owned_by: frontend
+- 逻辑段:
+- [Fb924de80-S0001] 行 1-2 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: 变更路由注册
+- calls: -
+- risks: -
+- tags: frontend-core, js-import, route
+- [Fb924de80-S0002] 行 3-10 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const
+- [Fb924de80-S0003] 行 11-15 | js-func | 函数/导出 component：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: frontend-core, js-func
+- [Fb924de80-S0004] 行 16-24 | js-func | 函数/导出 component：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: frontend-core, js-func
+- [Fb924de80-S0005] 行 25-31 | js-func | 函数/导出 component：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import, catchAll
+- risks: -
+- tags: frontend-core, js-func
+- [Fb924de80-S0006] 行 32-35 | js-func | 函数/导出 component：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: import
+- risks: -
+- tags: frontend-core, js-func
+- [Fb924de80-S0007] 行 36-40 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: 变更路由注册
+- calls: createRouter, createWebHashHistory
+- risks: -
+- tags: frontend-core, js-const, route
+- [Fb924de80-S0008] 行 41-42 | js-export | 函数/导出 export default：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-export
+

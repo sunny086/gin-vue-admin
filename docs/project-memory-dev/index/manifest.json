@@ -1,0 +1,29 @@
+{
+  "output": "docs/project-memory-dev",
+  "sync_id": "S0af8366c",
+  "generated_at": "2026-04-14T12:22:47.125Z",
+  "source_stats": {
+    "total_files": 650,
+    "total_segments": 4769,
+    "total_lines": 80517
+  },
+  "scope": [
+    "server",
+    "web",
+    "deploy",
+    "root"
+  ],
+  "exclude": [
+    ".git/",
+    ".idea/",
+    ".vscode/",
+    ".cursor/",
+    ".codex/",
+    ".claude/",
+    ".aone_copilot/",
+    ".trae/",
+    "node_modules/",
+    "server/docs/",
+    "/assets/"
+  ]
+}

@@ -1,0 +1,227 @@
+## [F7b5a8dc3] web/src/pinia/modules/user.js
+- 语言: js
+- 领域: frontend-core (前端框架内核)
+- 行数: 151
+- imports: ./router, @/api/jwt, @/api/user, @/pinia, @/router/index, @vueuse/core, @vueuse/integrations/useCookies, element-plus, pinia, vue
+- entrypoints: -
+- depends_on: ./router, @/api/jwt, @/api/user, @/pinia, @/router/index
+- owned_by: frontend
+- 逻辑段:
+- [F7b5a8dc3-S0001] 行 1-1 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F7b5a8dc3-S0002] 行 2-2 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import, security
+- [F7b5a8dc3-S0003] 行 3-3 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F7b5a8dc3-S0004] 行 4-4 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F7b5a8dc3-S0005] 行 5-5 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F7b5a8dc3-S0006] 行 6-6 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F7b5a8dc3-S0007] 行 7-7 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F7b5a8dc3-S0008] 行 8-8 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F7b5a8dc3-S0009] 行 9-10 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F7b5a8dc3-S0010] 行 11-12 | js-import | 依赖导入区：声明当前模块依赖与耦合边界。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-import
+- [F7b5a8dc3-S0011] 行 13-13 | js-export | 函数/导出 useUserStore：承载该模块的核心逻辑，用于支撑「前端框架内核」域。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: defineStore
+- risks: -
+- tags: frontend-core, js-export
+- [F7b5a8dc3-S0012] 行 14-14 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: useAppStore
+- risks: -
+- tags: frontend-core, js-const
+- [F7b5a8dc3-S0013] 行 15-16 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: ref
+- risks: -
+- tags: frontend-core, js-const
+- [F7b5a8dc3-S0014] 行 17-22 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: ref
+- risks: -
+- tags: frontend-core, js-const, security
+- [F7b5a8dc3-S0015] 行 23-23 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: useStorage
+- risks: -
+- tags: frontend-core, js-const, security
+- [F7b5a8dc3-S0016] 行 24-24 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: useCookies
+- risks: -
+- tags: frontend-core, js-const
+- [F7b5a8dc3-S0017] 行 25-26 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: computed, get
+- risks: -
+- tags: frontend-core, js-const, security
+- [F7b5a8dc3-S0018] 行 27-37 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: val
+- outputs: -
+- side_effects: -
+- calls: keys, forEach
+- risks: -
+- tags: frontend-core, js-const, config
+- [F7b5a8dc3-S0019] 行 38-42 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: val
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const, security
+- [F7b5a8dc3-S0020] 行 43-47 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, ClearStorage, push
+- risks: -
+- tags: frontend-core, js-const
+- [F7b5a8dc3-S0021] 行 48-54 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: value = {}
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: frontend-core, js-const
+- [F7b5a8dc3-S0022] 行 55-55 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async
+- risks: -
+- tags: frontend-core, js-const
+- [F7b5a8dc3-S0023] 行 56-62 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: getUserInfo, setUserInfo
+- risks: -
+- tags: frontend-core, js-const
+- [F7b5a8dc3-S0024] 行 63-69 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: loginInfo
+- outputs: -
+- side_effects: -
+- calls: async, service
+- risks: -
+- tags: frontend-core, js-const
+- [F7b5a8dc3-S0025] 行 70-79 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: login, setUserInfo, setToken
+- risks: -
+- tags: frontend-core, js-const, security
+- [F7b5a8dc3-S0026] 行 80-81 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: useRouterStore, SetAsyncRouter
+- risks: -
+- tags: frontend-core, js-const
+- [F7b5a8dc3-S0027] 行 82-99 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: 变更路由注册
+- calls: forEach, addRoute, replace, hasRoute, error
+- risks: -
+- tags: frontend-core, js-const, route, security
+- [F7b5a8dc3-S0028] 行 100-112 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: test, setItem, catch, error, close
+- risks: -
+- tags: frontend-core, js-const
+- [F7b5a8dc3-S0029] 行 113-113 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async
+- risks: -
+- tags: frontend-core, js-const
+- [F7b5a8dc3-S0030] 行 114-127 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: jsonInBlacklist, ClearStorage, push, reload
+- risks: -
+- tags: frontend-core, js-const
+- [F7b5a8dc3-S0031] 行 128-151 | js-const | 逻辑段 js-const：承载「前端框架内核」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: async, remove, clear, removeItem
+- risks: -
+- tags: frontend-core, js-const, security
+

@@ -1,0 +1,820 @@
+# root
+
+- 文件数量：6
+
+## [F8b92ef56] CODE_OF_CONDUCT.md
+- 语言: markdown
+- 领域: docs-governance (文档与治理)
+- 行数: 77
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: governance
+- 逻辑段:
+- [F8b92ef56-S0001] 行 1-2 | md-heading | 文档章节「Contributor Covenant Code of Conduct」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F8b92ef56-S0002] 行 3-11 | md-heading | 文档章节「Our Pledge」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading, config
+- [F8b92ef56-S0003] 行 12-33 | md-heading | 文档章节「Our Standards」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading, config
+- [F8b92ef56-S0004] 行 34-45 | md-heading | 文档章节「Our Responsibilities」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F8b92ef56-S0005] 行 46-54 | md-heading | 文档章节「Scope」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F8b92ef56-S0006] 行 55-67 | md-heading | 文档章节「Enforcement」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F8b92ef56-S0007] 行 68-77 | md-heading | 文档章节「Attribution」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+
+## [Fb810fdf8] CONTRIBUTING.md
+- 语言: markdown
+- 领域: docs-governance (文档与治理)
+- 行数: 20
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: governance
+- 逻辑段:
+- [Fb810fdf8-S0001] 行 1-1 | preamble | 逻辑段 preamble：承载「文档与治理」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, preamble
+- [Fb810fdf8-S0002] 行 2-2 | md-heading | 文档章节「Contributing Guide」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fb810fdf8-S0003] 行 3-8 | md-heading | 文档章节「1 Issue Guidelines」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fb810fdf8-S0004] 行 9-20 | md-heading | 文档章节「2 Pull Request Guidelines」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+
+## [F9cd57ca1] Makefile
+- 语言: makefile
+- 领域: system-config (系统配置与运行时)
+- 行数: 80
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: governance
+- 逻辑段:
+- [F9cd57ca1-S0001] 行 1-80 | block | 逻辑段 block：承载「插件生态」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, block, plugin, config
+
+## [Fa8a5f1b8] README-en.md
+- 语言: markdown
+- 领域: docs-governance (文档与治理)
+- 行数: 318
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: governance
+- 逻辑段:
+- [Fa8a5f1b8-S0001] 行 1-18 | preamble | 逻辑段 preamble：承载「文档与治理」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, preamble, database
+- [Fa8a5f1b8-S0002] 行 19-25 | md-heading | 文档章节「Project Guidelines」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading, config
+- [Fa8a5f1b8-S0003] 行 26-27 | md-heading | 文档章节「1. Basic Introduction」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0004] 行 28-37 | md-heading | 文档章节「1.1 Project Introduction」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading, security
+- [Fa8a5f1b8-S0005] 行 38-45 | md-heading | 文档章节「1.2 Contributing Guide」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: stack
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0006] 行 46-51 | md-heading | 文档章节「1.2.1 Issue Guidelines」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0007] 行 52-63 | md-heading | 文档章节「1.2.2 Pull Request Guidelines」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0008] 行 64-70 | md-heading | 文档章节「1.3 Version list」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading, database
+- [Fa8a5f1b8-S0009] 行 71-80 | md-heading | 文档章节「2. Getting started」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0010] 行 81-85 | md-heading | 文档章节「2.1 server project」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0011] 行 86-88 | md-heading | 文档章节「clone the project」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0012] 行 89-91 | md-heading | 文档章节「open server catalogue」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0013] 行 92-94 | md-heading | 文档章节「use go mod And install the go depen…」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0014] 行 95-97 | md-heading | 文档章节「Compile」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0015] 行 98-101 | md-heading | 文档章节「Run binary」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: server
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0016] 行 102-104 | md-heading | 文档章节「2.1 web project」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0017] 行 105-107 | md-heading | 文档章节「enter the project directory」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0018] 行 108-110 | md-heading | 文档章节「install dependency」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0019] 行 111-114 | md-heading | 文档章节「develop」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0020] 行 115-117 | md-heading | 文档章节「2.2 Server」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0021] 行 118-119 | md-heading | 文档章节「using go.mod」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0022] 行 120-122 | md-heading | 文档章节「install go modules」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: list
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0023] 行 123-126 | md-heading | 文档章节「build the server」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0024] 行 127-128 | md-heading | 文档章节「2.3 API docs auto-generation using …」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0025] 行 129-130 | md-heading | 文档章节「2.3.1 install swagger」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0026] 行 131-135 | md-heading | 文档章节「(1) Using VPN or outside mainland C…」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0027] 行 136-140 | md-heading | 文档章节「(2) In mainland China」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0028] 行 141-141 | md-heading | 文档章节「If you are using a version of Go 1.…」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0029] 行 142-143 | md-heading | 文档章节「Step one、Enable Go Modules Function」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading, config
+- [Fa8a5f1b8-S0030] 行 144-146 | md-heading | 文档章节「Step two、Configuration GOPROXY Envi…」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading, config
+- [Fa8a5f1b8-S0031] 行 147-150 | md-heading | 文档章节「If you dislike trouble,You can use …」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading, config
+- [Fa8a5f1b8-S0032] 行 151-154 | md-heading | 文档章节「Use the following command to downlo…」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0033] 行 155-164 | md-heading | 文档章节「2.3.2 API docs generation」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0034] 行 165-174 | md-heading | 文档章节「3. Technical selection」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: Go
+- risks: -
+- tags: docs-governance, md-heading, database, security, config
+- [Fa8a5f1b8-S0035] 行 175-176 | md-heading | 文档章节「4. Project Architecture」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0036] 行 177-180 | md-heading | 文档章节「4.1 Architecture Diagram」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0037] 行 181-184 | md-heading | 文档章节「4.2 Front-end Detailed Design Diagr…」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: Diagram
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0038] 行 185-226 | md-heading | 文档章节「4.3 Project Layout」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: api, v1, config, core, docs, global, initialize, internal, middleware, model, request, response
+- risks: -
+- tags: docs-governance, md-heading, config
+- [Fa8a5f1b8-S0039] 行 227-245 | md-heading | 文档章节「5. Features」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: foreground
+- risks: -
+- tags: docs-governance, md-heading, security, config
+- [Fa8a5f1b8-S0040] 行 246-247 | md-heading | 文档章节「6. Knowledge base」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0041] 行 248-253 | md-heading | 文档章节「6.1 Team blog」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0042] 行 254-278 | md-heading | 文档章节「6.2 Video courses」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: courses, reply2831798461
+- risks: -
+- tags: docs-governance, md-heading, config
+- [Fa8a5f1b8-S0043] 行 279-280 | md-heading | 文档章节「7.Contacts」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0044] 行 281-282 | md-heading | 文档章节「7.1 Groups」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0045] 行 283-289 | md-heading | 文档章节「QQ group: 622360840」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0046] 行 290-295 | md-heading | 文档章节「Wechat group: comment "加入gin-vue-ad…」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0047] 行 296-297 | md-heading | 文档章节「[About Us](https://www.gin-vue-admi…」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0048] 行 298-309 | md-heading | 文档章节「8. Contributors」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0049] 行 310-313 | md-heading | 文档章节「9. Donate」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fa8a5f1b8-S0050] 行 314-318 | md-heading | 文档章节「10. Commercial considerations」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+
+## [F18eb20e2] README.md
+- 语言: markdown
+- 领域: docs-governance (文档与治理)
+- 行数: 390
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: governance
+- 逻辑段:
+- [F18eb20e2-S0001] 行 1-20 | preamble | 逻辑段 preamble：承载「文档与治理」域的实现细节。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, preamble, database
+- [F18eb20e2-S0002] 行 21-24 | md-heading | 文档章节「支持claw生态」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, md-heading, plugin
+- [F18eb20e2-S0003] 行 25-44 | md-heading | 文档章节「✨一分钟生成前后端基础代码」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: mcp-skills, md-heading, security
+- [F18eb20e2-S0004] 行 45-59 | md-heading | 文档章节「项目文档」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, md-heading, plugin, config
+- [F18eb20e2-S0005] 行 60-73 | md-heading | 文档章节「重要提示」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, md-heading, plugin
+- [F18eb20e2-S0006] 行 74-75 | md-heading | 文档章节「1. 基本介绍」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0007] 行 76-85 | md-heading | 文档章节「1.1 项目介绍」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading, security
+- [F18eb20e2-S0008] 行 86-92 | md-heading | 文档章节「1.2 贡献指南」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0009] 行 93-97 | md-heading | 文档章节「1.2.1 Issue 规范」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0010] 行 98-106 | md-heading | 文档章节「1.2.2 Pull Request 规范」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0011] 行 107-114 | md-heading | 文档章节「2. 使用说明」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0012] 行 115-120 | md-heading | 文档章节「2.1 server项目」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0013] 行 121-122 | md-heading | 文档章节「克隆项目」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0014] 行 123-125 | md-heading | 文档章节「进入server文件夹」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0015] 行 126-128 | md-heading | 文档章节「使用 go mod 并安装go依赖包」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0016] 行 129-133 | md-heading | 文档章节「运行」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0017] 行 134-136 | md-heading | 文档章节「2.2 web项目」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0018] 行 137-139 | md-heading | 文档章节「进入web文件夹」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0019] 行 140-142 | md-heading | 文档章节「安装依赖」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0020] 行 143-146 | md-heading | 文档章节「启动web项目」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0021] 行 147-148 | md-heading | 文档章节「2.3 swagger自动化API文档」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0022] 行 149-154 | md-heading | 文档章节「2.3.1 安装 swagger」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0023] 行 155-163 | md-heading | 文档章节「2.3.2 生成API文档」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0024] 行 164-165 | md-heading | 文档章节「2.4 VSCode工作区」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0025] 行 166-169 | md-heading | 文档章节「2.4.1 开发」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0026] 行 170-173 | md-heading | 文档章节「2.4.2 运行/调试」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: Both
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0027] 行 174-182 | md-heading | 文档章节「2.4.3 settings」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0028] 行 183-192 | md-heading | 文档章节「3. 技术选型」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading, database, security, config
+- [F18eb20e2-S0029] 行 193-194 | md-heading | 文档章节「4. 项目架构」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0030] 行 195-198 | md-heading | 文档章节「4.1 系统架构图」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0031] 行 199-202 | md-heading | 文档章节「4.2 前端详细设计图 （提供者:<a href="https://g…」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0032] 行 203-303 | md-heading | 文档章节「4.3 目录结构」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: api, v1, config, core, docs, global, initialize, internal, middleware, model, request, response
+- risks: 依赖全局状态，模块可测试性与解耦性下降
+- tags: docs-governance, md-heading, config
+- [F18eb20e2-S0033] 行 304-322 | md-heading | 文档章节「5. 主要功能」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: true
+- risks: -
+- tags: docs-governance, md-heading, security, config
+- [F18eb20e2-S0034] 行 323-324 | md-heading | 文档章节「6. 知识库」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0035] 行 325-330 | md-heading | 文档章节「6.1 团队博客」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0036] 行 331-352 | md-heading | 文档章节「6.2 教学视频」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0037] 行 353-354 | md-heading | 文档章节「7. 联系方式」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0038] 行 355-356 | md-heading | 文档章节「7.1 技术群」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0039] 行 357-358 | md-heading | 文档章节「QQ交流群：971857775」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0040] 行 359-371 | md-heading | 文档章节「微信交流群」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: DecodeString, Println
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0041] 行 372-373 | md-heading | 文档章节「[关于我们](https://www.gin-vue-admin.co…」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0042] 行 374-381 | md-heading | 文档章节「8. 贡献者」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0043] 行 382-385 | md-heading | 文档章节「9. 捐赠」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [F18eb20e2-S0044] 行 386-390 | md-heading | 文档章节「10. 注意事项」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: plugin-ecosystem, md-heading, plugin
+
+## [Fdec54646] SECURITY.md
+- 语言: markdown
+- 领域: docs-governance (文档与治理)
+- 行数: 6
+- imports: -
+- entrypoints: -
+- depends_on: -
+- owned_by: governance
+- 逻辑段:
+- [Fdec54646-S0001] 行 1-2 | md-heading | 文档章节「Security Policy」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+- [Fdec54646-S0002] 行 3-6 | md-heading | 文档章节「Reporting a Vulnerability」：提供项目说明与协作规则。
+- inputs: -
+- outputs: -
+- side_effects: -
+- calls: -
+- risks: -
+- tags: docs-governance, md-heading
+
